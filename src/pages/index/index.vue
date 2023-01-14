@@ -23,28 +23,6 @@
                     alt=""
                 />
             </div>
-            <div class="flex-box mobile">
-                <img
-                    class="col25"
-                    :src="require(`@/assets/img/index1-0/01.jpg`)"
-                    alt=""
-                />
-                <img
-                    class="col25"
-                    :src="require(`@/assets/img/index1-0/02.jpg`)"
-                    alt=""
-                />
-                <img
-                    class="col25"
-                    :src="require(`@/assets/img/index1-0/03.jpg`)"
-                    alt=""
-                />
-                <img
-                    class="col25"
-                    :src="require(`@/assets/img/index1-0/04.jpg`)"
-                    alt=""
-                />
-            </div>
         </div>
         <div class="section2">
             <div
@@ -203,11 +181,9 @@ export default {
         msg: String,
     },
     data() {
-        return {
-            sectionOneImgs: ["@/assets/img/index1-0/01.jpg"],
-        };
+        return {};
     },
-    created() {},
+    mounted() {},
     methods: {},
     filters: {},
 };
