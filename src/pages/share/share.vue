@@ -8,7 +8,7 @@
                 <img class="step2" :src="require(`@/assets/img/index2-1/step 2.png`)" alt="" />
                 <a href="#"><img class="shareBtn" :src="require(`@/assets/img/index2-1/btn.png`)" alt="" /></a>
             </div>
-
+            <!--  -->
             <div class="botBg">
                 <img class="botImg" :src="require(`@/assets/img/index2-1/index_2-2_bg.png`)" alt="" />
                 <!-- <div class="fbShare1"> -->
@@ -17,7 +17,7 @@
                 <img class="share2" :src="require(`@/assets/img/index2-1/txt_2-2.png`)" alt="" />
                 <img class="share3" :src="require(`@/assets/img/index2-1/txt_3-3.png`)" alt="" />
                 <img class="share4" :src="require(`@/assets/img/index2-1/txt_4-4.png`)" alt="" />
-
+                <!-- Add Facebook Share Button -->
                 <a href="" class="fbBtn1"><img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" /></a>
                 <a href="" class="fbBtn2"><img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" /></a>
                 <a href="" class="fbBtn3"><img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" /></a>
