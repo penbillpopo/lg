@@ -92,7 +92,55 @@
                     'background-image':
                         'url(' + require(`@/assets/img/index1-3/bg.png`) + ')',
                 }"
-            ></div>
+            >
+                <img
+                    class="title reveal-right-300"
+                    :src="require(`@/assets/img/index1-3/title.png`)"
+                    alt=""
+                />
+                <img
+                    class="powder reveal-right-300"
+                    :src="require(`@/assets/img/index1-3/powder.png`)"
+                    alt=""
+                />
+                <img
+                    class="paper reveal-bottom-600 reveal-function-custom-600"
+                    :src="require(`@/assets/img/index1-3/paper.png`)"
+                    alt=""
+                />
+                <div ref="bubble-box" class="bubble-box">
+                    <img
+                        class="bubble1"
+                        :src="require(`@/assets/img/index1-3/bubble1.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="bubble2"
+                        :src="require(`@/assets/img/index1-3/bubble2.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="bubble3"
+                        :src="require(`@/assets/img/index1-3/bubble3.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="bubble4"
+                        :src="require(`@/assets/img/index1-3/bubble4.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="bubble5"
+                        :src="require(`@/assets/img/index1-3/bubble5.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="bubble6"
+                        :src="require(`@/assets/img/index1-3/bubble6.png`)"
+                        alt=""
+                    />
+                </div>
+            </div>
         </div>
         <div class="section5">
             <div
@@ -101,7 +149,23 @@
                     'background-image':
                         'url(' + require(`@/assets/img/index1-4/bg.png`) + ')',
                 }"
-            ></div>
+            >
+                <img
+                    class="title1"
+                    :src="require(`@/assets/img/index1-4/title1.png`)"
+                    alt=""
+                />
+                <img
+                    class="title2"
+                    :src="require(`@/assets/img/index1-4/title2.png`)"
+                    alt=""
+                />
+                <img
+                    class="powder"
+                    :src="require(`@/assets/img/index1-4/powder.png`)"
+                    alt=""
+                />
+            </div>
         </div>
         <div class="section6">
             <div class="question-box">
@@ -198,23 +262,47 @@
                     'background-image':
                         'url(' + require(`@/assets/img/index1-9/bg.png`) + ')',
                 }"
-            ></div>
+            >
+                <img
+                    class="title"
+                    :src="require(`@/assets/img/index1-9/title.png`)"
+                    alt=""
+                />
+            </div>
         </div>
     </div>
 </template>
 <script>
+import scrollReveal from "scrollreveal";
+const loadingSecond = 100;
+
 export default {
     name: "HomeComponent",
     props: {
         msg: String,
     },
     data() {
-        return {};
+        return {
+            scrollReveal: scrollReveal(),
+        };
     },
-    mounted() {},
+    mounted() {
+        setTimeout(() => {
+            this.setScrollRevealCustomFunction(600, this.$refs["bubble-box"]);
+        }, loadingSecond);
+    },
     methods: {
         scrollToSection(sessionName) {
             this.$refs[sessionName].scrollIntoView({ behavior: "smooth" });
+        },
+        setScrollRevealCustomFunction(time, el) {
+            this.scrollReveal.reveal(`.reveal-function-custom-${time}`, {
+                delay: time,
+                afterReveal: () => {
+                    el.classList.add("animating");
+                },
+                viewFactor: 1,
+            });
         },
     },
     filters: {},
