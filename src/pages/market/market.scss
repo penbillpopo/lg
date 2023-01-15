@@ -4,7 +4,7 @@
     // background-size: 100%;
     // background-repeat: no-repeat;
     // background-position: center;
-    .backgroundImg {
+    .background-img {
         width: 100%;
     }
     .buttons {
@@ -13,13 +13,38 @@
         bottom: 10%;
         left: 0;
         display: flex;
-        align-items: center;
         justify-content: center;
-        .marketBtn {
+        .market-btn {
             width: 10%;
             margin: 0 5px;
             img {
                 width: 100%;
+            }
+        }
+    }
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1023px) {
+    .pc {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .background {
+        .buttons {
+            position: absolute;
+            bottom: 7%;
+            .market-btn {
+                width: 30%;
+            }
+            .btn1 {
+                position: absolute;
+                bottom: 120%;
             }
         }
     }
