@@ -8,12 +8,10 @@
                 <img class="step2" :src="require(`@/assets/img/index2-1/step 2.png`)" alt="" />
                 <a href="#"><img class="shareBtn" :src="require(`@/assets/img/index2-1/btn.png`)" alt="" /></a>
             </div>
-            <!--  -->
+            <!-- Content Sliders -->
             <div class="botBg">
                 <img class="botImg" :src="require(`@/assets/img/index2-1/index_2-2_bg.png`)" alt="" />
-                <!-- <div class="fbShare1"> -->
                 <img class="share1" :src="require(`@/assets/img/index2-1/txt_1-1.png`)" alt="" />
-                <!-- </div> -->
                 <img class="share2" :src="require(`@/assets/img/index2-1/txt_2-2.png`)" alt="" />
                 <img class="share3" :src="require(`@/assets/img/index2-1/txt_3-3.png`)" alt="" />
                 <img class="share4" :src="require(`@/assets/img/index2-1/txt_4-4.png`)" alt="" />
