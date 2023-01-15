@@ -6,83 +6,36 @@ export const scrollRevealMixin = {
         };
     },
     mounted() {
-        const duration = 600;
-        const distance = "300px";
-        const opacity = 0;
-        const easing = "linear";
-        this.scrollReveal.reveal(".reveal-top", {
-            duration: duration,
-            delay: 0,
-            origin: "top",
-            distance: distance,
-            opacity: opacity,
-            easing: easing,
-            reset: true,
-        });
-        this.scrollReveal.reveal(".reveal-top-300", {
-            duration: duration,
-            delay: 300,
-            origin: "top",
-            distance: distance,
-            opacity: opacity,
-            easing: easing,
-            reset: true,
-        });
-        this.scrollReveal.reveal(".reveal-top-600", {
-            duration: duration,
-            delay: 600,
-            origin: "top",
-            distance: distance,
-            opacity: opacity,
-            easing: easing,
-            reset: true,
-        });
-        this.scrollReveal.reveal(".reveal-top-900", {
-            duration: duration,
-            delay: 900,
-            origin: "top",
-            distance: distance,
-            opacity: opacity,
-            easing: easing,
-            reset: true,
-        });
-        this.scrollReveal.reveal(".reveal-top-1200", {
-            duration: duration,
-            delay: 1200,
-            origin: "top",
-            distance: distance,
-            opacity: opacity,
-            easing: easing,
-            reset: true,
-        });
-        this.scrollReveal.reveal(".reveal-top-1500", {
-            duration: duration,
-            delay: 1500,
-            origin: "top",
-            distance: distance,
-            opacity: opacity,
-            easing: easing,
-            reset: true,
-        });
-        this.scrollReveal.reveal(".reveal-top-1800", {
-            duration: duration,
-            delay: 1800,
-            origin: "top",
-            distance: distance,
-            opacity: opacity,
-            easing: easing,
-            reset: true,
-        });
-        // this.scrollReveal.reveal(".reveal-top", {
-        //     duration: 1000,
-        //     delay: 300,
-        //     origin: "top",
-        //     reset: true,
-        //     mobile: false,
-        //     distance: "100px",
-        //     opacity:opacity,
-        //     easing: "linear",
-        //     scale: 1,
-        // });
+        this.setScrollRevealOrigin(300, "top", "60px", 0, "linear");
+        this.setScrollRevealOrigin(300, "bottom", "60px", 0, "linear");
+        this.setScrollRevealOrigin(300, "left", "60px", 0, "linear");
+        this.setScrollRevealOrigin(300, "right", "60px", 0, "linear");
+        this.setScrollRevealOrigin(300, "right", "60px", 0, "linear");
+        this.setScrollRevealFunction();
+    },
+    methods: {
+        setScrollRevealOrigin(duration, origin, distance, opacity, easing) {
+            for (let i = 0; i < 20; i++) {
+                this.scrollReveal.reveal(`.reveal-${origin}-${100 * i}`, {
+                    duration: duration,
+                    delay: 100 * i,
+                    origin: origin,
+                    distance: distance,
+                    opacity: opacity,
+                    easing: easing,
+                });
+            }
+        },
+        setScrollRevealFunction() {
+            for (let i = 0; i < 20; i++) {
+                this.scrollReveal.reveal(`.reveal-function-${100 * i}`, {
+                    delay: 100 * i,
+                    afterReveal: (el) => {
+                        el.classList.add("animating");
+                    },
+                    viewFactor: 1,
+                });
+            }
+        },
     },
 };

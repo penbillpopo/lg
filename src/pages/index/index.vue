@@ -3,35 +3,63 @@
         <div class="section1">
             <div class="flex-box">
                 <img
-                    class="col25"
+                    class="col25 ani"
                     :src="require(`@/assets/img/index1-0/01.jpg`)"
                     alt=""
                 />
                 <img
-                    class="col25"
+                    class="col25 ani delay-1"
                     :src="require(`@/assets/img/index1-0/02.jpg`)"
                     alt=""
                 />
                 <img
-                    class="col25"
+                    class="col25 ani delay-2"
                     :src="require(`@/assets/img/index1-0/03.jpg`)"
                     alt=""
                 />
                 <img
-                    class="col25"
+                    class="col25 ani delay-3"
                     :src="require(`@/assets/img/index1-0/04.jpg`)"
                     alt=""
                 />
             </div>
+            <button class="scroll-btn" @click="scrollToSection('section2')">
+                <img
+                    :src="require(`@/assets/img/index1-0/scroll.png`)"
+                    alt=""
+                />
+            </button>
         </div>
-        <div class="section2">
+        <div class="section2" ref="section2">
             <div
                 class="bg"
                 :style="{
                     'background-image':
                         'url(' + require(`@/assets/img/index1-1/bg.jpg`) + ')',
                 }"
-            ></div>
+            >
+                <div class="logo">
+                    <img
+                        class="flash reveal-function-900"
+                        :src="require(`@/assets/img/index1-1/flash.png`)"
+                        alt=""
+                    />
+                    <img
+                        :src="require(`@/assets/img/index1-1/logo.png`)"
+                        alt=""
+                    />
+                </div>
+                <img
+                    class="title reveal-top-300"
+                    :src="require(`@/assets/img/index1-1/title.png`)"
+                    alt=""
+                />
+                <img
+                    class="powder reveal-left-600"
+                    :src="require(`@/assets/img/index1-1/powder.png`)"
+                    alt=""
+                />
+            </div>
         </div>
         <div class="section3">
             <div class="flex-box">
@@ -184,7 +212,11 @@ export default {
         return {};
     },
     mounted() {},
-    methods: {},
+    methods: {
+        scrollToSection(sessionName) {
+            this.$refs[sessionName].scrollIntoView({ behavior: "smooth" });
+        },
+    },
     filters: {},
 };
 </script>
