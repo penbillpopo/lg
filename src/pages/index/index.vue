@@ -60,8 +60,17 @@
                     alt=""
                 />
             </div>
+            <button
+                class="scroll-btn small"
+                @click="scrollToSection('section3')"
+            >
+                <img
+                    :src="require(`@/assets/img/index1-1/scroll.png`)"
+                    alt=""
+                />
+            </button>
         </div>
-        <div class="section3">
+        <div class="section3" ref="section3">
             <div class="flex-box">
                 <img
                     class="col25"
@@ -83,6 +92,31 @@
                     :src="require(`@/assets/img/index1-0/04.jpg`)"
                     alt=""
                 />
+            </div>
+            <div class="black-field">
+                <div class="lightbox">
+                    <button class="close-btn">X</button>
+                    <swiper class="swiper" :options="swiperOption">
+                        <swiper-slide>Slide 1</swiper-slide>
+                        <swiper-slide>Slide 2</swiper-slide>
+                        <swiper-slide>Slide 3</swiper-slide>
+                        <swiper-slide>Slide 4</swiper-slide>
+                        <swiper-slide>Slide 5</swiper-slide>
+                        <swiper-slide>Slide 6</swiper-slide>
+                        <swiper-slide>Slide 7</swiper-slide>
+                        <swiper-slide>Slide 8</swiper-slide>
+                        <swiper-slide>Slide 9</swiper-slide>
+                        <swiper-slide>Slide 10</swiper-slide>
+                        <div
+                            class="swiper-button-prev"
+                            slot="button-prev"
+                        ></div>
+                        <div
+                            class="swiper-button-next"
+                            slot="button-next"
+                        ></div>
+                    </swiper>
+                </div>
             </div>
         </div>
         <div class="section4">
@@ -151,17 +185,17 @@
                 }"
             >
                 <img
-                    class="title1"
+                    class="title1 reveal-left-300"
                     :src="require(`@/assets/img/index1-4/title1.png`)"
                     alt=""
                 />
                 <img
-                    class="title2"
+                    class="title2 reveal-top-600"
                     :src="require(`@/assets/img/index1-4/title2.png`)"
                     alt=""
                 />
                 <img
-                    class="powder"
+                    class="powder reveal-top-900"
                     :src="require(`@/assets/img/index1-4/powder.png`)"
                     alt=""
                 />
@@ -170,7 +204,7 @@
         <div class="section6">
             <div class="question-box">
                 <div
-                    class="question"
+                    class="question reveal-left-300"
                     :style="{
                         'background-image':
                             'url(' +
@@ -179,7 +213,7 @@
                     }"
                 ></div>
                 <div
-                    class="answer"
+                    class="answer reveal-right-600"
                     :style="{
                         'background-image':
                             'url(' +
@@ -192,7 +226,7 @@
         <div class="section7">
             <div class="question-box">
                 <div
-                    class="question"
+                    class="question reveal-left-300"
                     :style="{
                         'background-image':
                             'url(' +
@@ -201,7 +235,7 @@
                     }"
                 ></div>
                 <div
-                    class="answer"
+                    class="answer reveal-right-600"
                     :style="{
                         'background-image':
                             'url(' +
@@ -214,7 +248,7 @@
         <div class="section8">
             <div class="question-box">
                 <div
-                    class="question"
+                    class="question reveal-left-300"
                     :style="{
                         'background-image':
                             'url(' +
@@ -223,7 +257,7 @@
                     }"
                 ></div>
                 <div
-                    class="answer"
+                    class="answer reveal-right-600"
                     :style="{
                         'background-image':
                             'url(' +
@@ -236,7 +270,7 @@
         <div class="section9">
             <div class="question-box">
                 <div
-                    class="question"
+                    class="question reveal-left-300"
                     :style="{
                         'background-image':
                             'url(' +
@@ -245,7 +279,7 @@
                     }"
                 ></div>
                 <div
-                    class="answer"
+                    class="answer reveal-right-300"
                     :style="{
                         'background-image':
                             'url(' +
@@ -274,16 +308,28 @@
 </template>
 <script>
 import scrollReveal from "scrollreveal";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+
 const loadingSecond = 100;
 
 export default {
     name: "HomeComponent",
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
     props: {
         msg: String,
     },
     data() {
         return {
             scrollReveal: scrollReveal(),
+            swiperOption: {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            },
         };
     },
     mounted() {

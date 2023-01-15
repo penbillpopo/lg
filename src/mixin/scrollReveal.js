@@ -28,6 +28,7 @@ export const scrollRevealMixin = {
                     distance: distance,
                     opacity: opacity,
                     easing: easing,
+                    viewFactor: 0.3,
                 });
             }
         },
