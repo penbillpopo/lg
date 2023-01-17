@@ -12,7 +12,7 @@ export const scrollRevealMixin = {
     mounted() {
         setTimeout(() => {
             this.setScrollRevealOrigin(300, "top", "60px", 0, "linear");
-            this.setScrollRevealOrigin(300, "bottom", "60px", 0, "linear");
+            this.setScrollRevealOrigin(600, "bottom", "200px", 0, "linear");
             this.setScrollRevealOrigin(300, "left", "60px", 0, "linear");
             this.setScrollRevealOrigin(300, "right", "60px", 0, "linear");
             this.setScrollRevealFunction();

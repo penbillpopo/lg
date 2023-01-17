@@ -29,7 +29,7 @@
     animation-name: scrollShaking;
     animation-duration: 1s;
     animation-iteration-count: infinite;
-    animation-delay: 2.4s;
+    animation-delay: 1.6s;
     opacity: 0;
     z-index: 10;
     img {
@@ -63,23 +63,23 @@
     position: relative;
     .ani {
         animation-name: revealTop;
-        animation-duration: 0.8s;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
         opacity: 0;
         transform: translateY(-100px);
         &.delay-1 {
-            animation-delay: 0.6s;
+            animation-delay: 0.4s;
         }
         &.delay-2 {
-            animation-delay: 1.2s;
+            animation-delay: 0.8s;
         }
         &.delay-3 {
-            animation-delay: 1.8s;
+            animation-delay: 1.2s;
         }
     }
     @keyframes revealTop {
         from {
-            transform: translateY(-100px);
+            transform: translateY(-200px);
             opacity: 0;
         }
         to {
@@ -138,6 +138,36 @@
 }
 .section3 {
     position: relative;
+    .flex-box {
+        position: relative;
+        .title {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 42%;
+            z-index: 1;
+        }
+        .pic-box {
+            position: relative;
+            .pic {
+                width: 100%;
+            }
+            .btn {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60%;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                transform-origin: 0% 100%;
+                &:hover {
+                    transform: scale(1.1) translateX(-50%);
+                }
+            }
+        }
+    }
     .black-field {
         position: fixed;
         left: 0;
@@ -146,8 +176,47 @@
         height: 100vh;
         background-color: rgba(24, 70, 149, 0.7);
         z-index: 11;
-        display: none;
+        .close-btn {
+            position: fixed;
+            right: 30px;
+            top: 30px;
+            width: 50px;
+            height: 30px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
         .lightbox {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            .frame {
+                width: 100%;
+                height: 100%;
+                @extend %background_100;
+                .swiper {
+                    width: 100%;
+                    height: 100%;
+                    .swiper-slide {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            width: 60%;
+                        }
+                    }
+                    .swiper-button-prev {
+                        left: 30px;
+                    }
+                    .swiper-button-next {
+                        right: 30px;
+                    }
+                }
+            }
         }
     }
 }
@@ -322,8 +391,40 @@
     position: relative;
     .title {
         position: absolute;
-        top: 27%;
+        top: 22%;
         left: 15%;
-        width: 40%;
+        width: 38%;
+    }
+    .swiper-box {
+        position: absolute;
+        top: 40%;
+        left: 0%;
+        width: 100%;
+        .swiper {
+            .pic {
+                @extend %background_100;
+                padding-bottom: 55%;
+                margin-bottom: 10px;
+                position: relative;
+                .play-btn {
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+                &:hover {
+                    .play-btn {
+                        opacity: 1;
+                    }
+                }
+            }
+            .text {
+                height: 30px;
+            }
+        }
     }
 }
