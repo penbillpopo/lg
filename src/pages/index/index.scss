@@ -22,55 +22,64 @@
         width: 63%;
     }
 }
+.scroll-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: scrollShaking;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.6s;
+    opacity: 0;
+    z-index: 10;
+    img {
+        width: 100px;
+        height: 106px;
+    }
+    &.small {
+        animation-delay: 0s;
+        img {
+            width: 80px;
+            height: 55px;
+        }
+    }
+}
+@keyframes scrollShaking {
+    0% {
+        opacity: 1;
+        bottom: 15px;
+    }
+    40% {
+        opacity: 1;
+        bottom: 0px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 15px;
+    }
+}
+
 .section1 {
     position: relative;
     .ani {
         animation-name: revealTop;
-        animation-duration: 0.8s;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
         opacity: 0;
         transform: translateY(-100px);
         &.delay-1 {
-            animation-delay: 0.8s;
+            animation-delay: 0.4s;
         }
         &.delay-2 {
-            animation-delay: 1.6s;
+            animation-delay: 0.8s;
         }
         &.delay-3 {
-            animation-delay: 2.4s;
-        }
-    }
-    .scroll-btn {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        animation-name: shaking;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-        animation-delay: 3.2s;
-        opacity: 0;
-        img {
-            width: 100px;
-            height: 106px;
-        }
-    }
-    @keyframes shaking {
-        0% {
-            opacity: 1;
-            bottom: 15px;
-        }
-        40% {
-            opacity: 1;
-            bottom: 0px;
-        }
-        100% {
-            opacity: 1;
-            bottom: 15px;
+            animation-delay: 1.2s;
         }
     }
     @keyframes revealTop {
         from {
-            transform: translateY(-100px);
+            transform: translateY(-200px);
             opacity: 0;
         }
         to {
@@ -124,6 +133,298 @@
         }
         100% {
             transform: translate(100px, 100px) scale(1.5);
+        }
+    }
+}
+.section3 {
+    position: relative;
+    .flex-box {
+        position: relative;
+        .title {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 42%;
+            z-index: 1;
+        }
+        .pic-box {
+            position: relative;
+            .pic {
+                width: 100%;
+            }
+            .btn {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60%;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                transform-origin: 0% 100%;
+                &:hover {
+                    transform: scale(1.1) translateX(-50%);
+                }
+            }
+        }
+    }
+    .black-field {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(24, 70, 149, 0.7);
+        z-index: 11;
+        .close-btn {
+            position: fixed;
+            right: 30px;
+            top: 30px;
+            width: 50px;
+            height: 30px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .lightbox {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            .frame {
+                width: 100%;
+                height: 100%;
+                @extend %background_100;
+                .swiper {
+                    width: 100%;
+                    height: 100%;
+                    .swiper-slide {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            width: 60%;
+                        }
+                    }
+                    .swiper-button-prev {
+                        left: 30px;
+                    }
+                    .swiper-button-next {
+                        right: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+.section4 {
+    position: relative;
+    .paper {
+        position: absolute;
+        top: 3%;
+        left: 17.5%;
+        width: 55%;
+        z-index: 1;
+    }
+    .title {
+        position: absolute;
+        top: 8%;
+        left: 53.5%;
+        width: 30%;
+    }
+    .powder {
+        position: absolute;
+        top: 62%;
+        left: 62.5%;
+        width: 20%;
+        z-index: 2;
+    }
+    .bubble-box {
+        position: absolute;
+        width: 100%;
+        padding-bottom: inherit;
+        &.animating {
+            .bubble1,
+            .bubble2,
+            .bubble3,
+            .bubble4,
+            .bubble5,
+            .bubble6 {
+                animation-name: revealScale, shaking;
+                animation-duration: 1s, 8s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+            }
+            .bubble1 {
+                animation-delay: 0s, 1s;
+            }
+            .bubble2 {
+                animation-delay: 0.3s, 1.3s;
+            }
+            .bubble3 {
+                animation-delay: 0.6s, 1.6s;
+            }
+            .bubble4 {
+                animation-delay: 0.9s, 1.9s;
+            }
+            .bubble5 {
+                animation-delay: 1.2s, 2.2s;
+            }
+            .bubble6 {
+                animation-delay: 1.5s, 2.5s;
+            }
+        }
+        .bubble1,
+        .bubble2,
+        .bubble3,
+        .bubble4,
+        .bubble5,
+        .bubble6 {
+            opacity: 0;
+            transform: scale(1);
+        }
+        .bubble1 {
+            position: absolute;
+            top: 68.5%;
+            left: 16%;
+            width: 17%;
+            z-index: 0;
+        }
+        .bubble2 {
+            position: absolute;
+            top: 56%;
+            left: 11.2%;
+            width: 12%;
+            z-index: 0;
+        }
+        .bubble3 {
+            position: absolute;
+            top: 30.5%;
+            left: 17.5%;
+            width: 19%;
+            z-index: 2;
+        }
+        .bubble4 {
+            position: absolute;
+            top: 16%;
+            left: 18%;
+            width: 11%;
+            z-index: 2;
+        }
+        .bubble5 {
+            position: absolute;
+            top: -1%;
+            left: 24%;
+            width: 15%;
+            z-index: 2;
+        }
+        .bubble6 {
+            position: absolute;
+            top: 31%;
+            left: 34%;
+            width: 9%;
+            z-index: 2;
+        }
+        @keyframes shaking {
+            0% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            45% {
+                opacity: 1;
+                transform: translateY(15px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        @keyframes revealScale {
+            from {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+}
+.section5 {
+    position: relative;
+    .title1 {
+        position: absolute;
+        top: 27%;
+        left: 14%;
+        width: 27%;
+    }
+    .title2 {
+        position: absolute;
+        top: 9%;
+        left: 41%;
+        width: 44%;
+    }
+    .powder {
+        position: absolute;
+        top: 28%;
+        left: 44%;
+        width: 39%;
+    }
+}
+.section6 {
+    position: relative;
+}
+.section7 {
+    position: relative;
+}
+.section8 {
+    position: relative;
+}
+.section9 {
+    position: relative;
+}
+.section10 {
+    position: relative;
+    .title {
+        position: absolute;
+        top: 22%;
+        left: 15%;
+        width: 38%;
+    }
+    .swiper-box {
+        position: absolute;
+        top: 40%;
+        left: 0%;
+        width: 100%;
+        .swiper {
+            .pic {
+                @extend %background_100;
+                padding-bottom: 55%;
+                margin-bottom: 10px;
+                position: relative;
+                .play-btn {
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+                &:hover {
+                    .play-btn {
+                        opacity: 1;
+                    }
+                }
+            }
+            .text {
+                height: 30px;
+            }
         }
     }
 }

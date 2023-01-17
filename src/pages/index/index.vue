@@ -60,29 +60,147 @@
                     alt=""
                 />
             </div>
+            <button
+                class="scroll-btn small"
+                @click="scrollToSection('section3')"
+            >
+                <img
+                    :src="require(`@/assets/img/index1-1/scroll.png`)"
+                    alt=""
+                />
+            </button>
         </div>
-        <div class="section3">
+        <div class="section3" ref="section3">
             <div class="flex-box">
                 <img
-                    class="col25"
-                    :src="require(`@/assets/img/index1-0/01.jpg`)"
+                    class="title reveal-top-1600"
+                    :src="require(`@/assets/img/index1-2/title.png`)"
                     alt=""
                 />
-                <img
-                    class="col25"
-                    :src="require(`@/assets/img/index1-0/02.jpg`)"
-                    alt=""
-                />
-                <img
-                    class="col25"
-                    :src="require(`@/assets/img/index1-0/03.jpg`)"
-                    alt=""
-                />
-                <img
-                    class="col25"
-                    :src="require(`@/assets/img/index1-0/04.jpg`)"
-                    alt=""
-                />
+                <div class="col25 reveal-bottom-0 pic-box">
+                    <img
+                        class="pic"
+                        :src="require(`@/assets/img/index1-2/01.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="btn"
+                        :src="require(`@/assets/img/index1-2/ng1.png`)"
+                        alt=""
+                        @click="lightBoxOpen(true)"
+                    />
+                </div>
+                <div class="col25 reveal-bottom-400 pic-box">
+                    <img
+                        class="pic"
+                        :src="require(`@/assets/img/index1-2/02.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="btn"
+                        :src="require(`@/assets/img/index1-2/ng2.png`)"
+                        alt=""
+                        @click="lightBoxOpen(true)"
+                    />
+                </div>
+                <div class="col25 reveal-bottom-800 pic-box">
+                    <img
+                        class="pic"
+                        :src="require(`@/assets/img/index1-2/03.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="btn"
+                        :src="require(`@/assets/img/index1-2/ng3.png`)"
+                        alt=""
+                        @click="lightBoxOpen(true)"
+                    />
+                </div>
+                <div class="col25 reveal-bottom-1200 pic-box">
+                    <img
+                        class="pic"
+                        :src="require(`@/assets/img/index1-2/04.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="btn"
+                        :src="require(`@/assets/img/index1-2/ng4.png`)"
+                        alt=""
+                        @click="lightBoxOpen(true)"
+                    />
+                </div>
+            </div>
+            <div class="black-field" v-if="lightBoxShow">
+                <button class="close-btn" @click="lightBoxOpen(false)">
+                    <img
+                        :src="
+                            require(`@/assets/img/index1-2/light-box/close.png`)
+                        "
+                        alt=""
+                    />
+                </button>
+                <div class="lightbox">
+                    <div
+                        class="frame"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-2/light-box/circle_bg2.png`) +
+                                ')',
+                        }"
+                    >
+                        <swiper class="swiper" :options="swiperOption3">
+                            <swiper-slide>
+                                <img
+                                    :src="
+                                        require(`@/assets/img/index1-2/light-box/1-2-1.png`)
+                                    "
+                                    alt=""
+                                />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img
+                                    :src="
+                                        require(`@/assets/img/index1-2/light-box/1-2-2.png`)
+                                    "
+                                    alt=""
+                                />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img
+                                    :src="
+                                        require(`@/assets/img/index1-2/light-box/1-2-3.png`)
+                                    "
+                                    alt=""
+                                />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img
+                                    :src="
+                                        require(`@/assets/img/index1-2/light-box/1-2-4.png`)
+                                    "
+                                    alt=""
+                                />
+                            </swiper-slide>
+                            <swiper-slide>
+                                <img
+                                    :src="
+                                        require(`@/assets/img/index1-2/light-box/1-2-5.png`)
+                                    "
+                                    alt=""
+                                />
+                            </swiper-slide>
+                            <div
+                                class="swiper-button-prev"
+                                slot="button-prev"
+                            ></div>
+                            <div
+                                class="swiper-button-next"
+                                slot="button-next"
+                            ></div>
+                        </swiper>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="section4">
@@ -92,7 +210,55 @@
                     'background-image':
                         'url(' + require(`@/assets/img/index1-3/bg.png`) + ')',
                 }"
-            ></div>
+            >
+                <img
+                    class="title reveal-right-300"
+                    :src="require(`@/assets/img/index1-3/title.png`)"
+                    alt=""
+                />
+                <img
+                    class="powder reveal-right-300"
+                    :src="require(`@/assets/img/index1-3/powder.png`)"
+                    alt=""
+                />
+                <img
+                    class="paper reveal-bottom-600 reveal-function-section4-600"
+                    :src="require(`@/assets/img/index1-3/paper.png`)"
+                    alt=""
+                />
+                <div ref="section4-ani" class="bubble-box">
+                    <img
+                        class="bubble1"
+                        :src="require(`@/assets/img/index1-3/bubble1.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="bubble2"
+                        :src="require(`@/assets/img/index1-3/bubble2.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="bubble3"
+                        :src="require(`@/assets/img/index1-3/bubble3.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="bubble4"
+                        :src="require(`@/assets/img/index1-3/bubble4.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="bubble5"
+                        :src="require(`@/assets/img/index1-3/bubble5.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="bubble6"
+                        :src="require(`@/assets/img/index1-3/bubble6.png`)"
+                        alt=""
+                    />
+                </div>
+            </div>
         </div>
         <div class="section5">
             <div
@@ -101,12 +267,28 @@
                     'background-image':
                         'url(' + require(`@/assets/img/index1-4/bg.png`) + ')',
                 }"
-            ></div>
+            >
+                <img
+                    class="title1 reveal-left-300"
+                    :src="require(`@/assets/img/index1-4/title1.png`)"
+                    alt=""
+                />
+                <img
+                    class="title2 reveal-top-600"
+                    :src="require(`@/assets/img/index1-4/title2.png`)"
+                    alt=""
+                />
+                <img
+                    class="powder reveal-top-900"
+                    :src="require(`@/assets/img/index1-4/powder.png`)"
+                    alt=""
+                />
+            </div>
         </div>
         <div class="section6">
             <div class="question-box">
                 <div
-                    class="question"
+                    class="question reveal-left-300"
                     :style="{
                         'background-image':
                             'url(' +
@@ -115,7 +297,7 @@
                     }"
                 ></div>
                 <div
-                    class="answer"
+                    class="answer reveal-right-600"
                     :style="{
                         'background-image':
                             'url(' +
@@ -128,7 +310,7 @@
         <div class="section7">
             <div class="question-box">
                 <div
-                    class="question"
+                    class="question reveal-left-300"
                     :style="{
                         'background-image':
                             'url(' +
@@ -137,7 +319,7 @@
                     }"
                 ></div>
                 <div
-                    class="answer"
+                    class="answer reveal-right-600"
                     :style="{
                         'background-image':
                             'url(' +
@@ -150,7 +332,7 @@
         <div class="section8">
             <div class="question-box">
                 <div
-                    class="question"
+                    class="question reveal-left-300"
                     :style="{
                         'background-image':
                             'url(' +
@@ -159,7 +341,7 @@
                     }"
                 ></div>
                 <div
-                    class="answer"
+                    class="answer reveal-right-600"
                     :style="{
                         'background-image':
                             'url(' +
@@ -172,7 +354,7 @@
         <div class="section9">
             <div class="question-box">
                 <div
-                    class="question"
+                    class="question reveal-left-300"
                     :style="{
                         'background-image':
                             'url(' +
@@ -181,7 +363,7 @@
                     }"
                 ></div>
                 <div
-                    class="answer"
+                    class="answer reveal-right-300"
                     :style="{
                         'background-image':
                             'url(' +
@@ -198,23 +380,177 @@
                     'background-image':
                         'url(' + require(`@/assets/img/index1-9/bg.png`) + ')',
                 }"
-            ></div>
+            >
+                <img
+                    class="title reveal-left-300"
+                    :src="require(`@/assets/img/index1-9/title.png`)"
+                    alt=""
+                />
+                <div class="swiper-box">
+                    <swiper class="swiper" :options="swiperOption10">
+                        <swiper-slide>
+                            <a
+                                href="http://media.w3.org/2010/05/sintel/trailer.mp4"
+                                data-fancybox
+                            >
+                                <div
+                                    class="pic"
+                                    :style="{
+                                        'background-image':
+                                            'url(' +
+                                            require(`@/assets/img/index1-9/video_1.png`) +
+                                            ')',
+                                    }"
+                                >
+                                    <img
+                                        class="play-btn"
+                                        :src="
+                                            require(`@/assets/img/index1-9/playBtn.png`)
+                                        "
+                                    />
+                                </div>
+                                <img
+                                    class="text"
+                                    :src="
+                                        require(`@/assets/img/index1-9/txt_1.png`)
+                                    "
+                                    alt=""
+                                />
+                            </a>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <a
+                                href="http://media.w3.org/2010/05/sintel/trailer.mp4"
+                                data-fancybox
+                            >
+                                <div
+                                    class="pic"
+                                    :style="{
+                                        'background-image':
+                                            'url(' +
+                                            require(`@/assets/img/index1-9/video_2.png`) +
+                                            ')',
+                                    }"
+                                >
+                                    <img
+                                        class="play-btn"
+                                        :src="
+                                            require(`@/assets/img/index1-9/playBtn.png`)
+                                        "
+                                    />
+                                </div>
+                                <img
+                                    class="text"
+                                    :src="
+                                        require(`@/assets/img/index1-9/txt_2.png`)
+                                    "
+                                    alt=""
+                                />
+                            </a>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <a
+                                href="http://media.w3.org/2010/05/sintel/trailer.mp4"
+                                data-fancybox
+                            >
+                                <div
+                                    class="pic"
+                                    :style="{
+                                        'background-image':
+                                            'url(' +
+                                            require(`@/assets/img/index1-9/video_3.png`) +
+                                            ')',
+                                    }"
+                                >
+                                    <img
+                                        class="play-btn"
+                                        :src="
+                                            require(`@/assets/img/index1-9/playBtn.png`)
+                                        "
+                                    />
+                                </div>
+                                <img
+                                    class="text"
+                                    :src="
+                                        require(`@/assets/img/index1-9/txt_3.png`)
+                                    "
+                                    alt=""
+                                />
+                            </a>
+                        </swiper-slide>
+                        <div
+                            class="swiper-button-prev"
+                            slot="button-prev"
+                        ></div>
+                        <div
+                            class="swiper-button-next"
+                            slot="button-next"
+                        ></div>
+                    </swiper>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 <script>
+import scrollReveal from "scrollreveal";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+
+const loadingSecond = 100;
+
 export default {
     name: "HomeComponent",
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
     props: {
         msg: String,
     },
     data() {
-        return {};
+        return {
+            scrollReveal: scrollReveal(),
+            swiperOption3: {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            },
+            swiperOption10: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            },
+            lightBoxShow: false,
+        };
     },
-    mounted() {},
+    mounted() {
+        setTimeout(() => {
+            this.setScrollRevealCustomFunction(
+                600,
+                "section4",
+                this.$refs["section4-ani"]
+            );
+        }, loadingSecond);
+    },
     methods: {
         scrollToSection(sessionName) {
             this.$refs[sessionName].scrollIntoView({ behavior: "smooth" });
+        },
+        setScrollRevealCustomFunction(time, name, el) {
+            this.scrollReveal.reveal(`.reveal-function-${name}-${time}`, {
+                delay: time,
+                afterReveal: () => {
+                    el.classList.add("animating");
+                },
+                viewFactor: 1,
+            });
+        },
+        lightBoxOpen(isOpen) {
+            this.lightBoxShow = isOpen;
         },
     },
     filters: {},

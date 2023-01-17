@@ -7,6 +7,20 @@
         <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
         <title><%= htmlWebpackPlugin.options.title %></title>
     </head>
+    <script>
+        (function (d) {
+            var js,
+                id = "facebook-jssdk";
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement("script");
+            js.id = id;
+            js.async = true;
+            js.src = "https://connect.facebook.net/es_LA/all.js";
+            d.getElementsByTagName("head")[0].appendChild(js);
+        })(document);
+    </script>
     <body>
         <noscript>
             <strong
