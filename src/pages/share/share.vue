@@ -2,109 +2,6 @@
     <div class="container">
         <div class="page02">
             <div class="top-bg">
-                <<<<<<< HEAD
-                <img
-                    class="top-img"
-                    :src="require(`@/assets/img/index2-1/index_2-1_bg.png`)"
-                    alt=""
-                />
-                <img
-                    class="logo"
-                    :src="require(`@/assets/img/index2-1/FIJI logo.png`)"
-                    alt=""
-                />
-                <img
-                    class="step1"
-                    :src="require(`@/assets/img/index2-1/step 1.png`)"
-                    alt=""
-                />
-                <img
-                    class="step2"
-                    :src="require(`@/assets/img/index2-1/step 2.png`)"
-                    alt=""
-                />
-                <a href="#"
-                    ><img
-                        class="share-btn"
-                        :src="require(`@/assets/img/index2-1/btn.png`)"
-                        alt=""
-                /></a>
-                <!-- Bubble -->
-                <img
-                    class="bubble-1"
-                    :src="require(`@/assets/img/index2-1/93.png`)"
-                    alt=""
-                />
-                <img
-                    class="bubble-2"
-                    :src="require(`@/assets/img/index2-1/95.png`)"
-                    alt=""
-                />
-                <img
-                    class="bubble-3"
-                    :src="require(`@/assets/img/index2-1/96.png`)"
-                    alt=""
-                />
-            </div>
-            <!-- Content Sliders -->
-            <div class="bottom-bg">
-                <!-- Share content -->
-                <img
-                    class="bottom-img"
-                    :src="require(`@/assets/img/index2-1/index_2-2_bg.png`)"
-                    alt=""
-                />
-                <img
-                    class="share1"
-                    :src="require(`@/assets/img/index2-1/txt_1-1.png`)"
-                    alt=""
-                />
-                <img
-                    class="share2"
-                    :src="require(`@/assets/img/index2-1/txt_2-2.png`)"
-                    alt=""
-                />
-                <img
-                    class="share3"
-                    :src="require(`@/assets/img/index2-1/txt_3-3.png`)"
-                    alt=""
-                />
-                <img
-                    class="share4"
-                    :src="require(`@/assets/img/index2-1/txt_4-4.png`)"
-                    alt=""
-                />
-                <!-- Add Facebook Share Button -->
-                <button class="fb-btn1" @click="onShareClick()">
-                    <img
-                        :src="require(`@/assets/img/index2-1/fbBtn.png`)"
-                        alt=""
-                    />
-                </button>
-                <button class="fb-btn2">
-                    <img
-                        :src="require(`@/assets/img/index2-1/fbBtnM.png`)"
-                        alt=""
-                    />
-                </button>
-                <button class="fb-btn3">
-                    <img
-                        :src="require(`@/assets/img/index2-1/fbBtnM.png`)"
-                        alt=""
-                    />
-                </button>
-                <button class="fb-btn4">
-                    <img
-                        :src="require(`@/assets/img/index2-1/fbBtn.png`)"
-                        alt=""
-                    />
-                </button>
-                <img
-                    class="talk1"
-                    :src="require(`@/assets/img/index2-1/talk.png`)"
-                    alt=""
-                />
-                =======
                 <img
                     class="top-img pc"
                     :src="require(`@/assets/img/index2-1/index_2-1.png`)"
@@ -174,7 +71,6 @@
                         :src="require(`@/assets/img/index2-1/fbBtn.png`)"
                         alt=""
                 /></a>
-                >>>>>>> 87d195a4fb7df8dd95423c04f8e9c62c5226e595
                 <a class="share-more" href=""
                     ><img
                         :src="
@@ -182,7 +78,6 @@
                         "
                         alt=""
                 /></a>
-                <<<<<<< HEAD
                 <img
                     class="image1"
                     :src="require(`@/assets/img/index2-1/images1.png`)"
@@ -198,28 +93,6 @@
                     :src="require(`@/assets/img/index2-1/images3.png`)"
                     alt=""
                 />
-                <img
-                    class="talk2"
-                    :src="require(`@/assets/img/index2-1/talk2.png`)"
-                    alt=""
-                />
-                =======
-                <img
-                    class="image1"
-                    :src="require(`@/assets/img/index2-1/images1.png`)"
-                    alt=""
-                />
-                <img
-                    class="image2"
-                    :src="require(`@/assets/img/index2-1/images2.png`)"
-                    alt=""
-                />
-                <img
-                    class="image3"
-                    :src="require(`@/assets/img/index2-1/images3.png`)"
-                    alt=""
-                />
-                >>>>>>> 87d195a4fb7df8dd95423c04f8e9c62c5226e595
                 <a href=""
                     ><img
                         class="like-btn"
