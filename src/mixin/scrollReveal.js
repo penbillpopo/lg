@@ -28,7 +28,7 @@ export const scrollRevealMixin = {
                     distance: distance,
                     opacity: opacity,
                     easing: easing,
-                    viewFactor: 0.3,
+                    // viewFactor: 1,
                 });
             }
         },
@@ -39,7 +39,7 @@ export const scrollRevealMixin = {
                     afterReveal: (el) => {
                         el.classList.add("animating");
                     },
-                    viewFactor: 1,
+                    // viewFactor: 1,
                 });
             }
         },

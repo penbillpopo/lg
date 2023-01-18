@@ -5,28 +5,32 @@
     }
     .share-btn {
         position: absolute;
-        top: 17.5%;
+        top: 17.8%;
         right: 21%;
         width: 20%;
-        padding: 1%;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.05);
+        }
     }
     .bubble-1 {
         position: absolute;
-        bottom: 67%;
-        left: 66%;
-        width: 14%;
+        bottom: 59.5%;
+        left: 61%;
+        width: 20%;
     }
     .bubble-2 {
         position: absolute;
-        bottom: 64%;
-        left: 56%;
-        width: 11%;
+        bottom: 56.8%;
+        left: 45%;
+        width: 18%;
     }
     .bubble-3 {
         position: absolute;
-        bottom: 58%;
-        left: 64%;
-        width: 16%;
+        bottom: 51.4%;
+        left: 56.2%;
+        width: 31%;
     }
 
     .share1 {
@@ -53,38 +57,45 @@
         left: 77%;
         width: 20%;
     }
-
-    .fb-btn1 {
-        img {
-            position: absolute;
+    .fb {
+        position: absolute;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+        &.btn1 {
             top: 50.7%;
             right: 11%;
             width: 8.5%;
+            img {
+                width: 100%;
+            }
         }
-    }
 
-    .fb-btn2 {
-        img {
-            position: absolute;
+        &.btn2 {
             top: 50%;
             right: 30%;
             width: 16%;
+            img {
+                width: 100%;
+            }
         }
-    }
-    .fb-btn3 {
-        img {
-            position: absolute;
+        &.btn3 {
             top: 49.5%;
             left: 28%;
             width: 16%;
+            img {
+                width: 100%;
+            }
         }
-    }
-    .fb-btn4 {
-        img {
-            position: absolute;
+        &.btn4 {
             top: 50%;
             left: 7%;
             width: 8.5%;
+            img {
+                width: 100%;
+            }
         }
     }
     .share-more {
@@ -134,6 +145,180 @@
 }
 .mobile {
     display: none;
+}
+.black-field {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(24, 70, 149, 0.7);
+    z-index: 11;
+    .close-btn {
+        position: fixed;
+        right: 30px;
+        top: 30px;
+        width: 50px;
+        height: 30px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .lightbox {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 540px;
+        .frame {
+            width: 100%;
+            height: 100%;
+            @extend %background_100;
+            position: relative;
+            .swiper {
+                width: 100%;
+                height: 100%;
+                .swiper-slide {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 60%;
+                    }
+                }
+                .swiper-button-prev {
+                    left: 30px;
+                }
+                .swiper-button-next {
+                    right: 30px;
+                }
+            }
+            .content-box {
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 62%;
+                height: 60%;
+                .title {
+                    text-align: center;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                    color: rgb(24, 47, 149);
+                    font-weight: 400;
+                }
+                .content,
+                .text {
+                    height: 245px;
+                    strong {
+                        color: rgb(230, 61, 112);
+                    }
+                    p {
+                        font-weight: 300;
+                    }
+                    strong,
+                    p {
+                        line-height: 1.8;
+                        font-size: 15px;
+                    }
+                    span {
+                        color: rgb(230, 61, 112);
+                    }
+                    a {
+                        color: rgb(0, 154, 205);
+                        text-decoration: underline;
+                    }
+                }
+                .content {
+                    overflow-y: scroll;
+                }
+                button {
+                    height: 40px;
+                    padding-left: 40px;
+                    padding-right: 30px;
+                    text-align: center;
+                    letter-spacing: 8px;
+                    font-size: 16px;
+                    color: #fff;
+                    background-color: rgb(27, 68, 151);
+                    margin: 0 auto;
+                    display: block;
+                    margin-top: 40px;
+                    border-radius: 20px;
+                    transition: transform 0.3s ease;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+                .step1 {
+                    .title {
+                        font-size: 22px;
+                        margin-bottom: 20px;
+                    }
+                    .text {
+                        height: 170px;
+                    }
+                }
+                .step2 {
+                    .content {
+                        height: 200px;
+                    }
+                    .agree {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 20px;
+                        input {
+                            margin-right: 10px;
+                        }
+                    }
+                    button {
+                        margin-top: 20px;
+                        &.disabled {
+                            background-color: rgb(125, 125, 125);
+                            pointer-events: none;
+                            cursor: default;
+                        }
+                    }
+                }
+                .step3 {
+                    .input-box {
+                        margin-top: 30px;
+                        .input {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 20px;
+                            p {
+                                width: 80px;
+                                font-weight: 400;
+                                text-align: right;
+                                padding-right: 15px;
+                            }
+                            input {
+                                width: 220px;
+                                height: 40px;
+                                border-radius: 20px;
+                                border: 0;
+                                background-color: rgb(225, 224, 225);
+                            }
+                        }
+                    }
+                }
+                .step4 {
+                    .title {
+                        font-size: 38px;
+                        margin-top: 30px;
+                    }
+                    img {
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -201,34 +386,42 @@
         .share4 {
             display: none;
         }
-
-        .fb-btn1 {
-            img {
+        .bubble-1 {
+            bottom: 60%;
+            left: 64%;
+            width: 21%;
+        }
+        .bubble-2 {
+            bottom: 51.5%;
+            left: 58%;
+            width: 29%;
+        }
+        .bubble-3 {
+            bottom: 57.5%;
+            left: 47%;
+            width: 18%;
+        }
+        .fb {
+            &.btn1 {
                 display: none;
             }
-        }
-
-        .fb-btn2 {
-            img {
+            &.btn2 {
                 position: absolute;
                 top: 58%;
                 right: 10%;
                 width: 30%;
             }
-        }
-        .fb-btn3 {
-            img {
+            &.btn3 {
                 position: absolute;
                 top: 57.4%;
                 left: 11%;
                 width: 30%;
             }
-        }
-        .fb-btn4 {
-            img {
+            &.btn4 {
                 display: none;
             }
         }
+
         .image1 {
             position: absolute;
             top: 70%;

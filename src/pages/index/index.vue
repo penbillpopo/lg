@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="section1">
-            <div class="flex-box">
+            <div class="flex-box pc-flex">
                 <img
                     class="col25 ani"
                     :src="require(`@/assets/img/index1-0/01.jpg`)"
@@ -23,6 +23,28 @@
                     alt=""
                 />
             </div>
+            <div class="flex-box mobile-flex">
+                <img
+                    class="col25 ani"
+                    :src="require(`@/assets/img/index1-0/mobile/01.jpg`)"
+                    alt=""
+                />
+                <img
+                    class="col25 ani delay-1"
+                    :src="require(`@/assets/img/index1-0/mobile/02.jpg`)"
+                    alt=""
+                />
+                <img
+                    class="col25 ani delay-2"
+                    :src="require(`@/assets/img/index1-0/mobile/03.jpg`)"
+                    alt=""
+                />
+                <img
+                    class="col25 ani delay-3"
+                    :src="require(`@/assets/img/index1-0/mobile/04.jpg`)"
+                    alt=""
+                />
+            </div>
             <button class="scroll-btn" @click="scrollToSection('section2')">
                 <img
                     :src="require(`@/assets/img/index1-0/scroll.png`)"
@@ -31,13 +53,7 @@
             </button>
         </div>
         <div class="section2" ref="section2">
-            <div
-                class="bg"
-                :style="{
-                    'background-image':
-                        'url(' + require(`@/assets/img/index1-1/bg.jpg`) + ')',
-                }"
-            >
+            <div class="bg">
                 <div class="logo">
                     <img
                         class="flash reveal-function-900"
@@ -55,8 +71,13 @@
                     alt=""
                 />
                 <img
-                    class="powder reveal-left-600"
+                    class="powder reveal-left-600 pc-inline-block"
                     :src="require(`@/assets/img/index1-1/powder.png`)"
+                    alt=""
+                />
+                <img
+                    class="powder reveal-left-600 mobile-inline-block"
+                    :src="require(`@/assets/img/index1-1/mobile/powder.png`)"
                     alt=""
                 />
             </div>
@@ -79,8 +100,13 @@
                 />
                 <div class="col25 reveal-bottom-0 pic-box">
                     <img
-                        class="pic"
+                        class="pic pc-inline-block"
                         :src="require(`@/assets/img/index1-2/01.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="pic mobile-inline-block"
+                        :src="require(`@/assets/img/index1-2/mobile/01.png`)"
                         alt=""
                     />
                     <img
@@ -92,8 +118,13 @@
                 </div>
                 <div class="col25 reveal-bottom-400 pic-box">
                     <img
-                        class="pic"
+                        class="pic pc-inline-block"
                         :src="require(`@/assets/img/index1-2/02.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="pic mobile-inline-block"
+                        :src="require(`@/assets/img/index1-2/mobile/02.png`)"
                         alt=""
                     />
                     <img
@@ -105,8 +136,13 @@
                 </div>
                 <div class="col25 reveal-bottom-800 pic-box">
                     <img
-                        class="pic"
+                        class="pic pc-inline-block"
                         :src="require(`@/assets/img/index1-2/03.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="pic mobile-inline-block"
+                        :src="require(`@/assets/img/index1-2/mobile/03.png`)"
                         alt=""
                     />
                     <img
@@ -118,8 +154,13 @@
                 </div>
                 <div class="col25 reveal-bottom-1200 pic-box">
                     <img
-                        class="pic"
+                        class="pic pc-inline-block"
                         :src="require(`@/assets/img/index1-2/04.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="pic mobile-inline-block"
+                        :src="require(`@/assets/img/index1-2/mobile/04.png`)"
                         alt=""
                     />
                     <img
@@ -204,13 +245,7 @@
             </div>
         </div>
         <div class="section4">
-            <div
-                class="bg"
-                :style="{
-                    'background-image':
-                        'url(' + require(`@/assets/img/index1-3/bg.png`) + ')',
-                }"
-            >
+            <div class="bg">
                 <img
                     class="title reveal-right-300"
                     :src="require(`@/assets/img/index1-3/title.png`)"
@@ -261,13 +296,7 @@
             </div>
         </div>
         <div class="section5">
-            <div
-                class="bg"
-                :style="{
-                    'background-image':
-                        'url(' + require(`@/assets/img/index1-4/bg.png`) + ')',
-                }"
-            >
+            <div class="bg">
                 <img
                     class="title1 reveal-left-300"
                     :src="require(`@/assets/img/index1-4/title1.png`)"
@@ -286,7 +315,7 @@
             </div>
         </div>
         <div class="section6">
-            <div class="question-box">
+            <div class="question-box pc-flex">
                 <div
                     class="question reveal-left-300"
                     :style="{
@@ -306,9 +335,29 @@
                     }"
                 ></div>
             </div>
+            <div class="question-box mobile-flex">
+                <div
+                    class="question reveal-left-300"
+                    :style="{
+                        'background-image':
+                            'url(' +
+                            require(`@/assets/img/index1-5/1-5-L-mobile.jpg`) +
+                            ')',
+                    }"
+                ></div>
+                <div
+                    class="answer reveal-right-600"
+                    :style="{
+                        'background-image':
+                            'url(' +
+                            require(`@/assets/img/index1-5/1-5-R-mobile.jpg`) +
+                            ')',
+                    }"
+                ></div>
+            </div>
         </div>
         <div class="section7">
-            <div class="question-box">
+            <div class="question-box pc-flex">
                 <div
                     class="question reveal-left-300"
                     :style="{
@@ -328,9 +377,29 @@
                     }"
                 ></div>
             </div>
+            <div class="question-box mobile-flex">
+                <div
+                    class="question reveal-left-300"
+                    :style="{
+                        'background-image':
+                            'url(' +
+                            require(`@/assets/img/index1-6/1-6-L-mobile.jpg`) +
+                            ')',
+                    }"
+                ></div>
+                <div
+                    class="answer reveal-right-600"
+                    :style="{
+                        'background-image':
+                            'url(' +
+                            require(`@/assets/img/index1-6/1-6-R-mobile.jpg`) +
+                            ')',
+                    }"
+                ></div>
+            </div>
         </div>
         <div class="section8">
-            <div class="question-box">
+            <div class="question-box pc-flex">
                 <div
                     class="question reveal-left-300"
                     :style="{
@@ -350,9 +419,29 @@
                     }"
                 ></div>
             </div>
+            <div class="question-box mobile-flex">
+                <div
+                    class="question reveal-left-300"
+                    :style="{
+                        'background-image':
+                            'url(' +
+                            require(`@/assets/img/index1-7/1-7-L-mobile.jpg`) +
+                            ')',
+                    }"
+                ></div>
+                <div
+                    class="answer reveal-right-600"
+                    :style="{
+                        'background-image':
+                            'url(' +
+                            require(`@/assets/img/index1-7/1-7-R-mobile.jpg`) +
+                            ')',
+                    }"
+                ></div>
+            </div>
         </div>
         <div class="section9">
-            <div class="question-box">
+            <div class="question-box pc-flex">
                 <div
                     class="question reveal-left-300"
                     :style="{
@@ -372,21 +461,35 @@
                     }"
                 ></div>
             </div>
+            <div class="question-box mobile-flex">
+                <div
+                    class="question reveal-left-300"
+                    :style="{
+                        'background-image':
+                            'url(' +
+                            require(`@/assets/img/index1-8/1-8-L-mobile.jpg`) +
+                            ')',
+                    }"
+                ></div>
+                <div
+                    class="answer reveal-right-300"
+                    :style="{
+                        'background-image':
+                            'url(' +
+                            require(`@/assets/img/index1-8/1-8-R-mobile.jpg`) +
+                            ')',
+                    }"
+                ></div>
+            </div>
         </div>
         <div class="section10">
-            <div
-                class="bg"
-                :style="{
-                    'background-image':
-                        'url(' + require(`@/assets/img/index1-9/bg.png`) + ')',
-                }"
-            >
+            <div class="bg">
                 <img
                     class="title reveal-left-300"
                     :src="require(`@/assets/img/index1-9/title.png`)"
                     alt=""
                 />
-                <div class="swiper-box">
+                <div class="swiper-box pc">
                     <swiper class="swiper" :options="swiperOption10">
                         <swiper-slide>
                             <a
@@ -487,6 +590,98 @@
                             slot="button-next"
                         ></div>
                     </swiper>
+                </div>
+                <div class="mobile">
+                    <div class="frame top">
+                        <a
+                            href="http://media.w3.org/2010/05/sintel/trailer.mp4"
+                            data-fancybox
+                        >
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image':
+                                        'url(' +
+                                        require(`@/assets/img/index1-9/video_1.png`) +
+                                        ')',
+                                }"
+                            >
+                                <img
+                                    class="play-btn"
+                                    :src="
+                                        require(`@/assets/img/index1-9/playBtn.png`)
+                                    "
+                                />
+                            </div>
+                            <img
+                                class="text"
+                                :src="
+                                    require(`@/assets/img/index1-9/txt_1.png`)
+                                "
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="frame center">
+                        <a
+                            href="http://media.w3.org/2010/05/sintel/trailer.mp4"
+                            data-fancybox
+                        >
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image':
+                                        'url(' +
+                                        require(`@/assets/img/index1-9/video_2.png`) +
+                                        ')',
+                                }"
+                            >
+                                <img
+                                    class="play-btn"
+                                    :src="
+                                        require(`@/assets/img/index1-9/playBtn.png`)
+                                    "
+                                />
+                            </div>
+                            <img
+                                class="text"
+                                :src="
+                                    require(`@/assets/img/index1-9/txt_2.png`)
+                                "
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <div class="frame bottom">
+                        <a
+                            href="http://media.w3.org/2010/05/sintel/trailer.mp4"
+                            data-fancybox
+                        >
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image':
+                                        'url(' +
+                                        require(`@/assets/img/index1-9/video_3.png`) +
+                                        ')',
+                                }"
+                            >
+                                <img
+                                    class="play-btn"
+                                    :src="
+                                        require(`@/assets/img/index1-9/playBtn.png`)
+                                    "
+                                />
+                            </div>
+                            <img
+                                class="text"
+                                :src="
+                                    require(`@/assets/img/index1-9/txt_3.png`)
+                                "
+                                alt=""
+                            />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
