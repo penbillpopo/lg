@@ -38,11 +38,11 @@
     }
     // 1st floating bubble
     .bubble-1 {
-        animation: baloon_1 5s infinite;
-        animation: baloon_1 5s infinite;
-        animation: baloon_1 5s infinite;
-        animation: baloon_1 5s infinite;
-        animation: baloon_1 5s infinite;
+        animation: baloon_1 6s infinite;
+        animation: baloon_1 6s infinite;
+        animation: baloon_1 6s infinite;
+        animation: baloon_1 6s infinite;
+        animation: baloon_1 6s infinite;
         animation-direction: alternate;
         animation-direction: alternate;
         animation-direction: alternate;
@@ -112,11 +112,11 @@
 
     // 2ed floating bubble
     .bubble-2 {
-        animation: baloon_1 5.1s infinite;
-        animation: baloon_1 5.1s infinite;
-        animation: baloon_1 5.1s infinite;
-        animation: baloon_1 5.1s infinite;
-        animation: baloon_1 5.1s infinite;
+        animation: baloon_1 6.2s infinite;
+        animation: baloon_1 6.2s infinite;
+        animation: baloon_1 6.2s infinite;
+        animation: baloon_1 6.2s infinite;
+        animation: baloon_1 6.2s infinite;
         animation-direction: alternate;
         animation-direction: alternate;
         animation-direction: alternate;
@@ -186,11 +186,11 @@
 
     // 3rd floating bubble
     .bubble-3 {
-        animation: baloon_1 5.2s infinite;
-        animation: baloon_1 5.2s infinite;
-        animation: baloon_1 5.2s infinite;
-        animation: baloon_1 5.2s infinite;
-        animation: baloon_1 5.2s infinite;
+        animation: baloon_1 6.4s infinite;
+        animation: baloon_1 6.4s infinite;
+        animation: baloon_1 6.4s infinite;
+        animation: baloon_1 6.4s infinite;
+        animation: baloon_1 6.4s infinite;
         animation-direction: alternate;
         animation-direction: alternate;
         animation-direction: alternate;
@@ -258,30 +258,35 @@
         }
     }
 
-    .share1 {
+    .content-slider {
         position: absolute;
-        top: 44.5%;
-        left: 3%;
-        width: 20%;
+        bottom: 80%;
+        .share1 {
+            position: absolute;
+            top: 44.5%;
+            left: 3%;
+            width: 20%;
+        }
+        .share2 {
+            position: absolute;
+            top: 42%;
+            left: 23.5%;
+            width: 26%;
+        }
+        .share3 {
+            position: absolute;
+            top: 43%;
+            left: 50.2%;
+            width: 26%;
+        }
+        .share4 {
+            position: absolute;
+            top: 45%;
+            left: 77%;
+            width: 20%;
+        }
     }
-    .share2 {
-        position: absolute;
-        top: 42%;
-        left: 23.5%;
-        width: 26%;
-    }
-    .share3 {
-        position: absolute;
-        top: 43%;
-        left: 50.2%;
-        width: 26%;
-    }
-    .share4 {
-        position: absolute;
-        top: 45%;
-        left: 77%;
-        width: 20%;
-    }
+
     .fb {
         position: absolute;
         cursor: pointer;
@@ -289,35 +294,10 @@
         &:hover {
             transform: scale(1.05);
         }
-        &.btn1 {
-            top: 50.7%;
-            right: 11%;
-            width: 8.5%;
-            img {
-                width: 100%;
-            }
-        }
-
-        &.btn2 {
-            top: 50%;
-            right: 30%;
-            width: 16%;
-            img {
-                width: 100%;
-            }
-        }
-        &.btn3 {
-            top: 49.5%;
-            left: 28%;
-            width: 16%;
-            img {
-                width: 100%;
-            }
-        }
-        &.btn4 {
-            top: 50%;
-            left: 7%;
-            width: 8.5%;
+        &.btn {
+            top: 56%;
+            right: 45%;
+            width: 12%;
             img {
                 width: 100%;
             }
@@ -330,6 +310,7 @@
             left: 40.5%;
             width: 22%;
             transition: all ease-in 0.3s;
+            z-index: 2;
         }
         img:hover {
             transform: scale(1.1);
@@ -358,6 +339,10 @@
         top: 80%;
         right: 33%;
         width: 35%;
+        transition: all 0.3s ease-in;
+    }
+    .like-btn:hover {
+        transform: scale(1.1);
     }
     .image4 {
         position: absolute;
@@ -370,6 +355,105 @@
         top: 84%;
         right: 17%;
         width: 32%;
+    }
+}
+
+// test swiper css
+
+.swiper-box {
+    position: absolute;
+    top: 36%;
+    left: 0%;
+    width: 100%;
+    .swiper {
+        .pic {
+            @extend %background_100;
+            padding-bottom: 55%;
+            // margin-bottom: 10px;
+            position: relative;
+            background-size: 25%;
+            .play-btn {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            &:hover {
+                .play-btn {
+                    opacity: 1;
+                }
+            }
+        }
+        .text {
+            height: 30px;
+        }
+    }
+    .frame {
+        position: absolute;
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        &.top {
+            top: 7%;
+        }
+        &.center {
+            top: 55%;
+        }
+        &.bottom {
+            top: 60%;
+        }
+    }
+}
+.swiper-box2 {
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    width: 100%;
+    .swiper {
+        .pic {
+            @extend %background_100;
+            padding-bottom: 55%;
+            // margin-bottom: 10px;
+            position: relative;
+            background-size: 25%;
+            .play-btn {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            &:hover {
+                .play-btn {
+                    opacity: 1;
+                }
+            }
+        }
+        .text {
+            height: 30px;
+        }
+    }
+    .frame {
+        position: absolute;
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        &.top {
+            top: 7%;
+        }
+        &.center {
+            top: 55%;
+        }
+        &.bottom {
+            top: 60%;
+        }
     }
 }
 .mobile {
@@ -573,6 +657,7 @@
             right: 17%;
             width: 65%;
         }
+
         .share-more {
             img {
                 position: absolute;

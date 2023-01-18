@@ -11,54 +11,144 @@
                 <img class="bubble-2" :src="require(`@/assets/img/index2-1/95.png`)" alt="" />
                 <img class="bubble-3" :src="require(`@/assets/img/index2-1/96.png`)" alt="" />
                 <!-- Content sliders -->
-
-                <div class="content-slider">
-                    <swiper class="swiper" :options="swiperOption">
+                <div class="swiper-box pc">
+                    <swiper class="swiper" :options="swiperOption10">
                         <swiper-slide>
                             <div
                                 class="pic"
                                 :style="{
                                     'background-image': 'url(' + require(`@/assets/img/index2-1/txt_1.png`) + ')',
                                 }"></div>
-                            <!-- <img class="share1" :src="require(`@/assets/img/index2-1/txt_1.png`)" alt="" /> -->
+                            <button class="fb btn" @click="lightBoxApplyOpen(true)">
+                                <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
+                            </button>
                         </swiper-slide>
                         <swiper-slide>
-                            <img class="share2" :src="require(`@/assets/img/index2-1/txt_2.png`)" alt="" />
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/txt_3.png`) + ')',
+                                }"></div>
+                            <button class="fb btn" @click="lightBoxApplyOpen(true)">
+                                <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
+                            </button>
                         </swiper-slide>
                         <swiper-slide>
-                            <img class="share3" :src="require(`@/assets/img/index2-1/txt_3.png`)" alt="" />
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/txt_3.png`) + ')',
+                                }"></div>
+                            <button class="fb btn" @click="lightBoxApplyOpen(true)">
+                                <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
+                            </button>
                         </swiper-slide>
                         <swiper-slide>
-                            <img class="share4" :src="require(`@/assets/img/index2-1/txt_4.png`)" alt="" />
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/txt_4.png`) + ')',
+                                }"></div>
+                            <button class="fb btn" @click="lightBoxApplyOpen(true)">
+                                <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
+                            </button>
                         </swiper-slide>
-                        <!-- <img class="share4" :src="require(`@/assets/img/index2-1/txt_5.png`)" alt="" />
-                <img class="share4" :src="require(`@/assets/img/index2-1/txt_6.png`)" alt="" />
-                <img class="share4" :src="require(`@/assets/img/index2-1/txt_7.png`)" alt="" />
-                <img class="share4" :src="require(`@/assets/img/index2-1/txt_8.png`)" alt="" />
-                <img class="share4" :src="require(`@/assets/img/index2-1/txt_9.png`)" alt="" />
-                <img class="share4" :src="require(`@/assets/img/index2-1/txt_10.png`)" alt="" /> -->
+                        <swiper-slide>
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/txt_5.png`) + ')',
+                                }"></div>
+                            <button class="fb btn" @click="lightBoxApplyOpen(true)">
+                                <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
+                            </button>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/txt_6.png`) + ')',
+                                }"></div>
+                            <button class="fb btn" @click="lightBoxApplyOpen(true)">
+                                <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
+                            </button>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/txt_7.png`) + ')',
+                                }"></div>
+                            <button class="fb btn" @click="lightBoxApplyOpen(true)">
+                                <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
+                            </button>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/txt_8.png`) + ')',
+                                }"></div>
+                            <button class="fb btn" @click="lightBoxApplyOpen(true)">
+                                <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
+                            </button>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/txt_9.png`) + ')',
+                                }"></div>
+                            <button class="fb btn" @click="lightBoxApplyOpen(true)">
+                                <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
+                            </button>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/txt_10.png`) + ')',
+                                }"></div>
+                            <button class="fb btn" @click="lightBoxApplyOpen(true)">
+                                <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
+                            </button>
+                        </swiper-slide>
+                        <div class="swiper-button-prev" slot="button-prev"></div>
+                        <div class="swiper-button-next" slot="button-next"></div>
                     </swiper>
                 </div>
-                <!-- Add Facebook Share Button -->
-                <button class="fb btn1" @click="lightBoxApplyOpen(true)">
-                    <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
-                </button>
-
-                <button class="fb btn2" @click="lightBoxApplyOpen(true)">
-                    <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                </button>
-                <button class="fb btn3" @click="lightBoxApplyOpen(true)">
-                    <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                </button>
-                <button class="fb btn4" @click="lightBoxApplyOpen(true)">
-                    <img :src="require(`@/assets/img/index2-1/fbBtn.png`)" alt="" />
-                </button>
+                <!-- Share more, link to another page -->
                 <a class="share-more" href="https://mamibuy.com.tw/talk/forum/topic/438210" target="_blank"
                     ><img :src="require(`@/assets/img/index2-1/btn-shareMore.png`)" alt=""
                 /></a>
-                <img class="image1" :src="require(`@/assets/img/index2-1/images1.png`)" alt="" />
-                <img class="image2" :src="require(`@/assets/img/index2-1/images2.png`)" alt="" />
-                <img class="image3" :src="require(`@/assets/img/index2-1/images3.png`)" alt="" />
+                <!-- Share more swiper images -->
+                <div class="sswiper-box2 pc">
+                    <swiper class="swiper" :options="swiperOption3">
+                        <swiper-slide>
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/images1.png`) + ')',
+                                }"></div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/images2.png`) + ')',
+                                }"></div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <div
+                                class="pic"
+                                :style="{
+                                    'background-image': 'url(' + require(`@/assets/img/index2-1/images3.png`) + ')',
+                                }"></div>
+                        </swiper-slide>
+                        <div class="swiper-button-prev" slot="button-prev"></div>
+                        <div class="swiper-button-next" slot="button-next"></div>
+                    </swiper>
+                </div>
                 <a href=""
                     ><img class="like-btn" :src="require(`@/assets/img/index2-1/btn-likeItTonight.png`)" alt=""
                 /></a>
