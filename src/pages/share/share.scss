@@ -3,34 +3,259 @@
     .top-img {
         width: 100%;
     }
+    // Share button
     .share-btn {
-        position: absolute;
-        top: 17.8%;
-        right: 21%;
-        width: 20%;
-        transition: transform 0.3s ease;
-        cursor: pointer;
-        &:hover {
+        img {
+            position: absolute;
+            top: 17.8%;
+            right: 20.5%;
+            width: 20%;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        img:hover {
             transform: scale(1.05);
         }
     }
+    // Floating bubbles
     .bubble-1 {
         position: absolute;
-        bottom: 59.5%;
-        left: 61%;
-        width: 20%;
+        bottom: 70%;
+        left: 66%;
+        width: 12%;
     }
     .bubble-2 {
         position: absolute;
-        bottom: 56.8%;
-        left: 45%;
-        width: 18%;
+        bottom: 66%;
+        left: 57%;
+        width: 11%;
     }
     .bubble-3 {
         position: absolute;
-        bottom: 51.4%;
-        left: 56.2%;
-        width: 31%;
+        bottom: 59%;
+        left: 63%;
+        width: 16%;
+    }
+    // 1st floating bubble
+    .bubble-1 {
+        animation: baloon_1 5s infinite;
+        animation: baloon_1 5s infinite;
+        animation: baloon_1 5s infinite;
+        animation: baloon_1 5s infinite;
+        animation: baloon_1 5s infinite;
+        animation-direction: alternate;
+        animation-direction: alternate;
+        animation-direction: alternate;
+        animation-direction: alternate;
+        animation-direction: alternate;
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    // 2ed floating bubble
+    .bubble-2 {
+        animation: baloon_1 5.1s infinite;
+        animation: baloon_1 5.1s infinite;
+        animation: baloon_1 5.1s infinite;
+        animation: baloon_1 5.1s infinite;
+        animation: baloon_1 5.1s infinite;
+        animation-direction: alternate;
+        animation-direction: alternate;
+        animation-direction: alternate;
+        animation-direction: alternate;
+        animation-direction: alternate;
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    // 3rd floating bubble
+    .bubble-3 {
+        animation: baloon_1 5.2s infinite;
+        animation: baloon_1 5.2s infinite;
+        animation: baloon_1 5.2s infinite;
+        animation: baloon_1 5.2s infinite;
+        animation: baloon_1 5.2s infinite;
+        animation-direction: alternate;
+        animation-direction: alternate;
+        animation-direction: alternate;
+        animation-direction: alternate;
+        animation-direction: alternate;
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes baloon_1 {
+        0% {
+            transform: translateY(20px);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
     }
 
     .share1 {
@@ -104,6 +329,10 @@
             top: 60%;
             left: 40.5%;
             width: 22%;
+            transition: all ease-in 0.3s;
+        }
+        img:hover {
+            transform: scale(1.1);
         }
     }
     .image1 {
@@ -332,41 +561,25 @@
 
     .top-bg {
         .share-btn {
-            top: 24%;
-            right: 10%;
-            width: 40%;
+            img {
+                top: 27%;
+                right: 10%;
+                width: 40%;
+            }
         }
         .like-btn {
             position: absolute;
-            top: 86%;
+            top: 87%;
             right: 17%;
             width: 65%;
         }
         .share-more {
             img {
                 position: absolute;
-                top: 66.5%;
+                top: 68%;
                 left: 28.5%;
                 width: 43%;
             }
-        }
-        .bubble-1 {
-            position: absolute;
-            bottom: 59.5%;
-            left: 66%;
-            width: 14%;
-        }
-        .bubble-2 {
-            position: absolute;
-            bottom: 56.8%;
-            left: 45%;
-            width: 18%;
-        }
-        .bubble-3 {
-            position: absolute;
-            bottom: 51.4%;
-            left: 56.2%;
-            width: 31%;
         }
         .share1 {
             display: none;
@@ -387,20 +600,21 @@
             display: none;
         }
         .bubble-1 {
-            bottom: 60%;
+            bottom: 57%;
             left: 64%;
             width: 21%;
         }
         .bubble-2 {
-            bottom: 51.5%;
-            left: 58%;
-            width: 29%;
-        }
-        .bubble-3 {
-            bottom: 57.5%;
+            bottom: 55%;
             left: 47%;
             width: 18%;
         }
+        .bubble-3 {
+            bottom: 49.5%;
+            left: 58%;
+            width: 29%;
+        }
+
         .fb {
             &.btn1 {
                 display: none;
@@ -424,19 +638,19 @@
 
         .image1 {
             position: absolute;
-            top: 70%;
+            top: 72%;
             left: -35%;
             width: 48%;
         }
         .image2 {
             position: absolute;
-            top: 70%;
+            top: 72%;
             left: 18%;
             width: 60%;
         }
         .image3 {
             position: absolute;
-            top: 70%;
+            top: 72%;
             right: -35%;
             width: 51%;
         }

@@ -1,44 +1,32 @@
 <template>
     <div class="container">
         <div class="background">
-            <img
-                class="background-img pc"
-                :src="require(`@/assets/img/index3/index_3-bg.png`)"
-                alt=""
-            />
+            <img class="background-img pc" :src="require(`@/assets/img/index3/index_3.png`)" alt="" />
+            <div class="costco-market">
+                <!-- <img class="flash" :src="require(`@/assets/img/index3/flash.png`)" alt="" /> -->
+                <img class="costco" :src="require(`@/assets/img/index3/costco.png`)" alt="" />
+            </div>
             <div class="buttons">
                 <a href="#" class="market-btn btn1"
-                    ><img
-                        :src="require(`@/assets/img/index3/LG-button.png`)"
-                        alt=""
+                    ><img :src="require(`@/assets/img/index3/LG-button.png`)" alt=""
                 /></a>
                 <a href="#" class="market-btn btn2"
-                    ><img
-                        :src="require(`@/assets/img/index3/momo-button.png`)"
-                        alt=""
+                    ><img :src="require(`@/assets/img/index3/momo-button.png`)" alt=""
                 /></a>
                 <a href="#" class="market-btn btn3"
-                    ><img
-                        :src="require(`@/assets/img/index3/pchome-button.png`)"
-                        alt=""
+                    ><img :src="require(`@/assets/img/index3/pchome-button.png`)" alt=""
                 /></a>
                 <a href="#" class="market-btn btn4"
-                    ><img
-                        :src="require(`@/assets/img/index3/shopee-button.png`)"
-                        alt=""
+                    ><img :src="require(`@/assets/img/index3/shopee-button.png`)" alt=""
                 /></a>
             </div>
-            <img
-                class="background-img mobile"
-                :src="require(`@/assets/img/index3/index_m_3.png`)"
-                alt=""
-            />
+            <img class="background-img mobile" :src="require(`@/assets/img/index3/index_m_3.png`)" alt="" />
         </div>
     </div>
 </template>
 <script>
 export default {
-    name: "MarketComponent",
+    name: 'MarketComponent',
     props: {},
     data() {
         return {};
