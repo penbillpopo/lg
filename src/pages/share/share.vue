@@ -7,9 +7,8 @@
                     :src="require(`@/assets/img/index2-1/index_2-1.png`)"
                     alt=""
                 />
-                <button @click="lightBoxIntroOpen(true)">
+                <button class="share-btn" @click="lightBoxIntroOpen(true)">
                     <img
-                        class="share-btn"
                         :src="require(`@/assets/img/index2-1/btn.png`)"
                         alt=""
                     />

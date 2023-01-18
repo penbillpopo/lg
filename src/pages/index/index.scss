@@ -624,32 +624,29 @@
             padding-bottom: 155%;
             position: relative;
         }
+        .title {
+            top: 5%;
+            left: 20%;
+            width: 59%;
+        }
         .mobile {
             .frame {
                 position: absolute;
-                width: 70%;
+                width: 57%;
                 left: 50%;
                 transform: translateX(-50%);
+                .text {
+                    height: 25px;
+                    margin-top: 10px;
+                }
                 &.top {
-                    top: 4%;
-                    .text {
-                        height: 25px;
-                        margin-top: 10px;
-                    }
+                    top: 14%;
                 }
                 &.center {
-                    top: 35%;
-                    .text {
-                        height: 25px;
-                        margin-top: 10px;
-                    }
+                    top: 42%;
                 }
                 &.bottom {
-                    top: 67%;
-                    .text {
-                        height: 25px;
-                        margin-top: 10px;
-                    }
+                    top: 71%;
                 }
 
                 a {

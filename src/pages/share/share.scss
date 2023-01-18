@@ -367,34 +367,42 @@
         .share4 {
             display: none;
         }
-
-        .fb-btn1 {
-            img {
+        .bubble-1 {
+            bottom: 60%;
+            left: 64%;
+            width: 21%;
+        }
+        .bubble-2 {
+            bottom: 51.5%;
+            left: 58%;
+            width: 29%;
+        }
+        .bubble-3 {
+            bottom: 57.5%;
+            left: 47%;
+            width: 18%;
+        }
+        .fb {
+            &.btn1 {
                 display: none;
             }
-        }
-
-        .fb-btn2 {
-            img {
+            &.btn2 {
                 position: absolute;
                 top: 58%;
                 right: 10%;
                 width: 30%;
             }
-        }
-        .fb-btn3 {
-            img {
+            &.btn3 {
                 position: absolute;
                 top: 57.4%;
                 left: 11%;
                 width: 30%;
             }
-        }
-        .fb-btn4 {
-            img {
+            &.btn4 {
                 display: none;
             }
         }
+
         .image1 {
             position: absolute;
             top: 70%;
