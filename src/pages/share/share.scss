@@ -288,20 +288,21 @@
                         align-items: center;
                         margin-top: 20px;
                         .slide-down {
-                            width: 10%;
-                            height: 6%;
+                            width: 30px;
+                            height: 20px;
                             position: absolute;
-                            bottom: 13%;
+                            bottom: 43px;
                             right: 0;
                             background-color: rgba(0, 0, 0, 0);
                             color: #d0d0d0;
                             border: 1px solid rgb(101, 101, 101);
                             border-radius: 25%;
                             cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                             img {
-                                position: absolute;
-                                top: 15%;
-                                left: 8%;
+                                width: 80%;
                             }
                         }
                         input {
@@ -678,22 +679,19 @@
                     .step2 {
                         .agree {
                             .slide-down {
-                                width: 10%;
-                                height: 6%;
+                                width: 25px;
+                                height: 20px;
                                 position: absolute;
-                                bottom: 11%;
+                                bottom: 25px;
                                 right: 0;
                                 background-color: rgba(0, 0, 0, 0);
                                 color: #d0d0d0;
                                 border: 1px solid rgb(101, 101, 101);
                                 border-radius: 25%;
                                 cursor: pointer;
-                                img {
-                                    position: absolute;
-                                    top: 15%;
-                                    left: 5%;
-                                    width: 90%;
-                                }
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
                             }
                         }
                     }
