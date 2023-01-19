@@ -393,16 +393,16 @@ export default {
             this.apply.step = 3;
         },
         onStep3Click() {
-            // FB.ui(
-            //     {
-            //         display: "popup",
-            //         method: "share",
-            //         href: "https://developers.facebook.com/docs/",
-            //     },
-            //     function (response) {
-            //         console.log(response);
-            //     }
-            // );
+            FB.ui(
+                {
+                    display: "popup",
+                    method: "share",
+                    href: "https://developers.facebook.com/docs/",
+                },
+                function (response) {
+                    console.log(response);
+                }
+            );
             this.apply.step = 4;
         },
         lightBoxIntroOpen(isOpen) {
