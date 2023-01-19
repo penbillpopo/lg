@@ -395,6 +395,16 @@
                                     <label for="agree"
                                         >已詳閱並同意抽獎活動辦法</label
                                     >
+                                    <div class="agree-slide">
+                                        <div class="slide-down">
+                                            <img
+                                                :src="
+                                                    require(`@/assets/img/index2-1/triangle.png`)
+                                                "
+                                                alt=""
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                                 <button
                                     :class="{ disabled: !apply.agree }"

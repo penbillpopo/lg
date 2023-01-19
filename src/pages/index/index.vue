@@ -539,7 +539,7 @@
                     <swiper class="swiper" :options="swiperOption10">
                         <swiper-slide>
                             <a
-                                href="http://media.w3.org/2010/05/sintel/trailer.mp4"
+                                href="https://www.youtube.com/watch?v=WviQZvbizGQ"
                                 data-fancybox
                             >
                                 <div
@@ -569,7 +569,7 @@
                         </swiper-slide>
                         <swiper-slide>
                             <a
-                                href="http://media.w3.org/2010/05/sintel/trailer.mp4"
+                                href="https://www.youtube.com/watch?v=WviQZvbizGQ"
                                 data-fancybox
                             >
                                 <div
@@ -599,7 +599,7 @@
                         </swiper-slide>
                         <swiper-slide>
                             <a
-                                href="http://media.w3.org/2010/05/sintel/trailer.mp4"
+                                href="https://www.youtube.com/watch?v=WviQZvbizGQ"
                                 data-fancybox
                             >
                                 <div
