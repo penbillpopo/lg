@@ -1,5 +1,6 @@
 <template>
-    <div class="container">
+    <div class="container market">
+        <navComponent></navComponent>
         <div class="background">
             <img
                 class="background-img pc"
@@ -37,8 +38,13 @@
     </div>
 </template>
 <script>
+import navComponent from "../../component/nav/nav.vue";
+
 export default {
     name: "MarketComponent",
+    components: {
+        navComponent,
+    },
     props: {},
     data() {
         return {};
@@ -48,4 +54,4 @@ export default {
     filters: {},
 };
 </script>
-<style scoped lang="scss" src="./market.scss"></style>
+<style lang="scss" src="./market.scss"></style>
