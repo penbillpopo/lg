@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <navComponent></navComponent>
         <div class="section1">
             <div class="flex-box pc-flex">
                 <img
@@ -80,6 +81,44 @@
                     :src="require(`@/assets/img/index1-1/mobile/powder.png`)"
                     alt=""
                 />
+<<<<<<< HEAD
+=======
+                <img
+                    class="light l1"
+                    :src="require(`@/assets/img/index1-1/light2.png`)"
+                    alt=""
+                />
+                <img
+                    class="light l2"
+                    :src="require(`@/assets/img/index1-1/light2.png`)"
+                    alt=""
+                />
+                <img
+                    class="light l3"
+                    :src="require(`@/assets/img/index1-1/light2.png`)"
+                    alt=""
+                />
+                <img
+                    class="light l4"
+                    :src="require(`@/assets/img/index1-1/light2.png`)"
+                    alt=""
+                />
+                <img
+                    class="light l5"
+                    :src="require(`@/assets/img/index1-1/light2.png`)"
+                    alt=""
+                />
+                <img
+                    class="light l6"
+                    :src="require(`@/assets/img/index1-1/light2.png`)"
+                    alt=""
+                />
+                <img
+                    class="light l7"
+                    :src="require(`@/assets/img/index1-1/light2.png`)"
+                    alt=""
+                />
+>>>>>>> 3d9f1f3bef9710816aad97e185f28813dc4a0066
             </div>
             <button
                 class="scroll-btn small"
@@ -190,61 +229,75 @@
                                 ')',
                         }"
                     >
-                        <swiper class="swiper" :options="swiperOption3">
-                            <swiper-slide>
-                                <img
-                                    :src="
-                                        require(`@/assets/img/index1-2/light-box/1-2-1.png`)
-                                    "
-                                    alt=""
-                                />
-                            </swiper-slide>
-                            <swiper-slide>
-                                <img
-                                    :src="
-                                        require(`@/assets/img/index1-2/light-box/1-2-2.png`)
-                                    "
-                                    alt=""
-                                />
-                            </swiper-slide>
-                            <swiper-slide>
-                                <img
-                                    :src="
-                                        require(`@/assets/img/index1-2/light-box/1-2-3.png`)
-                                    "
-                                    alt=""
-                                />
-                            </swiper-slide>
-                            <swiper-slide>
-                                <img
-                                    :src="
-                                        require(`@/assets/img/index1-2/light-box/1-2-4.png`)
-                                    "
-                                    alt=""
-                                />
-                            </swiper-slide>
-                            <swiper-slide>
-                                <img
-                                    :src="
-                                        require(`@/assets/img/index1-2/light-box/1-2-5.png`)
-                                    "
-                                    alt=""
-                                />
-                            </swiper-slide>
-                            <div
-                                class="swiper-button-prev"
-                                slot="button-prev"
-                            ></div>
-                            <div
-                                class="swiper-button-next"
-                                slot="button-next"
-                            ></div>
-                        </swiper>
+                        <div class="inner">
+                            <swiper class="swiper" :options="swiperOption3">
+                                <swiper-slide>
+                                    <img
+                                        :src="
+                                            require(`@/assets/img/index1-2/light-box/1-2-1.png`)
+                                        "
+                                        alt=""
+                                    />
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <img
+                                        :src="
+                                            require(`@/assets/img/index1-2/light-box/1-2-2.png`)
+                                        "
+                                        alt=""
+                                    />
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <img
+                                        :src="
+                                            require(`@/assets/img/index1-2/light-box/1-2-3.png`)
+                                        "
+                                        alt=""
+                                    />
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <img
+                                        :src="
+                                            require(`@/assets/img/index1-2/light-box/1-2-4.png`)
+                                        "
+                                        alt=""
+                                    />
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <img
+                                        :src="
+                                            require(`@/assets/img/index1-2/light-box/1-2-5.png`)
+                                        "
+                                        alt=""
+                                    />
+                                    <img
+                                        class="btn"
+                                        @click="section3LightBoxClick()"
+                                        :src="
+                                            require(`@/assets/img/index1-2/light-box/1-2-5-btn.png`)
+                                        "
+                                        alt=""
+                                    />
+                                </swiper-slide>
+                                <div
+                                    class="swiper-button-prev"
+                                    slot="button-prev"
+                                ></div>
+                                <div
+                                    class="swiper-button-next"
+                                    slot="button-next"
+                                ></div>
+                            </swiper>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="section4">
+=======
+        <div class="section4" ref="section4">
+>>>>>>> 3d9f1f3bef9710816aad97e185f28813dc4a0066
             <div class="bg">
                 <img
                     class="title reveal-right-300"
@@ -690,7 +743,7 @@
 <script>
 import scrollReveal from "scrollreveal";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-
+import navComponent from "../../component/nav/nav.vue";
 const loadingSecond = 100;
 
 export default {
@@ -698,6 +751,7 @@ export default {
     components: {
         Swiper,
         SwiperSlide,
+        navComponent,
     },
     props: {
         msg: String,
@@ -746,6 +800,10 @@ export default {
         },
         lightBoxOpen(isOpen) {
             this.lightBoxShow = isOpen;
+        },
+        section3LightBoxClick() {
+            this.lightBoxShow = false;
+            this.scrollToSection("section4");
         },
     },
     filters: {},
