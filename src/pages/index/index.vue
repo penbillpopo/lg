@@ -81,8 +81,6 @@
                     :src="require(`@/assets/img/index1-1/mobile/powder.png`)"
                     alt=""
                 />
-<<<<<<< HEAD
-=======
                 <img
                     class="light l1"
                     :src="require(`@/assets/img/index1-1/light2.png`)"
@@ -118,7 +116,6 @@
                     :src="require(`@/assets/img/index1-1/light2.png`)"
                     alt=""
                 />
->>>>>>> 3d9f1f3bef9710816aad97e185f28813dc4a0066
             </div>
             <button
                 class="scroll-btn small"
