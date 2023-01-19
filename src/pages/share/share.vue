@@ -378,7 +378,7 @@ export default {
         window.fbAsyncInit = function () {
             /* global FB */
             FB.init({
-                appId: "935058840744913",
+                appId: "440644321520782",
                 cookie: true,
                 xfbml: true,
                 version: "v11.0",
