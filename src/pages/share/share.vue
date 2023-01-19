@@ -495,6 +495,7 @@ export default {
             this.apply.step = 3;
         },
         onStep3Click() {
+            let _this = this;
             this.axios
                 .post("https://2908.api.gosu.bar/customize/addLgMember", {
                     name: this.apply.data.name,
@@ -508,14 +509,8 @@ export default {
                             method: "share",
                             href: "http://www.lgfiji.com.tw/",
                         },
-                        function (response) {
-                            if (response && !response.error_message) {
-                                this.apply.step = 4;
-                            } else {
-                                alert("分享失敗");
-                                this.lightBoxApplyShow = false;
-                                this.resetApply();
-                            }
+                        function () {
+                            _this.apply.step = 4;
                         }
                     );
                 })

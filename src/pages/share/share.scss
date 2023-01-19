@@ -549,10 +549,8 @@
     .top-bg {
         .share-btn {
             top: 27%;
-            right: 29%;
-            img {
-                width: 200%;
-            }
+            right: 8%;
+            width: 40%;
         }
         .like-btn {
             position: absolute;
@@ -567,25 +565,6 @@
                 left: 28.5%;
                 width: 43%;
             }
-        }
-
-        .bubble-1 {
-            position: absolute;
-            bottom: 59.5%;
-            left: 66%;
-            width: 14%;
-        }
-        .bubble-2 {
-            position: absolute;
-            bottom: 56.8%;
-            left: 45%;
-            width: 18%;
-        }
-        .bubble-3 {
-            position: absolute;
-            bottom: 51.4%;
-            left: 56.2%;
-            width: 31%;
         }
         .share1 {
             display: none;
@@ -611,12 +590,12 @@
             width: 21%;
         }
 
-        .bubble-2 {
+        .bubble-3 {
             bottom: 55%;
             left: 47%;
             width: 18%;
         }
-        .bubble-3 {
+        .bubble-2 {
             bottom: 49.5%;
             left: 58%;
             width: 29%;
