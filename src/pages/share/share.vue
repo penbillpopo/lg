@@ -18,6 +18,7 @@
                 </button>
                 <!-- Bubble -->
                 <img
+                    ref="fb"
                     class="bubble-1"
                     :src="require(`@/assets/img/index2-1/93.png`)"
                     alt=""
@@ -481,6 +482,7 @@ export default {
                     email: null,
                 },
             },
+            hash: this.$route.hash,
         };
     },
     created() {},
@@ -494,8 +496,19 @@ export default {
                 version: "v11.0",
             });
         };
+        this.$nextTick(function () {
+            if (this.hash) {
+                const refName = this.hash.replace("#", "");
+                this.scrollToSection(refName);
+            }
+        });
     },
     methods: {
+        scrollToSection(sessionName) {
+            if (this.$refs[sessionName]) {
+                this.$refs[sessionName].scrollIntoView();
+            }
+        },
         onStep1Click() {
             this.apply.step = 2;
         },
