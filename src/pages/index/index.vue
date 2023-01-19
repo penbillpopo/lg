@@ -290,7 +290,11 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+        <div class="section4">
+=======
         <div class="section4" ref="section4">
+>>>>>>> 3d9f1f3bef9710816aad97e185f28813dc4a0066
             <div class="bg">
                 <img
                     class="title reveal-right-300"
