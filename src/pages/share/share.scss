@@ -13,6 +13,9 @@
         &:hover {
             transform: scale(1.05);
         }
+        img {
+            width: 100%;
+        }
     }
     .bubble-1 {
         position: absolute;
@@ -325,6 +328,9 @@
             height: 430px;
             .frame {
                 .content-box {
+                    .content {
+                        height: 200px;
+                    }
                     button {
                         height: 30px;
                         padding-left: 30px;
@@ -348,6 +354,10 @@
                     .step2 {
                         .content {
                             height: 160px;
+                            strong,
+                            p {
+                                font-size: 14px;
+                            }
                         }
                         .agree {
                             margin-top: 10px;
@@ -399,6 +409,10 @@
                 .content-box {
                     top: 53%;
                     width: 70%;
+
+                    .content {
+                        height: 160px;
+                    }
                     button {
                         height: 25px;
                         padding-left: 25px;
@@ -454,6 +468,13 @@
             height: 320px;
             .frame {
                 .content-box {
+                    .content {
+                        height: 140px;
+                        strong,
+                        p {
+                            font-size: 12px;
+                        }
+                    }
                     button {
                         margin-top: 10px;
                     }
