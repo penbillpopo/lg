@@ -261,7 +261,7 @@
                 <div class="swiper-box pc">
                     <swiper class="swiper" :options="swiperOption10">
                         <swiper-slide>
-                            <a href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox>
+                            <a href="https://www.youtube.com/watch?v=WviQZvbizGQ" data-fancybox>
                                 <div
                                     class="pic"
                                     :style="{
@@ -273,7 +273,7 @@
                             </a>
                         </swiper-slide>
                         <swiper-slide>
-                            <a href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox>
+                            <a href="https://www.youtube.com/watch?v=WviQZvbizGQ" data-fancybox>
                                 <div
                                     class="pic"
                                     :style="{
@@ -285,7 +285,7 @@
                             </a>
                         </swiper-slide>
                         <swiper-slide>
-                            <a href="http://media.w3.org/2010/05/sintel/trailer.mp4" data-fancybox>
+                            <a href="https://www.youtube.com/watch?v=WviQZvbizGQ" data-fancybox>
                                 <div
                                     class="pic"
                                     :style="{

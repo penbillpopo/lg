@@ -287,6 +287,23 @@
                         display: flex;
                         align-items: center;
                         margin-top: 20px;
+                        .slide-down {
+                            width: 10%;
+                            height: 6%;
+                            position: absolute;
+                            bottom: 13%;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0);
+                            color: #d0d0d0;
+                            border: 1px solid rgb(101, 101, 101);
+                            border-radius: 25%;
+                            cursor: pointer;
+                            img {
+                                position: absolute;
+                                top: 15%;
+                                left: 8%;
+                            }
+                        }
                         input {
                             margin-right: 10px;
                         }
@@ -651,6 +668,37 @@
             top: 90%;
             right: 4%;
             width: 45%;
+        }
+    }
+    // Slider down button
+    .black-field {
+        .lightbox {
+            .frame {
+                .content-box {
+                    .step2 {
+                        .agree {
+                            .slide-down {
+                                width: 10%;
+                                height: 6%;
+                                position: absolute;
+                                bottom: 11%;
+                                right: 0;
+                                background-color: rgba(0, 0, 0, 0);
+                                color: #d0d0d0;
+                                border: 1px solid rgb(101, 101, 101);
+                                border-radius: 25%;
+                                cursor: pointer;
+                                img {
+                                    position: absolute;
+                                    top: 15%;
+                                    left: 5%;
+                                    width: 90%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
