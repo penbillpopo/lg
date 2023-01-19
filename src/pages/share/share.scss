@@ -256,6 +256,11 @@
                     &:hover {
                         transform: scale(1.05);
                     }
+                    &.disabled {
+                        background-color: rgb(125, 125, 125);
+                        pointer-events: none;
+                        cursor: default;
+                    }
                 }
                 .step1 {
                     .title {
@@ -280,11 +285,6 @@
                     }
                     button {
                         margin-top: 20px;
-                        &.disabled {
-                            background-color: rgb(125, 125, 125);
-                            pointer-events: none;
-                            cursor: default;
-                        }
                     }
                 }
                 .step3 {
@@ -364,11 +364,6 @@
                         }
                         button {
                             margin-top: 15px;
-                            &.disabled {
-                                background-color: rgb(125, 125, 125);
-                                pointer-events: none;
-                                cursor: default;
-                            }
                         }
                     }
                     .step3 {

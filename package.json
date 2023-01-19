@@ -9,11 +9,13 @@
     },
     "dependencies": {
         "@fancyapps/ui": "^4.0.31",
+        "axios": "^1.2.3",
         "core-js": "^3.8.3",
         "scrollreveal": "^4.0.9",
         "swiper": "^5.4.5",
         "vue": "^2.7.14",
         "vue-awesome-swiper": "^4.1.1",
+        "vue-axios": "^3.5.2",
         "vue-router": "^3.6.5"
     },
     "devDependencies": {

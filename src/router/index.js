@@ -7,9 +7,14 @@ import MarketComponent from "../pages/market/market.vue";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
+import axios from "axios";
+import VueAxios from "vue-axios";
+
 Vue.use(VueAwesomeSwiper);
 
 Vue.use(Router);
+
+Vue.use(VueAxios, axios);
 
 export default new Router({
     routes: [
