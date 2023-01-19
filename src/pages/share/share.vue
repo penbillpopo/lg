@@ -492,37 +492,37 @@ export default {
             this.apply.step = 2;
         },
         onStep2Click() {
+            this.apply.step = 3;
+        },
+        onStep3Click() {
             this.axios
                 .post("https://2908.api.gosu.bar/customize/addLgMember", {
                     name: this.apply.data.name,
                     email: this.apply.data.email,
                     phone: this.apply.data.phone,
                 })
-                .then((response) => {
-                    this.apply.step = 3;
+                .then(() => {
+                    FB.ui(
+                        {
+                            display: "popup",
+                            method: "share",
+                            href: "http://www.lgfiji.com.tw/",
+                        },
+                        function (response) {
+                            if (response && !response.error_message) {
+                                this.apply.step = 4;
+                            } else {
+                                alert("分享失敗");
+                                this.lightBoxApplyShow = false;
+                                this.resetApply();
+                            }
+                        }
+                    );
                 })
                 .catch((error) => {
                     alert("資料傳輸失敗");
                     console.error(error);
                 });
-        },
-        onStep3Click() {
-            FB.ui(
-                {
-                    display: "popup",
-                    method: "share",
-                    href: "http://www.lgfiji.com.tw/",
-                },
-                function (response) {
-                    if (response && !response.error_message) {
-                        this.apply.step = 4;
-                    } else {
-                        alert("分享失敗");
-                        this.lightBoxApplyShow = false;
-                        this.resetApply();
-                    }
-                }
-            );
         },
         lightBoxIntroOpen(isOpen) {
             this.lightBoxIntroShow = isOpen;
