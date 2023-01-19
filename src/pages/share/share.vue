@@ -533,14 +533,21 @@ export default {
                     email: this.apply.data.email,
                     phone: this.apply.data.phone,
                 })
-                .then(() => {
+                .then(async () => {
+                    await FB.init({
+                        appId: "440644321520782",
+                        cookie: true,
+                        xfbml: true,
+                        version: "v11.0",
+                    });
                     FB.ui(
                         {
                             display: "popup",
                             method: "share",
                             href: "http://www.lgfiji.com.tw/",
                         },
-                        function () {
+                        function (res) {
+                            console.log(res);
                             _this.apply.step = 4;
                         }
                     );
