@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-        <navComponent></navComponent>
+        <navComponent
+            v-if="!lightBoxIntroShow && !lightBoxApplyShow"
+        ></navComponent>
         <div class="page02">
             <div class="top-bg">
                 <img
