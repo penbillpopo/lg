@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <navComponent></navComponent>
         <div class="page02">
             <div class="top-bg">
                 <img
@@ -457,8 +458,13 @@
     </div>
 </template>
 <script>
+import navComponent from "../../component/nav/nav.vue";
+
 export default {
     name: "ShareComponent",
+    components: {
+        navComponent,
+    },
     props: {},
     data() {
         return {

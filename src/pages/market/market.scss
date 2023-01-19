@@ -1,9 +1,6 @@
 .background {
     width: 100%;
     position: relative;
-    // background-size: 100%;
-    // background-repeat: no-repeat;
-    // background-position: center;
     .background-img {
         width: 100%;
     }
@@ -26,6 +23,18 @@
 
 .mobile {
     display: none;
+}
+
+.container {
+    &.market {
+        .nav {
+            .hamburger {
+                .line {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1023px) {
