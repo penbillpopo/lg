@@ -1,52 +1,100 @@
 <template>
-    <div class="container">
+    <div class="container" ref="container">
         <navComponent v-if="!lightBoxShow"></navComponent>
         <div class="section1">
             <div class="flex-box pc-flex">
-                <img
-                    class="col25 ani"
-                    :src="require(`@/assets/img/index1-0/01.jpg`)"
-                    alt=""
-                />
-                <img
-                    class="col25 ani delay-1"
-                    :src="require(`@/assets/img/index1-0/02.jpg`)"
-                    alt=""
-                />
-                <img
-                    class="col25 ani delay-2"
-                    :src="require(`@/assets/img/index1-0/03.jpg`)"
-                    alt=""
-                />
-                <img
-                    class="col25 ani delay-3"
-                    :src="require(`@/assets/img/index1-0/04.jpg`)"
-                    alt=""
-                />
+                <div class="frame ani">
+                    <div
+                        class="img"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-0/01.jpg`) +
+                                ')',
+                        }"
+                    ></div>
+                </div>
+                <div class="frame ani delay-1">
+                    <div
+                        class="img"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-0/02.jpg`) +
+                                ')',
+                        }"
+                    ></div>
+                </div>
+                <div class="frame ani delay-2">
+                    <div
+                        class="img"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-0/03.jpg`) +
+                                ')',
+                        }"
+                    ></div>
+                </div>
+                <div class="frame ani delay-3">
+                    <div
+                        class="img"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-0/04.jpg`) +
+                                ')',
+                        }"
+                    ></div>
+                </div>
             </div>
             <div class="flex-box mobile-flex">
-                <img
-                    class="col25 ani"
-                    :src="require(`@/assets/img/index1-0/mobile/01.jpg`)"
-                    alt=""
-                />
-                <img
-                    class="col25 ani delay-1"
-                    :src="require(`@/assets/img/index1-0/mobile/02.jpg`)"
-                    alt=""
-                />
-                <img
-                    class="col25 ani delay-2"
-                    :src="require(`@/assets/img/index1-0/mobile/03.jpg`)"
-                    alt=""
-                />
-                <img
-                    class="col25 ani delay-3"
-                    :src="require(`@/assets/img/index1-0/mobile/04.jpg`)"
-                    alt=""
-                />
+                <div class="frame ani">
+                    <div
+                        class="img"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-0/mobile/01.jpg`) +
+                                ')',
+                        }"
+                    ></div>
+                </div>
+                <div class="frame ani delay-1">
+                    <div
+                        class="img"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-0/mobile/02.jpg`) +
+                                ')',
+                        }"
+                    ></div>
+                </div>
+                <div class="frame ani delay-2">
+                    <div
+                        class="img"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-0/mobile/03.jpg`) +
+                                ')',
+                        }"
+                    ></div>
+                </div>
+                <div class="frame ani delay-3">
+                    <div
+                        class="img"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-0/mobile/04.jpg`) +
+                                ')',
+                        }"
+                    ></div>
+                </div>
             </div>
-            <button class="scroll-btn" @click="scrollToSection('section2')">
+            <button class="scroll-btn" @click="scrollToSection(2)">
                 <img
                     :src="require(`@/assets/img/index1-0/scroll.png`)"
                     alt=""
@@ -57,7 +105,7 @@
             <div class="bg">
                 <div class="logo">
                     <img
-                        class="flash reveal-function-900"
+                        class="flash"
                         :src="require(`@/assets/img/index1-1/flash.png`)"
                         alt=""
                     />
@@ -117,10 +165,7 @@
                     alt=""
                 />
             </div>
-            <button
-                class="scroll-btn small"
-                @click="scrollToSection('section3')"
-            >
+            <button class="scroll-btn small" @click="scrollToSection(3)">
                 <img
                     :src="require(`@/assets/img/index1-1/scroll.png`)"
                     alt=""
@@ -128,23 +173,105 @@
             </button>
         </div>
         <div class="section3" ref="section3">
-            <div class="flex-box">
+            <div class="flex-box pc-flex">
                 <img
                     class="title reveal-top-1600"
                     :src="require(`@/assets/img/index1-2/title.png`)"
                     alt=""
                 />
-                <div class="col25 reveal-bottom-0 pic-box">
-                    <img
+                <div
+                    class="col25 reveal-bottom-0 pic-box"
+                    @click="lightBoxOpen(true)"
+                >
+                    <div
                         class="pic pc-inline-block"
-                        :src="require(`@/assets/img/index1-2/01.png`)"
-                        alt=""
-                    />
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-2/01.png`) +
+                                ')',
+                        }"
+                    ></div>
                     <img
-                        class="pic mobile-inline-block"
-                        :src="require(`@/assets/img/index1-2/mobile/01.png`)"
+                        class="btn"
+                        :src="require(`@/assets/img/index1-2/ng1.png`)"
                         alt=""
                     />
+                </div>
+                <div
+                    class="col25 reveal-bottom-400 pic-box"
+                    @click="lightBoxOpen(true)"
+                >
+                    <div
+                        class="pic pc-inline-block"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-2/02.png`) +
+                                ')',
+                        }"
+                    ></div>
+                    <img
+                        class="btn"
+                        :src="require(`@/assets/img/index1-2/ng2.png`)"
+                        alt=""
+                    />
+                </div>
+                <div
+                    class="col25 reveal-bottom-800 pic-box"
+                    @click="lightBoxOpen(true)"
+                >
+                    <div
+                        class="pic pc-inline-block"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-2/03.png`) +
+                                ')',
+                        }"
+                    ></div>
+                    <img
+                        class="btn"
+                        :src="require(`@/assets/img/index1-2/ng3.png`)"
+                        alt=""
+                    />
+                </div>
+                <div
+                    class="col25 reveal-bottom-1200 pic-box"
+                    @click="lightBoxOpen(true)"
+                >
+                    <div
+                        class="pic pc-inline-block"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-2/04.png`) +
+                                ')',
+                        }"
+                    ></div>
+                    <img
+                        class="btn"
+                        :src="require(`@/assets/img/index1-2/ng4.png`)"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="flex-box mobile-flex">
+                <img
+                    class="title reveal-top-1600"
+                    :src="require(`@/assets/img/index1-2/title.png`)"
+                    alt=""
+                />
+                <div class="col25 reveal-bottom-0 pic-box big">
+                    <div
+                        class="pic mobile-inline-block"
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-2/mobile/01.png`) +
+                                ')',
+                        }"
+                    ></div>
                     <img
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng1.png`)"
@@ -153,16 +280,15 @@
                     />
                 </div>
                 <div class="col25 reveal-bottom-400 pic-box">
-                    <img
-                        class="pic pc-inline-block"
-                        :src="require(`@/assets/img/index1-2/02.png`)"
-                        alt=""
-                    />
-                    <img
+                    <div
                         class="pic mobile-inline-block"
-                        :src="require(`@/assets/img/index1-2/mobile/02.png`)"
-                        alt=""
-                    />
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-2/mobile/02.png`) +
+                                ')',
+                        }"
+                    ></div>
                     <img
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng2.png`)"
@@ -171,16 +297,15 @@
                     />
                 </div>
                 <div class="col25 reveal-bottom-800 pic-box">
-                    <img
-                        class="pic pc-inline-block"
-                        :src="require(`@/assets/img/index1-2/03.png`)"
-                        alt=""
-                    />
-                    <img
+                    <div
                         class="pic mobile-inline-block"
-                        :src="require(`@/assets/img/index1-2/mobile/03.png`)"
-                        alt=""
-                    />
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-2/mobile/03.png`) +
+                                ')',
+                        }"
+                    ></div>
                     <img
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng3.png`)"
@@ -189,16 +314,15 @@
                     />
                 </div>
                 <div class="col25 reveal-bottom-1200 pic-box">
-                    <img
-                        class="pic pc-inline-block"
-                        :src="require(`@/assets/img/index1-2/04.png`)"
-                        alt=""
-                    />
-                    <img
+                    <div
                         class="pic mobile-inline-block"
-                        :src="require(`@/assets/img/index1-2/mobile/04.png`)"
-                        alt=""
-                    />
+                        :style="{
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index1-2/mobile/04.png`) +
+                                ')',
+                        }"
+                    ></div>
                     <img
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng4.png`)"
@@ -303,7 +427,7 @@
                     alt=""
                 />
                 <img
-                    class="paper reveal-bottom-600 reveal-function-section4-600"
+                    class="paper"
                     :src="require(`@/assets/img/index1-3/paper.png`)"
                     alt=""
                 />
@@ -354,7 +478,7 @@
                     alt=""
                 />
                 <img
-                    class="powder reveal-top-900"
+                    class="powder"
                     :src="require(`@/assets/img/index1-4/powder.png`)"
                     alt=""
                 />
@@ -498,7 +622,7 @@
                     }"
                 ></div>
                 <div
-                    class="answer reveal-right-300"
+                    class="answer reveal-right-600"
                     :style="{
                         'background-image':
                             'url(' +
@@ -734,24 +858,18 @@
     </div>
 </template>
 <script>
-import scrollReveal from "scrollreveal";
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import navComponent from "../../component/nav/nav.vue";
-const loadingSecond = 100;
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 
 export default {
-    name: "HomeComponent",
+    name: "TempComponent",
     components: {
         Swiper,
         SwiperSlide,
         navComponent,
     },
-    props: {
-        msg: String,
-    },
     data() {
         return {
-            scrollReveal: scrollReveal(),
             swiperOption3: {
                 navigation: {
                     nextEl: ".swiper-button-next",
@@ -769,34 +887,53 @@ export default {
             lightBoxShow: false,
         };
     },
+    created() {
+        const _this = this;
+        window.addEventListener(
+            "scroll",
+            () => {
+                _this.sectionScroll();
+            },
+            false
+        );
+    },
     mounted() {
         setTimeout(() => {
-            this.setScrollRevealCustomFunction(
-                600,
-                "section4",
-                this.$refs["section4-ani"]
-            );
-        }, loadingSecond);
+            this.$refs["container"].classList.add("active");
+            this.sectionScroll();
+        }, 500);
     },
     methods: {
-        scrollToSection(sessionName) {
-            this.$refs[sessionName].scrollIntoView({ behavior: "smooth" });
+        sectionScroll() {
+            const percentage =
+                Math.round(
+                    (window.pageYOffset /
+                        (document.body.offsetHeight - window.innerHeight)) *
+                        10
+                ) + 1;
+            if (percentage < 11) {
+                if (this.$refs["container"]) {
+                    for (let i = 1; i <= 10; i++) {
+                        this.$refs["container"].classList.remove(
+                            `animate-${i}`
+                        );
+                    }
+                    this.$refs["container"].classList.add(
+                        "container",
+                        `animate-${percentage}`
+                    );
+                }
+            }
         },
-        setScrollRevealCustomFunction(time, name, el) {
-            this.scrollReveal.reveal(`.reveal-function-${name}-${time}`, {
-                delay: time,
-                afterReveal: () => {
-                    el.classList.add("animating");
-                },
-                viewFactor: 1,
-            });
+        scrollToSection(session) {
+            window.scrollTo(0, window.innerHeight * session);
         },
         lightBoxOpen(isOpen) {
             this.lightBoxShow = isOpen;
         },
         section3LightBoxClick() {
             this.lightBoxShow = false;
-            this.scrollToSection("section4");
+            this.scrollToSection(5);
         },
     },
     filters: {},

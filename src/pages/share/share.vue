@@ -169,7 +169,7 @@
                                 <strong>活動辦法</strong>
                                 <p>
                                     1. 於活動期間內至『FiJi 飛漬洗衣紙
-                                    好評分享抽大獎』活動頁http://LG_Fiji.com.tw分享「FiJi
+                                    好評分享抽大獎』活動頁http://lgfiji.com.tw分享「FiJi
                                     飛漬洗衣紙」愛用者好評至個人FB或IG，並設定公開，即可參加抽獎。
                                 </p>
                                 <p>
