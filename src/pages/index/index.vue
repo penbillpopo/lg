@@ -500,7 +500,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-5/1-5-R.png`) +
+                            require(`@/assets/img/index1-5/pc-R.png`) +
                             ')',
                     }"
                 ></div>
@@ -511,7 +511,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-5/1-5-L-mobile.jpg`) +
+                            require(`@/assets/img/index1-5/1-5-L-mobile.png`) +
                             ')',
                     }"
                 ></div>
@@ -520,7 +520,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-5/1-5-R-mobile.jpg`) +
+                            require(`@/assets/img/index1-5/mobile-R.png`) +
                             ')',
                     }"
                 ></div>
@@ -542,7 +542,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-6/1-6-R.png`) +
+                            require(`@/assets/img/index1-6/pc-R.png`) +
                             ')',
                     }"
                 ></div>
@@ -553,7 +553,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-6/1-6-L-mobile.jpg`) +
+                            require(`@/assets/img/index1-6/1-6-L-mobile.png`) +
                             ')',
                     }"
                 ></div>
@@ -562,7 +562,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-6/1-6-R-mobile.jpg`) +
+                            require(`@/assets/img/index1-6/mobile-R.png`) +
                             ')',
                     }"
                 ></div>
@@ -584,7 +584,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-7/1-7-R.png`) +
+                            require(`@/assets/img/index1-7/pc-R.png`) +
                             ')',
                     }"
                 ></div>
@@ -595,7 +595,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-7/1-7-L-mobile.jpg`) +
+                            require(`@/assets/img/index1-7/1-7-L-mobile.png`) +
                             ')',
                     }"
                 ></div>
@@ -604,7 +604,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-7/1-7-R-mobile.jpg`) +
+                            require(`@/assets/img/index1-7/mobile-R.png`) +
                             ')',
                     }"
                 ></div>
@@ -626,7 +626,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-8/1-8-R.png`) +
+                            require(`@/assets/img/index1-8/pc-R.png`) +
                             ')',
                     }"
                 ></div>
@@ -637,7 +637,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-8/1-8-L-mobile.jpg`) +
+                            require(`@/assets/img/index1-8/1-8-L-mobile.png`) +
                             ')',
                     }"
                 ></div>
@@ -646,7 +646,7 @@
                     :style="{
                         'background-image':
                             'url(' +
-                            require(`@/assets/img/index1-8/1-8-R-mobile.jpg`) +
+                            require(`@/assets/img/index1-8/mobile-R.png`) +
                             ')',
                     }"
                 ></div>

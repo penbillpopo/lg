@@ -46,7 +46,7 @@
     .answer {
         position: absolute;
         top: 0;
-        @extend %background_100_100;
+        @extend %background_cover;
         height: 100%;
     }
     .question {
@@ -987,6 +987,10 @@ $delays: (
                 .text {
                     height: 20px;
                 }
+                .swiper-button-prev,
+                .swiper-button-next {
+                    top: 45%;
+                }
             }
         }
     }
@@ -995,6 +999,10 @@ $delays: (
             .swiper {
                 .text {
                     height: 18px;
+                }
+                .swiper-button-prev,
+                .swiper-button-next {
+                    top: 40%;
                 }
             }
         }
