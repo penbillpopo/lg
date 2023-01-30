@@ -495,7 +495,20 @@
                             ')',
                     }"
                 >
-                    <div class="title-left"></div>
+                    <img
+                        class="title-L-1"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/title-L-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="title-L-2"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/title-L-2.png`)
+                        "
+                        alt=""
+                    />
                 </div>
                 <div
                     class="answer reveal-right-600"
@@ -505,7 +518,36 @@
                             require(`@/assets/img/index1-5/pc-R.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-R"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/title-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-1"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/text-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-2"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/text-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="icon-R"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                </div>
             </div>
             <div class="question-box mobile-flex">
                 <div
@@ -516,7 +558,22 @@
                             require(`@/assets/img/index1-5/1-5-L-mobile.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-L-1"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/title-L-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="title-L-2"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/title-L-2.png`)
+                        "
+                        alt=""
+                    />
+                </div>
                 <div
                     class="answer reveal-right-600"
                     :style="{
@@ -525,7 +582,36 @@
                             require(`@/assets/img/index1-5/mobile-R.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-R"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/title-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-1"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/text-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-2"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/text-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="icon-R"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                </div>
             </div>
         </div>
         <div class="section7">
@@ -538,7 +624,22 @@
                             require(`@/assets/img/index1-6/1-6-L.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-L-1"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/title-L-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="title-L-2"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/title-L-2.png`)
+                        "
+                        alt=""
+                    />
+                </div>
                 <div
                     class="answer reveal-right-600"
                     :style="{
@@ -547,7 +648,36 @@
                             require(`@/assets/img/index1-6/pc-R.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-R"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/title-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-1"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/text-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-2"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/text-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="icon-R"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                </div>
             </div>
             <div class="question-box mobile-flex">
                 <div
@@ -558,7 +688,22 @@
                             require(`@/assets/img/index1-6/1-6-L-mobile.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-L-1"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/title-L-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="title-L-2"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/title-L-2-m.png`)
+                        "
+                        alt=""
+                    />
+                </div>
                 <div
                     class="answer reveal-right-600"
                     :style="{
@@ -567,7 +712,36 @@
                             require(`@/assets/img/index1-6/mobile-R.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-R"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/title-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-1"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/text-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-2"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/text-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="icon-R"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                </div>
             </div>
         </div>
         <div class="section8">
@@ -580,7 +754,22 @@
                             require(`@/assets/img/index1-7/1-7-L.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-L-1"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/title-L-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="title-L-2"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/title-L-2.png`)
+                        "
+                        alt=""
+                    />
+                </div>
                 <div
                     class="answer reveal-right-600"
                     :style="{
@@ -589,7 +778,36 @@
                             require(`@/assets/img/index1-7/pc-R.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-R"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/title-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-1"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/text-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-2"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/text-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="icon-R"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                </div>
             </div>
             <div class="question-box mobile-flex">
                 <div
@@ -600,7 +818,22 @@
                             require(`@/assets/img/index1-7/1-7-L-mobile.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-L-1"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/title-L-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="title-L-2"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/title-L-2.png`)
+                        "
+                        alt=""
+                    />
+                </div>
                 <div
                     class="answer reveal-right-600"
                     :style="{
@@ -609,7 +842,36 @@
                             require(`@/assets/img/index1-7/mobile-R.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-R"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/title-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-1"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/text-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-2"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/text-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="icon-R"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                </div>
             </div>
         </div>
         <div class="section9">
@@ -622,7 +884,22 @@
                             require(`@/assets/img/index1-8/1-8-L.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-L-1"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/title-L-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="title-L-2"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/title-L-2.png`)
+                        "
+                        alt=""
+                    />
+                </div>
                 <div
                     class="answer reveal-right-600"
                     :style="{
@@ -631,7 +908,36 @@
                             require(`@/assets/img/index1-8/pc-R.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-R"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/title-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-1"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/text-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-2"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/text-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="icon-R"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                </div>
             </div>
             <div class="question-box mobile-flex">
                 <div
@@ -642,7 +948,22 @@
                             require(`@/assets/img/index1-8/1-8-L-mobile.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-L-1"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/title-L-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="title-L-2"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/title-L-2.png`)
+                        "
+                        alt=""
+                    />
+                </div>
                 <div
                     class="answer reveal-right-300"
                     :style="{
@@ -651,7 +972,36 @@
                             require(`@/assets/img/index1-8/mobile-R.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <img
+                        class="title-R"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/title-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-1"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/text-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="text-R-2"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/text-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="icon-R"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                </div>
             </div>
         </div>
         <div class="section10">
@@ -842,7 +1192,7 @@ export default {
         setTimeout(() => {
             this.$refs["container"].classList.add("active");
             this.sectionScroll();
-        }, 500);
+        });
     },
     methods: {
         sectionScroll() {
@@ -862,6 +1212,18 @@ export default {
                     this.$refs["container"].classList.add(
                         "container",
                         `animate-${percentage}`
+                    );
+                }
+            } else if (percentage === 11) {
+                if (this.$refs["container"]) {
+                    for (let i = 1; i <= 10; i++) {
+                        this.$refs["container"].classList.remove(
+                            `animate-${i}`
+                        );
+                    }
+                    this.$refs["container"].classList.add(
+                        "container",
+                        `animate-10`
                     );
                 }
             }

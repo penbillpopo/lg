@@ -1,6 +1,6 @@
 .container {
     &.active {
-        min-height: 2000vh;
+        min-height: 1000vh;
         .section1,
         .section2,
         .section3,
@@ -52,17 +52,235 @@
     .question {
         left: 0;
         width: 37%;
+        .title-L-1 {
+            position: absolute;
+            top: 15%;
+            left: 55%;
+            width: 30%;
+        }
+        .title-L-2 {
+            position: absolute;
+            top: 23%;
+            left: 41%;
+            width: 57%;
+        }
     }
     .answer {
         left: 37%;
         width: 63%;
+        .icon-R {
+            position: absolute;
+            top: 6%;
+            left: 5%;
+            width: 10.5%;
+        }
+        .title-R {
+            position: absolute;
+            top: 7%;
+            left: 15.5%;
+            width: 62%;
+        }
+        .text-R-1 {
+            position: absolute;
+            top: 21%;
+            left: 4.5%;
+            width: 53%;
+        }
+        .text-R-2 {
+            position: absolute;
+            top: 30%;
+            left: 5%;
+            width: 53%;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .question {
+            .title-L-1 {
+                width: 35%;
+                left: 50%;
+            }
+            .title-L-2 {
+                width: 63%;
+                left: 37%;
+            }
+        }
+        .answer {
+            .icon-R {
+                width: 11%;
+            }
+            .title-R {
+                width: 67%;
+            }
+            .text-R-1 {
+                width: 67%;
+            }
+            .text-R-2 {
+                width: 67%;
+            }
+        }
     }
     &.mobile-flex {
         .question {
             height: 30%;
+            .title-L-1 {
+                position: absolute;
+                top: 15%;
+                left: 13%;
+                width: 15%;
+            }
+            .title-L-2 {
+                position: absolute;
+                left: 6%;
+                width: 30%;
+            }
         }
         .answer {
             height: 70%;
+            .icon-R {
+                top: 6%;
+            }
+            .title-R {
+                top: 7%;
+            }
+            .text-R-1 {
+                top: 25%;
+                width: 67%;
+            }
+            .text-R-2 {
+                top: 38%;
+                width: 67%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .question {
+                .title-L-1 {
+                    width: 20%;
+                }
+                .title-L-2 {
+                    width: 35%;
+                }
+            }
+            .answer {
+                .icon-R {
+                    width: 13%;
+                }
+                .title-R {
+                    width: 80%;
+                }
+                .text-R-1 {
+                    width: 80%;
+                }
+                .text-R-2 {
+                    width: 80%;
+                }
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .question {
+                .title-L-1 {
+                    width: 30%;
+                }
+                .title-L-2 {
+                    top: 36%;
+                    width: 48%;
+                }
+            }
+            .answer {
+                .icon-R {
+                    width: 13%;
+                }
+                .title-R {
+                    width: 85%;
+                }
+                .text-R-1 {
+                    top: 21%;
+                    width: 90%;
+                }
+                .text-R-2 {
+                    top: 32%;
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+.section6 {
+    .question-box {
+        .question {
+            .title-L-2 {
+                top: 26%;
+            }
+        }
+        &.mobile-flex {
+            .question {
+                .title-L-2 {
+                    top: 30%;
+                }
+            }
+        }
+    }
+}
+.section7 {
+    .question-box {
+        .question {
+            .title-L-2 {
+                top: 30%;
+            }
+        }
+        &.mobile-flex {
+            .question {
+                .title-L-2 {
+                    width: 40%;
+                    top: 30%;
+                    left: 0%;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .question {
+                    .title-L-2 {
+                        width: 48%;
+                    }
+                }
+            }
+            @media screen and (max-width: 480px) {
+                .question {
+                    .title-L-2 {
+                        width: 56%;
+                    }
+                }
+            }
+        }
+    }
+}
+.section8 {
+    .question-box {
+        .question {
+            .title-L-2 {
+                top: 23%;
+            }
+        }
+        &.mobile-flex {
+            .question {
+                .title-L-2 {
+                    top: 32%;
+                }
+            }
+        }
+    }
+}
+.section9 {
+    .question-box {
+        .question {
+            .title-L-2 {
+                top: 23%;
+            }
+        }
+        &.mobile-flex {
+            .question {
+                .title-L-2 {
+                    top: 32%;
+                }
+            }
         }
     }
 }
