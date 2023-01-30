@@ -36,127 +36,59 @@
         width: 13%;
     }
 
-    .customer-evaluate {
-        display: flex;
+    .chat-swiper {
         position: absolute;
-        bottom: 45%;
         width: 100%;
-
-        .conversation {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
+        top: 43%;
+        .frame {
+            width: 100%;
+            position: relative;
             img {
-                width: 50%;
+                width: 100%;
             }
-            .paragraph {
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: center;
-                // align-items: center;
-                width: 40%;
-                // height: 70%;
+            .content {
                 position: absolute;
-                top: 6%;
-                display: block;
-                border: 1px solid red;
-                h1 {
-                    font-size: 200%;
-                    text-align: center;
-                    margin-bottom: 2.5%;
+                top: 13%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 65%;
+                .title {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #2647a4;
+                    margin-bottom: 15px;
+                    @include textdot(1);
                 }
-                .customer-content {
-                    font-size: 180%;
-                    // text-align: center;
-                    width: 80%;
-                    padding-left: 25%;
+                .text {
+                    font-size: 16px;
+                    @include textdot(2);
+                    font-weight: 400;
+                    margin-bottom: 15px;
                 }
                 .name {
-                    font-size: 200%;
-                    padding-left: 25%;
-                    margin-top: 4%;
+                    font-size: 16px;
+                    color: #3655aa;
+                    font-weight: 400;
+                    margin-bottom: 10px;
                 }
                 .fb-btn {
-                    // text-align: center;
-                    padding-left: 25%;
-                    margin-top: 3%;
+                    width: 80%;
                 }
             }
         }
+        @media screen and (max-width: 1023px) {
+            top: 54%;
+        }
     }
-    // .share1 {
-    //     position: absolute;
-    //     top: 44.5%;
-    //     left: 3%;
-    //     width: 20%;
-    // }
-    // .share2 {
-    //     position: absolute;
-    //     top: 42%;
-    //     left: 23.5%;
-    //     width: 26%;
-    // }
-    // .share3 {
-    //     position: absolute;
-    //     top: 43%;
-    //     left: 50.2%;
-    //     width: 26%;
-    // }
-    // .share4 {
-    //     position: absolute;
-    //     top: 45%;
-    //     left: 77%;
-    //     width: 20%;
-    // }
-    // .fb {
-    //     position: absolute;
-    //     cursor: pointer;
-    //     transition: transform 0.3s ease;
-    //     &:hover {
-    //         transform: scale(1.05);
-    //     }
-    //     &.btn1 {
-    //         top: 50.7%;
-    //         right: 11%;
-    //         width: 8.5%;
-    //         img {
-    //             width: 100%;
-    //         }
-    //     }
-
-    //     &.btn2 {
-    //         top: 50%;
-    //         right: 30%;
-    //         width: 16%;
-    //         img {
-    //             width: 100%;
-    //         }
-    //     }
-    //     &.btn3 {
-    //         top: 49.5%;
-    //         left: 28%;
-    //         width: 16%;
-    //         img {
-    //             width: 100%;
-    //         }
-    //     }
-    //     &.btn4 {
-    //         top: 50%;
-    //         left: 7%;
-    //         width: 8.5%;
-    //         img {
-    //             width: 100%;
-    //         }
-    //     }
-    // }
-    .share-images {
-        display: flex;
+    .image-swiper {
         position: absolute;
-        bottom: 25%;
-        img {
-            margin: 0 1%;
+        width: 100%;
+        top: 62%;
+        .image {
+            width: 100%;
+        }
+        @media screen and (max-width: 1023px) {
+            top: 71%;
         }
     }
     .share-more {
@@ -171,24 +103,7 @@
             transform: scale(1.1);
         }
     }
-    .image1 {
-        position: absolute;
-        top: 63%;
-        left: -5%;
-        width: 34%;
-    }
-    .image2 {
-        position: absolute;
-        top: 63%;
-        left: 33%;
-        width: 34%;
-    }
-    .image3 {
-        position: absolute;
-        top: 63%;
-        right: -5%;
-        width: 34%;
-    }
+
     .like-btn {
         position: absolute;
         top: 80%;
@@ -699,24 +614,6 @@
             }
         }
 
-        .image1 {
-            position: absolute;
-            top: 72%;
-            left: -35%;
-            width: 48%;
-        }
-        .image2 {
-            position: absolute;
-            top: 72%;
-            left: 18%;
-            width: 60%;
-        }
-        .image3 {
-            position: absolute;
-            top: 72%;
-            right: -35%;
-            width: 51%;
-        }
         .image4 {
             position: absolute;
             top: 90%;
