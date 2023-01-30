@@ -494,7 +494,9 @@
                             require(`@/assets/img/index1-5/1-5-L.png`) +
                             ')',
                     }"
-                ></div>
+                >
+                    <div class="title-left"></div>
+                </div>
                 <div
                     class="answer reveal-right-600"
                     :style="{
