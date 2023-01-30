@@ -547,6 +547,34 @@
                         "
                         alt=""
                     />
+                    <img
+                        class="pic-R-1"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/pic-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-2"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/pic-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-3"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/pic-R-3.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-4"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/pic-R-4.png`)
+                        "
+                        alt=""
+                    />
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -608,6 +636,34 @@
                         class="icon-R"
                         :src="
                             require(`@/assets/img/index1-5/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-1"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/pic-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-2"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/pic-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-3"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/pic-R-3.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-4"
+                        :src="
+                            require(`@/assets/img/index1-5/elements/pic-R-4.png`)
                         "
                         alt=""
                     />
@@ -677,6 +733,41 @@
                         "
                         alt=""
                     />
+                    <img
+                        class="pic-R-1"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/pic-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-2"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/pic-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-3"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/pic-R-3.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-4"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/pic-R-4.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-5"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/pic-R-5.png`)
+                        "
+                        alt=""
+                    />
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -738,6 +829,41 @@
                         class="icon-R"
                         :src="
                             require(`@/assets/img/index1-6/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-1"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/pic-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-2"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/pic-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-3"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/pic-R-3.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-4"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/pic-R-4.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-5"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/pic-R-5.png`)
                         "
                         alt=""
                     />
@@ -807,6 +933,34 @@
                         "
                         alt=""
                     />
+                    <img
+                        class="pic-R-1"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/pic-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-2"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/pic-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-3"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/pic-R-3.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-4"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/pic-R-4.png`)
+                        "
+                        alt=""
+                    />
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -868,6 +1022,34 @@
                         class="icon-R"
                         :src="
                             require(`@/assets/img/index1-7/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-1"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/pic-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-2"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/pic-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-3"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/pic-R-3.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-4"
+                        :src="
+                            require(`@/assets/img/index1-7/elements/pic-R-4.png`)
                         "
                         alt=""
                     />
@@ -937,6 +1119,27 @@
                         "
                         alt=""
                     />
+                    <img
+                        class="pic-R-1"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/pic-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-2"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/pic-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-3"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/pic-R-3.png`)
+                        "
+                        alt=""
+                    />
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -998,6 +1201,27 @@
                         class="icon-R"
                         :src="
                             require(`@/assets/img/index1-8/elements/icon-R.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-1"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/pic-R-1.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-2"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/pic-R-2.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="pic-R-3"
+                        :src="
+                            require(`@/assets/img/index1-8/elements/pic-R-3.png`)
                         "
                         alt=""
                     />
