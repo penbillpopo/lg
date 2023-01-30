@@ -519,13 +519,22 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="title-box">
+                        <img
+                            class="icon-R"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/icon-R.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="title-R"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/title-R.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                     <img
                         class="text-R-1"
                         :src="
@@ -540,41 +549,36 @@
                         "
                         alt=""
                     />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="pic-box">
+                        <img
+                            class="pic-R-1"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/pic-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="pic-R-2"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/pic-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="pic-R-3"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/pic-R-3.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="pic-R-4"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/pic-R-4.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -611,13 +615,22 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="title-box">
+                        <img
+                            class="icon-R"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/icon-R.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="title-R"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/title-R.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                     <img
                         class="text-R-1"
                         :src="
@@ -632,41 +645,36 @@
                         "
                         alt=""
                     />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="pic-box">
+                        <img
+                            class="pic-R-1"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/pic-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="pic-R-2"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/pic-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="pic-R-3"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/pic-R-3.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="pic-R-4"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/pic-R-4.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                 </div>
             </div>
         </div>
@@ -705,13 +713,22 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="title-box">
+                        <img
+                            class="icon-R"
+                            :src="
+                                require(`@/assets/img/index1-6/elements/icon-R.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="title-R"
+                            :src="
+                                require(`@/assets/img/index1-6/elements/title-R.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                     <img
                         class="text-R-1"
                         :src="
@@ -726,48 +743,48 @@
                         "
                         alt=""
                     />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-5"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-5.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="pic-box">
+                        <div class="left">
+                            <img
+                                class="pic-R-3"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/pic-R-3.png`)
+                                "
+                                alt=""
+                            />
+
+                            <img
+                                class="pic-R-5"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/pic-R-5.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            class="pic-R-4"
+                            :src="
+                                require(`@/assets/img/index1-6/elements/pic-R-4.png`)
+                            "
+                            alt=""
+                        />
+                        <div class="right">
+                            <img
+                                class="pic-R-2"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/pic-R-2.png`)
+                                "
+                                alt=""
+                            />
+                            <img
+                                class="pic-R-1"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/pic-R-1.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -804,13 +821,22 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="title-box">
+                        <img
+                            class="icon-R"
+                            :src="
+                                require(`@/assets/img/index1-6/elements/icon-R.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="title-R"
+                            :src="
+                                require(`@/assets/img/index1-6/elements/title-R.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                     <img
                         class="text-R-1"
                         :src="
@@ -825,48 +851,48 @@
                         "
                         alt=""
                     />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-5"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-5.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="pic-box">
+                        <div class="left">
+                            <img
+                                class="pic-R-3"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/pic-R-3.png`)
+                                "
+                                alt=""
+                            />
+
+                            <img
+                                class="pic-R-5"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/pic-R-5.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            class="pic-R-4"
+                            :src="
+                                require(`@/assets/img/index1-6/elements/pic-R-4.png`)
+                            "
+                            alt=""
+                        />
+                        <div class="right">
+                            <img
+                                class="pic-R-2"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/pic-R-2.png`)
+                                "
+                                alt=""
+                            />
+                            <img
+                                class="pic-R-1"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/pic-R-1.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -905,13 +931,22 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="title-box">
+                        <img
+                            class="icon-R"
+                            :src="
+                                require(`@/assets/img/index1-7/elements/icon-R.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="title-R"
+                            :src="
+                                require(`@/assets/img/index1-7/elements/title-R.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                     <img
                         class="text-R-1"
                         :src="
@@ -926,41 +961,42 @@
                         "
                         alt=""
                     />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="pic-box">
+                        <div class="left">
+                            <img
+                                class="pic-R-4"
+                                :src="
+                                    require(`@/assets/img/index1-7/elements/pic-R-4.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <div class="right">
+                            <div class="top">
+                                <img
+                                    class="pic-R-1"
+                                    :src="
+                                        require(`@/assets/img/index1-7/elements/pic-R-1.png`)
+                                    "
+                                    alt=""
+                                />
+                                <img
+                                    class="pic-R-2"
+                                    :src="
+                                        require(`@/assets/img/index1-7/elements/pic-R-2.png`)
+                                    "
+                                    alt=""
+                                />
+                            </div>
+                            <img
+                                class="pic-R-3"
+                                :src="
+                                    require(`@/assets/img/index1-7/elements/pic-R-3.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -997,13 +1033,22 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="title-box">
+                        <img
+                            class="icon-R"
+                            :src="
+                                require(`@/assets/img/index1-7/elements/icon-R.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="title-R"
+                            :src="
+                                require(`@/assets/img/index1-7/elements/title-R.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                     <img
                         class="text-R-1"
                         :src="
@@ -1018,41 +1063,42 @@
                         "
                         alt=""
                     />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="pic-box">
+                        <div class="left">
+                            <img
+                                class="pic-R-4"
+                                :src="
+                                    require(`@/assets/img/index1-7/elements/pic-R-4.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <div class="right">
+                            <div class="top">
+                                <img
+                                    class="pic-R-1"
+                                    :src="
+                                        require(`@/assets/img/index1-7/elements/pic-R-1.png`)
+                                    "
+                                    alt=""
+                                />
+                                <img
+                                    class="pic-R-2"
+                                    :src="
+                                        require(`@/assets/img/index1-7/elements/pic-R-2.png`)
+                                    "
+                                    alt=""
+                                />
+                            </div>
+                            <img
+                                class="pic-R-3"
+                                :src="
+                                    require(`@/assets/img/index1-7/elements/pic-R-3.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1091,13 +1137,22 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="title-box">
+                        <img
+                            class="icon-R"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/icon-R.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="title-R"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/title-R.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                     <img
                         class="text-R-1"
                         :src="
@@ -1112,34 +1167,29 @@
                         "
                         alt=""
                     />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="pic-box">
+                        <img
+                            class="pic-R-1"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/pic-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="pic-R-2"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/pic-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="pic-R-3"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/pic-R-3.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -1176,13 +1226,22 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="title-box">
+                        <img
+                            class="icon-R"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/icon-R.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="title-R"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/title-R.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                     <img
                         class="text-R-1"
                         :src="
@@ -1197,34 +1256,29 @@
                         "
                         alt=""
                     />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="pic-box">
+                        <img
+                            class="pic-R-1"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/pic-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="pic-R-2"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/pic-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="pic-R-3"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/pic-R-3.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
                 </div>
             </div>
         </div>
