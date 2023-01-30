@@ -36,69 +36,127 @@
         width: 13%;
     }
 
-    .share1 {
+    .customer-evaluate {
+        display: flex;
         position: absolute;
-        top: 44.5%;
-        left: 3%;
-        width: 20%;
-    }
-    .share2 {
-        position: absolute;
-        top: 42%;
-        left: 23.5%;
-        width: 26%;
-    }
-    .share3 {
-        position: absolute;
-        top: 43%;
-        left: 50.2%;
-        width: 26%;
-    }
-    .share4 {
-        position: absolute;
-        top: 45%;
-        left: 77%;
-        width: 20%;
-    }
-    .fb {
-        position: absolute;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        &:hover {
-            transform: scale(1.05);
-        }
-        &.btn1 {
-            top: 50.7%;
-            right: 11%;
-            width: 8.5%;
-            img {
-                width: 100%;
-            }
-        }
+        bottom: 45%;
+        width: 100%;
 
-        &.btn2 {
-            top: 50%;
-            right: 30%;
-            width: 16%;
+        .conversation {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
             img {
-                width: 100%;
+                width: 50%;
+            }
+            .paragraph {
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // align-items: center;
+                width: 40%;
+                // height: 70%;
+                position: absolute;
+                top: 6%;
+                display: block;
+                border: 1px solid red;
+                h1 {
+                    font-size: 200%;
+                    text-align: center;
+                    margin-bottom: 2.5%;
+                }
+                .customer-content {
+                    font-size: 180%;
+                    // text-align: center;
+                    width: 80%;
+                    padding-left: 25%;
+                }
+                .name {
+                    font-size: 200%;
+                    padding-left: 25%;
+                    margin-top: 4%;
+                }
+                .fb-btn {
+                    // text-align: center;
+                    padding-left: 25%;
+                    margin-top: 3%;
+                }
             }
         }
-        &.btn3 {
-            top: 49.5%;
-            left: 28%;
-            width: 16%;
-            img {
-                width: 100%;
-            }
-        }
-        &.btn4 {
-            top: 50%;
-            left: 7%;
-            width: 8.5%;
-            img {
-                width: 100%;
-            }
+    }
+    // .share1 {
+    //     position: absolute;
+    //     top: 44.5%;
+    //     left: 3%;
+    //     width: 20%;
+    // }
+    // .share2 {
+    //     position: absolute;
+    //     top: 42%;
+    //     left: 23.5%;
+    //     width: 26%;
+    // }
+    // .share3 {
+    //     position: absolute;
+    //     top: 43%;
+    //     left: 50.2%;
+    //     width: 26%;
+    // }
+    // .share4 {
+    //     position: absolute;
+    //     top: 45%;
+    //     left: 77%;
+    //     width: 20%;
+    // }
+    // .fb {
+    //     position: absolute;
+    //     cursor: pointer;
+    //     transition: transform 0.3s ease;
+    //     &:hover {
+    //         transform: scale(1.05);
+    //     }
+    //     &.btn1 {
+    //         top: 50.7%;
+    //         right: 11%;
+    //         width: 8.5%;
+    //         img {
+    //             width: 100%;
+    //         }
+    //     }
+
+    //     &.btn2 {
+    //         top: 50%;
+    //         right: 30%;
+    //         width: 16%;
+    //         img {
+    //             width: 100%;
+    //         }
+    //     }
+    //     &.btn3 {
+    //         top: 49.5%;
+    //         left: 28%;
+    //         width: 16%;
+    //         img {
+    //             width: 100%;
+    //         }
+    //     }
+    //     &.btn4 {
+    //         top: 50%;
+    //         left: 7%;
+    //         width: 8.5%;
+    //         img {
+    //             width: 100%;
+    //         }
+    //     }
+    // }
+    .share-images {
+        display: flex;
+        position: absolute;
+        bottom: 25%;
+        img {
+            margin: 0 1%;
         }
     }
     .share-more {
@@ -154,6 +212,7 @@
         width: 32%;
     }
 }
+
 .mobile {
     display: none;
 }
@@ -664,6 +723,7 @@
             left: 4%;
             width: 45%;
         }
+
         .image5 {
             position: absolute;
             top: 90%;
