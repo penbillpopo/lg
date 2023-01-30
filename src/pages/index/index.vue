@@ -659,7 +659,7 @@
                     :src="require(`@/assets/img/index1-9/title.png`)"
                     alt=""
                 />
-                <div class="swiper-box pc">
+                <div class="swiper-box">
                     <swiper class="swiper" :options="swiperOption10">
                         <swiper-slide>
                             <a
@@ -761,98 +761,6 @@
                         ></div>
                     </swiper>
                 </div>
-                <div class="mobile">
-                    <div class="frame top">
-                        <a
-                            href="http://media.w3.org/2010/05/sintel/trailer.mp4"
-                            data-fancybox
-                        >
-                            <div
-                                class="pic"
-                                :style="{
-                                    'background-image':
-                                        'url(' +
-                                        require(`@/assets/img/index1-9/video_1.png`) +
-                                        ')',
-                                }"
-                            >
-                                <img
-                                    class="play-btn"
-                                    :src="
-                                        require(`@/assets/img/index1-9/playBtn.png`)
-                                    "
-                                />
-                            </div>
-                            <img
-                                class="text"
-                                :src="
-                                    require(`@/assets/img/index1-9/txt_1.png`)
-                                "
-                                alt=""
-                            />
-                        </a>
-                    </div>
-                    <div class="frame center">
-                        <a
-                            href="http://media.w3.org/2010/05/sintel/trailer.mp4"
-                            data-fancybox
-                        >
-                            <div
-                                class="pic"
-                                :style="{
-                                    'background-image':
-                                        'url(' +
-                                        require(`@/assets/img/index1-9/video_2.png`) +
-                                        ')',
-                                }"
-                            >
-                                <img
-                                    class="play-btn"
-                                    :src="
-                                        require(`@/assets/img/index1-9/playBtn.png`)
-                                    "
-                                />
-                            </div>
-                            <img
-                                class="text"
-                                :src="
-                                    require(`@/assets/img/index1-9/txt_2.png`)
-                                "
-                                alt=""
-                            />
-                        </a>
-                    </div>
-                    <div class="frame bottom">
-                        <a
-                            href="http://media.w3.org/2010/05/sintel/trailer.mp4"
-                            data-fancybox
-                        >
-                            <div
-                                class="pic"
-                                :style="{
-                                    'background-image':
-                                        'url(' +
-                                        require(`@/assets/img/index1-9/video_3.png`) +
-                                        ')',
-                                }"
-                            >
-                                <img
-                                    class="play-btn"
-                                    :src="
-                                        require(`@/assets/img/index1-9/playBtn.png`)
-                                    "
-                                />
-                            </div>
-                            <img
-                                class="text"
-                                :src="
-                                    require(`@/assets/img/index1-9/txt_3.png`)
-                                "
-                                alt=""
-                            />
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -883,7 +791,38 @@ export default {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
+                breakpoints: {
+                    1280: {
+                        slidesPerView: 3,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
             },
+            section10Data: [
+                {
+                    video: "https://www.youtube.com/watch?v=WviQZvbizGQ",
+                    pic: "@/assets/img/index1-9/video_1.png",
+                    btn: "@/assets/img/index1-9/playBtn.png",
+                    text: "@/assets/img/index1-9/txt_1.png",
+                },
+                {
+                    video: "https://www.youtube.com/watch?v=WviQZvbizGQ",
+                    pic: "@/assets/img/index1-9/video_2.png",
+                    btn: "@/assets/img/index1-9/playBtn.png",
+                    text: "@/assets/img/index1-9/txt_2.png",
+                },
+                {
+                    video: "https://www.youtube.com/watch?v=WviQZvbizGQ",
+                    pic: "@/assets/img/index1-9/video_3.png",
+                    btn: "@/assets/img/index1-9/playBtn.png",
+                    text: "@/assets/img/index1-9/txt_3.png",
+                },
+            ],
             lightBoxShow: false,
         };
     },

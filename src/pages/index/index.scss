@@ -28,6 +28,9 @@
                 }
             }
         }
+        @media screen and (max-width: 1023px) {
+            min-height: 1000vh;
+        }
     }
 }
 .bg {
@@ -293,7 +296,7 @@ $delays: (
 .mobile-flex {
     display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
     .pc {
         display: none;
     }
@@ -337,6 +340,9 @@ $delays: (
                 width: 100%;
                 height: 100%;
                 @extend %background_cover;
+                @media screen and (max-width: 480px) {
+                    background-size: 100% 100%;
+                }
             }
         }
     }
@@ -487,7 +493,7 @@ $delays: (
             transform: scale(1) rotate(270deg);
         }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1023px) {
         .bg {
             background-image: url(@/assets/img/index1-1/mobile/bg.png);
             padding-bottom: 155%;
@@ -562,6 +568,9 @@ $delays: (
                     height: 100%;
                     @extend %background_cover;
                     transition: transform 0.6s ease;
+                    @media screen and (max-width: 480px) {
+                        background-size: 100% 100%;
+                    }
                 }
             }
         }
@@ -748,7 +757,7 @@ $delays: (
             }
         }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1023px) {
         .bg {
             background-image: url(@/assets/img/index1-3/mobile/bg.png);
             padding-bottom: 155%;
@@ -846,7 +855,7 @@ $delays: (
     .bg {
         background-image: url(@/assets/img/index1-4/bg.png);
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1023px) {
         .bg {
             background-image: url(@/assets/img/index1-4/mobile/bg.png);
             padding-bottom: 155%;
@@ -870,7 +879,7 @@ $delays: (
     .bg {
         background-image: url(@/assets/img/index1-4/bg.png);
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1023px) {
         .bg {
             background-image: url(@/assets/img/index1-4/mobile/bg.png);
             padding-bottom: 155%;
@@ -951,23 +960,8 @@ $delays: (
                 height: 30px;
             }
         }
-        .frame {
-            position: absolute;
-            width: 70%;
-            left: 50%;
-            transform: translateX(-50%);
-            &.top {
-                top: 7%;
-            }
-            &.center {
-                top: 55%;
-            }
-            &.bottom {
-                top: 60%;
-            }
-        }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1023px) {
         .bg {
             background-image: url(@/assets/img/index1-9/mobile/bg.png);
             padding-bottom: 155%;
@@ -978,60 +972,18 @@ $delays: (
             left: 20%;
             width: 59%;
         }
-        .mobile {
-            .frame {
-                position: absolute;
-                width: 57%;
-                left: 50%;
-                transform: translateX(-50%);
+        .swiper-box {
+            .swiper {
                 .text {
                     height: 25px;
                     margin-top: 10px;
-                }
-                &.top {
-                    top: 14%;
-                }
-                &.center {
-                    top: 42%;
-                }
-                &.bottom {
-                    top: 71%;
-                }
-
-                a {
-                    width: 100%;
-                    display: block;
-                    .pic {
-                        width: 100%;
-                        display: block;
-                        padding-bottom: 58%;
-                        background-size: 100%;
-                        .play-btn {
-                            position: absolute;
-                            width: 80px;
-                            height: 80px;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            @media screen and (max-width: 768px) {
-                                top: 45%;
-                                width: 60px;
-                                height: 60px;
-                            }
-                            @media screen and (max-width: 480px) {
-                                top: 40%;
-                                width: 50px;
-                                height: 50px;
-                            }
-                        }
-                    }
                 }
             }
         }
     }
     @media screen and (max-width: 480px) {
-        .mobile {
-            .frame {
+        .swiper-box {
+            .swiper {
                 .text {
                     height: 20px;
                 }
@@ -1039,9 +991,8 @@ $delays: (
         }
     }
     @media screen and (max-width: 440px) {
-        .mobile {
-            .frame {
-                width: 65%;
+        .swiper-box {
+            .swiper {
                 .text {
                     height: 18px;
                 }
