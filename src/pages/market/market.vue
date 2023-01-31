@@ -7,6 +7,13 @@
                 :src="require(`@/assets/img/index3/index_3-bg.png`)"
                 alt=""
             />
+            <div class="logo">
+                <img
+                    class="flash"
+                    :src="require(`@/assets/img/index1-1/flash.png`)"
+                    alt=""
+                />
+            </div>
             <div class="buttons">
                 <a href="#" class="market-btn btn1"
                     ><img

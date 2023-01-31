@@ -627,6 +627,11 @@ export default {
                     },
                     0: {
                         slidesPerView: 2,
+                        spaceBetween: 10,
+                        coverflowEffect: {
+                            stretch: 0,
+                            depth: 0,
+                        },
                     },
                 },
             },
@@ -781,7 +786,7 @@ export default {
             swiperOptionImage: {
                 effect: "coverflow",
                 slidesPerView: 3,
-                spaceBetween: 0,
+                spaceBetween: 5,
                 loop: true,
                 autoplay: {
                     delay: 3000,
@@ -804,8 +809,9 @@ export default {
                     },
                     0: {
                         slidesPerView: 2,
+                        spaceBetween: 10,
                         coverflowEffect: {
-                            stretch: -60,
+                            stretch: 0,
                         },
                     },
                 },

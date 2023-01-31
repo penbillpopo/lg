@@ -69,6 +69,9 @@
         left: 37%;
         width: 63%;
         padding: 5%;
+        .frame {
+            width: 80%;
+        }
         .title-box {
             display: flex;
             width: 100%;
@@ -89,6 +92,7 @@
             margin-bottom: 5%;
         }
     }
+
     @media screen and (max-width: 1280px) {
         .question {
             .title-L-1 {
@@ -102,6 +106,9 @@
         }
         .answer {
             padding: 10% 5%;
+            .frame {
+                width: 90%;
+            }
         }
     }
     &.mobile-flex {
@@ -122,6 +129,13 @@
         .answer {
             height: 70%;
         }
+        @media screen and (max-width: 1023px) {
+            .answer {
+                .frame {
+                    width: 80%;
+                }
+            }
+        }
         @media screen and (max-width: 768px) {
             .question {
                 .title-L-1 {
@@ -129,6 +143,11 @@
                 }
                 .title-L-2 {
                     width: 35%;
+                }
+            }
+            .answer {
+                .frame {
+                    width: 90%;
                 }
             }
         }
@@ -140,6 +159,11 @@
                 .title-L-2 {
                     top: 36%;
                     width: 48%;
+                }
+            }
+            .answer {
+                .frame {
+                    width: 100%;
                 }
             }
         }
@@ -304,6 +328,7 @@
                         .pic-R-2 {
                             width: 37%;
                         }
+                        margin-bottom: 10px;
                     }
                     .pic-R-3 {
                         width: 100%;
@@ -472,6 +497,16 @@ $delays: (
     "1800": 1.8s,
     "1900": 1.9s,
     "2000": 2s,
+    "2100": 2.1s,
+    "2200": 2.2s,
+    "2300": 2.3s,
+    "2400": 2.4s,
+    "2500": 2.5s,
+    "2600": 2.6s,
+    "2700": 2.7s,
+    "2800": 2.8s,
+    "2900": 2.9s,
+    "3000": 3s,
 );
 @each $delayName, $delay in $delays {
     .reveal-top-#{$delayName} {

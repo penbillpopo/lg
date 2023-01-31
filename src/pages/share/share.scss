@@ -79,6 +79,47 @@
         @media screen and (max-width: 1023px) {
             top: 54%;
         }
+        @media screen and (max-width: 480px) {
+            top: 53%;
+            .frame {
+                .content {
+                    top: 13%;
+                    .title {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                    .text {
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+                    .name {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+                    .fb-btn {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 380px) {
+            .frame {
+                .content {
+                    top: 13%;
+                    .title {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+                    .text {
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                    }
+                    .name {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
     }
     .image-swiper {
         position: absolute;
