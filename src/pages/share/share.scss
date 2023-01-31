@@ -123,24 +123,32 @@
     .image-swiper {
         position: absolute;
         width: 100%;
-        top: 62%;
+        top: 63%;
         .image {
             width: 100%;
         }
         @media screen and (max-width: 1023px) {
-            top: 71%;
+            top: 73%;
+        }
+        @media screen and (max-width: 768px) {
+            top: 73%;
         }
     }
     .share-more {
-        img {
-            position: absolute;
-            top: 60%;
-            left: 37.5%;
-            width: 25%;
-            transition: all ease-in 0.5s;
+        position: absolute;
+        top: 60%;
+        left: 37.5%;
+        width: 25%;
+        transition: opacity ease 0.3s;
+        z-index: 1;
+        &.hover {
+            z-index: 0;
         }
-        img:hover {
-            transform: scale(1.1);
+        &:hover {
+            opacity: 0;
+            &.hover {
+                opacity: 1;
+            }
         }
     }
 
@@ -149,10 +157,17 @@
         top: 80%;
         right: 33%;
         width: 35%;
-        transition: all ease-in 0.3s;
-    }
-    .like-btn:hover {
-        transform: scale(1.1);
+        transition: opacity ease 0.3s;
+        z-index: 1;
+        &.hover {
+            z-index: 0;
+        }
+        &:hover {
+            opacity: 0;
+            &.hover {
+                opacity: 1;
+            }
+        }
     }
     .image4 {
         position: absolute;
@@ -195,8 +210,8 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 500px;
-        height: 540px;
+        width: 600px;
+        height: 650px;
         .frame {
             width: 100%;
             height: 100%;
@@ -229,6 +244,7 @@
                 height: 60%;
                 .title {
                     text-align: center;
+                    margin-top: 10px;
                     margin-bottom: 10px;
                     font-size: 20px;
                     color: rgb(24, 47, 149);
@@ -236,7 +252,7 @@
                 }
                 .content,
                 .text {
-                    height: 245px;
+                    height: 310px;
                     strong {
                         color: rgb(230, 61, 112);
                     }
@@ -290,7 +306,7 @@
                         margin-bottom: 20px;
                     }
                     .text {
-                        height: 180px;
+                        height: 230px;
                         padding: 0 10px;
                         overflow-x: hidden;
                         overflow-y: auto;
@@ -298,7 +314,7 @@
                 }
                 .step2 {
                     .content {
-                        height: 200px;
+                        height: 260px;
                     }
                     .agree {
                         display: flex;
@@ -332,7 +348,7 @@
                 }
                 .step3 {
                     .input-box {
-                        margin-top: 30px;
+                        margin-top: 45px;
                         .input {
                             display: flex;
                             align-items: center;
@@ -344,8 +360,8 @@
                                 padding-right: 15px;
                             }
                             input {
-                                width: 220px;
-                                height: 40px;
+                                width: 280px;
+                                height: 45px;
                                 border-radius: 20px;
                                 border: 0;
                                 background-color: rgb(225, 224, 225);
@@ -361,18 +377,18 @@
                     }
                     img {
                         width: 100%;
-                        margin-top: 10px;
+                        margin-top: 30px;
                     }
                 }
             }
         }
         @media screen and (max-width: 768px) {
-            width: 400px;
-            height: 430px;
+            width: 500px;
+            height: 550px;
             .frame {
                 .content-box {
                     .content {
-                        height: 200px;
+                        height: 250px;
                     }
                     button {
                         height: 30px;
@@ -391,12 +407,12 @@
                             font-size: 14px;
                         }
                         .text {
-                            height: 150px;
+                            height: 200px;
                         }
                     }
                     .step2 {
                         .content {
-                            height: 160px;
+                            height: 200px;
                             strong,
                             p {
                                 font-size: 14px;
@@ -419,12 +435,12 @@
                                     padding-right: 10px;
                                 }
                                 input {
-                                    width: 160px;
+                                    width: 230px;
                                 }
                             }
                         }
                         button {
-                            margin-top: 20px;
+                            margin-top: 40px;
                         }
                     }
                     .step4 {
@@ -434,15 +450,15 @@
                         }
                         img {
                             width: 90%;
-                            margin-top: 10px;
+                            margin-top: 20px;
                         }
                     }
                 }
             }
         }
         @media screen and (max-width: 480px) {
-            width: 350px;
-            height: 370px;
+            width: 400px;
+            height: 450px;
             .frame {
                 .content-box {
                     top: 53%;
@@ -462,6 +478,9 @@
                         .title {
                             font-size: 16px;
                             margin-bottom: 10px;
+                        }
+                        .text {
+                            height: 170px;
                         }
                     }
                     .step2 {
@@ -495,7 +514,7 @@
                         }
                         img {
                             width: 80%;
-                            margin-top: 10px;
+                            margin-top: 20px;
                         }
                     }
                 }
@@ -521,6 +540,9 @@
                             font-size: 16px;
                             margin-bottom: 0px;
                         }
+                        .text {
+                            height: 120px;
+                        }
                         p {
                             font-size: 12px;
                         }
@@ -541,6 +563,9 @@
                             label {
                                 font-size: 12px;
                             }
+                            .slide-down {
+                                display: none;
+                            }
                         }
                     }
                     .step3 {
@@ -556,7 +581,8 @@
                                     padding-right: 10px;
                                 }
                                 input {
-                                    width: 153px;
+                                    width: 140px;
+                                    height: 32px;
                                 }
                             }
                         }
@@ -594,12 +620,10 @@
             width: 65%;
         }
         .share-more {
-            img {
-                position: absolute;
-                top: 68.5%;
-                left: 28.5%;
-                width: 43%;
-            }
+            position: absolute;
+            top: 68.5%;
+            left: 28.5%;
+            width: 43%;
         }
         .share1 {
             display: none;
@@ -669,34 +693,6 @@
             top: 90%;
             right: 4%;
             width: 45%;
-        }
-    }
-    // Slider down button
-    .black-field {
-        .lightbox {
-            .frame {
-                .content-box {
-                    .step2 {
-                        .agree {
-                            .slide-down {
-                                width: 25px;
-                                height: 20px;
-                                position: absolute;
-                                bottom: 25px;
-                                right: 0;
-                                background-color: rgba(0, 0, 0, 0);
-                                color: #d0d0d0;
-                                border: 1px solid rgb(101, 101, 101);
-                                border-radius: 25%;
-                                cursor: pointer;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="container" ref="container">
-        <navComponent v-if="!lightBoxShow"></navComponent>
+        <navComponent v-if="!lightBoxShow" location="home"></navComponent>
         <div class="section1">
             <div class="flex-box pc-flex">
                 <div class="frame ani">
@@ -103,6 +103,44 @@
         </div>
         <div class="section2" ref="section2">
             <div class="bg">
+                <div class="nav-box">
+                    <router-link to="/" @click.native="$router.go()">
+                        <img
+                            :src="require(`@/assets/img/index1-1/nav-1.png`)"
+                            alt=""
+                        />
+                    </router-link>
+                    <router-link
+                        to="/share#step"
+                        class="option"
+                        @click.native="$router.go()"
+                    >
+                        <img
+                            :src="require(`@/assets/img/index1-1/nav-2.png`)"
+                            alt=""
+                        />
+                    </router-link>
+                    <router-link
+                        to="/share#fb"
+                        class="option"
+                        @click.native="$router.go()"
+                    >
+                        <img
+                            :src="require(`@/assets/img/index1-1/nav-3.png`)"
+                            alt=""
+                        />
+                    </router-link>
+                    <router-link
+                        to="/market"
+                        class="option"
+                        @click.native="$router.go()"
+                    >
+                        <img
+                            :src="require(`@/assets/img/index1-1/nav-4.png`)"
+                            alt=""
+                        />
+                    </router-link>
+                </div>
                 <div class="logo">
                     <img
                         class="flash"
@@ -1116,10 +1154,7 @@
                             </a>
                         </swiper-slide>
                         <swiper-slide>
-                            <a
-                                href="https://www.youtube.com/watch?v=WviQZvbizGQ"
-                                data-fancybox
-                            >
+                            <div>
                                 <div
                                     class="pic"
                                     :style="{
@@ -1128,14 +1163,7 @@
                                             require(`@/assets/img/index1-9/video_2.png`) +
                                             ')',
                                     }"
-                                >
-                                    <img
-                                        class="play-btn"
-                                        :src="
-                                            require(`@/assets/img/index1-9/playBtn.png`)
-                                        "
-                                    />
-                                </div>
+                                ></div>
                                 <img
                                     class="text"
                                     :src="
@@ -1143,13 +1171,10 @@
                                     "
                                     alt=""
                                 />
-                            </a>
+                            </div>
                         </swiper-slide>
                         <swiper-slide>
-                            <a
-                                href="https://www.youtube.com/watch?v=WviQZvbizGQ"
-                                data-fancybox
-                            >
+                            <div>
                                 <div
                                     class="pic"
                                     :style="{
@@ -1158,14 +1183,7 @@
                                             require(`@/assets/img/index1-9/video_3.png`) +
                                             ')',
                                     }"
-                                >
-                                    <img
-                                        class="play-btn"
-                                        :src="
-                                            require(`@/assets/img/index1-9/playBtn.png`)
-                                        "
-                                    />
-                                </div>
+                                ></div>
                                 <img
                                     class="text"
                                     :src="
@@ -1173,7 +1191,7 @@
                                     "
                                     alt=""
                                 />
-                            </a>
+                            </div>
                         </swiper-slide>
                         <div
                             class="swiper-button-prev"
@@ -1184,6 +1202,67 @@
                             slot="button-next"
                         ></div>
                     </swiper>
+                </div>
+                <div class="video-box">
+                    <a
+                        class="video"
+                        href="https://www.youtube.com/watch?v=WviQZvbizGQ"
+                        data-fancybox
+                    >
+                        <div
+                            class="pic"
+                            :style="{
+                                'background-image':
+                                    'url(' +
+                                    require(`@/assets/img/index1-9/video_1.png`) +
+                                    ')',
+                            }"
+                        >
+                            <img
+                                class="play-btn"
+                                :src="
+                                    require(`@/assets/img/index1-9/playBtn.png`)
+                                "
+                            />
+                        </div>
+                        <img
+                            class="text"
+                            :src="require(`@/assets/img/index1-9/txt_1.png`)"
+                            alt=""
+                        />
+                    </a>
+                    <div class="video">
+                        <div
+                            class="pic"
+                            :style="{
+                                'background-image':
+                                    'url(' +
+                                    require(`@/assets/img/index1-9/video_2.png`) +
+                                    ')',
+                            }"
+                        ></div>
+                        <img
+                            class="text"
+                            :src="require(`@/assets/img/index1-9/txt_2.png`)"
+                            alt=""
+                        />
+                    </div>
+                    <div class="video">
+                        <div
+                            class="pic"
+                            :style="{
+                                'background-image':
+                                    'url(' +
+                                    require(`@/assets/img/index1-9/video_3.png`) +
+                                    ')',
+                            }"
+                        ></div>
+                        <img
+                            class="text"
+                            :src="require(`@/assets/img/index1-9/txt_3.png`)"
+                            alt=""
+                        />
+                    </div>
                 </div>
             </div>
         </div>
@@ -1227,26 +1306,6 @@ export default {
                     },
                 },
             },
-            section10Data: [
-                {
-                    video: "https://www.youtube.com/watch?v=WviQZvbizGQ",
-                    pic: "@/assets/img/index1-9/video_1.png",
-                    btn: "@/assets/img/index1-9/playBtn.png",
-                    text: "@/assets/img/index1-9/txt_1.png",
-                },
-                {
-                    video: "https://www.youtube.com/watch?v=WviQZvbizGQ",
-                    pic: "@/assets/img/index1-9/video_2.png",
-                    btn: "@/assets/img/index1-9/playBtn.png",
-                    text: "@/assets/img/index1-9/txt_2.png",
-                },
-                {
-                    video: "https://www.youtube.com/watch?v=WviQZvbizGQ",
-                    pic: "@/assets/img/index1-9/video_3.png",
-                    btn: "@/assets/img/index1-9/playBtn.png",
-                    text: "@/assets/img/index1-9/txt_3.png",
-                },
-            ],
             lightBoxShow: false,
             tempScrollOffset: "",
             isScrollStop: false,

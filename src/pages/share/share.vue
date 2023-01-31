@@ -2,6 +2,7 @@
     <div class="container">
         <navComponent
             v-if="!lightBoxIntroShow && !lightBoxApplyShow"
+            location="share"
         ></navComponent>
         <div class="page02">
             <div class="top-bg">
@@ -97,16 +98,41 @@
                         /></swiper-slide>
                     </swiper>
                 </div>
+                <a href="#" target="blank">
+                    <img
+                        class="share-more"
+                        :src="
+                            require(`@/assets/img/index2-1/btn-shareMore.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="share-more hover"
+                        :src="
+                            require(`@/assets/img/index2-1/btn-shareMore-hover.png`)
+                        "
+                        alt=""
+                    />
+                </a>
                 <a
                     href="https://mamibuy.com.tw/talk/forum/topic/438210"
                     target="blank"
-                    ><img
+                >
+                    <img
                         class="like-btn"
                         :src="
                             require(`@/assets/img/index2-1/btn-likeItTonight.png`)
                         "
                         alt=""
-                /></a>
+                    />
+                    <img
+                        class="like-btn hover"
+                        :src="
+                            require(`@/assets/img/index2-1/btn-likeItTonight-hover.png`)
+                        "
+                        alt=""
+                    />
+                </a>
                 <img
                     class="image4"
                     :src="require(`@/assets/img/index2-1/images4.png`)"
@@ -605,11 +631,11 @@ export default {
             swiperOptionChat: {
                 effect: "coverflow",
                 slidesPerView: 4,
-                spaceBetween: 0,
+                spaceBetween: 40,
                 coverflowEffect: {
                     rotate: 0,
-                    stretch: -100,
-                    depth: 180,
+                    stretch: 0,
+                    depth: 60,
                     modifier: 1,
                     slideShadows: false,
                 },
@@ -795,6 +821,7 @@ export default {
                     delay: 3000,
                     disableOnInteraction: false,
                 },
+                speed: 1000,
                 coverflowEffect: {
                     rotate: 0,
                     depth: 0,
@@ -858,36 +885,51 @@ export default {
             this.apply.step = 3;
         },
         onStep3Click() {
-            let _this = this;
-            this.axios
-                .post("https://2908.api.gosu.bar/customize/addLgMember", {
-                    name: this.apply.data.name,
-                    email: this.apply.data.email,
-                    phone: this.apply.data.phone,
-                })
-                .then(async () => {
-                    await FB.init({
-                        appId: "440644321520782",
-                        cookie: true,
-                        xfbml: true,
-                        version: "v11.0",
+            let validate = true;
+            let alertTxt = "";
+            let regPhone = /^09[0-9]{8}$/;
+            let regEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            if (!regPhone.test(this.apply.data.phone)) {
+                validate = false;
+                alertTxt = "手機格式錯誤";
+            } else if (!regEmail.test(this.apply.data.email)) {
+                validate = false;
+                alertTxt = "email格式錯誤";
+            }
+            if (validate) {
+                let _this = this;
+                this.axios
+                    .post("https://2908.api.gosu.bar/customize/addLgMember", {
+                        name: this.apply.data.name,
+                        email: this.apply.data.email,
+                        phone: this.apply.data.phone,
+                    })
+                    .then(async () => {
+                        await FB.init({
+                            appId: "440644321520782",
+                            cookie: true,
+                            xfbml: true,
+                            version: "v11.0",
+                        });
+                        FB.ui(
+                            {
+                                display: "popup",
+                                method: "share",
+                                href: "http://www.lgfiji.com.tw/",
+                            },
+                            function (res) {
+                                console.log(res);
+                                _this.apply.step = 4;
+                            }
+                        );
+                    })
+                    .catch((error) => {
+                        alert("資料傳輸失敗");
+                        console.error(error);
                     });
-                    FB.ui(
-                        {
-                            display: "popup",
-                            method: "share",
-                            href: "http://www.lgfiji.com.tw/",
-                        },
-                        function (res) {
-                            console.log(res);
-                            _this.apply.step = 4;
-                        }
-                    );
-                })
-                .catch((error) => {
-                    alert("資料傳輸失敗");
-                    console.error(error);
-                });
+            } else {
+                alert(alertTxt);
+            }
         },
         lightBoxIntroOpen(isOpen) {
             this.lightBoxIntroShow = isOpen;
