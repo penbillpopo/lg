@@ -96,7 +96,9 @@
                         /></swiper-slide>
                     </swiper>
                 </div>
-                <a href=""
+                <a
+                    href="https://mamibuy.com.tw/talk/forum/topic/438210"
+                    target="blank"
                     ><img
                         class="like-btn"
                         :src="
