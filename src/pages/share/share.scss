@@ -250,7 +250,10 @@
                         margin-bottom: 20px;
                     }
                     .text {
-                        height: 170px;
+                        height: 180px;
+                        padding: 0 10px;
+                        overflow-x: hidden;
+                        overflow-y: auto;
                     }
                 }
                 .step2 {
