@@ -757,7 +757,6 @@
                                     "
                                     alt=""
                                 />
-
                                 <img
                                     class="pic-R-5"
                                     :src="
@@ -785,6 +784,13 @@
                                     class="pic-R-1"
                                     :src="
                                         require(`@/assets/img/index1-6/elements/pic-R-1.png`)
+                                    "
+                                    alt=""
+                                />
+                                <img
+                                    class="pic-R-6"
+                                    :src="
+                                        require(`@/assets/img/index1-6/elements/pic-R-6.png`)
                                     "
                                     alt=""
                                 />
@@ -867,7 +873,6 @@
                                     "
                                     alt=""
                                 />
-
                                 <img
                                     class="pic-R-5"
                                     :src="
@@ -895,6 +900,13 @@
                                     class="pic-R-1"
                                     :src="
                                         require(`@/assets/img/index1-6/elements/pic-R-1.png`)
+                                    "
+                                    alt=""
+                                />
+                                <img
+                                    class="pic-R-6"
+                                    :src="
+                                        require(`@/assets/img/index1-6/elements/pic-R-6.png`)
                                     "
                                     alt=""
                                 />
