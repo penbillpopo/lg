@@ -1482,6 +1482,8 @@ export default {
                 },
             ],
             lightBoxShow: false,
+            tempScrollOffset: "",
+            isScrollStop: false,
         };
     },
     created() {
@@ -1502,14 +1504,26 @@ export default {
     },
     methods: {
         sectionScroll() {
-            const percentage =
+            if (this.isScrollStop) {
+                window.scrollTo(0, this.tempScrollOffset);
+                return;
+            }
+            let percentage =
                 Math.round(
                     (window.pageYOffset /
                         (document.body.offsetHeight - window.innerHeight)) *
                         10
                 ) + 1;
-            if (percentage < 11) {
-                if (this.$refs["container"]) {
+            if (percentage <= 11) {
+                if (percentage === 11) {
+                    percentage = 10;
+                }
+                if (
+                    this.$refs["container"] &&
+                    !this.$refs["container"].classList.contains(
+                        `animate-${percentage}`
+                    )
+                ) {
                     for (let i = 1; i <= 10; i++) {
                         this.$refs["container"].classList.remove(
                             `animate-${i}`
@@ -1519,18 +1533,11 @@ export default {
                         "container",
                         `animate-${percentage}`
                     );
-                }
-            } else if (percentage === 11) {
-                if (this.$refs["container"]) {
-                    for (let i = 1; i <= 10; i++) {
-                        this.$refs["container"].classList.remove(
-                            `animate-${i}`
-                        );
-                    }
-                    this.$refs["container"].classList.add(
-                        "container",
-                        `animate-10`
-                    );
+                    this.isScrollStop = true;
+                    this.tempScrollOffset = window.scrollY;
+                    setTimeout(() => {
+                        this.isScrollStop = false;
+                    }, 1000);
                 }
             }
         },
