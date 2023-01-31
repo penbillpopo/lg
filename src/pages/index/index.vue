@@ -465,7 +465,7 @@
                 </div>
             </div>
         </div>
-        <div class="section5">
+        <div class="section5" ref="section5">
             <div class="bg">
                 <img
                     class="title1 reveal-left-300"
@@ -1542,7 +1542,8 @@ export default {
             }
         },
         scrollToSection(session) {
-            window.scrollTo(0, window.innerHeight * session);
+            const offset = 10;
+            window.scrollTo(0, (window.innerHeight / 20) * session + offset);
         },
         lightBoxOpen(isOpen) {
             this.lightBoxShow = isOpen;

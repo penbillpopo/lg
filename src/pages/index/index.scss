@@ -1,6 +1,6 @@
 .container {
     &.active {
-        min-height: 1000vh;
+        min-height: 200vh;
         .section1,
         .section2,
         .section3,
@@ -28,9 +28,11 @@
                 }
             }
         }
-        @media screen and (max-width: 1023px) {
-            min-height: 1000vh;
-        }
+    }
+}
+.animate-2 {
+    .nav {
+        display: none;
     }
 }
 .bg {

@@ -6,6 +6,7 @@
         <div class="page02">
             <div class="top-bg">
                 <img
+                    ref="step"
                     class="top-img pc"
                     :src="require(`@/assets/img/index2-1/index_2-1.png`)"
                     alt=""
@@ -841,7 +842,9 @@ export default {
     methods: {
         scrollToSection(sessionName) {
             if (this.$refs[sessionName]) {
-                this.$refs[sessionName].scrollIntoView();
+                setTimeout(() => {
+                    this.$refs[sessionName].scrollIntoView();
+                }, 100);
             }
         },
         scrolledToBottom(refName) {
