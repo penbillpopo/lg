@@ -80,18 +80,18 @@
         .title-box {
             display: flex;
             width: 100%;
-            margin-bottom: 5%;
+            margin-bottom: 3%;
             .title-R {
                 width: 100%;
             }
         }
         .text-R-1 {
             width: 70%;
-            margin-bottom: 5%;
+            margin-bottom: 3%;
         }
         .text-R-2 {
             width: 70%;
-            margin-bottom: 5%;
+            margin-bottom: 3%;
         }
         .pic-box {
             width: 100%;
@@ -112,7 +112,7 @@
             }
         }
         .answer {
-            padding: 10% 5%;
+            padding: 5%;
             .frame {
                 width: 90%;
             }
@@ -135,12 +135,9 @@
         }
         .answer {
             height: 70%;
-        }
-        @media screen and (max-width: 1023px) {
-            .answer {
-                .frame {
-                    width: 70%;
-                }
+            justify-content: flex-start;
+            .frame {
+                width: 100%;
             }
         }
         @media screen and (max-width: 768px) {
@@ -151,11 +148,6 @@
                 .title-L-2 {
                     width: 33%;
                     left: 6%;
-                }
-            }
-            .answer {
-                .frame {
-                    width: 80%;
                 }
             }
         }
@@ -169,11 +161,6 @@
                     width: 40%;
                 }
             }
-            .answer {
-                .frame {
-                    width: 90%;
-                }
-            }
         }
         @media screen and (max-width: 480px) {
             .question {
@@ -183,11 +170,6 @@
                 .title-L-2 {
                     top: 36%;
                     width: 48%;
-                }
-            }
-            .answer {
-                .frame {
-                    width: 100%;
                 }
             }
         }
@@ -226,10 +208,10 @@
         }
         .answer {
             .pic-R-1 {
-                width: 90%;
+                width: 92%;
                 position: absolute;
-                top: -95%;
-                left: -4%;
+                top: -100%;
+                left: 0%;
             }
             .response {
                 position: absolute;
@@ -320,46 +302,10 @@
                 left: 0%;
             }
         }
-        @media screen and (max-width: 1280px) {
-            .answer {
-                .frame {
-                    width: 80%;
-                }
-            }
-        }
-
         &.mobile-flex {
             .question {
                 .title-L-2 {
                     top: 32%;
-                }
-            }
-            @media screen and (max-width: 1023px) {
-                .answer {
-                    .frame {
-                        width: 60%;
-                    }
-                }
-            }
-            @media screen and (max-width: 768px) {
-                .answer {
-                    .frame {
-                        width: 70%;
-                    }
-                }
-            }
-            @media screen and (max-width: 600px) {
-                .answer {
-                    .frame {
-                        width: 80%;
-                    }
-                }
-            }
-            @media screen and (max-width: 480px) {
-                .answer {
-                    .frame {
-                        width: 90%;
-                    }
                 }
             }
         }
@@ -675,6 +621,12 @@ $delays: (
     }
     .mobile-inline-block {
         display: inline-block;
+        .ng {
+            position: absolute;
+            top: 6%;
+            right: 5%;
+            width: 60%;
+        }
     }
     .pc-flex {
         display: none;
@@ -951,10 +903,23 @@ $delays: (
                 &.big {
                     height: 40%;
                 }
+
                 .btn {
                     width: 24%;
                     bottom: 15px;
                     left: 21%;
+                }
+                .first-arrow {
+                    position: absolute;
+                    bottom: 10%;
+                    right: 3%;
+                    width: 7%;
+                }
+                .arrow {
+                    position: absolute;
+                    bottom: 25%;
+                    right: 3%;
+                    width: 7%;
                 }
                 .pic {
                     width: 100%;

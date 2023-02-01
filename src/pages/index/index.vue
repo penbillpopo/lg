@@ -312,10 +312,24 @@
                                 require(`@/assets/img/index1-2/mobile/01.png`) +
                                 ')',
                         }"
-                    ></div>
+                    >
+                        <img
+                            class="ng"
+                            :src="
+                                require(`@/assets/img/index1-2/mobile/4ng.png`)
+                            "
+                            alt=""
+                        />
+                    </div>
+
                     <img
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng1.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="first-arrow"
+                        :src="require(`@/assets/img/index1-2/arrow.png`)"
                         alt=""
                     />
                 </div>
@@ -338,6 +352,11 @@
                         alt=""
                         @click="lightBoxOpen(true)"
                     />
+                    <img
+                        class="arrow"
+                        :src="require(`@/assets/img/index1-2/arrow.png`)"
+                        alt=""
+                    />
                 </div>
                 <div
                     class="col25 reveal-bottom-800 pic-box"
@@ -358,6 +377,11 @@
                         alt=""
                         @click="lightBoxOpen(true)"
                     />
+                    <img
+                        class="arrow"
+                        :src="require(`@/assets/img/index1-2/arrow.png`)"
+                        alt=""
+                    />
                 </div>
                 <div
                     class="col25 reveal-bottom-1200 pic-box"
@@ -377,6 +401,11 @@
                         :src="require(`@/assets/img/index1-2/ng4.png`)"
                         alt=""
                         @click="lightBoxOpen(true)"
+                    />
+                    <img
+                        class="arrow"
+                        :src="require(`@/assets/img/index1-2/arrow.png`)"
+                        alt=""
                     />
                 </div>
             </div>
@@ -1347,10 +1376,12 @@ export default {
         );
     },
     mounted() {
-        setTimeout(() => {
-            window.scrollTo(0, 0);
-            this.$refs["container"].classList.add("active");
-            this.sectionScroll();
+        this.$nextTick(function () {
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+                this.$refs["container"].classList.add("active");
+                this.sectionScroll();
+            }, 200);
         });
     },
     methods: {
