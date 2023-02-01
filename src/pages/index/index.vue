@@ -1323,21 +1323,20 @@ export default {
             isScrollStop: false,
         };
     },
-    created() {
-        const _this = this;
-        window.addEventListener(
-            "scroll",
-            () => {
-                _this.sectionScroll();
-            },
-            false
-        );
-    },
+    created() {},
     mounted() {
+        const _this = this;
         this.$nextTick(function () {
             setTimeout(() => {
                 window.scrollTo(0, 0);
                 this.$refs["container"].classList.add("active");
+                window.addEventListener(
+                    "scroll",
+                    () => {
+                        _this.sectionScroll();
+                    },
+                    false
+                );
                 this.sectionScroll();
             }, 200);
         });
