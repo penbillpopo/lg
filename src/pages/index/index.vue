@@ -1213,7 +1213,7 @@
                         data-fancybox
                     >
                         <div
-                            class="pic"
+                            class="pic reveal-left-300"
                             :style="{
                                 'background-image':
                                     'url(' +
@@ -1222,7 +1222,7 @@
                             }"
                         >
                             <img
-                                class="title reveal-left-300"
+                                class="title"
                                 :src="
                                     require(`@/assets/img/index1-9/title.png`)
                                 "

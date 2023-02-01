@@ -321,6 +321,132 @@
         }
     }
 }
+.section10 {
+    position: relative;
+    .bg {
+        background-image: url(@/assets/img/index1-9/bg.png);
+    }
+
+    .video-box {
+        position: absolute;
+        top: 35%;
+        left: 16%;
+        width: 40%;
+        transform: translate(-50%, -50%);
+        top: 55%;
+        left: 30%;
+        .video {
+            width: 50%;
+            margin-bottom: 20px;
+            .pic {
+                width: 100%;
+                @extend %background_100;
+                padding-bottom: 55%;
+                margin-bottom: 10px;
+                position: relative;
+                .title {
+                    position: absolute;
+                    top: -40%;
+                    left: -3%;
+                    width: 106%;
+                }
+                .text {
+                    width: 50%;
+                    position: absolute;
+                    bottom: -13%;
+                }
+                .play-btn {
+                    position: absolute;
+                    width: 120px;
+                    height: 120px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: opacity 0.6s ease;
+                    cursor: pointer;
+                }
+                &:hover {
+                    .play-btn {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .bg {
+            background-image: url(@/assets/img/index1-9/mobile/bg.png);
+            padding-bottom: 155%;
+            position: relative;
+        }
+
+        .video-box {
+            top: 30%;
+            width: 70%;
+            top: 40%;
+            left: 50%;
+            .video {
+                width: 60%;
+                .pic {
+                    .play-btn {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .title {
+            top: 8%;
+            width: 65%;
+        }
+        .video-box {
+            top: 35%;
+            width: 80%;
+            .video {
+                .play-btn {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .title {
+            top: 8%;
+            left: 18%;
+        }
+        .video-box {
+            top: 25%;
+            width: 90%;
+            .video {
+                width: 70%;
+                .play-btn {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 420px) {
+        .title {
+            top: 10%;
+            left: 16%;
+        }
+        .video-box {
+            .video {
+                width: 80%;
+            }
+        }
+    }
+    @media screen and (max-width: 380px) {
+        .title {
+            left: 9%;
+            top: 11%;
+        }
+    }
+}
 .scroll-btn {
     position: absolute;
     left: 50%;
@@ -1258,134 +1384,6 @@ $delays: (
         .answer {
             position: initial;
             width: 100%;
-        }
-    }
-}
-.section10 {
-    position: relative;
-    .bg {
-        background-image: url(@/assets/img/index1-9/bg.png);
-    }
-
-    .video-box {
-        position: absolute;
-        top: 35%;
-        left: 16%;
-        width: 40%;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
-        .video {
-            width: 50%;
-            margin-bottom: 20px;
-            .pic {
-                width: 100%;
-                @extend %background_100;
-                padding-bottom: 55%;
-                margin-bottom: 10px;
-                position: relative;
-                .title {
-                    position: absolute;
-                    top: -35%;
-                    left: -3%;
-                    width: 106%;
-                }
-                .text {
-                    width: 50%;
-                    position: absolute;
-                    bottom: -13%;
-                }
-                .play-btn {
-                    position: absolute;
-                    width: 100px;
-                    height: 100px;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    opacity: 0;
-                    transition: opacity 0.6s ease;
-                }
-                &:hover {
-                    .play-btn {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
-    @media screen and (max-width: 1023px) {
-        .bg {
-            background-image: url(@/assets/img/index1-9/mobile/bg.png);
-            padding-bottom: 155%;
-            position: relative;
-        }
-
-        .video-box {
-            top: 30%;
-            width: 50%;
-            .video {
-                width: 60%;
-            }
-        }
-    }
-    @media screen and (max-width: 768px) {
-        .title {
-            top: 8%;
-            width: 65%;
-        }
-        .video-box {
-            top: 30%;
-            width: 60%;
-            .video {
-                width: 60%;
-            }
-        }
-    }
-    @media screen and (max-width: 480px) {
-        .title {
-            top: 8%;
-            left: 18%;
-        }
-        .video-box {
-            width: 60%;
-            .video {
-                width: 70%;
-            }
-        }
-    }
-    @media screen and (max-width: 420px) {
-        .title {
-            top: 10%;
-            left: 16%;
-        }
-        .video-box {
-            // display: flex;
-            width: 60%;
-            .video {
-                width: 70%;
-            }
-        }
-    }
-    @media screen and (max-width: 380px) {
-        .title {
-            left: 9%;
-            top: 11%;
-        }
-        .video-box {
-            // display: flex;
-            width: 60%;
-            .video {
-                width: 80%;
-            }
-        }
-    }
-    @media screen and (max-width: 340px) {
-        .video-box {
-            // display: flex;
-            width: 60%;
-            .video {
-                width: 90%;
-            }
         }
     }
 }
