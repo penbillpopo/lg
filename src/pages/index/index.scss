@@ -1040,7 +1040,7 @@ $delays: (
                 }
 
                 .btn {
-                    width: 12%;
+                    width: 23%;
                     bottom: 15px;
                     left: 21%;
                 }
@@ -1048,7 +1048,7 @@ $delays: (
                     position: absolute;
                     top: 6%;
                     right: 12%;
-                    width: 30%;
+                    width: 48%;
                 }
                 .first-arrow {
                     position: absolute;
@@ -1072,42 +1072,23 @@ $delays: (
             @media screen and (max-width: 768px) {
                 .pic-box {
                     .btn {
-                        width: 14%;
+                        width: 26%;
                     }
                     .ng {
-                        width: 37%;
+                        width: 57%;
+                        right: 8%;
                     }
                 }
             }
-            @media screen and (max-width: 600px) {
-                .pic-box {
-                    .btn {
-                        width: 18%;
-                    }
-                    .ng {
-                        width: 46%;
-                    }
-                }
-            }
+
             @media screen and (max-width: 480px) {
                 .pic-box {
                     .btn {
-                        width: 20%;
+                        width: 30%;
                     }
                     .ng {
-                        width: 50%;
-                        top: 8%;
-                    }
-                }
-            }
-            @media screen and (max-width: 380px) {
-                .pic-box {
-                    .btn {
-                        width: 22%;
-                    }
-                    .ng {
-                        width: 56%;
-                        top: 12%;
+                        width: 64%;
+                        right: 6%;
                     }
                 }
             }
