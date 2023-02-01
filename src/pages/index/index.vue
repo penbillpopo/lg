@@ -300,7 +300,10 @@
                     :src="require(`@/assets/img/index1-2/title.png`)"
                     alt=""
                 />
-                <div class="col25 reveal-bottom-0 pic-box big">
+                <div
+                    class="col25 reveal-bottom-0 pic-box big"
+                    @click="lightBoxOpen(true)"
+                >
                     <div
                         class="pic mobile-inline-block"
                         :style="{
@@ -314,10 +317,12 @@
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng1.png`)"
                         alt=""
-                        @click="lightBoxOpen(true)"
                     />
                 </div>
-                <div class="col25 reveal-bottom-400 pic-box">
+                <div
+                    class="col25 reveal-bottom-400 pic-box"
+                    @click="lightBoxOpen(true)"
+                >
                     <div
                         class="pic mobile-inline-block"
                         :style="{
@@ -334,7 +339,10 @@
                         @click="lightBoxOpen(true)"
                     />
                 </div>
-                <div class="col25 reveal-bottom-800 pic-box">
+                <div
+                    class="col25 reveal-bottom-800 pic-box"
+                    @click="lightBoxOpen(true)"
+                >
                     <div
                         class="pic mobile-inline-block"
                         :style="{
@@ -351,7 +359,10 @@
                         @click="lightBoxOpen(true)"
                     />
                 </div>
-                <div class="col25 reveal-bottom-1200 pic-box">
+                <div
+                    class="col25 reveal-bottom-1200 pic-box"
+                    @click="lightBoxOpen(true)"
+                >
                     <div
                         class="pic mobile-inline-block"
                         :style="{
@@ -733,6 +744,13 @@
                             />
                         </div>
                     </div>
+                    <img
+                        class="response"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/response.png`)
+                        "
+                        alt=""
+                    />
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -803,6 +821,13 @@
                             />
                         </div>
                     </div>
+                    <img
+                        class="response"
+                        :src="
+                            require(`@/assets/img/index1-6/elements/response.png`)
+                        "
+                        alt=""
+                    />
                 </div>
             </div>
         </div>

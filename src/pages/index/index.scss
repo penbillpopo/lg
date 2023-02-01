@@ -139,7 +139,7 @@
         @media screen and (max-width: 1023px) {
             .answer {
                 .frame {
-                    width: 60%;
+                    width: 70%;
                 }
             }
         }
@@ -155,7 +155,7 @@
             }
             .answer {
                 .frame {
-                    width: 70%;
+                    width: 80%;
                 }
             }
         }
@@ -231,6 +231,12 @@
                 top: -95%;
                 left: -4%;
             }
+            .response {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                width: 30%;
+            }
         }
         &.mobile-flex {
             .question {
@@ -238,6 +244,14 @@
                     width: 40%;
                     top: 30%;
                     left: 0%;
+                }
+            }
+            .answer {
+                .response {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    width: 50%;
                 }
             }
             @media screen and (max-width: 1023px) {

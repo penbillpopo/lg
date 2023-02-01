@@ -18,6 +18,16 @@
                         alt=""
                     />
                 </button>
+                <a
+                    class="share-btn-link"
+                    href="https://www.facebook.com/lglife?mibextid=LQQJ4d"
+                    target="_blank"
+                >
+                    <img
+                        :src="require(`@/assets/img/index2-1/award-text.png`)"
+                        alt=""
+                    />
+                </a>
                 <!-- Bubble -->
                 <img
                     ref="fb"
@@ -98,7 +108,10 @@
                         /></swiper-slide>
                     </swiper>
                 </div>
-                <a href="#" target="blank">
+                <a
+                    href="https://mamibuy.com.tw/talk/forum/topic/438210"
+                    target="_blank"
+                >
                     <img
                         class="share-more"
                         :src="
@@ -114,10 +127,7 @@
                         alt=""
                     />
                 </a>
-                <a
-                    href="https://mamibuy.com.tw/talk/forum/topic/438210"
-                    target="blank"
-                >
+                <a href="#" target="_blank">
                     <img
                         class="like-btn"
                         :src="
@@ -209,7 +219,7 @@
                                     1.
                                     中獎名單將由電腦隨機抽出，並於<span>2023/3/20(一)</span>公佈於LG生活健康FB粉絲專頁
                                     <a
-                                        target="blank"
+                                        target="_blank"
                                         href="https://www.facebook.com/lglife"
                                         >https://www.facebook.com/lglife</a
                                     >
@@ -398,7 +408,7 @@
                                         1.
                                         中獎名單將由電腦隨機抽出，並於<span>2023/3/20(一)</span>公佈於LG生活健康FB粉絲專頁
                                         <a
-                                            target="blank"
+                                            target="_blank"
                                             href="https://www.facebook.com/lglife"
                                             >https://www.facebook.com/lglife</a
                                         >
