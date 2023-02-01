@@ -17,6 +17,20 @@
             width: 100%;
         }
     }
+    .share-btn-link {
+        position: absolute;
+        top: 21.8%;
+        right: 22%;
+        width: 16%;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;
+        }
+    }
     .bubble-1 {
         position: absolute;
         bottom: 67.5%;
@@ -36,168 +50,138 @@
         width: 13%;
     }
 
-    .customer-evaluate {
-        display: flex;
+    .chat-swiper {
         position: absolute;
-        bottom: 45%;
         width: 100%;
-
-        .conversation {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 50%;
+        top: 43%;
+        .frame {
+            width: 100%;
+            position: relative;
             img {
-                width: 50%;
+                width: 100%;
             }
-            .paragraph {
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: center;
-                // align-items: center;
-                width: 40%;
-                // height: 70%;
+            .content {
                 position: absolute;
-                top: 6%;
-                display: block;
-                border: 1px solid red;
-                h1 {
-                    font-size: 200%;
-                    text-align: center;
-                    margin-bottom: 2.5%;
+                top: 13%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 65%;
+                .title {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #2647a4;
+                    margin-bottom: 15px;
+                    @include textdot(1);
                 }
-                .customer-content {
-                    font-size: 180%;
-                    // text-align: center;
-                    width: 80%;
-                    padding-left: 25%;
+                .text {
+                    font-size: 16px;
+                    @include textdot(2);
+                    font-weight: 400;
+                    margin-bottom: 15px;
                 }
                 .name {
-                    font-size: 200%;
-                    padding-left: 25%;
-                    margin-top: 4%;
+                    font-size: 16px;
+                    color: #3655aa;
+                    font-weight: 400;
+                    margin-bottom: 10px;
                 }
                 .fb-btn {
-                    // text-align: center;
-                    padding-left: 25%;
-                    margin-top: 3%;
+                    width: 80%;
+                }
+            }
+        }
+        @media screen and (max-width: 1023px) {
+            top: 53%;
+        }
+        @media screen and (max-width: 480px) {
+            .frame {
+                .content {
+                    top: 13%;
+                    .title {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                    .text {
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+                    .name {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+                    .fb-btn {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 380px) {
+            .frame {
+                .content {
+                    top: 13%;
+                    .title {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+                    .text {
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                    }
+                    .name {
+                        font-size: 12px;
+                    }
                 }
             }
         }
     }
-    // .share1 {
-    //     position: absolute;
-    //     top: 44.5%;
-    //     left: 3%;
-    //     width: 20%;
-    // }
-    // .share2 {
-    //     position: absolute;
-    //     top: 42%;
-    //     left: 23.5%;
-    //     width: 26%;
-    // }
-    // .share3 {
-    //     position: absolute;
-    //     top: 43%;
-    //     left: 50.2%;
-    //     width: 26%;
-    // }
-    // .share4 {
-    //     position: absolute;
-    //     top: 45%;
-    //     left: 77%;
-    //     width: 20%;
-    // }
-    // .fb {
-    //     position: absolute;
-    //     cursor: pointer;
-    //     transition: transform 0.3s ease;
-    //     &:hover {
-    //         transform: scale(1.05);
-    //     }
-    //     &.btn1 {
-    //         top: 50.7%;
-    //         right: 11%;
-    //         width: 8.5%;
-    //         img {
-    //             width: 100%;
-    //         }
-    //     }
-
-    //     &.btn2 {
-    //         top: 50%;
-    //         right: 30%;
-    //         width: 16%;
-    //         img {
-    //             width: 100%;
-    //         }
-    //     }
-    //     &.btn3 {
-    //         top: 49.5%;
-    //         left: 28%;
-    //         width: 16%;
-    //         img {
-    //             width: 100%;
-    //         }
-    //     }
-    //     &.btn4 {
-    //         top: 50%;
-    //         left: 7%;
-    //         width: 8.5%;
-    //         img {
-    //             width: 100%;
-    //         }
-    //     }
-    // }
-    .share-images {
-        display: flex;
+    .image-swiper {
         position: absolute;
-        bottom: 25%;
-        img {
-            margin: 0 1%;
+        width: 100%;
+        top: 63%;
+        .image {
+            width: 100%;
+        }
+        @media screen and (max-width: 1023px) {
+            top: 73%;
+        }
+        @media screen and (max-width: 768px) {
+            top: 73%;
         }
     }
     .share-more {
-        img {
-            position: absolute;
-            top: 60%;
-            left: 37.5%;
-            width: 25%;
-            transition: all ease-in 0.5s;
+        position: absolute;
+        top: 60%;
+        left: 37.5%;
+        width: 25%;
+        transition: opacity ease 0.3s;
+        z-index: 1;
+        &.hover {
+            z-index: 0;
         }
-        img:hover {
-            transform: scale(1.1);
+        &:hover {
+            opacity: 0;
+            &.hover {
+                opacity: 1;
+            }
         }
     }
-    .image1 {
-        position: absolute;
-        top: 63%;
-        left: -5%;
-        width: 34%;
-    }
-    .image2 {
-        position: absolute;
-        top: 63%;
-        left: 33%;
-        width: 34%;
-    }
-    .image3 {
-        position: absolute;
-        top: 63%;
-        right: -5%;
-        width: 34%;
-    }
+
     .like-btn {
         position: absolute;
         top: 80%;
         right: 33%;
         width: 35%;
-        transition: all ease-in 0.3s;
-    }
-    .like-btn:hover {
-        transform: scale(1.1);
+        transition: opacity ease 0.3s;
+        z-index: 1;
+        &.hover {
+            z-index: 0;
+        }
+        &:hover {
+            opacity: 0;
+            &.hover {
+                opacity: 1;
+            }
+        }
     }
     .image4 {
         position: absolute;
@@ -240,8 +224,8 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 500px;
-        height: 540px;
+        width: 600px;
+        height: 650px;
         .frame {
             width: 100%;
             height: 100%;
@@ -274,6 +258,7 @@
                 height: 60%;
                 .title {
                     text-align: center;
+                    margin-top: 10px;
                     margin-bottom: 10px;
                     font-size: 20px;
                     color: rgb(24, 47, 149);
@@ -281,7 +266,7 @@
                 }
                 .content,
                 .text {
-                    height: 245px;
+                    height: 310px;
                     strong {
                         color: rgb(230, 61, 112);
                     }
@@ -335,12 +320,15 @@
                         margin-bottom: 20px;
                     }
                     .text {
-                        height: 170px;
+                        height: 230px;
+                        padding: 0 10px;
+                        overflow-x: hidden;
+                        overflow-y: auto;
                     }
                 }
                 .step2 {
                     .content {
-                        height: 200px;
+                        height: 260px;
                     }
                     .agree {
                         display: flex;
@@ -374,7 +362,7 @@
                 }
                 .step3 {
                     .input-box {
-                        margin-top: 30px;
+                        margin-top: 45px;
                         .input {
                             display: flex;
                             align-items: center;
@@ -386,8 +374,8 @@
                                 padding-right: 15px;
                             }
                             input {
-                                width: 220px;
-                                height: 40px;
+                                width: 280px;
+                                height: 45px;
                                 border-radius: 20px;
                                 border: 0;
                                 background-color: rgb(225, 224, 225);
@@ -403,18 +391,18 @@
                     }
                     img {
                         width: 100%;
-                        margin-top: 10px;
+                        margin-top: 30px;
                     }
                 }
             }
         }
         @media screen and (max-width: 768px) {
-            width: 400px;
-            height: 430px;
+            width: 500px;
+            height: 550px;
             .frame {
                 .content-box {
                     .content {
-                        height: 200px;
+                        height: 250px;
                     }
                     button {
                         height: 30px;
@@ -433,12 +421,12 @@
                             font-size: 14px;
                         }
                         .text {
-                            height: 150px;
+                            height: 200px;
                         }
                     }
                     .step2 {
                         .content {
-                            height: 160px;
+                            height: 200px;
                             strong,
                             p {
                                 font-size: 14px;
@@ -461,12 +449,12 @@
                                     padding-right: 10px;
                                 }
                                 input {
-                                    width: 160px;
+                                    width: 230px;
                                 }
                             }
                         }
                         button {
-                            margin-top: 20px;
+                            margin-top: 40px;
                         }
                     }
                     .step4 {
@@ -476,15 +464,15 @@
                         }
                         img {
                             width: 90%;
-                            margin-top: 10px;
+                            margin-top: 20px;
                         }
                     }
                 }
             }
         }
         @media screen and (max-width: 480px) {
-            width: 350px;
-            height: 370px;
+            width: 400px;
+            height: 450px;
             .frame {
                 .content-box {
                     top: 53%;
@@ -504,6 +492,9 @@
                         .title {
                             font-size: 16px;
                             margin-bottom: 10px;
+                        }
+                        .text {
+                            height: 170px;
                         }
                     }
                     .step2 {
@@ -537,7 +528,7 @@
                         }
                         img {
                             width: 80%;
-                            margin-top: 10px;
+                            margin-top: 20px;
                         }
                     }
                 }
@@ -563,6 +554,9 @@
                             font-size: 16px;
                             margin-bottom: 0px;
                         }
+                        .text {
+                            height: 120px;
+                        }
                         p {
                             font-size: 12px;
                         }
@@ -583,6 +577,9 @@
                             label {
                                 font-size: 12px;
                             }
+                            .slide-down {
+                                display: none;
+                            }
                         }
                     }
                     .step3 {
@@ -598,7 +595,8 @@
                                     padding-right: 10px;
                                 }
                                 input {
-                                    width: 153px;
+                                    width: 140px;
+                                    height: 32px;
                                 }
                             }
                         }
@@ -629,6 +627,11 @@
             right: 8%;
             width: 40%;
         }
+        .share-btn-link {
+            top: 31.4%;
+            right: 11%;
+            width: 37%;
+        }
         .like-btn {
             position: absolute;
             top: 87%;
@@ -636,12 +639,10 @@
             width: 65%;
         }
         .share-more {
-            img {
-                position: absolute;
-                top: 68.5%;
-                left: 28.5%;
-                width: 43%;
-            }
+            position: absolute;
+            top: 68.5%;
+            left: 28.5%;
+            width: 43%;
         }
         .share1 {
             display: none;
@@ -699,24 +700,6 @@
             }
         }
 
-        .image1 {
-            position: absolute;
-            top: 72%;
-            left: -35%;
-            width: 48%;
-        }
-        .image2 {
-            position: absolute;
-            top: 72%;
-            left: 18%;
-            width: 60%;
-        }
-        .image3 {
-            position: absolute;
-            top: 72%;
-            right: -35%;
-            width: 51%;
-        }
         .image4 {
             position: absolute;
             top: 90%;
@@ -729,34 +712,6 @@
             top: 90%;
             right: 4%;
             width: 45%;
-        }
-    }
-    // Slider down button
-    .black-field {
-        .lightbox {
-            .frame {
-                .content-box {
-                    .step2 {
-                        .agree {
-                            .slide-down {
-                                width: 25px;
-                                height: 20px;
-                                position: absolute;
-                                bottom: 25px;
-                                right: 0;
-                                background-color: rgba(0, 0, 0, 0);
-                                color: #d0d0d0;
-                                border: 1px solid rgb(101, 101, 101);
-                                border-radius: 25%;
-                                cursor: pointer;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }

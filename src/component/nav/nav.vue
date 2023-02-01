@@ -1,6 +1,6 @@
 <template>
     <div class="nav">
-        <router-link to="/">
+        <router-link to="/" @click.native="$router.go()">
             <img class="logo" :src="require(`@/assets/img/logo.png`)" alt="" />
         </router-link>
         <div class="hamburger" v-if="!isMenuOpen" @click="menuOpen(true)">
@@ -15,16 +15,28 @@
                 />
             </button>
             <div class="option-box">
-                <router-link to="/" class="option">
+                <router-link to="/" class="option" @click.native="$router.go()">
                     <p>LG Fiji 韓式洗衣新革命</p>
                 </router-link>
-                <router-link to="/share" class="option">
+                <router-link
+                    to="/share#step"
+                    class="option"
+                    @click.native="$router.go()"
+                >
                     <p>分享抽LG洗衣機</p>
                 </router-link>
-                <router-link to="/share#fb" class="option">
+                <router-link
+                    to="/share#fb"
+                    class="option"
+                    @click.native="$router.go()"
+                >
                     <p>百人親身好評見證</p>
                 </router-link>
-                <router-link to="/market" class="option">
+                <router-link
+                    to="/market"
+                    class="option"
+                    @click.native="$router.go()"
+                >
                     <p>立即購買</p>
                 </router-link>
             </div>
@@ -34,6 +46,7 @@
 <script>
 export default {
     name: "navComponent",
+    props: ["location"],
     data() {
         return {
             isMenuOpen: false,

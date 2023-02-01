@@ -1,6 +1,6 @@
 .container {
     &.active {
-        min-height: 1000vh;
+        min-height: 200vh;
         .section1,
         .section2,
         .section3,
@@ -28,9 +28,11 @@
                 }
             }
         }
-        @media screen and (max-width: 1023px) {
-            min-height: 1000vh;
-        }
+    }
+}
+.animate-2 {
+    .nav {
+        display: none;
     }
 }
 .bg {
@@ -68,61 +70,36 @@
     .answer {
         left: 37%;
         width: 63%;
-        .icon-R {
-            position: absolute;
-            top: 6%;
-            left: 5%;
-            width: 10.5%;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .frame {
+            width: 80%;
         }
-        .title-R {
-            position: absolute;
-            top: 7%;
-            left: 15.5%;
-            width: 62%;
+        .title-box {
+            display: flex;
+            width: 100%;
+            margin-bottom: 5%;
+            .title-R {
+                width: 100%;
+            }
         }
         .text-R-1 {
-            position: absolute;
-            top: 21%;
-            left: 4.5%;
-            width: 53%;
+            width: 70%;
+            margin-bottom: 5%;
         }
         .text-R-2 {
-            position: absolute;
-            top: 30%;
-            left: 5%;
-            width: 53%;
+            width: 70%;
+            margin-bottom: 5%;
         }
-        .pic-R-1 {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            width: 10%;
-        }
-        .pic-R-2 {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            width: 10%;
-        }
-        .pic-R-3 {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            width: 10%;
-        }
-        .pic-R-4 {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            width: 10%;
-        }
-        .pic-R-5 {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            width: 10%;
+        .pic-box {
+            width: 100%;
+            padding-bottom: 40%;
+            position: relative;
         }
     }
+
     @media screen and (max-width: 1280px) {
         .question {
             .title-L-1 {
@@ -135,17 +112,9 @@
             }
         }
         .answer {
-            .icon-R {
-                width: 11%;
-            }
-            .title-R {
-                width: 67%;
-            }
-            .text-R-1 {
-                width: 67%;
-            }
-            .text-R-2 {
-                width: 67%;
+            padding: 10% 5%;
+            .frame {
+                width: 90%;
             }
         }
     }
@@ -160,48 +129,49 @@
             }
             .title-L-2 {
                 position: absolute;
-                left: 6%;
-                width: 30%;
+                left: 8%;
+                width: 25%;
             }
         }
         .answer {
             height: 70%;
-            .icon-R {
-                top: 6%;
-            }
-            .title-R {
-                top: 7%;
-            }
-            .text-R-1 {
-                top: 25%;
-                width: 67%;
-            }
-            .text-R-2 {
-                top: 38%;
-                width: 67%;
+        }
+        @media screen and (max-width: 1023px) {
+            .answer {
+                .frame {
+                    width: 70%;
+                }
             }
         }
         @media screen and (max-width: 768px) {
             .question {
                 .title-L-1 {
-                    width: 20%;
+                    width: 18%;
                 }
                 .title-L-2 {
-                    width: 35%;
+                    width: 33%;
+                    left: 6%;
                 }
             }
             .answer {
-                .icon-R {
-                    width: 13%;
-                }
-                .title-R {
+                .frame {
                     width: 80%;
                 }
-                .text-R-1 {
-                    width: 80%;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .question {
+                .title-L-1 {
+                    width: 25%;
                 }
-                .text-R-2 {
-                    width: 80%;
+                .title-L-2 {
+                    top: 36%;
+                    width: 40%;
+                }
+            }
+            .answer {
+                .frame {
+                    width: 90%;
                 }
             }
         }
@@ -216,19 +186,8 @@
                 }
             }
             .answer {
-                .icon-R {
-                    width: 13%;
-                }
-                .title-R {
-                    width: 85%;
-                }
-                .text-R-1 {
-                    top: 21%;
-                    width: 90%;
-                }
-                .text-R-2 {
-                    top: 32%;
-                    width: 90%;
+                .frame {
+                    width: 100%;
                 }
             }
         }
@@ -243,71 +202,16 @@
         }
         .answer {
             .pic-R-1 {
-                top: 34%;
-                left: 68%;
-                width: 10%;
-                z-index: 3;
-            }
-            .pic-R-2 {
-                top: 58%;
-                left: 40%;
-                width: 17%;
-                z-index: 4;
-            }
-            .pic-R-3 {
-                top: 40%;
-                left: 50%;
-                width: 25%;
-                z-index: 2;
-            }
-            .pic-R-4 {
-                top: 55%;
-                left: 5%;
-                width: 55%;
-            }
-        }
-        @media screen and (max-width: 1280px) {
-            .answer {
-                .pic-R-1 {
-                    top: 39%;
-                    left: 79%;
-                }
-                .pic-R-2 {
-                    top: 58%;
-                    left: 45%;
-                    width: 18%;
-                }
-                .pic-R-3 {
-                    top: 44%;
-                    left: 59%;
-                    width: 28%;
-                }
-                .pic-R-4 {
-                    width: 62%;
-                }
+                width: 100%;
+                position: absolute;
+                top: -60%;
+                left: 0;
             }
         }
         &.mobile-flex {
             .question {
                 .title-L-2 {
-                    top: 30%;
-                }
-            }
-            .answer {
-                .pic-R-1 {
-                }
-                .pic-R-2 {
-                    top: 65%;
-                    left: 50%;
-                    width: 20%;
-                }
-                .pic-R-3 {
-                }
-                .pic-R-4 {
-                    width: 68%;
-                    top: 62%;
-                }
-                .pic-R-5 {
+                    top: 33%;
                 }
             }
         }
@@ -322,14 +226,16 @@
         }
         .answer {
             .pic-R-1 {
+                width: 90%;
+                position: absolute;
+                top: -95%;
+                left: -4%;
             }
-            .pic-R-2 {
-            }
-            .pic-R-3 {
-            }
-            .pic-R-4 {
-            }
-            .pic-R-5 {
+            .response {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                width: 30%;
             }
         }
         &.mobile-flex {
@@ -341,28 +247,55 @@
                 }
             }
             .answer {
-                .pic-R-1 {
+                .response {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    width: 50%;
                 }
-                .pic-R-2 {
-                }
-                .pic-R-3 {
-                }
-                .pic-R-4 {
-                }
-                .pic-R-5 {
+            }
+            @media screen and (max-width: 1023px) {
+                .question {
+                    .title-L-2 {
+                        width: 40%;
+                        top: 30%;
+                        left: 0%;
+                    }
                 }
             }
             @media screen and (max-width: 768px) {
                 .question {
                     .title-L-2 {
-                        width: 48%;
+                        width: 43%;
+                        top: 32%;
+                        left: 1%;
+                    }
+                }
+            }
+            @media screen and (max-width: 600px) {
+                .question {
+                    .title-L-2 {
+                        width: 50%;
+                        top: 37%;
+                        left: 1%;
                     }
                 }
             }
             @media screen and (max-width: 480px) {
                 .question {
                     .title-L-2 {
-                        width: 56%;
+                        width: 58%;
+                        top: 37%;
+                        left: -1%;
+                    }
+                }
+            }
+            @media screen and (max-width: 400px) {
+                .question {
+                    .title-L-2 {
+                        width: 63%;
+                        top: 34%;
+                        left: -3%;
                     }
                 }
             }
@@ -377,33 +310,56 @@
             }
         }
         .answer {
+            .text-R-2 {
+                width: 100%;
+            }
             .pic-R-1 {
-            }
-            .pic-R-2 {
-            }
-            .pic-R-3 {
-            }
-            .pic-R-4 {
-            }
-            .pic-R-5 {
+                width: 100%;
+                position: absolute;
+                top: -4%;
+                left: 0%;
             }
         }
+        @media screen and (max-width: 1280px) {
+            .answer {
+                .frame {
+                    width: 80%;
+                }
+            }
+        }
+
         &.mobile-flex {
             .question {
                 .title-L-2 {
                     top: 32%;
                 }
             }
-            .answer {
-                .pic-R-1 {
+            @media screen and (max-width: 1023px) {
+                .answer {
+                    .frame {
+                        width: 60%;
+                    }
                 }
-                .pic-R-2 {
+            }
+            @media screen and (max-width: 768px) {
+                .answer {
+                    .frame {
+                        width: 70%;
+                    }
                 }
-                .pic-R-3 {
+            }
+            @media screen and (max-width: 600px) {
+                .answer {
+                    .frame {
+                        width: 80%;
+                    }
                 }
-                .pic-R-4 {
-                }
-                .pic-R-5 {
+            }
+            @media screen and (max-width: 480px) {
+                .answer {
+                    .frame {
+                        width: 90%;
+                    }
                 }
             }
         }
@@ -418,32 +374,22 @@
         }
         .answer {
             .pic-R-1 {
+                width: 100%;
+                position: absolute;
+                top: 4%;
+                left: 0%;
             }
             .pic-R-2 {
-            }
-            .pic-R-3 {
-            }
-            .pic-R-4 {
-            }
-            .pic-R-5 {
+                width: 22%;
+                position: absolute;
+                top: -77%;
+                left: 72%;
             }
         }
         &.mobile-flex {
             .question {
                 .title-L-2 {
                     top: 32%;
-                }
-            }
-            .answer {
-                .pic-R-1 {
-                }
-                .pic-R-2 {
-                }
-                .pic-R-3 {
-                }
-                .pic-R-4 {
-                }
-                .pic-R-5 {
                 }
             }
         }
@@ -505,8 +451,8 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 500px;
-        height: 500px;
+        width: 600px;
+        height: 600px;
         .frame {
             width: 100%;
             height: 100%;
@@ -531,16 +477,44 @@
             }
         }
         @media screen and (max-width: 768px) {
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
+        }
+        @media screen and (max-width: 600px) {
+            width: 450px;
+            height: 450px;
         }
         @media screen and (max-width: 480px) {
+            width: 400px;
+            height: 400px;
+            .frame {
+                .swiper {
+                    .swiper-button-prev {
+                        left: 20px;
+                    }
+                    .swiper-button-next {
+                        right: 20px;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 420px) {
             width: 350px;
             height: 350px;
         }
         @media screen and (max-width: 380px) {
             width: 300px;
             height: 300px;
+            .frame {
+                .swiper {
+                    .swiper-button-prev {
+                        left: 10px;
+                    }
+                    .swiper-button-next {
+                        right: 10px;
+                    }
+                }
+            }
         }
     }
 }
@@ -567,6 +541,16 @@ $delays: (
     "1800": 1.8s,
     "1900": 1.9s,
     "2000": 2s,
+    "2100": 2.1s,
+    "2200": 2.2s,
+    "2300": 2.3s,
+    "2400": 2.4s,
+    "2500": 2.5s,
+    "2600": 2.6s,
+    "2700": 2.7s,
+    "2800": 2.8s,
+    "2900": 2.9s,
+    "3000": 3s,
 );
 @each $delayName, $delay in $delays {
     .reveal-top-#{$delayName} {
@@ -750,7 +734,33 @@ $delays: (
 .section2 {
     position: relative;
     .bg {
-        background-image: url(@/assets/img/index1-1/bg.jpg);
+        background-image: url(@/assets/img/index1-1/bg.png);
+        position: relative;
+        .nav-box {
+            position: absolute;
+            top: 2%;
+            left: 48%;
+            transform: translateX(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            max-width: 1000px;
+            height: 63px;
+            img {
+                height: 100%;
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        .bg {
+            .nav-box {
+                display: none;
+            }
+        }
     }
     .logo {
         position: absolute;
@@ -1315,8 +1325,8 @@ $delays: (
     .swiper-box {
         position: absolute;
         top: 40%;
-        left: 0%;
-        width: 100%;
+        left: 5%;
+        width: 90%;
         .swiper {
             .pic {
                 @extend %background_100;
@@ -1344,6 +1354,44 @@ $delays: (
             }
         }
     }
+    .video-box {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        .video {
+            width: 50%;
+            margin-bottom: 20px;
+            .pic {
+                width: 100%;
+                @extend %background_100;
+                padding-bottom: 55%;
+                margin-bottom: 10px;
+                position: relative;
+                .play-btn {
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: opacity 0.6s ease;
+                }
+                &:hover {
+                    .play-btn {
+                        opacity: 1;
+                    }
+                }
+            }
+            .text {
+                width: 100%;
+            }
+        }
+    }
     @media screen and (max-width: 1023px) {
         .bg {
             background-image: url(@/assets/img/index1-9/mobile/bg.png);
@@ -1356,6 +1404,7 @@ $delays: (
             width: 59%;
         }
         .swiper-box {
+            top: 25%;
             .swiper {
                 .text {
                     height: 25px;
@@ -1363,30 +1412,71 @@ $delays: (
                 }
             }
         }
-    }
-    @media screen and (max-width: 480px) {
-        .swiper-box {
-            .swiper {
+        .video-box {
+            .video {
                 .text {
-                    height: 20px;
-                }
-                .swiper-button-prev,
-                .swiper-button-next {
-                    top: 45%;
+                    width: 60%;
                 }
             }
         }
     }
-    @media screen and (max-width: 440px) {
+    @media screen and (max-width: 768px) {
         .swiper-box {
-            .swiper {
-                .text {
-                    height: 18px;
-                }
-                .swiper-button-prev,
-                .swiper-button-next {
-                    top: 40%;
-                }
+            display: none;
+        }
+        .title {
+            top: 8%;
+            width: 65%;
+        }
+        .video-box {
+            display: flex;
+            top: 30%;
+            .video {
+                width: 60%;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .title {
+            top: 8%;
+            left: 18%;
+        }
+        .video-box {
+            display: flex;
+            .video {
+                width: 70%;
+            }
+        }
+    }
+    @media screen and (max-width: 420px) {
+        .title {
+            top: 10%;
+            left: 16%;
+        }
+        .video-box {
+            display: flex;
+            .video {
+                width: 70%;
+            }
+        }
+    }
+    @media screen and (max-width: 380px) {
+        .title {
+            left: 9%;
+            top: 11%;
+        }
+        .video-box {
+            display: flex;
+            .video {
+                width: 80%;
+            }
+        }
+    }
+    @media screen and (max-width: 340px) {
+        .video-box {
+            display: flex;
+            .video {
+                width: 90%;
             }
         }
     }

@@ -35,6 +35,14 @@
     }
 }
 
+@mixin textdot($lines) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}
+
 /*#region col*/
 .col100 {
     width: 100%;

@@ -1,255 +1,185 @@
 <template>
     <div class="container">
-        <navComponent v-if="!lightBoxIntroShow && !lightBoxApplyShow"></navComponent>
+        <navComponent
+            v-if="!lightBoxIntroShow && !lightBoxApplyShow"
+            location="share"
+        ></navComponent>
         <div class="page02">
             <div class="top-bg">
-                <img class="top-img pc" :src="require(`@/assets/img/index2-1/index_2-1.png`)" alt="" />
+                <img
+                    ref="step"
+                    class="top-img pc"
+                    :src="require(`@/assets/img/index2-1/index_2-1.png`)"
+                    alt=""
+                />
                 <button class="share-btn" @click="lightBoxIntroOpen(true)">
-                    <img :src="require(`@/assets/img/index2-1/btn.png`)" alt="" />
+                    <img
+                        :src="require(`@/assets/img/index2-1/btn.png`)"
+                        alt=""
+                    />
                 </button>
+                <a
+                    class="share-btn-link"
+                    href="https://www.facebook.com/lglife?mibextid=LQQJ4d"
+                    target="_blank"
+                >
+                    <img
+                        :src="require(`@/assets/img/index2-1/award-text.png`)"
+                        alt=""
+                    />
+                </a>
                 <!-- Bubble -->
-                <img ref="fb" class="bubble-1" :src="require(`@/assets/img/index2-1/93.png`)" alt="" />
-                <img class="bubble-2" :src="require(`@/assets/img/index2-1/95.png`)" alt="" />
-                <img class="bubble-3" :src="require(`@/assets/img/index2-1/96.png`)" alt="" />
+                <img
+                    ref="fb"
+                    class="bubble-1"
+                    :src="require(`@/assets/img/index2-1/93.png`)"
+                    alt=""
+                />
+                <img
+                    class="bubble-2"
+                    :src="require(`@/assets/img/index2-1/95.png`)"
+                    alt=""
+                />
+                <img
+                    class="bubble-3"
+                    :src="require(`@/assets/img/index2-1/96.png`)"
+                    alt=""
+                />
 
                 <!-- Content Swiper New -->
-                <div class="customer-evaluate">
-                    <div class="conversation">
-                        <img :src="require(`@/assets/img/index2-1/left.png`)" alt="" />
-                        <div class="paragraph">
-                            <h1>輕鬆洗衣不費力</h1>
-                            <p class="customer-content">
-                                環保意識抬頭,當然我們家也是一樣，一直以來都使用環保包装補充型的洗衣精，但真的要搬回家的時候，很想哭啊。超級重的!
-                                但是!!!!最近發現了一個超好用的新產品，就是：Fiji飛漬洗衣紙！它解決了我每次採買洗衣大又重，搬上搬下像重訓的煩惱啊！
-                                Fiji飛漬洗衣紙是LG專利全新纸張劑型的洗衣纸，一包有30張=2公升洗衣精。而且像我們家直立式洗衣機並沒有接熱水管路也沒有熱水的洗滌功能可以使用，但完全不用擔心無法溶解或是有殘留的問題，因為即使遇冷水也能100%完全溶解零殘留。
-                                再来，虛線的設計，能輕鬆的將洗衣纸撕成一半來使用；拿在手上也不會有洗衣精一样黏黏的又刺激皮膚。
-                                別小看只有小小的一張洗衣纸，它可是一張「強效去污酵素」的洗衣纸喔！完全不用擔心衣服會洗不乾淨，洗完還帶有一股淡淡的清新香味，不像化學味道那檬刺鼻。
-                                完全愛上使用FiJi飛清洗衣紙了啦！ 更多訊息請參考:
-                                LG生活健康電商網站htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW
-                            </p>
-                            <p class="name">朱小豬</p>
-                            <button class="fb-btn" @click="lightBoxApplyOpen(true)">
-                                <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- 新增的10個文案 -->
-
-                    <!-- <div class="conversation">
-                        <img :src="require(`@/assets/img/index2-1/left.png`)" alt="" />
-                        <div class="paragraph">
-                            <h1>冷水也能溶解很徹底</h1>
-                            <p class="customer-content">
-                                它我們家是使用一般型洗衣機，它無法像全自動或滾筒洗衣機一樣可以用膠囊型的洗衣精，因為會不好溶解，曾經試過某牌的膠囊洗衣球，結果不僅沒溶解好，還沾的衣服到處都是，所以我只好乖乖的使用一般洗衣精，但洗衣精又很佔空間且不好倒。
-                                這次使用了FiJi飛漬洗衣紙，真是令我大開眼界，它輕巧便利又環保，不佔空間好收納，LG專利紙張型洗劑，一張就能搞定一桶髒衣，就算用冷水也能溶解的很徹底，強效去汙酵素，連兒子每次都要手洗很久的襪子都能直接洗淨，讓媽媽好輕鬆，而且用多少就撕多少，完全不怕浪費，就算要手洗貼身衣物也可以，輕巧又不佔空間,真是媽媽的神隊友！
-                            </p>
-                            <p class="name">Yazmin</p>
-                            <button class="fb-btn" @click="lightBoxApplyOpen(true)">
-                                <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="conversation">
-                        <img :src="require(`@/assets/img/index2-1/left.png`)" alt="" />
-                        <div class="paragraph">
-                            <h1>強效去污酵素，好洗</h1>
-                            <p class="customer-content">
-                                我們家洗衣服有用一般洗衣精和洗衣球兩種，但總是會遇到1.衣服太少，洗衣球一顆太浪費，還遇過衣服洗完衣球完好無缺的情形。2.先生總是無法準確用衣服量，去抓洗衣精要多少，所以洗衣服的事情總是落在媽媽身上。
-                                這次嘗試使用“FiJi飛漬洗衣紙“，本來還很擔心它的溶解度和清潔能力，結果衣服洗出來的成果超乎我想像，意外的好洗，清潔力也很夠，100%完全溶解零殘留，連冷水也能完全溶解，而且一整包不佔空間又輕巧便利好收纳，全新纸張型洗劑，拿取時方便乾淨不沾手。
-                                現在的衣服，先生都會幫忙丟洗衣機，因為FiJi虛線設計可以精準换算單次所需用量，彈性使用超輕鬆，而且洗完還有淡淡清香，先生也誇讚FiJi飛漬洗衣紙輕巧便利又環保，不佔空間好收纳，用量也很省，一張搞定一桶髒衣，100%溶解不殘留，我們家的滾筒洗衣機也不怕，加上它的強效去污酵素，連白色襯衫都能輕鬆洗淨，真的是手洗機洗都好用。
-                            </p>
-                            <p class="name">庭</p>
-                            <button class="fb-btn" @click="lightBoxApplyOpen(true)">
-                                <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="conversation">
-                        <img :src="require(`@/assets/img/index2-1/left.png`)" alt="" />
-                        <div class="paragraph">
-                            <h1>不沾手也不怕流！</h1>
-                            <p class="customer-content">
-                                最初洗衣服時使用的是洗衣粉 後來發現容易殘留粉末在洗衣機底部 洗衣粉也容易因潮濕結塊
-                                雖然不影響使用，但每次都得弄碎好累 後來改使用洗衣精 手殘的我常常弄到罐子周圍都是洗衣精
-                                最後改用洗衣球，一顆丟入洗衣機清洗衣服非常方便
-                                味道也夠香，洗爸爸的髒衣服時不用再另外加芬香豆 缺點就是儲存方式沒有處理好，容易受潮
-                                每次拿完受潮的洗衣球就得洗手，不是很方便 最近發現一款好用的洗衣紙 「FiJi飛漬洗衣紙」
-                                夾鏈袋包裝，不用擔心洗衣紙會受潮 輕巧便利又環保，也不佔空間
-                                添加強效去污酵，衣服洗完乾乾淨淨 清新的香氣就算是臭臭的衣服
-                                洗完也還能保留香味，不需再另外加入芬香豆 這點超讚！
-                                使用專利纸張劑型的方式，不沾手也不怕流的到處都是 薄薄的一張，想洗多少就用多少
-                                就算用冷水也能100%溶解不殘留洗劑 將洗衣紙和購衣服一起丟入洗衣機內清洗
-                                讓你能優雅的洗衣服，不兵荒馬亂~
-                                同步分享於部落格:https://mamibuy.com.tw/talk/article/213552
-                            </p>
-                            <p class="name">Do Remi</p>
-                            <button class="fb-btn" @click="lightBoxApplyOpen(true)">
-                                <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="conversation">
-                        <img :src="require(`@/assets/img/index2-1/left.png`)" alt="" />
-                        <div class="paragraph">
-                            <h1>頑固污漬也好清</h1>
-                            <p class="customer-content">
-                                當孩子從嬰兒進化到屁童後，每天回家衣服不是黑漆漆就是沾到醬汁或是乾掉的飯粒，都讓老婆很苦惱要如何挑選最適合我們需求的洗衣精。
-                                希望有強勁的去汙潔淨力，又不要傷害到衣物本身，擅長作智慧家電的LG總是會推出令人耳目一新的產品，這次是推出的是很讓我驚訝的FiJi飛漬洗衣紙，洗衣服竟然可以不用洗衣精(粉)而是紙!!想到洗衣服不用提重重的洗衣精，就覺得老婆可以省力不少？身為顧家好男人的我不該趁機表示一下我的貼心嗎??
-                                洗衣紙使用方式非常容易，可以容易的根據衣服量判斷要放多少張洗衣紙使用量很容易估算，也不需要撕碎或是泡軟，直接跟著髒衣丟到洗衣筒，它是可以被冷水溶解的。高清潔力非常適合給我們家孩子使用，強效去污酵素讓沾在衣服上的頑固污漬也清潔溜溜。
-                                有些家長會很在意的香精部分，這款洗衣紙完除讓服變得乾淨之外，只带著淡淡清香，不用擔心會有過多的化學香精殘留在衣服上，也不用擔心汗臭洗不掉。
-                            </p>
-                            <p class="name">3Cholic</p>
-                            <button class="fb-btn" @click="lightBoxApplyOpen(true)">
-                                <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="conversation">
-                        <img :src="require(`@/assets/img/index2-1/left.png`)" alt="" />
-                        <div class="paragraph">
-                            <h1>洗衣紙卻100%溶解！</h1>
-                            <p class="customer-content">
-                                我從以前就是洗衣狂魔很忍受不衣服超過洗衣籃的表面，現在有了老公小孩，衣服增加了一倍，為了維持乾淨減少細菌病毒，我幾乎1-2天一定要洗衣服。用過不少洗衣相關的產品，洗衣球是目前用過最雷的，雖然體積小好收納，但球內的小珠珠，常常洗衣之後都沒完全融化，整個黏在衣服上，只好洗兩遍，真的很耗時又浪費水電，還有洗衣球外膜會因為天氣冷熱，溶解度不同尤其冬天最誇張，根本不溶，有時候還要自己戳洞。有了這些經驗我只想繼續使用洗衣精，但洗衣精也帶給我許多困擾，一大我桶已經不知道打翻幾次了，尤其半獸人真的很愛趁我打開陽台時，把洗衣精推倒！再來是每次洗衣服時，將洗衣精提起來倒量杯，真的很訓練二頭肌，還常常不小心倒太多漏出量杯，把整隻手都弄得黏搭搭，還有！補充包分裝至瓶子時，因為看不清裡面到底裝了多少，時常装到最後一刻都會滿到漏出來。最近看到一個神奇用物-FiJi飛漬洗衣紙，體積小又輕薄對於家庭空間小，不想儲存這麼多洗衣精的我，抱試看的心態，沒想到！
-                                1.一秒投人洗衣紙，不用像以前一樣洗衣精量来量去還倒出来，Fiji有虛線設計可以精準换算單次所需用量
-                                2.正逢現在冬天冷得要命，洗衣紙卻100%溶解,完全無殘留
-                                3.強效去污酵素讓衣服洗得乾乾淨，跟用洗衣精效果相當 4.洗完有股淡淡清香，半室外晾衣也很OK
-                                5.不占空間收纳方便。
-                                FiJi飛清洗衣紙納入我口袋名單，半獣人拿上拿下都輕鬆，解放媽媽二頭肌！
-                            </p>
-                            <p class="name">sandy</p>
-                            <button class="fb-btn" @click="lightBoxApplyOpen(true)">
-                                <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="conversation">
-                        <img :src="require(`@/assets/img/index2-1/left.png`)" alt="" />
-                        <div class="paragraph">
-                            <h1>洗多少衣服就撕多少張！</h1>
-                            <p class="customer-content">
-                                【FiJi飛漬洗衣紙】10抽
-                                我們家的洗衣機小台，所以必須每兩天洗一次衣服，衣服一多時洗衣精用量就大，導致洗衣容易洗不乾淨殘留，麻煩的是沒多久就又要去採購洗衣精，瓶装洗衣精動轍1、2公斤裝重，最多也只能買個兩瓶。
-                                也試過洗衣球，但是有時候洗衣量不多，用一整顆洗衣球又太浪費可惜，相信大家都一定了解這種心情。
-                                推薦給大家【 FiJi飛漬洗衣紙】LG專利全新紙張洗劑，只要一張就能輕鬆洗淨髒汙!
-                                【FiJi飛漬洗衣纸】LG
-                                専利全新纸張洗劑每包有10張抽，每張FiJi洗衣纸上有虛線設計可以精準換算單次所需用量，洗多少衣服就撕多少張不怕浪費，遇上冷水也能100%溶解，去污力25%幫助強效去除污漬，夾鏈袋設計比傳統洗衣精還要省空間好收纳。
-                                無論一般洗衣抑或是滾筒洗衣機都適用，洗衣後不需將洗衣紙撈出。一般洗衣精碰到容易讓手黏黏的，【
-                                FiJi飛漬洗衣纸】全新紙張型洗劑，只要放入洗衣槽即可，既乾淨方便又不沾手，真的非常好用。
-                                尤其我們家都是室內晾衣，【 FiJi飛漬洗衣纸] 洗後不殘留只聞得到洗完淡淡清香，而且【
-                                FiJi飛漬洗衣纸】收納少非常輕巧便利，洗衣亦能輕鬆控制使用量不浪費又環保，推薦主婦們一定要來試試~無論手洗機洗都好用呢！
-                                LG生活健康電商網站htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW
-                            </p>
-                            <p class="name">咕嚕媽</p>
-                            <button class="fb-btn" @click="lightBoxApplyOpen(true)">
-                                <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="conversation">
-                        <img :src="require(`@/assets/img/index2-1/left.png`)" alt="" />
-                        <div class="paragraph">
-                            <h1>比一般洗衣精還省</h1>
-                            <p class="customer-content">
-                                曾經用洗衣球曾經沒溶解衣服只是洗了個寂寞的人，或是家中長洗衣服都放很多的人，真的可以試試看FiJi飛漬洗衣紙。
-                                其實洗衣球方便是方便，但用量固定就是一顆配多少衣服，對於小家庭真的是不太方便，不可能2.3件深色衣物一顆，2.3件淺色衣服一顆，3.4雙襪子又要再一顆，全部混在一起洗也不好，尤其是寶寶或小孩的衣物，其實相對來說真的是浪費。更不用說有些習慣放超級多洗衣粉覺得洗衣服就是要都是泡泡的人，沒有完全溶解清潔乾淨的洗劑，不是要重新洗一次，不然就是減少洗衣機壽命！
-                                FiJi飛漬洗衣紙真的解決了這些問題，LG專利紙張洗劑真的很方便，好溶解不殘留，用量可配合洗衣的份量去調整，重點是使用的量比一般洗衣精還省。一張FiJi飛漬洗衣紙就可以洗一整個洗衣機的量。
-                                要針對局部髒污只要撕開洗衣紙用適當的份量先溶解在水盆裡去手洗，不用大罐大的洗衣精搬來搬去,輕鬆又省力又節省空間。
-                                使用過後發覺FiJi飛漬洗衣紙洗淨力真的不錯，沒有洗劑殘留卻又洗的乾淨，用冷水也是馬上溶解，香味也清爽舒服，沒那麼多瓶瓶罐也很方便環保回收，覺得跟洗衣球相比一樣不沾手，但FiJi飛漬洗衣紙用量更彈性，重量很輕巧，連我兩歲大的兒子都可以輕鬆拿，對於正在媽媽手困擾的我而言真的是太喜歡了!!
-                            </p>
-                            <p class="name">許小G</p>
-                            <button class="fb-btn" @click="lightBoxApplyOpen(true)">
-                                <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="conversation">
-                        <img :src="require(`@/assets/img/index2-1/left.png`)" alt="" />
-                        <div class="paragraph">
-                            <h1>天然清香不刺鼻</h1>
-                            <p class="customer-content">
-                                相信大家都有用過洗衣精、洗衣球，那你有聽過洗衣紙嗎？
-                                別懷疑，真的有洗衣纸這個東西~這次蠟燭媽来分享FiJi飛漬洗衣紙到底有多好用
-                                蠟燭媽是一個很愛網路購物一次訂購好幾箱家庭用品的人，方便而且ㄈ又快速，但當貨運送到時是另一種頭疼的開始，要擔心婆婆簽收時司機大哥有沒有好心的幫忙搬進客廳、要擔心家裡空間要把這堆東西放哪，又要擔心正值探索時期的Mini拿來就咬或當開水喝
-                                『
-                                FiJi飛漬洗衣紙』一次解決我所有的煩惱！不但輕巧方便好收納，友善的虛線設計連長辈都能輕鬆使用，別看它薄薄一張，洗淨力可是很足夠的喔！蠟燭爸上班弄的髒污跟小蠟燭上課玩耍的污漬，一點都難不倒『
-                                FiJi飛漬洗衣紙』
-                                輕鬆還你乾淨整潔的衣服，而且使用冷水就可以輕輕鬆鬆溶解！完全不用擔心洗劑殘留要再重洗一遍。
-                                『
-                                FiJi飛漬洗衣紙』帶點淡淡清香,不會有化學刺鼻味，好聞又舒服的味道，蠟燭媽可以掛保證，因為蠟燭媽的鼻子完全無法接受太化學的香味(連香水都沒辦法用，蠟燭爸都懷疑我是男人?)
-                                『 FiJi飛漬洗衣紙』 有五大優點>> 1.輕巧便利又環保，不佔空間好收納。
-                                2.LG專利纸張型洗劑，一張搞定一桶髒衣。
-                                3.就算用冷水也能100%溶解不殘留，滾筒洗衣機也不怕。 4.強效去污酵素,輕鬆洗淨衣物。
-                                5.輕鬆控制使用量,手洗機洗都好用。 哪裡買 https://www.lglife.com.tw
-                            </p>
-                            <p class="name">蠟燭媽</p>
-                            <button class="fb-btn" @click="lightBoxApplyOpen(true)">
-                                <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="conversation">
-                        <img :src="require(`@/assets/img/index2-1/left.png`)" alt="" />
-                        <div class="paragraph">
-                            <h1>洗多少衣服就撕多少張！</h1>
-                            <p class="customer-content">
-                                當了媽以後開始要洗衣服人生 每天洗一家四口的衣服 第一次看到這個新好物
-                                #LG專利全新纸張劑型上市 它好方便喔喔喔喔 我們家陽台偏小 所以每天都要洗衣服
-                                不然太多不好曬又容易曬不乾 但有時候衣服的量多量少 洗衣球會比較浪費
-                                洗衣粉會撒的到處都是ㄈ 洗衣精又很重，新買回来時要倒有時候都會失手到太多
-                                因為單手拿很重耶(瘦弱哈哈) 而且長輩拿可能會更吃力 現在#LG 造福各位洗衣服的媽媽們
-                                連手洗都可以用的喔~ LG專利紙張劑型，一張搞定一桶髒衣 30張=2公升洗衣精，輕巧便利好收納
-                                冷水也能100%溶解 滾筒洗衣機也是可以的 擺在架上完全不佔空間啊 而且輕鬆控制使用量
-                                手洗機洗都方便 重點是!!!! 強效去污酵素，衣服洗的乾淨很重要呢~~ 它非常好拿取
-                                乾淨方便不會沾手 一片有兩張，中間有虛線 Fiji虛線設計可以精準換算單次所需用量，使用超彈性
-                                它的溶解和去污力也很讚 洗完有淡淡的清香 不會有太化學味道 我很推薦大家可以試試看
-                                因為這是顛覆以往我們洗衣的產品 竟然一片可以洗整桶衣服 輕巧方便又不佔家裡空間
-                                可以幫它準備美麗的盒子裝這些紙 家裡也可以有美美的陽台囉 點這裡看更多介紹唷
-                                htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW
-                            </p>
-                            <p class="name">沙發哥的媽</p>
-                            <button class="fb-btn" @click="lightBoxApplyOpen(true)">
-                                <img :src="require(`@/assets/img/index2-1/fbBtnM.png`)" alt="" />
-                            </button>
-                        </div>
-                    </div> -->
+                <div class="chat-swiper">
+                    <swiper class="swiper" :options="swiperOptionChat">
+                        <swiper-slide
+                            v-for="(item, index) in chats"
+                            :key="index"
+                        >
+                            <div class="frame">
+                                <img
+                                    :src="
+                                        require(`@/assets/img/index2-1/left.png`)
+                                    "
+                                    alt=""
+                                />
+                                <div class="content">
+                                    <h1 class="title">{{ item.title }}</h1>
+                                    <p class="text">
+                                        {{ item.content }}
+                                    </p>
+                                    <p class="name">{{ item.name }}</p>
+                                    <button
+                                        class="fb-btn"
+                                        @click="
+                                            lightBoxApplyOpen(
+                                                true,
+                                                item.content
+                                            )
+                                        "
+                                    >
+                                        <img
+                                            :src="
+                                                require(`@/assets/img/index2-1/fbBtnM.png`)
+                                            "
+                                            alt=""
+                                        />
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                        <div
+                            class="swiper-button-prev chat"
+                            slot="button-prev"
+                        ></div>
+                        <div
+                            class="swiper-button-next chat"
+                            slot="button-next"
+                        ></div>
+                    </swiper>
                 </div>
-
                 <!-- share image sliders -->
-                <div class="share-images">
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_1.png`)" alt="" />
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_2.png`)" alt="" />
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_3.png`)" alt="" />
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_3.png`)" alt="" />
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_3.png`)" alt="" />
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_3.png`)" alt="" />
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_3.png`)" alt="" />
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_3.png`)" alt="" />
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_3.png`)" alt="" />
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_3.png`)" alt="" />
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_3.png`)" alt="" />
-                    <img class="image" :src="require(`@/assets/img/index2-1/images_3.png`)" alt="" />
+                <div class="image-swiper">
+                    <swiper class="swiper" :options="swiperOptionImage">
+                        <swiper-slide v-for="index in 11" :key="index">
+                            <img
+                                class="image"
+                                :src="
+                                    require(`@/assets/img/index2-1/images_${index}.png`)
+                                "
+                                alt=""
+                        /></swiper-slide>
+                    </swiper>
                 </div>
-
-                <a href=""
-                    ><img class="like-btn" :src="require(`@/assets/img/index2-1/btn-likeItTonight.png`)" alt=""
-                /></a>
-                <img class="image4" :src="require(`@/assets/img/index2-1/images4.png`)" alt="" />
-                <img class="image5" :src="require(`@/assets/img/index2-1/images5.png`)" alt="" />
+                <a
+                    href="https://mamibuy.com.tw/talk/forum/topic/438210"
+                    target="_blank"
+                >
+                    <img
+                        class="share-more"
+                        :src="
+                            require(`@/assets/img/index2-1/btn-shareMore.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="share-more hover"
+                        :src="
+                            require(`@/assets/img/index2-1/btn-shareMore-hover.png`)
+                        "
+                        alt=""
+                    />
+                </a>
+                <a href="#" target="_blank">
+                    <img
+                        class="like-btn"
+                        :src="
+                            require(`@/assets/img/index2-1/btn-likeItTonight.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="like-btn hover"
+                        :src="
+                            require(`@/assets/img/index2-1/btn-likeItTonight-hover.png`)
+                        "
+                        alt=""
+                    />
+                </a>
+                <img
+                    class="image4"
+                    :src="require(`@/assets/img/index2-1/images4.png`)"
+                    alt=""
+                />
+                <img
+                    class="image5"
+                    :src="require(`@/assets/img/index2-1/images5.png`)"
+                    alt=""
+                />
                 <!-- RWD part -->
-                <img class="mobile" :src="require(`@/assets/img/index2-1/index_m_2.png`)" alt="" />
+                <img
+                    class="mobile"
+                    :src="require(`@/assets/img/index2-1/index_m_2.png`)"
+                    alt=""
+                />
             </div>
 
             <div class="black-field" v-if="lightBoxIntroShow">
                 <button class="close-btn" @click="lightBoxIntroOpen(false)">
-                    <img :src="require(`@/assets/img/index1-2/light-box/close.png`)" alt="" />
+                    <img
+                        :src="
+                            require(`@/assets/img/index1-2/light-box/close.png`)
+                        "
+                        alt=""
+                    />
                 </button>
                 <div class="lightbox">
                     <div
                         class="frame"
                         :style="{
-                            'background-image': 'url(' + require(`@/assets/img/index2-1/light-box/circle_bg.png`) + ')',
-                        }">
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index2-1/light-box/circle_bg.png`) +
+                                ')',
+                        }"
+                    >
                         <div class="content-box">
                             <p class="title">Fiji抽獎注意事項</p>
                             <div class="content">
@@ -262,8 +192,14 @@
                                     冰磁白WD-S13VDW」。分享次數越多，中獎機率越高。
                                 </p>
                                 <strong> 獎項內容 </strong>
-                                <p>1. LG蒸氣滾筒洗衣機(蒸洗脫烘) 冰磁白WD-S13VDW 壹台，一名 (市價36,900元)。</p>
-                                <p>2. FiJi飛漬洗衣紙清新30抽六盒，三名 (市價2,250元)。</p>
+                                <p>
+                                    1. LG蒸氣滾筒洗衣機(蒸洗脫烘)
+                                    冰磁白WD-S13VDW 壹台，一名 (市價36,900元)。
+                                </p>
+                                <p>
+                                    2. FiJi飛漬洗衣紙清新30抽六盒，三名
+                                    (市價2,250元)。
+                                </p>
                                 <strong>活動辦法</strong>
                                 <p>
                                     1. 於活動期間內至『FiJi 飛漬洗衣紙
@@ -274,12 +210,17 @@
                                     2.
                                     中獎者需保留FB或IG公開分享內容至2023/3/31（五），並於兌獎時提出畫面截圖（須顯示發文帳號及時間）供本公司活動小組進行核對，若無法提供者，即取消中獎資格。
                                 </p>
-                                <p>3. 每位中獎者不得重複領獎，獎項以市價高者為優先贈予。</p>
+                                <p>
+                                    3.
+                                    每位中獎者不得重複領獎，獎項以市價高者為優先贈予。
+                                </p>
                                 <strong>抽獎時間與中獎公告</strong>
                                 <p>
                                     1.
                                     中獎名單將由電腦隨機抽出，並於<span>2023/3/20(一)</span>公佈於LG生活健康FB粉絲專頁
-                                    <a target="blank" href="https://www.facebook.com/lglife"
+                                    <a
+                                        target="_blank"
+                                        href="https://www.facebook.com/lglife"
                                         >https://www.facebook.com/lglife</a
                                     >
                                     ，及E-mail寄出中獎通知信給中獎者。中獎者收到電子郵件後，請依郵件內容，並於指定時間內列印填寫中獎回函等紙本，以掛號方式寄回，經本公司驗證無誤後寄發獎項。上述文件將供本公司驗證及留存，活動結束後不再退還。
@@ -348,13 +289,17 @@
                                     依據個人資料保護法等相關規定，以下告知事項請臺端詳閱，當臺端參加本活動時表示已同意內容：
                                 </p>
                                 <p>
-                                    1. 蒐集個人資料公司：LG生活健康（即臺灣樂金生活健康股份有限公司，以下簡稱本公司）。
+                                    1.
+                                    蒐集個人資料公司：LG生活健康（即臺灣樂金生活健康股份有限公司，以下簡稱本公司）。
                                 </p>
                                 <p>
                                     2. 蒐集之目的：『FiJi 飛漬洗衣紙
                                     好評分享抽大獎』活動（以下簡稱本活動)之抽獎、兌獎及本活動相關聯繫。
                                 </p>
-                                <p>3. 個人資料之類別：個人資料中之識別類（輸入之姓名、電話、email）。</p>
+                                <p>
+                                    3.
+                                    個人資料之類別：個人資料中之識別類（輸入之姓名、電話、email）。
+                                </p>
                                 <p>
                                     4.
                                     個人資料利用之期間：自參加本活動之日起至活動結束後6個月止，之後將逕行刪除不予留存。
@@ -390,177 +335,42 @@
             </div>
             <div class="black-field" v-if="lightBoxApplyShow">
                 <button class="close-btn" @click="lightBoxApplyOpen(false)">
-                    <img :src="require(`@/assets/img/index1-2/light-box/close.png`)" alt="" />
+                    <img
+                        :src="
+                            require(`@/assets/img/index1-2/light-box/close.png`)
+                        "
+                        alt=""
+                    />
                 </button>
                 <div class="lightbox">
                     <div
                         class="frame"
                         :style="{
-                            'background-image': 'url(' + require(`@/assets/img/index2-1/light-box/circle_bg.png`) + ')',
-                        }">
+                            'background-image':
+                                'url(' +
+                                require(`@/assets/img/index2-1/light-box/circle_bg.png`) +
+                                ')',
+                        }"
+                    >
                         <div class="content-box">
                             <div class="step1" v-if="apply.step === 1">
                                 <p class="title">好物推薦心得</p>
                                 <div class="text">
                                     <p>
-                                        環保意識抬頭,當然我們家也是一樣，一直以來都使用環保包装補充型的洗衣精，但真的要搬回家的時候，很想哭啊。超級重的!
-                                        但是!!!!最近發現了一個超好用的新產品，就是：Fiji飛漬洗衣紙！它解決了我每次採買洗衣大又重，搬上搬下像重訓的煩惱啊！
-                                        Fiji飛漬洗衣紙是LG專利全新纸張劑型的洗衣纸，一包有30張=2公升洗衣精。而且像我們家直立式洗衣機並沒有接熱水管路也沒有熱水的洗滌功能可以使用，但完全不用擔心無法溶解或是有殘留的問題，因為即使遇冷水也能100%完全溶解零殘留。
-                                        再来，虛線的設計，能輕鬆的將洗衣纸撕成一半來使用；拿在手上也不會有洗衣精一样黏黏的又刺激皮膚。
-                                        別小看只有小小的一張洗衣纸，它可是一張「強效去污酵素」的洗衣纸喔！完全不用擔心衣服會洗不乾淨，洗完還帶有一股淡淡的清新香味，不像化學味道那檬刺鼻。
-                                        完全愛上使用FiJi飛清洗衣紙了啦！ 更多訊息請參考:
-                                        LG生活健康電商網站htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW
+                                        {{ applyContent }}
                                     </p>
                                 </div>
-                                <button @click="onStep1Click()">分享抽大獎</button>
+                                <button @click="onStep1Click()">
+                                    分享抽大獎
+                                </button>
                             </div>
-
-                            <!-- 新增的10個文案 -->
-
-                            <!-- <div class="step1" v-if="apply.step === 1">
-                                <p class="title">好物推薦心得</p>
-                                <div class="text">
-                                    <p>
-                                        它我們家是使用一般型洗衣機，它無法像全自動或滾筒洗衣機一樣可以用膠囊型的洗衣精，因為會不好溶解，曾經試過某牌的膠囊洗衣球，結果不僅沒溶解好，還沾的衣服到處都是，所以我只好乖乖的使用一般洗衣精，但洗衣精又很佔空間且不好倒。
-                                這次使用了FiJi飛漬洗衣紙，真是令我大開眼界，它輕巧便利又環保，不佔空間好收納，LG專利紙張型洗劑，一張就能搞定一桶髒衣，就算用冷水也能溶解的很徹底，強效去汙酵素，連兒子每次都要手洗很久的襪子都能直接洗淨，讓媽媽好輕鬆，而且用多少就撕多少，完全不怕浪費，就算要手洗貼身衣物也可以，輕巧又不佔空間,真是媽媽的神隊友！
-                                    </p>
-                                </div>
-                                <button @click="onStep1Click()">分享抽大獎</button>
-                            </div>
-                            <div class="step1" v-if="apply.step === 1">
-                                <p class="title">好物推薦心得</p>
-                                <div class="text">
-                                    <p>
-                                        我們家洗衣服有用一般洗衣精和洗衣球兩種，但總是會遇到1.衣服太少，洗衣球一顆太浪費，還遇過衣服洗完衣球完好無缺的情形。2.先生總是無法準確用衣服量，去抓洗衣精要多少，所以洗衣服的事情總是落在媽媽身上。
-                                這次嘗試使用“FiJi飛漬洗衣紙“，本來還很擔心它的溶解度和清潔能力，結果衣服洗出來的成果超乎我想像，意外的好洗，清潔力也很夠，100%完全溶解零殘留，連冷水也能完全溶解，而且一整包不佔空間又輕巧便利好收纳，全新纸張型洗劑，拿取時方便乾淨不沾手。
-                                現在的衣服，先生都會幫忙丟洗衣機，因為FiJi虛線設計可以精準换算單次所需用量，彈性使用超輕鬆，而且洗完還有淡淡清香，先生也誇讚FiJi飛漬洗衣紙輕巧便利又環保，不佔空間好收纳，用量也很省，一張搞定一桶髒衣，100%溶解不殘留，我們家的滾筒洗衣機也不怕，加上它的強效去污酵素，連白色襯衫都能輕鬆洗淨，真的是手洗機洗都好用。
-                                    </p>
-                                </div>
-                                <button @click="onStep1Click()">分享抽大獎</button>
-                            </div>
-                            <div class="step1" v-if="apply.step === 1">
-                                <p class="title">好物推薦心得</p>
-                                <div class="text">
-                                    <p>
-                                        最初洗衣服時使用的是洗衣粉 後來發現容易殘留粉末在洗衣機底部 洗衣粉也容易因潮濕結塊
-                                雖然不影響使用，但每次都得弄碎好累 後來改使用洗衣精 手殘的我常常弄到罐子周圍都是洗衣精
-                                最後改用洗衣球，一顆丟入洗衣機清洗衣服非常方便
-                                味道也夠香，洗爸爸的髒衣服時不用再另外加芬香豆 缺點就是儲存方式沒有處理好，容易受潮
-                                每次拿完受潮的洗衣球就得洗手，不是很方便 最近發現一款好用的洗衣紙 「FiJi飛漬洗衣紙」
-                                夾鏈袋包裝，不用擔心洗衣紙會受潮 輕巧便利又環保，也不佔空間
-                                添加強效去污酵，衣服洗完乾乾淨淨 清新的香氣就算是臭臭的衣服
-                                洗完也還能保留香味，不需再另外加入芬香豆 這點超讚！
-                                使用專利纸張劑型的方式，不沾手也不怕流的到處都是 薄薄的一張，想洗多少就用多少
-                                就算用冷水也能100%溶解不殘留洗劑 將洗衣紙和購衣服一起丟入洗衣機內清洗
-                                讓你能優雅的洗衣服，不兵荒馬亂~
-                                同步分享於部落格:https://mamibuy.com.tw/talk/article/213552
-                                    </p>
-                                </div>
-                                <button @click="onStep1Click()">分享抽大獎</button>
-                            </div>
-                            <div class="step1" v-if="apply.step === 1">
-                                <p class="title">好物推薦心得</p>
-                                <div class="text">
-                                    <p>
-                                        當孩子從嬰兒進化到屁童後，每天回家衣服不是黑漆漆就是沾到醬汁或是乾掉的飯粒，都讓老婆很苦惱要如何挑選最適合我們需求的洗衣精。
-                                希望有強勁的去汙潔淨力，又不要傷害到衣物本身，擅長作智慧家電的LG總是會推出令人耳目一新的產品，這次是推出的是很讓我驚訝的FiJi飛漬洗衣紙，洗衣服竟然可以不用洗衣精(粉)而是紙!!想到洗衣服不用提重重的洗衣精，就覺得老婆可以省力不少？身為顧家好男人的我不該趁機表示一下我的貼心嗎??
-                                洗衣紙使用方式非常容易，可以容易的根據衣服量判斷要放多少張洗衣紙使用量很容易估算，也不需要撕碎或是泡軟，直接跟著髒衣丟到洗衣筒，它是可以被冷水溶解的。高清潔力非常適合給我們家孩子使用，強效去污酵素讓沾在衣服上的頑固污漬也清潔溜溜。
-                                有些家長會很在意的香精部分，這款洗衣紙完除讓服變得乾淨之外，只带著淡淡清香，不用擔心會有過多的化學香精殘留在衣服上，也不用擔心汗臭洗不掉。
-                                    </p>
-                                </div>
-                                <button @click="onStep1Click()">分享抽大獎</button>
-                            </div>
-                            <div class="step1" v-if="apply.step === 1">
-                                <p class="title">好物推薦心得</p>
-                                <div class="text">
-                                    <p>
-                                        我從以前就是洗衣狂魔很忍受不衣服超過洗衣籃的表面，現在有了老公小孩，衣服增加了一倍，為了維持乾淨減少細菌病毒，我幾乎1-2天一定要洗衣服。用過不少洗衣相關的產品，洗衣球是目前用過最雷的，雖然體積小好收納，但球內的小珠珠，常常洗衣之後都沒完全融化，整個黏在衣服上，只好洗兩遍，真的很耗時又浪費水電，還有洗衣球外膜會因為天氣冷熱，溶解度不同尤其冬天最誇張，根本不溶，有時候還要自己戳洞。有了這些經驗我只想繼續使用洗衣精，但洗衣精也帶給我許多困擾，一大我桶已經不知道打翻幾次了，尤其半獸人真的很愛趁我打開陽台時，把洗衣精推倒！再來是每次洗衣服時，將洗衣精提起來倒量杯，真的很訓練二頭肌，還常常不小心倒太多漏出量杯，把整隻手都弄得黏搭搭，還有！補充包分裝至瓶子時，因為看不清裡面到底裝了多少，時常装到最後一刻都會滿到漏出來。最近看到一個神奇用物-FiJi飛漬洗衣紙，體積小又輕薄對於家庭空間小，不想儲存這麼多洗衣精的我，抱試看的心態，沒想到！
-                                1.一秒投人洗衣紙，不用像以前一樣洗衣精量来量去還倒出来，Fiji有虛線設計可以精準换算單次所需用量
-                                2.正逢現在冬天冷得要命，洗衣紙卻100%溶解,完全無殘留
-                                3.強效去污酵素讓衣服洗得乾乾淨，跟用洗衣精效果相當 4.洗完有股淡淡清香，半室外晾衣也很OK
-                                5.不占空間收纳方便。
-                                FiJi飛清洗衣紙納入我口袋名單，半獣人拿上拿下都輕鬆，解放媽媽二頭肌！
-                                    </p>
-                                </div>
-                                <button @click="onStep1Click()">分享抽大獎</button>
-                            </div>
-                            <div class="step1" v-if="apply.step === 1">
-                                <p class="title">好物推薦心得</p>
-                                <div class="text">
-                                    <p>
-                                        【FiJi飛漬洗衣紙】10抽
-                                我們家的洗衣機小台，所以必須每兩天洗一次衣服，衣服一多時洗衣精用量就大，導致洗衣容易洗不乾淨殘留，麻煩的是沒多久就又要去採購洗衣精，瓶装洗衣精動轍1、2公斤裝重，最多也只能買個兩瓶。
-                                也試過洗衣球，但是有時候洗衣量不多，用一整顆洗衣球又太浪費可惜，相信大家都一定了解這種心情。
-                                推薦給大家【 FiJi飛漬洗衣紙】LG專利全新紙張洗劑，只要一張就能輕鬆洗淨髒汙!
-                                【FiJi飛漬洗衣纸】LG
-                                専利全新纸張洗劑每包有10張抽，每張FiJi洗衣纸上有虛線設計可以精準換算單次所需用量，洗多少衣服就撕多少張不怕浪費，遇上冷水也能100%溶解，去污力25%幫助強效去除污漬，夾鏈袋設計比傳統洗衣精還要省空間好收纳。
-                                無論一般洗衣抑或是滾筒洗衣機都適用，洗衣後不需將洗衣紙撈出。一般洗衣精碰到容易讓手黏黏的，【
-                                FiJi飛漬洗衣纸】全新紙張型洗劑，只要放入洗衣槽即可，既乾淨方便又不沾手，真的非常好用。
-                                尤其我們家都是室內晾衣，【 FiJi飛漬洗衣纸] 洗後不殘留只聞得到洗完淡淡清香，而且【
-                                FiJi飛漬洗衣纸】收納少非常輕巧便利，洗衣亦能輕鬆控制使用量不浪費又環保，推薦主婦們一定要來試試~無論手洗機洗都好用呢！
-                                LG生活健康電商網站htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW
-                                    </p>
-                                </div>
-                                <button @click="onStep1Click()">分享抽大獎</button>
-                            </div>
-                            <div class="step1" v-if="apply.step === 1">
-                                <p class="title">好物推薦心得</p>
-                                <div class="text">
-                                    <p>
-                                        曾經用洗衣球曾經沒溶解衣服只是洗了個寂寞的人，或是家中長洗衣服都放很多的人，真的可以試試看FiJi飛漬洗衣紙。
-                                其實洗衣球方便是方便，但用量固定就是一顆配多少衣服，對於小家庭真的是不太方便，不可能2.3件深色衣物一顆，2.3件淺色衣服一顆，3.4雙襪子又要再一顆，全部混在一起洗也不好，尤其是寶寶或小孩的衣物，其實相對來說真的是浪費。更不用說有些習慣放超級多洗衣粉覺得洗衣服就是要都是泡泡的人，沒有完全溶解清潔乾淨的洗劑，不是要重新洗一次，不然就是減少洗衣機壽命！
-                                FiJi飛漬洗衣紙真的解決了這些問題，LG專利紙張洗劑真的很方便，好溶解不殘留，用量可配合洗衣的份量去調整，重點是使用的量比一般洗衣精還省。一張FiJi飛漬洗衣紙就可以洗一整個洗衣機的量。
-                                要針對局部髒污只要撕開洗衣紙用適當的份量先溶解在水盆裡去手洗，不用大罐大的洗衣精搬來搬去,輕鬆又省力又節省空間。
-                                使用過後發覺FiJi飛漬洗衣紙洗淨力真的不錯，沒有洗劑殘留卻又洗的乾淨，用冷水也是馬上溶解，香味也清爽舒服，沒那麼多瓶瓶罐也很方便環保回收，覺得跟洗衣球相比一樣不沾手，但FiJi飛漬洗衣紙用量更彈性，重量很輕巧，連我兩歲大的兒子都可以輕鬆拿，對於正在媽媽手困擾的我而言真的是太喜歡了!!
-                                    </p>
-                                </div>
-                                <button @click="onStep1Click()">分享抽大獎</button>
-                            </div>
-                            <div class="step1" v-if="apply.step === 1">
-                                <p class="title">好物推薦心得</p>
-                                <div class="text">
-                                    <p>
-                                        相信大家都有用過洗衣精、洗衣球，那你有聽過洗衣紙嗎？
-                                別懷疑，真的有洗衣纸這個東西~這次蠟燭媽来分享FiJi飛漬洗衣紙到底有多好用
-                                蠟燭媽是一個很愛網路購物一次訂購好幾箱家庭用品的人，方便而且ㄈ又快速，但當貨運送到時是另一種頭疼的開始，要擔心婆婆簽收時司機大哥有沒有好心的幫忙搬進客廳、要擔心家裡空間要把這堆東西放哪，又要擔心正值探索時期的Mini拿來就咬或當開水喝
-                                『
-                                FiJi飛漬洗衣紙』一次解決我所有的煩惱！不但輕巧方便好收納，友善的虛線設計連長辈都能輕鬆使用，別看它薄薄一張，洗淨力可是很足夠的喔！蠟燭爸上班弄的髒污跟小蠟燭上課玩耍的污漬，一點都難不倒『
-                                FiJi飛漬洗衣紙』
-                                輕鬆還你乾淨整潔的衣服，而且使用冷水就可以輕輕鬆鬆溶解！完全不用擔心洗劑殘留要再重洗一遍。
-                                『
-                                FiJi飛漬洗衣紙』帶點淡淡清香,不會有化學刺鼻味，好聞又舒服的味道，蠟燭媽可以掛保證，因為蠟燭媽的鼻子完全無法接受太化學的香味(連香水都沒辦法用，蠟燭爸都懷疑我是男人?)
-                                『 FiJi飛漬洗衣紙』 有五大優點>> 1.輕巧便利又環保，不佔空間好收納。
-                                2.LG專利纸張型洗劑，一張搞定一桶髒衣。
-                                3.就算用冷水也能100%溶解不殘留，滾筒洗衣機也不怕。 4.強效去污酵素,輕鬆洗淨衣物。
-                                5.輕鬆控制使用量,手洗機洗都好用。 哪裡買 https://www.lglife.com.tw
-                                    </p>
-                                </div>
-                                <button @click="onStep1Click()">分享抽大獎</button>
-                            </div>
-                            <div class="step1" v-if="apply.step === 1">
-                                <p class="title">好物推薦心得</p>
-                                <div class="text">
-                                    <p>
-                                        當了媽以後開始要洗衣服人生 每天洗一家四口的衣服 第一次看到這個新好物
-                                #LG專利全新纸張劑型上市 它好方便喔喔喔喔 我們家陽台偏小 所以每天都要洗衣服
-                                不然太多不好曬又容易曬不乾 但有時候衣服的量多量少 洗衣球會比較浪費
-                                洗衣粉會撒的到處都是ㄈ 洗衣精又很重，新買回来時要倒有時候都會失手到太多
-                                因為單手拿很重耶(瘦弱哈哈) 而且長輩拿可能會更吃力 現在#LG 造福各位洗衣服的媽媽們
-                                連手洗都可以用的喔~ LG專利紙張劑型，一張搞定一桶髒衣 30張=2公升洗衣精，輕巧便利好收納
-                                冷水也能100%溶解 滾筒洗衣機也是可以的 擺在架上完全不佔空間啊 而且輕鬆控制使用量
-                                手洗機洗都方便 重點是!!!! 強效去污酵素，衣服洗的乾淨很重要呢~~ 它非常好拿取
-                                乾淨方便不會沾手 一片有兩張，中間有虛線 Fiji虛線設計可以精準換算單次所需用量，使用超彈性
-                                它的溶解和去污力也很讚 洗完有淡淡的清香 不會有太化學味道 我很推薦大家可以試試看
-                                因為這是顛覆以往我們洗衣的產品 竟然一片可以洗整桶衣服 輕巧方便又不佔家裡空間
-                                可以幫它準備美麗的盒子裝這些紙 家裡也可以有美美的陽台囉 點這裡看更多介紹唷
-                                htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW
-                                    </p>
-                                </div>
-                                <button @click="onStep1Click()">分享抽大獎</button>
-                            </div> -->
                             <div class="step2" v-if="apply.step === 2">
                                 <p class="title">Fiji抽獎注意事項</p>
-                                <div class="content" @scroll="handleScroll" ref="agreeContent">
+                                <div
+                                    class="content"
+                                    @scroll="handleScroll"
+                                    ref="agreeContent"
+                                >
                                     <strong>活動期間</strong>
                                     <p>即日起至 2023/3/10（五）。</p>
                                     <strong>活動內容</strong>
@@ -570,8 +380,15 @@
                                         冰磁白WD-S13VDW」。分享次數越多，中獎機率越高。
                                     </p>
                                     <strong> 獎項內容 </strong>
-                                    <p>1. LG蒸氣滾筒洗衣機(蒸洗脫烘) 冰磁白WD-S13VDW 壹台，一名 (市價36,900元)。</p>
-                                    <p>2. FiJi飛漬洗衣紙清新30抽六盒，三名 (市價2,250元)。</p>
+                                    <p>
+                                        1. LG蒸氣滾筒洗衣機(蒸洗脫烘)
+                                        冰磁白WD-S13VDW 壹台，一名
+                                        (市價36,900元)。
+                                    </p>
+                                    <p>
+                                        2. FiJi飛漬洗衣紙清新30抽六盒，三名
+                                        (市價2,250元)。
+                                    </p>
                                     <strong>活動辦法</strong>
                                     <p>
                                         1. 於活動期間內至『FiJi 飛漬洗衣紙
@@ -582,12 +399,17 @@
                                         2.
                                         中獎者需保留FB或IG公開分享內容至2023/3/31（五），並於兌獎時提出畫面截圖（須顯示發文帳號及時間）供本公司活動小組進行核對，若無法提供者，即取消中獎資格。
                                     </p>
-                                    <p>3. 每位中獎者不得重複領獎，獎項以市價高者為優先贈予。</p>
+                                    <p>
+                                        3.
+                                        每位中獎者不得重複領獎，獎項以市價高者為優先贈予。
+                                    </p>
                                     <strong>抽獎時間與中獎公告</strong>
                                     <p>
                                         1.
                                         中獎名單將由電腦隨機抽出，並於<span>2023/3/20(一)</span>公佈於LG生活健康FB粉絲專頁
-                                        <a target="blank" href="https://www.facebook.com/lglife"
+                                        <a
+                                            target="_blank"
+                                            href="https://www.facebook.com/lglife"
                                             >https://www.facebook.com/lglife</a
                                         >
                                         ，及E-mail寄出中獎通知信給中獎者。中獎者收到電子郵件後，請依郵件內容，並於指定時間內列印填寫中獎回函等紙本，以掛號方式寄回，經本公司驗證無誤後寄發獎項。上述文件將供本公司驗證及留存，活動結束後不再退還。
@@ -663,7 +485,10 @@
                                         2. 蒐集之目的：『FiJi 飛漬洗衣紙
                                         好評分享抽大獎』活動（以下簡稱本活動)之抽獎、兌獎及本活動相關聯繫。
                                     </p>
-                                    <p>3. 個人資料之類別：個人資料中之識別類（輸入之姓名、電話、email）。</p>
+                                    <p>
+                                        3.
+                                        個人資料之類別：個人資料中之識別類（輸入之姓名、電話、email）。
+                                    </p>
                                     <p>
                                         4.
                                         個人資料利用之期間：自參加本活動之日起至活動結束後6個月止，之後將逕行刪除不予留存。
@@ -698,17 +523,33 @@
                                         v-model="apply.agree"
                                         id="agree"
                                         type="checkbox"
-                                        :disabled="!hasScrolledToBottom" />
-                                    <label for="agree">已詳閱並同意抽獎活動辦法</label>
-                                    <div class="slide-down" @click="scrolledToBottom('agreeContent')">
-                                        <img :src="require(`@/assets/img/index2-1/triangle.png`)" alt="" />
+                                        :disabled="!hasScrolledToBottom"
+                                    />
+                                    <label for="agree"
+                                        >已詳閱並同意抽獎活動辦法</label
+                                    >
+                                    <div
+                                        class="slide-down"
+                                        @click="
+                                            scrolledToBottom('agreeContent')
+                                        "
+                                    >
+                                        <img
+                                            :src="
+                                                require(`@/assets/img/index2-1/triangle.png`)
+                                            "
+                                            alt=""
+                                        />
                                     </div>
                                 </div>
                                 <button
                                     :class="{
-                                        disabled: !apply.agree || !hasScrolledToBottom,
+                                        disabled:
+                                            !apply.agree ||
+                                            !hasScrolledToBottom,
                                     }"
-                                    @click="onStep2Click()">
+                                    @click="onStep2Click()"
+                                >
                                     下一步
                                 </button>
                             </div>
@@ -717,15 +558,27 @@
                                 <div class="input-box">
                                     <div class="input">
                                         <p>姓 名</p>
-                                        <input v-model="apply.data.name" id="name" type="text" />
+                                        <input
+                                            v-model="apply.data.name"
+                                            id="name"
+                                            type="text"
+                                        />
                                     </div>
                                     <div class="input">
                                         <p>手機號碼</p>
-                                        <input v-model="apply.data.phone" id="phone" type="text" />
+                                        <input
+                                            v-model="apply.data.phone"
+                                            id="phone"
+                                            type="text"
+                                        />
                                     </div>
                                     <div class="input">
                                         <p>Email</p>
-                                        <input v-model="apply.data.email" id="email" type="text" />
+                                        <input
+                                            v-model="apply.data.email"
+                                            id="email"
+                                            type="text"
+                                        />
                                     </div>
                                 </div>
                                 <button
@@ -736,13 +589,19 @@
                                             this.apply.data.email
                                         ),
                                     }"
-                                    @click="onStep3Click()">
+                                    @click="onStep3Click()"
+                                >
                                     下一步抽大獎
                                 </button>
                             </div>
                             <div class="step4" v-if="apply.step === 4">
                                 <p class="title">感謝分享</p>
-                                <img :src="require(`@/assets/img/index2-1/light-box/thank-share.png`)" alt="" />
+                                <img
+                                    :src="
+                                        require(`@/assets/img/index2-1/light-box/thank-share.png`)
+                                    "
+                                    alt=""
+                                />
                             </div>
                         </div>
                     </div>
@@ -752,11 +611,14 @@
     </div>
 </template>
 <script>
-import navComponent from '../../component/nav/nav.vue';
+import navComponent from "../../component/nav/nav.vue";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 
 export default {
-    name: 'ShareComponent',
+    name: "ShareComponent",
     components: {
+        Swiper,
+        SwiperSlide,
         navComponent,
     },
     props: {},
@@ -773,8 +635,227 @@ export default {
                     email: null,
                 },
             },
+            applyContent: "",
             hash: this.$route.hash,
             hasScrolledToBottom: false,
+            swiperOptionChat: {
+                effect: "coverflow",
+                slidesPerView: 4,
+                spaceBetween: 40,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 60,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next.chat",
+                    prevEl: ".swiper-button-prev.chat",
+                },
+                breakpoints: {
+                    1023: {
+                        slidesPerView: 4,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        coverflowEffect: {
+                            stretch: -30,
+                            depth: 60,
+                        },
+                    },
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                        coverflowEffect: {
+                            stretch: 0,
+                            depth: 0,
+                        },
+                    },
+                },
+            },
+            chats: [
+                {
+                    title: "輕鬆洗衣不費力",
+                    name: "朱小豬",
+                    content: `環保意識抬頭,當然我們家也是一樣，一直以來都使用環保包装補充型的洗衣精，但真的要搬回家的時候，很想哭啊。超級重的!
+                    但是!!!!最近發現了一個超好用的新產品，就是：Fiji飛漬洗衣紙！它解決了我每次採買洗衣大又重，搬上搬下像重訓的煩惱啊！
+                    Fiji飛漬洗衣紙是LG專利全新纸張劑型的洗衣纸，一包有30張=2公升洗衣精。而且像我們家直立式洗衣機並沒有接熱水管路也沒有熱水的洗滌功能可以使用，但完全不用擔心無法溶解或是有殘留的問題，因為即使遇冷水也能100%完全溶解零殘留。
+                    再来，虛線的設計，能輕鬆的將洗衣纸撕成一半來使用；拿在手上也不會有洗衣精一样黏黏的又刺激皮膚。
+                    別小看只有小小的一張洗衣纸，它可是一張「強效去污酵素」的洗衣纸喔！完全不用擔心衣服會洗不乾淨，洗完還帶有一股淡淡的清新香味，不像化學味道那檬刺鼻。
+                    完全愛上使用FiJi飛清洗衣紙了啦！ 更多訊息請參考:
+                    LG生活健康電商網站htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW`,
+                },
+                {
+                    title: "冷水也能溶解很徹底",
+                    name: "Yazmin",
+                    content: `它我們家是使用一般型洗衣機，它無法像全自動或滾筒洗衣機一樣可以用膠囊型的洗衣精，因為會不好溶解，曾經試過某牌的膠囊洗衣球，結果不僅沒溶解好，還沾的衣服到處都是，所以我只好乖乖的使用一般洗衣精，但洗衣精又很佔空間且不好倒。
+                                這次使用了FiJi飛漬洗衣紙，真是令我大開眼界，它輕巧便利又環保，不佔空間好收納，LG專利紙張型洗劑，一張就能搞定一桶髒衣，就算用冷水也能溶解的很徹底，強效去汙酵素，連兒子每次都要手洗很久的襪子都能直接洗淨，讓媽媽好輕鬆，而且用多少就撕多少，完全不怕浪費，就算要手洗貼身衣物也可以，輕巧又不佔空間,真是媽媽的神隊友！`,
+                },
+                {
+                    title: "強效去污酵素，好洗",
+                    name: "庭",
+                    content: `我們家洗衣服有用一般洗衣精和洗衣球兩種，但總是會遇到1.衣服太少，洗衣球一顆太浪費，還遇過衣服洗完衣球完好無缺的情形。2.先生總是無法準確用衣服量，去抓洗衣精要多少，所以洗衣服的事情總是落在媽媽身上。
+                                這次嘗試使用“FiJi飛漬洗衣紙“，本來還很擔心它的溶解度和清潔能力，結果衣服洗出來的成果超乎我想像，意外的好洗，清潔力也很夠，100%完全溶解零殘留，連冷水也能完全溶解，而且一整包不佔空間又輕巧便利好收纳，全新纸張型洗劑，拿取時方便乾淨不沾手。
+                                現在的衣服，先生都會幫忙丟洗衣機，因為FiJi虛線設計可以精準换算單次所需用量，彈性使用超輕鬆，而且洗完還有淡淡清香，先生也誇讚FiJi飛漬洗衣紙輕巧便利又環保，不佔空間好收纳，用量也很省，一張搞定一桶髒衣，100%溶解不殘留，我們家的滾筒洗衣機也不怕，加上它的強效去污酵素，連白色襯衫都能輕鬆洗淨，真的是手洗機洗都好用。`,
+                },
+                {
+                    title: "不沾手也不怕流！",
+                    name: "Do Remi",
+                    content: `最初洗衣服時使用的是洗衣粉
+                                後來發現容易殘留粉末在洗衣機底部
+                                洗衣粉也容易因潮濕結塊
+                                雖然不影響使用，但每次都得弄碎好累
+                                後來改使用洗衣精
+                                手殘的我常常弄到罐子周圍都是洗衣精
+                                最後改用洗衣球，一顆丟入洗衣機清洗衣服非常方便
+                                味道也夠香，洗爸爸的髒衣服時不用再另外加芬香豆
+                                缺點就是儲存方式沒有處理好，容易受潮
+                                每次拿完受潮的洗衣球就得洗手，不是很方便
+                                最近發現一款好用的洗衣紙 「FiJi飛漬洗衣紙」
+                                夾鏈袋包裝，不用擔心洗衣紙會受潮
+                                輕巧便利又環保，也不佔空間
+                                添加強效去污酵，衣服洗完乾乾淨淨
+                                清新的香氣就算是臭臭的衣服
+                                洗完也還能保留香味，不需再另外加入芬香豆
+                                這點超讚！
+                                使用專利纸張劑型的方式，不沾手也不怕流的到處都是
+                                薄薄的一張，想洗多少就用多少
+                                就算用冷水也能100%溶解不殘留洗劑
+                                將洗衣紙和購衣服一起丟入洗衣機內清洗
+                                讓你能優雅的洗衣服，不兵荒馬亂~
+                                同步分享於部落格:https://mamibuy.com.tw/talk/article/213552`,
+                },
+                {
+                    title: "頑固污漬也好清",
+                    name: "3Cholic",
+                    content: `當孩子從嬰兒進化到屁童後，每天回家衣服不是黑漆漆就是沾到醬汁或是乾掉的飯粒，都讓老婆很苦惱要如何挑選最適合我們需求的洗衣精。
+                                希望有強勁的去汙潔淨力，又不要傷害到衣物本身，擅長作智慧家電的LG總是會推出令人耳目一新的產品，這次是推出的是很讓我驚訝的FiJi飛漬洗衣紙，洗衣服竟然可以不用洗衣精(粉)而是紙!!想到洗衣服不用提重重的洗衣精，就覺得老婆可以省力不少？身為顧家好男人的我不該趁機表示一下我的貼心嗎??
+                                洗衣紙使用方式非常容易，可以容易的根據衣服量判斷要放多少張洗衣紙使用量很容易估算，也不需要撕碎或是泡軟，直接跟著髒衣丟到洗衣筒，它是可以被冷水溶解的。高清潔力非常適合給我們家孩子使用，強效去污酵素讓沾在衣服上的頑固污漬也清潔溜溜。
+                                有些家長會很在意的香精部分，這款洗衣紙完除讓服變得乾淨之外，只带著淡淡清香，不用擔心會有過多的化學香精殘留在衣服上，也不用擔心汗臭洗不掉。`,
+                },
+                {
+                    title: "洗衣紙卻100%溶解！",
+                    name: "sandy",
+                    content: `我從以前就是洗衣狂魔很忍受不衣服超過洗衣籃的表面，現在有了老公小孩，衣服增加了一倍，為了維持乾淨減少細菌病毒，我幾乎1-2天一定要洗衣服。用過不少洗衣相關的產品，洗衣球是目前用過最雷的，雖然體積小好收納，但球內的小珠珠，常常洗衣之後都沒完全融化，整個黏在衣服上，只好洗兩遍，真的很耗時又浪費水電，還有洗衣球外膜會因為天氣冷熱，溶解度不同尤其冬天最誇張，根本不溶，有時候還要自己戳洞。有了這些經驗我只想繼續使用洗衣精，但洗衣精也帶給我許多困擾，一大我桶已經不知道打翻幾次了，尤其半獸人真的很愛趁我打開陽台時，把洗衣精推倒！再來是每次洗衣服時，將洗衣精提起來倒量杯，真的很訓練二頭肌，還常常不小心倒太多漏出量杯，把整隻手都弄得黏搭搭，還有！補充包分裝至瓶子時，因為看不清裡面到底裝了多少，時常装到最後一刻都會滿到漏出來。最近看到一個神奇用物-FiJi飛漬洗衣紙，體積小又輕薄對於家庭空間小，不想儲存這麼多洗衣精的我，抱試看的心態，沒想到！
+                                1.一秒投人洗衣紙，不用像以前一樣洗衣精量来量去還倒出来，Fiji有虛線設計可以精準换算單次所需用量
+                                2.正逢現在冬天冷得要命，洗衣紙卻100%溶解,完全無殘留
+                                3.強效去污酵素讓衣服洗得乾乾淨，跟用洗衣精效果相當
+                                4.洗完有股淡淡清香，半室外晾衣也很OK
+                                5.不占空間收纳方便。
+                                FiJi飛清洗衣紙納入我口袋名單，半獣人拿上拿下都輕鬆，解放媽媽二頭肌！`,
+                },
+                {
+                    title: "洗多少衣服就撕多少張！",
+                    name: "咕嚕媽",
+                    content: `【FiJi飛漬洗衣紙】10抽
+                                我們家的洗衣機小台，所以必須每兩天洗一次衣服，衣服一多時洗衣精用量就大，導致洗衣容易洗不乾淨殘留，麻煩的是沒多久就又要去採購洗衣精，瓶装洗衣精動轍1、2公斤裝重，最多也只能買個兩瓶。
+                                也試過洗衣球，但是有時候洗衣量不多，用一整顆洗衣球又太浪費可惜，相信大家都一定了解這種心情。
+                                推薦給大家【
+                                FiJi飛漬洗衣紙】LG專利全新紙張洗劑，只要一張就能輕鬆洗淨髒汙!
+                                【FiJi飛漬洗衣纸】LG
+                                専利全新纸張洗劑每包有10張抽，每張FiJi洗衣纸上有虛線設計可以精準換算單次所需用量，洗多少衣服就撕多少張不怕浪費，遇上冷水也能100%溶解，去污力25%幫助強效去除污漬，夾鏈袋設計比傳統洗衣精還要省空間好收纳。
+                                無論一般洗衣抑或是滾筒洗衣機都適用，洗衣後不需將洗衣紙撈出。一般洗衣精碰到容易讓手黏黏的，【
+                                FiJi飛漬洗衣纸】全新紙張型洗劑，只要放入洗衣槽即可，既乾淨方便又不沾手，真的非常好用。
+                                尤其我們家都是室內晾衣，【 FiJi飛漬洗衣纸]
+                                洗後不殘留只聞得到洗完淡淡清香，而且【
+                                FiJi飛漬洗衣纸】收納少非常輕巧便利，洗衣亦能輕鬆控制使用量不浪費又環保，推薦主婦們一定要來試試~無論手洗機洗都好用呢！
+                                LG生活健康電商網站htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW`,
+                },
+                {
+                    title: "比一般洗衣精還省",
+                    name: "許小G",
+                    content: `曾經用洗衣球曾經沒溶解衣服只是洗了個寂寞的人，或是家中長洗衣服都放很多的人，真的可以試試看FiJi飛漬洗衣紙。
+                                其實洗衣球方便是方便，但用量固定就是一顆配多少衣服，對於小家庭真的是不太方便，不可能2.3件深色衣物一顆，2.3件淺色衣服一顆，3.4雙襪子又要再一顆，全部混在一起洗也不好，尤其是寶寶或小孩的衣物，其實相對來說真的是浪費。更不用說有些習慣放超級多洗衣粉覺得洗衣服就是要都是泡泡的人，沒有完全溶解清潔乾淨的洗劑，不是要重新洗一次，不然就是減少洗衣機壽命！
+                                FiJi飛漬洗衣紙真的解決了這些問題，LG專利紙張洗劑真的很方便，好溶解不殘留，用量可配合洗衣的份量去調整，重點是使用的量比一般洗衣精還省。一張FiJi飛漬洗衣紙就可以洗一整個洗衣機的量。
+                                要針對局部髒污只要撕開洗衣紙用適當的份量先溶解在水盆裡去手洗，不用大罐大的洗衣精搬來搬去,輕鬆又省力又節省空間。
+                                使用過後發覺FiJi飛漬洗衣紙洗淨力真的不錯，沒有洗劑殘留卻又洗的乾淨，用冷水也是馬上溶解，香味也清爽舒服，沒那麼多瓶瓶罐也很方便環保回收，覺得跟洗衣球相比一樣不沾手，但FiJi飛漬洗衣紙用量更彈性，重量很輕巧，連我兩歲大的兒子都可以輕鬆拿，對於正在媽媽手困擾的我而言真的是太喜歡了!!`,
+                },
+                {
+                    title: "天然清香不刺鼻",
+                    name: "蠟燭媽",
+                    content: `相信大家都有用過洗衣精、洗衣球，那你有聽過洗衣紙嗎？
+                                別懷疑，真的有洗衣纸這個東西~這次蠟燭媽来分享FiJi飛漬洗衣紙到底有多好用
+                                蠟燭媽是一個很愛網路購物一次訂購好幾箱家庭用品的人，方便而且ㄈ又快速，但當貨運送到時是另一種頭疼的開始，要擔心婆婆簽收時司機大哥有沒有好心的幫忙搬進客廳、要擔心家裡空間要把這堆東西放哪，又要擔心正值探索時期的Mini拿來就咬或當開水喝
+                                『
+                                FiJi飛漬洗衣紙』一次解決我所有的煩惱！不但輕巧方便好收納，友善的虛線設計連長辈都能輕鬆使用，別看它薄薄一張，洗淨力可是很足夠的喔！蠟燭爸上班弄的髒污跟小蠟燭上課玩耍的污漬，一點都難不倒『
+                                FiJi飛漬洗衣紙』
+                                輕鬆還你乾淨整潔的衣服，而且使用冷水就可以輕輕鬆鬆溶解！完全不用擔心洗劑殘留要再重洗一遍。
+                                『
+                                FiJi飛漬洗衣紙』帶點淡淡清香,不會有化學刺鼻味，好聞又舒服的味道，蠟燭媽可以掛保證，因為蠟燭媽的鼻子完全無法接受太化學的香味(連香水都沒辦法用，蠟燭爸都懷疑我是男人?)
+                                『 FiJi飛漬洗衣紙』 有五大優點>>
+                                1.輕巧便利又環保，不佔空間好收納。
+                                2.LG專利纸張型洗劑，一張搞定一桶髒衣。
+                                3.就算用冷水也能100%溶解不殘留，滾筒洗衣機也不怕。
+                                4.強效去污酵素,輕鬆洗淨衣物。
+                                5.輕鬆控制使用量,手洗機洗都好用。 哪裡買
+                                https://www.lglife.com.tw`,
+                },
+                {
+                    title: "洗多少衣服就撕多少張！",
+                    name: "沙發哥的媽",
+                    content: `當了媽以後開始要洗衣服人生 每天洗一家四口的衣服
+                                第一次看到這個新好物 #LG專利全新纸張劑型上市
+                                它好方便喔喔喔喔 我們家陽台偏小
+                                所以每天都要洗衣服 不然太多不好曬又容易曬不乾
+                                但有時候衣服的量多量少 洗衣球會比較浪費
+                                洗衣粉會撒的到處都是ㄈ
+                                洗衣精又很重，新買回来時要倒有時候都會失手到太多
+                                因為單手拿很重耶(瘦弱哈哈)
+                                而且長輩拿可能會更吃力 現在#LG
+                                造福各位洗衣服的媽媽們 連手洗都可以用的喔~
+                                LG專利紙張劑型，一張搞定一桶髒衣
+                                30張=2公升洗衣精，輕巧便利好收納
+                                冷水也能100%溶解 滾筒洗衣機也是可以的
+                                擺在架上完全不佔空間啊 而且輕鬆控制使用量
+                                手洗機洗都方便 重點是!!!!
+                                強效去污酵素，衣服洗的乾淨很重要呢~~
+                                它非常好拿取 乾淨方便不會沾手
+                                一片有兩張，中間有虛線
+                                Fiji虛線設計可以精準換算單次所需用量，使用超彈性
+                                它的溶解和去污力也很讚 洗完有淡淡的清香
+                                不會有太化學味道 我很推薦大家可以試試看
+                                因為這是顛覆以往我們洗衣的產品
+                                竟然一片可以洗整桶衣服 輕巧方便又不佔家裡空間
+                                可以幫它準備美麗的盒子裝這些紙
+                                家裡也可以有美美的陽台囉 點這裡看更多介紹唷
+                                htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW`,
+                },
+            ],
+            swiperOptionImage: {
+                effect: "coverflow",
+                slidesPerView: 3,
+                spaceBetween: 5,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                speed: 1000,
+                coverflowEffect: {
+                    rotate: 0,
+                    depth: 0,
+                    stretch: -80,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next.image",
+                    prevEl: ".swiper-button-prev.image",
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                        coverflowEffect: {
+                            stretch: 0,
+                        },
+                    },
+                },
+            },
         };
     },
     created() {},
@@ -782,15 +863,15 @@ export default {
         window.fbAsyncInit = function () {
             /* global FB */
             FB.init({
-                appId: '440644321520782',
+                appId: "440644321520782",
                 cookie: true,
                 xfbml: true,
-                version: 'v11.0',
+                version: "v11.0",
             });
         };
         this.$nextTick(function () {
             if (this.hash) {
-                const refName = this.hash.replace('#', '');
+                const refName = this.hash.replace("#", "");
                 this.scrollToSection(refName);
             }
         });
@@ -798,7 +879,9 @@ export default {
     methods: {
         scrollToSection(sessionName) {
             if (this.$refs[sessionName]) {
-                this.$refs[sessionName].scrollIntoView();
+                setTimeout(() => {
+                    this.$refs[sessionName].scrollIntoView();
+                }, 100);
             }
         },
         scrolledToBottom(refName) {
@@ -812,42 +895,62 @@ export default {
             this.apply.step = 3;
         },
         onStep3Click() {
-            let _this = this;
-            this.axios
-                .post('https://2908.api.gosu.bar/customize/addLgMember', {
-                    name: this.apply.data.name,
-                    email: this.apply.data.email,
-                    phone: this.apply.data.phone,
-                })
-                .then(async () => {
-                    await FB.init({
-                        appId: '440644321520782',
-                        cookie: true,
-                        xfbml: true,
-                        version: 'v11.0',
+            let validate = true;
+            let alertTxt = "";
+            let regPhone = /^09[0-9]{8}$/;
+            let regEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            if (!regPhone.test(this.apply.data.phone)) {
+                validate = false;
+                alertTxt = "手機格式錯誤";
+            } else if (!regEmail.test(this.apply.data.email)) {
+                validate = false;
+                alertTxt = "email格式錯誤";
+            }
+            if (validate) {
+                let _this = this;
+                this.axios
+                    .post("https://2908.api.gosu.bar/customize/addLgMember", {
+                        name: this.apply.data.name,
+                        email: this.apply.data.email,
+                        phone: this.apply.data.phone,
+                    })
+                    .then(async () => {
+                        await FB.init({
+                            appId: "440644321520782",
+                            cookie: true,
+                            xfbml: true,
+                            version: "v11.0",
+                        });
+                        FB.ui(
+                            {
+                                display: "popup",
+                                method: "share",
+                                href: "http://www.lgfiji.com.tw/",
+                            },
+                            function (res) {
+                                console.log(res);
+                                _this.apply.step = 4;
+                            }
+                        );
+                    })
+                    .catch((error) => {
+                        alert("資料傳輸失敗");
+                        console.error(error);
                     });
-                    FB.ui(
-                        {
-                            display: 'popup',
-                            method: 'share',
-                            href: 'http://www.lgfiji.com.tw/',
-                        },
-                        function (res) {
-                            console.log(res);
-                            _this.apply.step = 4;
-                        }
-                    );
-                })
-                .catch((error) => {
-                    alert('資料傳輸失敗');
-                    console.error(error);
-                });
+            } else {
+                alert(alertTxt);
+            }
         },
         lightBoxIntroOpen(isOpen) {
             this.lightBoxIntroShow = isOpen;
         },
-        lightBoxApplyOpen(isOpen) {
+        lightBoxApplyOpen(isOpen, content) {
             this.lightBoxApplyShow = isOpen;
+            if (isOpen) {
+                this.applyContent = content;
+            } else {
+                this.applyContent = "";
+            }
             this.resetApply();
         },
         resetApply() {
@@ -862,7 +965,10 @@ export default {
             };
         },
         handleScroll: function (el) {
-            if (el.srcElement.offsetHeight + el.srcElement.scrollTop >= el.srcElement.scrollHeight) {
+            if (
+                el.srcElement.offsetHeight + el.srcElement.scrollTop >=
+                el.srcElement.scrollHeight
+            ) {
                 this.hasScrolledToBottom = true;
             }
         },

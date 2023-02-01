@@ -1,6 +1,6 @@
 <template>
     <div class="container" ref="container">
-        <navComponent v-if="!lightBoxShow"></navComponent>
+        <navComponent v-if="!lightBoxShow" location="home"></navComponent>
         <div class="section1">
             <div class="flex-box pc-flex">
                 <div class="frame ani">
@@ -103,6 +103,44 @@
         </div>
         <div class="section2" ref="section2">
             <div class="bg">
+                <div class="nav-box">
+                    <router-link to="/" @click.native="$router.go()">
+                        <img
+                            :src="require(`@/assets/img/index1-1/nav-1.png`)"
+                            alt=""
+                        />
+                    </router-link>
+                    <router-link
+                        to="/share#step"
+                        class="option"
+                        @click.native="$router.go()"
+                    >
+                        <img
+                            :src="require(`@/assets/img/index1-1/nav-2.png`)"
+                            alt=""
+                        />
+                    </router-link>
+                    <router-link
+                        to="/share#fb"
+                        class="option"
+                        @click.native="$router.go()"
+                    >
+                        <img
+                            :src="require(`@/assets/img/index1-1/nav-3.png`)"
+                            alt=""
+                        />
+                    </router-link>
+                    <router-link
+                        to="/market"
+                        class="option"
+                        @click.native="$router.go()"
+                    >
+                        <img
+                            :src="require(`@/assets/img/index1-1/nav-4.png`)"
+                            alt=""
+                        />
+                    </router-link>
+                </div>
                 <div class="logo">
                     <img
                         class="flash"
@@ -262,7 +300,10 @@
                     :src="require(`@/assets/img/index1-2/title.png`)"
                     alt=""
                 />
-                <div class="col25 reveal-bottom-0 pic-box big">
+                <div
+                    class="col25 reveal-bottom-0 pic-box big"
+                    @click="lightBoxOpen(true)"
+                >
                     <div
                         class="pic mobile-inline-block"
                         :style="{
@@ -276,10 +317,12 @@
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng1.png`)"
                         alt=""
-                        @click="lightBoxOpen(true)"
                     />
                 </div>
-                <div class="col25 reveal-bottom-400 pic-box">
+                <div
+                    class="col25 reveal-bottom-400 pic-box"
+                    @click="lightBoxOpen(true)"
+                >
                     <div
                         class="pic mobile-inline-block"
                         :style="{
@@ -296,7 +339,10 @@
                         @click="lightBoxOpen(true)"
                     />
                 </div>
-                <div class="col25 reveal-bottom-800 pic-box">
+                <div
+                    class="col25 reveal-bottom-800 pic-box"
+                    @click="lightBoxOpen(true)"
+                >
                     <div
                         class="pic mobile-inline-block"
                         :style="{
@@ -313,7 +359,10 @@
                         @click="lightBoxOpen(true)"
                     />
                 </div>
-                <div class="col25 reveal-bottom-1200 pic-box">
+                <div
+                    class="col25 reveal-bottom-1200 pic-box"
+                    @click="lightBoxOpen(true)"
+                >
                     <div
                         class="pic mobile-inline-block"
                         :style="{
@@ -465,7 +514,7 @@
                 </div>
             </div>
         </div>
-        <div class="section5">
+        <div class="section5" ref="section5">
             <div class="bg">
                 <img
                     class="title1 reveal-left-300"
@@ -496,14 +545,14 @@
                     }"
                 >
                     <img
-                        class="title-L-1"
+                        class="title-L-1 reveal-left-800"
                         :src="
                             require(`@/assets/img/index1-5/elements/title-L-1.png`)
                         "
                         alt=""
                     />
                     <img
-                        class="title-L-2"
+                        class="title-L-2 reveal-left-1000"
                         :src="
                             require(`@/assets/img/index1-5/elements/title-L-2.png`)
                         "
@@ -519,62 +568,40 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-1"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/text-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-2"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/text-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="frame">
+                        <div class="title-box reveal-right-1200">
+                            <img
+                                class="title-R"
+                                :src="
+                                    require(`@/assets/img/index1-5/elements/title-R.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            class="text-R-1 reveal-right-1500"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/text-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="text-R-2 reveal-right-1800"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/text-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <div class="pic-box">
+                            <img
+                                class="pic-R-1 reveal-right-2100"
+                                :src="
+                                    require(`@/assets/img/index1-5/elements/pic-R-1.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -588,14 +615,14 @@
                     }"
                 >
                     <img
-                        class="title-L-1"
+                        class="title-L-1 reveal-left-800"
                         :src="
                             require(`@/assets/img/index1-5/elements/title-L-1.png`)
                         "
                         alt=""
                     />
                     <img
-                        class="title-L-2"
+                        class="title-L-2 reveal-left-1000"
                         :src="
                             require(`@/assets/img/index1-5/elements/title-L-2.png`)
                         "
@@ -611,62 +638,40 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-1"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/text-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-2"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/text-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-5/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="frame">
+                        <div class="title-box reveal-right-1200">
+                            <img
+                                class="title-R"
+                                :src="
+                                    require(`@/assets/img/index1-5/elements/title-R.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            class="text-R-1 reveal-right-1500"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/text-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="text-R-2 reveal-right-1800"
+                            :src="
+                                require(`@/assets/img/index1-5/elements/text-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <div class="pic-box">
+                            <img
+                                class="pic-R-1 reveal-right-2100"
+                                :src="
+                                    require(`@/assets/img/index1-5/elements/pic-R-1.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -682,14 +687,14 @@
                     }"
                 >
                     <img
-                        class="title-L-1"
+                        class="title-L-1 reveal-left-800"
                         :src="
                             require(`@/assets/img/index1-6/elements/title-L-1.png`)
                         "
                         alt=""
                     />
                     <img
-                        class="title-L-2"
+                        class="title-L-2 reveal-left-1000"
                         :src="
                             require(`@/assets/img/index1-6/elements/title-L-2.png`)
                         "
@@ -705,66 +710,44 @@
                             ')',
                     }"
                 >
+                    <div class="frame">
+                        <div class="title-box reveal-right-1200">
+                            <img
+                                class="title-R"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/title-R.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            class="text-R-1 reveal-right-1500"
+                            :src="
+                                require(`@/assets/img/index1-6/elements/text-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="text-R-2 reveal-right-1800"
+                            :src="
+                                require(`@/assets/img/index1-6/elements/text-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <div class="pic-box reveal-right-2100">
+                            <img
+                                class="pic-R-1"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/pic-R-1.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                    </div>
                     <img
-                        class="title-R"
+                        class="response"
                         :src="
-                            require(`@/assets/img/index1-6/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-1"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/text-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-2"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/text-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-5"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-5.png`)
+                            require(`@/assets/img/index1-6/elements/response.png`)
                         "
                         alt=""
                     />
@@ -781,14 +764,14 @@
                     }"
                 >
                     <img
-                        class="title-L-1"
+                        class="title-L-1 reveal-left-800"
                         :src="
                             require(`@/assets/img/index1-6/elements/title-L-1.png`)
                         "
                         alt=""
                     />
                     <img
-                        class="title-L-2"
+                        class="title-L-2 reveal-left-1000"
                         :src="
                             require(`@/assets/img/index1-6/elements/title-L-2-m.png`)
                         "
@@ -804,66 +787,44 @@
                             ')',
                     }"
                 >
+                    <div class="frame">
+                        <div class="title-box reveal-right-1200">
+                            <img
+                                class="title-R"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/title-R.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            class="text-R-1 reveal-right-1500"
+                            :src="
+                                require(`@/assets/img/index1-6/elements/text-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="text-R-2 reveal-right-1800"
+                            :src="
+                                require(`@/assets/img/index1-6/elements/text-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <div class="pic-box reveal-right-2100">
+                            <img
+                                class="pic-R-1"
+                                :src="
+                                    require(`@/assets/img/index1-6/elements/pic-R-1.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                    </div>
                     <img
-                        class="title-R"
+                        class="response"
                         :src="
-                            require(`@/assets/img/index1-6/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-1"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/text-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-2"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/text-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-5"
-                        :src="
-                            require(`@/assets/img/index1-6/elements/pic-R-5.png`)
+                            require(`@/assets/img/index1-6/elements/response.png`)
                         "
                         alt=""
                     />
@@ -882,14 +843,14 @@
                     }"
                 >
                     <img
-                        class="title-L-1"
+                        class="title-L-1 reveal-left-800"
                         :src="
                             require(`@/assets/img/index1-7/elements/title-L-1.png`)
                         "
                         alt=""
                     />
                     <img
-                        class="title-L-2"
+                        class="title-L-2 reveal-left-1000"
                         :src="
                             require(`@/assets/img/index1-7/elements/title-L-2.png`)
                         "
@@ -905,62 +866,45 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-1"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/text-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-2"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/text-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="frame">
+                        <div class="title-box reveal-right-1200">
+                            <img
+                                class="title-R"
+                                :src="
+                                    require(`@/assets/img/index1-7/elements/title-R.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            class="text-R-1 reveal-right-1500"
+                            :src="
+                                require(`@/assets/img/index1-7/elements/text-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="text-R-2 reveal-right-1800"
+                            :src="
+                                require(`@/assets/img/index1-7/elements/text-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <div class="pic-box reveal-right-2100">
+                            <div class="left"></div>
+                            <div class="right">
+                                <div class="top">
+                                    <img
+                                        class="pic-R-1"
+                                        :src="
+                                            require(`@/assets/img/index1-7/elements/pic-R-1.png`)
+                                        "
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -974,14 +918,14 @@
                     }"
                 >
                     <img
-                        class="title-L-1"
+                        class="title-L-1 reveal-left-800"
                         :src="
                             require(`@/assets/img/index1-7/elements/title-L-1.png`)
                         "
                         alt=""
                     />
                     <img
-                        class="title-L-2"
+                        class="title-L-2 reveal-left-1000"
                         :src="
                             require(`@/assets/img/index1-7/elements/title-L-2.png`)
                         "
@@ -997,62 +941,45 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-1"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/text-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-2"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/text-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-4"
-                        :src="
-                            require(`@/assets/img/index1-7/elements/pic-R-4.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="frame">
+                        <div class="title-box reveal-right-1200">
+                            <img
+                                class="title-R"
+                                :src="
+                                    require(`@/assets/img/index1-7/elements/title-R.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            class="text-R-1 reveal-right-1500"
+                            :src="
+                                require(`@/assets/img/index1-7/elements/text-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="text-R-2 reveal-right-1800"
+                            :src="
+                                require(`@/assets/img/index1-7/elements/text-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <div class="pic-box reveal-right-2100">
+                            <div class="left"></div>
+                            <div class="right">
+                                <div class="top">
+                                    <img
+                                        class="pic-R-1"
+                                        :src="
+                                            require(`@/assets/img/index1-7/elements/pic-R-1.png`)
+                                        "
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1068,14 +995,14 @@
                     }"
                 >
                     <img
-                        class="title-L-1"
+                        class="title-L-1 reveal-left-800"
                         :src="
                             require(`@/assets/img/index1-8/elements/title-L-1.png`)
                         "
                         alt=""
                     />
                     <img
-                        class="title-L-2"
+                        class="title-L-2 reveal-left-1000"
                         :src="
                             require(`@/assets/img/index1-8/elements/title-L-2.png`)
                         "
@@ -1091,55 +1018,47 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-1"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/text-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-2"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/text-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="frame">
+                        <div class="title-box reveal-right-1200">
+                            <img
+                                class="title-R"
+                                :src="
+                                    require(`@/assets/img/index1-8/elements/title-R.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            class="text-R-1 reveal-right-1500"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/text-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="text-R-2 reveal-right-1800"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/text-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <div class="pic-box reveal-right-2100">
+                            <img
+                                class="pic-R-1"
+                                :src="
+                                    require(`@/assets/img/index1-8/elements/pic-R-1.png`)
+                                "
+                                alt=""
+                            />
+                            <img
+                                class="pic-R-2"
+                                :src="
+                                    require(`@/assets/img/index1-8/elements/pic-R-2.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="question-box mobile-flex">
@@ -1153,14 +1072,14 @@
                     }"
                 >
                     <img
-                        class="title-L-1"
+                        class="title-L-1 reveal-left-800"
                         :src="
                             require(`@/assets/img/index1-8/elements/title-L-1.png`)
                         "
                         alt=""
                     />
                     <img
-                        class="title-L-2"
+                        class="title-L-2 reveal-left-1000"
                         :src="
                             require(`@/assets/img/index1-8/elements/title-L-2.png`)
                         "
@@ -1176,55 +1095,47 @@
                             ')',
                     }"
                 >
-                    <img
-                        class="title-R"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/title-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-1"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/text-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="text-R-2"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/text-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="icon-R"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/icon-R.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-1"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-1.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-2"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-2.png`)
-                        "
-                        alt=""
-                    />
-                    <img
-                        class="pic-R-3"
-                        :src="
-                            require(`@/assets/img/index1-8/elements/pic-R-3.png`)
-                        "
-                        alt=""
-                    />
+                    <div class="frame">
+                        <div class="title-box reveal-right-1200">
+                            <img
+                                class="title-R"
+                                :src="
+                                    require(`@/assets/img/index1-8/elements/title-R.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                        <img
+                            class="text-R-1 reveal-right-1500"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/text-R-1.png`)
+                            "
+                            alt=""
+                        />
+                        <img
+                            class="text-R-2 reveal-right-1800"
+                            :src="
+                                require(`@/assets/img/index1-8/elements/text-R-2.png`)
+                            "
+                            alt=""
+                        />
+                        <div class="pic-box reveal-right-2100">
+                            <img
+                                class="pic-R-1"
+                                :src="
+                                    require(`@/assets/img/index1-8/elements/pic-R-1.png`)
+                                "
+                                alt=""
+                            />
+                            <img
+                                class="pic-R-2"
+                                :src="
+                                    require(`@/assets/img/index1-8/elements/pic-R-2.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1267,11 +1178,8 @@
                                 />
                             </a>
                         </swiper-slide>
-                        <swiper-slide>
-                            <a
-                                href="https://www.youtube.com/watch?v=WviQZvbizGQ"
-                                data-fancybox
-                            >
+                        <!-- <swiper-slide>
+                            <div>
                                 <div
                                     class="pic"
                                     :style="{
@@ -1280,14 +1188,7 @@
                                             require(`@/assets/img/index1-9/video_2.png`) +
                                             ')',
                                     }"
-                                >
-                                    <img
-                                        class="play-btn"
-                                        :src="
-                                            require(`@/assets/img/index1-9/playBtn.png`)
-                                        "
-                                    />
-                                </div>
+                                ></div>
                                 <img
                                     class="text"
                                     :src="
@@ -1295,13 +1196,10 @@
                                     "
                                     alt=""
                                 />
-                            </a>
+                            </div>
                         </swiper-slide>
                         <swiper-slide>
-                            <a
-                                href="https://www.youtube.com/watch?v=WviQZvbizGQ"
-                                data-fancybox
-                            >
+                            <div>
                                 <div
                                     class="pic"
                                     :style="{
@@ -1310,14 +1208,7 @@
                                             require(`@/assets/img/index1-9/video_3.png`) +
                                             ')',
                                     }"
-                                >
-                                    <img
-                                        class="play-btn"
-                                        :src="
-                                            require(`@/assets/img/index1-9/playBtn.png`)
-                                        "
-                                    />
-                                </div>
+                                ></div>
                                 <img
                                     class="text"
                                     :src="
@@ -1325,8 +1216,8 @@
                                     "
                                     alt=""
                                 />
-                            </a>
-                        </swiper-slide>
+                            </div>
+                        </swiper-slide> -->
                         <div
                             class="swiper-button-prev"
                             slot="button-prev"
@@ -1336,6 +1227,67 @@
                             slot="button-next"
                         ></div>
                     </swiper>
+                </div>
+                <div class="video-box">
+                    <a
+                        class="video"
+                        href="https://www.youtube.com/watch?v=WviQZvbizGQ"
+                        data-fancybox
+                    >
+                        <div
+                            class="pic"
+                            :style="{
+                                'background-image':
+                                    'url(' +
+                                    require(`@/assets/img/index1-9/video_1.png`) +
+                                    ')',
+                            }"
+                        >
+                            <img
+                                class="play-btn"
+                                :src="
+                                    require(`@/assets/img/index1-9/playBtn.png`)
+                                "
+                            />
+                        </div>
+                        <img
+                            class="text"
+                            :src="require(`@/assets/img/index1-9/txt_1.png`)"
+                            alt=""
+                        />
+                    </a>
+                    <!-- <div class="video">
+                        <div
+                            class="pic"
+                            :style="{
+                                'background-image':
+                                    'url(' +
+                                    require(`@/assets/img/index1-9/video_2.png`) +
+                                    ')',
+                            }"
+                        ></div>
+                        <img
+                            class="text"
+                            :src="require(`@/assets/img/index1-9/txt_2.png`)"
+                            alt=""
+                        />
+                    </div>
+                    <div class="video">
+                        <div
+                            class="pic"
+                            :style="{
+                                'background-image':
+                                    'url(' +
+                                    require(`@/assets/img/index1-9/video_3.png`) +
+                                    ')',
+                            }"
+                        ></div>
+                        <img
+                            class="text"
+                            :src="require(`@/assets/img/index1-9/txt_3.png`)"
+                            alt=""
+                        />
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -1379,27 +1331,9 @@ export default {
                     },
                 },
             },
-            section10Data: [
-                {
-                    video: "https://www.youtube.com/watch?v=WviQZvbizGQ",
-                    pic: "@/assets/img/index1-9/video_1.png",
-                    btn: "@/assets/img/index1-9/playBtn.png",
-                    text: "@/assets/img/index1-9/txt_1.png",
-                },
-                {
-                    video: "https://www.youtube.com/watch?v=WviQZvbizGQ",
-                    pic: "@/assets/img/index1-9/video_2.png",
-                    btn: "@/assets/img/index1-9/playBtn.png",
-                    text: "@/assets/img/index1-9/txt_2.png",
-                },
-                {
-                    video: "https://www.youtube.com/watch?v=WviQZvbizGQ",
-                    pic: "@/assets/img/index1-9/video_3.png",
-                    btn: "@/assets/img/index1-9/playBtn.png",
-                    text: "@/assets/img/index1-9/txt_3.png",
-                },
-            ],
             lightBoxShow: false,
+            tempScrollOffset: "",
+            isScrollStop: false,
         };
     },
     created() {
@@ -1414,20 +1348,33 @@ export default {
     },
     mounted() {
         setTimeout(() => {
+            window.scrollTo(0, 0);
             this.$refs["container"].classList.add("active");
             this.sectionScroll();
         });
     },
     methods: {
         sectionScroll() {
-            const percentage =
+            if (this.isScrollStop) {
+                window.scrollTo(0, this.tempScrollOffset);
+                return;
+            }
+            let percentage =
                 Math.round(
                     (window.pageYOffset /
                         (document.body.offsetHeight - window.innerHeight)) *
                         10
                 ) + 1;
-            if (percentage < 11) {
-                if (this.$refs["container"]) {
+            if (percentage <= 11) {
+                if (percentage === 11) {
+                    percentage = 10;
+                }
+                if (
+                    this.$refs["container"] &&
+                    !this.$refs["container"].classList.contains(
+                        `animate-${percentage}`
+                    )
+                ) {
                     for (let i = 1; i <= 10; i++) {
                         this.$refs["container"].classList.remove(
                             `animate-${i}`
@@ -1437,23 +1384,17 @@ export default {
                         "container",
                         `animate-${percentage}`
                     );
-                }
-            } else if (percentage === 11) {
-                if (this.$refs["container"]) {
-                    for (let i = 1; i <= 10; i++) {
-                        this.$refs["container"].classList.remove(
-                            `animate-${i}`
-                        );
-                    }
-                    this.$refs["container"].classList.add(
-                        "container",
-                        `animate-10`
-                    );
+                    this.isScrollStop = true;
+                    this.tempScrollOffset = window.scrollY;
+                    setTimeout(() => {
+                        this.isScrollStop = false;
+                    }, 1000);
                 }
             }
         },
         scrollToSection(session) {
-            window.scrollTo(0, window.innerHeight * session);
+            const offset = 15;
+            window.scrollTo(0, (window.innerHeight / 20) * session + offset);
         },
         lightBoxOpen(isOpen) {
             this.lightBoxShow = isOpen;

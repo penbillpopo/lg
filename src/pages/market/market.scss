@@ -23,6 +23,44 @@
             }
         }
     }
+
+    .logo {
+        position: absolute;
+        top: 54.8%;
+        right: 54.8%;
+        width: 12.5%;
+        padding-bottom: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.5s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+        img {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 1023px) {
+            top: 55.5%;
+            right: 57%;
+            width: 30%;
+            padding-bottom: 10%;
+        }
+    }
+    @keyframes flashing {
+        0% {
+            opacity: 1;
+            transform: translate(-100px, -100px) scale(1.5);
+        }
+        20% {
+            opacity: 1;
+            transform: translate(100px, 100px) scale(1.5);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(100px, 100px) scale(1.5);
+        }
+    }
 }
 
 .mobile {
