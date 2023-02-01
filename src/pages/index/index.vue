@@ -1347,10 +1347,12 @@ export default {
         );
     },
     mounted() {
-        setTimeout(() => {
-            window.scrollTo(0, 0);
-            this.$refs["container"].classList.add("active");
-            this.sectionScroll();
+        this.$nextTick(function () {
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+                this.$refs["container"].classList.add("active");
+                this.sectionScroll();
+            }, 200);
         });
     },
     methods: {
