@@ -1412,6 +1412,13 @@ $delays: (
                 }
             }
         }
+        .video-box {
+            .video {
+                .text {
+                    width: 60%;
+                }
+            }
+        }
     }
     @media screen and (max-width: 768px) {
         .swiper-box {
@@ -1455,7 +1462,8 @@ $delays: (
     }
     @media screen and (max-width: 380px) {
         .title {
-            left: 14%;
+            left: 9%;
+            top: 11%;
         }
         .video-box {
             display: flex;
@@ -1465,9 +1473,6 @@ $delays: (
         }
     }
     @media screen and (max-width: 340px) {
-        .title {
-            left: 12%;
-        }
         .video-box {
             display: flex;
             .video {
