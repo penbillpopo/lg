@@ -1278,6 +1278,36 @@ $delays: (
             }
         }
     }
+    @media screen and (max-width: 480px) {
+        .paper {
+            left: 13%;
+            width: 92%;
+        }
+        .powder {
+            left: 53%;
+            width: 44%;
+        }
+        .bubble-box {
+            .bubble1 {
+                width: 40%;
+            }
+            .bubble2 {
+                width: 26%;
+            }
+            .bubble3 {
+                width: 35%;
+            }
+            .bubble4 {
+                width: 26%;
+            }
+            .bubble5 {
+                width: 30%;
+            }
+            .bubble6 {
+                width: 19%;
+            }
+        }
+    }
 }
 .section5 {
     position: relative;
