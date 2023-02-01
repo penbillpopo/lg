@@ -7,7 +7,6 @@
         <div class="page02">
             <div class="top-bg">
                 <img
-                    ref="step"
                     class="top-img pc"
                     :src="require(`@/assets/img/index2-1/index_2-1.png`)"
                     alt=""
@@ -873,16 +872,22 @@ export default {
             if (this.hash) {
                 const refName = this.hash.replace("#", "");
                 this.scrollToSection(refName);
+            } else {
+                setTimeout(() => {
+                    window.scrollTo(0, 0);
+                }, 200);
             }
         });
     },
     methods: {
         scrollToSection(sessionName) {
-            if (this.$refs[sessionName]) {
-                setTimeout(() => {
+            setTimeout(() => {
+                if (this.$refs[sessionName]) {
                     this.$refs[sessionName].scrollIntoView();
-                }, 100);
-            }
+                } else {
+                    window.scrollTo(0, 0);
+                }
+            }, 200);
         },
         scrolledToBottom(refName) {
             var messageDisplay = this.$refs[refName];
