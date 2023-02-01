@@ -7,16 +7,28 @@
         <div class="page02">
             <div class="top-bg">
                 <img
+                    ref="step"
                     class="top-img pc"
                     :src="require(`@/assets/img/index2-1/index_2-1.png`)"
                     alt=""
                 />
-                <button class="share-btn" @click="lightBoxIntroOpen(true)">
+                <button class="share-btn-pc" @click="lightBoxIntroOpen(true)">
                     <img
                         :src="require(`@/assets/img/index2-1/btn.png`)"
                         alt=""
                     />
                 </button>
+
+                <button
+                    class="share-btn-mobile"
+                    @click="lightBoxIntroOpen(true)"
+                >
+                    <img
+                        :src="require(`@/assets/img/index2-1/btnM.png`)"
+                        alt=""
+                    />
+                </button>
+
                 <a
                     class="share-btn-link"
                     href="https://www.facebook.com/lglife?mibextid=LQQJ4d"
