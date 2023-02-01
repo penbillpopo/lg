@@ -970,7 +970,7 @@ export default {
         },
         handleScroll: function (el) {
             if (
-                el.srcElement.offsetHeight + el.srcElement.scrollTop >=
+                el.srcElement.offsetHeight + el.srcElement.scrollTop + 10 >=
                 el.srcElement.scrollHeight
             ) {
                 this.hasScrolledToBottom = true;
