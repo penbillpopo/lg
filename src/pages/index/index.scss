@@ -1423,15 +1423,10 @@ $delays: (
         }
         .video-box {
             display: flex;
-            top: 29%;
+            top: 30%;
             .video {
                 width: 60%;
             }
-        }
-    }
-    @media screen and (max-width: 600px) {
-        .video-box {
-            top: 25%;
         }
     }
     @media screen and (max-width: 480px) {
@@ -1441,7 +1436,6 @@ $delays: (
         }
         .video-box {
             display: flex;
-            top: 24%;
             .video {
                 width: 70%;
             }
