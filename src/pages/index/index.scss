@@ -1287,17 +1287,15 @@ $delays: (
     .bg {
         background-image: url(@/assets/img/index1-9/bg.png);
     }
-    .title {
-        position: absolute;
-        top: 22%;
-        left: 15%;
-        width: 38%;
-    }
+
     .video-box {
         position: absolute;
-        top: 50%;
+        top: 35%;
         left: 16%;
-        width: 45%;
+        width: 40%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
         .video {
             width: 50%;
             margin-bottom: 20px;
@@ -1307,6 +1305,17 @@ $delays: (
                 padding-bottom: 55%;
                 margin-bottom: 10px;
                 position: relative;
+                .title {
+                    position: absolute;
+                    top: -35%;
+                    left: -3%;
+                    width: 106%;
+                }
+                .text {
+                    width: 50%;
+                    position: absolute;
+                    bottom: -13%;
+                }
                 .play-btn {
                     position: absolute;
                     width: 100px;
@@ -1323,9 +1332,6 @@ $delays: (
                     }
                 }
             }
-            .text {
-                width: 100%;
-            }
         }
     }
     @media screen and (max-width: 1023px) {
@@ -1334,13 +1340,10 @@ $delays: (
             padding-bottom: 155%;
             position: relative;
         }
-        .title {
-            top: 5%;
-            left: 20%;
-            width: 59%;
-        }
+
         .video-box {
             top: 30%;
+            width: 50%;
             .video {
                 width: 60%;
             }
@@ -1353,6 +1356,7 @@ $delays: (
         }
         .video-box {
             top: 30%;
+            width: 60%;
             .video {
                 width: 60%;
             }
@@ -1364,7 +1368,7 @@ $delays: (
             left: 18%;
         }
         .video-box {
-            display: flex;
+            width: 60%;
             .video {
                 width: 70%;
             }
@@ -1376,7 +1380,8 @@ $delays: (
             left: 16%;
         }
         .video-box {
-            display: flex;
+            // display: flex;
+            width: 60%;
             .video {
                 width: 70%;
             }
@@ -1388,7 +1393,8 @@ $delays: (
             top: 11%;
         }
         .video-box {
-            display: flex;
+            // display: flex;
+            width: 60%;
             .video {
                 width: 80%;
             }
@@ -1396,7 +1402,8 @@ $delays: (
     }
     @media screen and (max-width: 340px) {
         .video-box {
-            display: flex;
+            // display: flex;
+            width: 60%;
             .video {
                 width: 90%;
             }
