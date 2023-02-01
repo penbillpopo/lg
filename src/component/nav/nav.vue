@@ -26,7 +26,7 @@
                     <p>分享抽LG洗衣機</p>
                 </router-link>
                 <router-link
-                    to="/share#fb"
+                    to="/share#mamibuy"
                     class="option"
                     @click.native="$router.go()"
                 >

@@ -86,47 +86,71 @@
                 transform: translateX(-50%);
                 width: 65%;
                 .title {
-                    font-size: 20px;
-                    font-weight: 500;
+                    font-size: 24px;
+                    font-weight: 400;
                     color: #2647a4;
-                    margin-bottom: 15px;
+                    margin-bottom: 12px;
                     @include textdot(1);
                 }
                 .text {
                     font-size: 16px;
                     @include textdot(2);
                     font-weight: 400;
-                    margin-bottom: 15px;
+                    margin-bottom: 12px;
+                    line-height: 1.8;
                 }
                 .name {
                     font-size: 16px;
                     color: #3655aa;
                     font-weight: 400;
-                    margin-bottom: 10px;
+                    margin-bottom: 12px;
                 }
                 .fb-btn {
                     width: 80%;
+                    transition: transform 0.3s ease;
+                    &:hover {
+                        transform: scale(1.07);
+                    }
                 }
             }
         }
         @media screen and (max-width: 1023px) {
             top: 53%;
         }
+        @media screen and (max-width: 768px) {
+            .frame {
+                .content {
+                    top: 13%;
+                    .title {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+                    .text {
+                        font-size: 15px;
+                        margin-bottom: 10px;
+                    }
+                    .name {
+                        font-size: 15px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
         @media screen and (max-width: 480px) {
             .frame {
                 .content {
                     top: 13%;
                     .title {
-                        font-size: 16px;
-                        margin-bottom: 10px;
+                        font-size: 18px;
+                        margin-bottom: 8px;
                     }
                     .text {
                         font-size: 14px;
-                        margin-bottom: 10px;
+                        margin-bottom: 8px;
                     }
                     .name {
                         font-size: 14px;
-                        margin-bottom: 5px;
+                        margin-bottom: 8px;
                     }
                     .fb-btn {
                         width: 60%;
@@ -140,14 +164,15 @@
                     top: 13%;
                     .title {
                         font-size: 14px;
-                        margin-bottom: 5px;
+                        margin-bottom: 3px;
                     }
                     .text {
                         font-size: 12px;
-                        margin-bottom: 5px;
+                        margin-bottom: 3px;
                     }
                     .name {
                         font-size: 12px;
+                        margin-bottom: 3px;
                     }
                 }
             }

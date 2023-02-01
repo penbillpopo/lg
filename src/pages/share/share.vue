@@ -7,7 +7,6 @@
         <div class="page02">
             <div class="top-bg">
                 <img
-                    ref="step"
                     class="top-img pc"
                     :src="require(`@/assets/img/index2-1/index_2-1.png`)"
                     alt=""
@@ -41,7 +40,7 @@
                 </a>
                 <!-- Bubble -->
                 <img
-                    ref="fb"
+                    ref="mamibuy"
                     class="bubble-1"
                     :src="require(`@/assets/img/index2-1/93.png`)"
                     alt=""
@@ -66,8 +65,16 @@
                         >
                             <div class="frame">
                                 <img
+                                    v-if="index % 2 === 0"
                                     :src="
                                         require(`@/assets/img/index2-1/left.png`)
+                                    "
+                                    alt=""
+                                />
+                                <img
+                                    v-else
+                                    :src="
+                                        require(`@/assets/img/index2-1/right.png`)
                                     "
                                     alt=""
                                 />
@@ -650,16 +657,8 @@ export default {
             hash: this.$route.hash,
             hasScrolledToBottom: false,
             swiperOptionChat: {
-                effect: "coverflow",
                 slidesPerView: 4,
-                spaceBetween: 40,
-                coverflowEffect: {
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 60,
-                    modifier: 1,
-                    slideShadows: false,
-                },
+                spaceBetween: 10,
                 navigation: {
                     nextEl: ".swiper-button-next.chat",
                     prevEl: ".swiper-button-prev.chat",
@@ -667,21 +666,15 @@ export default {
                 breakpoints: {
                     1023: {
                         slidesPerView: 4,
+                        spaceBetween: 10,
                     },
                     768: {
                         slidesPerView: 3,
-                        coverflowEffect: {
-                            stretch: -30,
-                            depth: 60,
-                        },
+                        spaceBetween: 10,
                     },
                     0: {
                         slidesPerView: 2,
                         spaceBetween: 10,
-                        coverflowEffect: {
-                            stretch: 0,
-                            depth: 0,
-                        },
                     },
                 },
             },
@@ -834,36 +827,30 @@ export default {
                 },
             ],
             swiperOptionImage: {
-                effect: "coverflow",
                 slidesPerView: 3,
-                spaceBetween: 5,
+                spaceBetween: 20,
                 loop: true,
                 autoplay: {
                     delay: 3000,
                     disableOnInteraction: false,
                 },
                 speed: 1000,
-                coverflowEffect: {
-                    rotate: 0,
-                    depth: 0,
-                    stretch: -80,
-                    modifier: 1,
-                    slideShadows: false,
-                },
                 navigation: {
                     nextEl: ".swiper-button-next.image",
                     prevEl: ".swiper-button-prev.image",
                 },
                 breakpoints: {
+                    1023: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
                     768: {
                         slidesPerView: 3,
+                        spaceBetween: 15,
                     },
                     0: {
                         slidesPerView: 2,
-                        spaceBetween: 10,
-                        coverflowEffect: {
-                            stretch: 0,
-                        },
+                        spaceBetween: 15,
                     },
                 },
             },

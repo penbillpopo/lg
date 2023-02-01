@@ -30,6 +30,7 @@
         }
     }
 }
+.animate-1,
 .animate-2 {
     .nav {
         display: none;
@@ -329,12 +330,10 @@
 
     .video-box {
         position: absolute;
-        top: 35%;
-        left: 16%;
-        width: 40%;
+        width: 50%;
         transform: translate(-50%, -50%);
         top: 55%;
-        left: 30%;
+        left: 35%;
         .video {
             width: 50%;
             margin-bottom: 20px;
@@ -346,12 +345,12 @@
                 position: relative;
                 .title {
                     position: absolute;
-                    top: -40%;
-                    left: -3%;
-                    width: 106%;
+                    top: -25%;
+                    left: -1%;
+                    width: 70%;
                 }
                 .text {
-                    width: 50%;
+                    width: 45%;
                     position: absolute;
                     bottom: -13%;
                 }
@@ -724,12 +723,6 @@ $delays: (
     }
     .mobile-inline-block {
         display: inline-block;
-        .ng {
-            position: absolute;
-            top: 6%;
-            right: 5%;
-            width: 60%;
-        }
     }
     .pc-flex {
         display: none;
@@ -762,14 +755,32 @@ $delays: (
                 width: 100%;
                 height: 100%;
                 @extend %background_cover;
-                // @media screen and (max-width: 480px) {
-                //     background-size: 100% 100%;
-                // }
                 img {
                     position: absolute;
-                    top: 25%;
+                    top: 50%;
                     left: 7%;
-                    width: 30%;
+                    width: 14%;
+                    transform: translateY(-50%);
+                }
+                @media screen and (max-width: 768px) {
+                    img {
+                        width: 18%;
+                    }
+                }
+                @media screen and (max-width: 600px) {
+                    img {
+                        width: 22%;
+                    }
+                }
+                @media screen and (max-width: 480px) {
+                    img {
+                        width: 26%;
+                    }
+                }
+                @media screen and (max-width: 380px) {
+                    img {
+                        width: 30%;
+                    }
                 }
             }
         }
@@ -977,6 +988,22 @@ $delays: (
             width: 42%;
             z-index: 1;
         }
+        .pic-box {
+            position: relative;
+            .pic {
+                width: 100%;
+            }
+            .btn {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60%;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                transform-origin: 0% 100%;
+            }
+        }
         &.pc-flex {
             height: 100vh;
             .pic-box {
@@ -1013,9 +1040,15 @@ $delays: (
                 }
 
                 .btn {
-                    width: 24%;
+                    width: 12%;
                     bottom: 15px;
                     left: 21%;
+                }
+                .ng {
+                    position: absolute;
+                    top: 6%;
+                    right: 12%;
+                    width: 30%;
                 }
                 .first-arrow {
                     position: absolute;
@@ -1025,7 +1058,7 @@ $delays: (
                 }
                 .arrow {
                     position: absolute;
-                    bottom: 25%;
+                    bottom: 20%;
                     right: 3%;
                     width: 7%;
                 }
@@ -1034,26 +1067,49 @@ $delays: (
                     height: 100%;
                     @extend %background_cover;
                     transition: transform 0.6s ease;
-                    @media screen and (max-width: 480px) {
-                        background-size: 100% 100%;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .pic-box {
+                    .btn {
+                        width: 14%;
+                    }
+                    .ng {
+                        width: 37%;
                     }
                 }
             }
-        }
-        .pic-box {
-            position: relative;
-            .pic {
-                width: 100%;
+            @media screen and (max-width: 600px) {
+                .pic-box {
+                    .btn {
+                        width: 18%;
+                    }
+                    .ng {
+                        width: 46%;
+                    }
+                }
             }
-            .btn {
-                position: absolute;
-                bottom: 30px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 60%;
-                cursor: pointer;
-                transition: transform 0.3s ease;
-                transform-origin: 0% 100%;
+            @media screen and (max-width: 480px) {
+                .pic-box {
+                    .btn {
+                        width: 20%;
+                    }
+                    .ng {
+                        width: 50%;
+                        top: 8%;
+                    }
+                }
+            }
+            @media screen and (max-width: 380px) {
+                .pic-box {
+                    .btn {
+                        width: 22%;
+                    }
+                    .ng {
+                        width: 56%;
+                        top: 12%;
+                    }
+                }
             }
         }
     }

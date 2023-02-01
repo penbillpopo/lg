@@ -139,7 +139,7 @@
                         />
                     </router-link>
                     <router-link
-                        to="/share#step"
+                        to="/share"
                         class="option"
                         @click.native="$router.go()"
                     >
@@ -149,7 +149,7 @@
                         />
                     </router-link>
                     <router-link
-                        to="/share#fb"
+                        to="/share#mamibuy"
                         class="option"
                         @click.native="$router.go()"
                     >
@@ -1204,7 +1204,7 @@
                 </div>
             </div>
         </div>
-        <div class="section10">
+        <div class="section10" ref="video">
             <div class="bg">
                 <div class="video-box">
                     <a
@@ -1243,38 +1243,6 @@
                             />
                         </div>
                     </a>
-                    <!-- <div class="video">
-                        <div
-                            class="pic"
-                            :style="{
-                                'background-image':
-                                    'url(' +
-                                    require(`@/assets/img/index1-9/video_2.png`) +
-                                    ')',
-                            }"
-                        ></div>
-                        <img
-                            class="text"
-                            :src="require(`@/assets/img/index1-9/txt_2.png`)"
-                            alt=""
-                        />
-                    </div>
-                    <div class="video">
-                        <div
-                            class="pic"
-                            :style="{
-                                'background-image':
-                                    'url(' +
-                                    require(`@/assets/img/index1-9/video_3.png`) +
-                                    ')',
-                            }"
-                        ></div>
-                        <img
-                            class="text"
-                            :src="require(`@/assets/img/index1-9/txt_3.png`)"
-                            alt=""
-                        />
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -1321,6 +1289,14 @@ export default {
             lightBoxShow: false,
             tempScrollOffset: "",
             isScrollStop: false,
+            routeNameColumn: {
+                home: 2,
+                ng4: 3,
+                product: 5,
+                innovation: 7,
+                video: 17,
+            },
+            hash: this.$route.hash,
         };
     },
     created() {},
@@ -1328,7 +1304,16 @@ export default {
         const _this = this;
         this.$nextTick(function () {
             setTimeout(() => {
-                window.scrollTo(0, 0);
+                if (this.hash) {
+                    const refName = this.hash.replace("#", "");
+                    if (this.routeNameColumn[refName]) {
+                        this.scrollToSection(this.routeNameColumn[refName]);
+                    } else {
+                        window.scrollTo(0, 0);
+                    }
+                } else {
+                    window.scrollTo(0, 0);
+                }
                 this.$refs["container"].classList.add("active");
                 window.addEventListener(
                     "scroll",
