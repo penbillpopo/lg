@@ -1,17 +1,6 @@
 <template>
     <div class="nav">
-        <router-link
-            v-if="location === 'home'"
-            to="/"
-            @click.native="$router.go()"
-        >
-            <img class="logo" :src="require(`@/assets/img/logo.png`)" alt="" />
-        </router-link>
-        <router-link
-            v-if="location === 'share'"
-            to="/share#step"
-            @click.native="$router.go()"
-        >
+        <router-link to="/" @click.native="$router.go()">
             <img class="logo" :src="require(`@/assets/img/logo.png`)" alt="" />
         </router-link>
         <div class="hamburger" v-if="!isMenuOpen" @click="menuOpen(true)">

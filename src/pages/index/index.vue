@@ -1178,7 +1178,7 @@
                                 />
                             </a>
                         </swiper-slide>
-                        <swiper-slide>
+                        <!-- <swiper-slide>
                             <div>
                                 <div
                                     class="pic"
@@ -1217,7 +1217,7 @@
                                     alt=""
                                 />
                             </div>
-                        </swiper-slide>
+                        </swiper-slide> -->
                         <div
                             class="swiper-button-prev"
                             slot="button-prev"
@@ -1256,7 +1256,7 @@
                             alt=""
                         />
                     </a>
-                    <div class="video">
+                    <!-- <div class="video">
                         <div
                             class="pic"
                             :style="{
@@ -1287,7 +1287,7 @@
                             :src="require(`@/assets/img/index1-9/txt_3.png`)"
                             alt=""
                         />
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -1348,6 +1348,7 @@ export default {
     },
     mounted() {
         setTimeout(() => {
+            window.scrollTo(0, 0);
             this.$refs["container"].classList.add("active");
             this.sectionScroll();
         });
@@ -1392,7 +1393,7 @@ export default {
             }
         },
         scrollToSection(session) {
-            const offset = 10;
+            const offset = 15;
             window.scrollTo(0, (window.innerHeight / 20) * session + offset);
         },
         lightBoxOpen(isOpen) {

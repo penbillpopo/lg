@@ -1325,8 +1325,8 @@ $delays: (
     .swiper-box {
         position: absolute;
         top: 40%;
-        left: 0%;
-        width: 100%;
+        left: 5%;
+        width: 90%;
         .swiper {
             .pic {
                 @extend %background_100;
@@ -1418,30 +1418,39 @@ $delays: (
             display: none;
         }
         .title {
-            top: 5%;
+            top: 8%;
+            width: 65%;
         }
         .video-box {
             display: flex;
-            top: 55%;
+            top: 29%;
             .video {
-                width: 55%;
+                width: 60%;
             }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .video-box {
+            top: 25%;
         }
     }
     @media screen and (max-width: 480px) {
         .title {
-            top: 7%;
+            top: 8%;
+            left: 18%;
         }
         .video-box {
             display: flex;
+            top: 24%;
             .video {
-                width: 65%;
+                width: 70%;
             }
         }
     }
     @media screen and (max-width: 420px) {
         .title {
             top: 10%;
+            left: 16%;
         }
         .video-box {
             display: flex;
@@ -1451,6 +1460,9 @@ $delays: (
         }
     }
     @media screen and (max-width: 380px) {
+        .title {
+            left: 14%;
+        }
         .video-box {
             display: flex;
             .video {
@@ -1459,6 +1471,9 @@ $delays: (
         }
     }
     @media screen and (max-width: 340px) {
+        .title {
+            left: 12%;
+        }
         .video-box {
             display: flex;
             .video {
