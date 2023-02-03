@@ -659,6 +659,7 @@ export default {
             swiperOptionChat: {
                 slidesPerView: 4,
                 spaceBetween: 10,
+                speed: 1500,
                 navigation: {
                     nextEl: ".swiper-button-next.chat",
                     prevEl: ".swiper-button-prev.chat",
@@ -834,7 +835,7 @@ export default {
                     delay: 3000,
                     disableOnInteraction: false,
                 },
-                speed: 1000,
+                speed: 1500,
                 navigation: {
                     nextEl: ".swiper-button-next.image",
                     prevEl: ".swiper-button-prev.image",
@@ -856,17 +857,20 @@ export default {
             },
         };
     },
-    created() {},
+    created() {
+        if (!window.FB) {
+            window.fbAsyncInit = function () {
+                /* global FB */
+                FB.init({
+                    appId: "440644321520782",
+                    cookie: true,
+                    xfbml: true,
+                    version: "v11.0",
+                });
+            };
+        }
+    },
     mounted() {
-        window.fbAsyncInit = function () {
-            /* global FB */
-            FB.init({
-                appId: "440644321520782",
-                cookie: true,
-                xfbml: true,
-                version: "v11.0",
-            });
-        };
         this.$nextTick(function () {
             if (this.hash) {
                 const refName = this.hash.replace("#", "");
@@ -911,7 +915,6 @@ export default {
                 alertTxt = "email格式錯誤";
             }
             if (validate) {
-                let _this = this;
                 this.axios
                     .post("https://2908.api.gosu.bar/customize/addLgMember", {
                         name: this.apply.data.name,
@@ -919,43 +922,51 @@ export default {
                         phone: this.apply.data.phone,
                     })
                     .then(async () => {
-                        await FB.init({
-                            appId: "440644321520782",
-                            cookie: true,
-                            xfbml: true,
-                            version: "v11.0",
-                        });
-                        FB.ui(
-                            {
-                                display: "popup",
-                                method: "share",
-                                href: "http://www.lgfiji.com.tw/",
-                            },
-                            function (res) {
-                                console.log(res);
-                                _this.apply.step = 4;
-                            }
-                        );
+                        this.shareFb();
                     })
                     .catch((error) => {
-                        alert("資料傳輸失敗");
+                        this.shareFb();
                         console.error(error);
                     });
             } else {
                 alert(alertTxt);
             }
         },
+        async shareFb() {
+            await FB.init({
+                appId: "440644321520782",
+                cookie: true,
+                xfbml: true,
+                version: "v11.0",
+            });
+            FB.ui({
+                display: "popup",
+                method: "share",
+                href: "http://www.lgfiji.com.tw/",
+            });
+            this.apply.step = 4;
+        },
         lightBoxIntroOpen(isOpen) {
             this.lightBoxIntroShow = isOpen;
+            this.disableScrollY(isOpen);
         },
         lightBoxApplyOpen(isOpen, content) {
             this.lightBoxApplyShow = isOpen;
+            this.disableScrollY(isOpen);
             if (isOpen) {
                 this.applyContent = content;
             } else {
                 this.applyContent = "";
             }
             this.resetApply();
+        },
+        disableScrollY(hide) {
+            const html = document.getElementsByTagName("html")[0];
+            if (hide) {
+                html.style.overflowY = "hidden";
+            } else {
+                html.style.overflowY = "auto";
+            }
         },
         resetApply() {
             this.apply = {

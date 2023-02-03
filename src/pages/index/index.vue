@@ -132,7 +132,7 @@
         <div class="section2" ref="section2">
             <div class="bg">
                 <div class="nav-box">
-                    <router-link to="/" @click.native="$router.go()">
+                    <router-link to="/#product" @click.native="$router.go()">
                         <img
                             :src="require(`@/assets/img/index1-1/nav-1.png`)"
                             alt=""
@@ -497,14 +497,19 @@
                                         "
                                         alt=""
                                     />
-                                    <img
-                                        class="btn"
-                                        @click="section3LightBoxClick()"
-                                        :src="
-                                            require(`@/assets/img/index1-2/light-box/1-2-5-btn.png`)
-                                        "
-                                        alt=""
-                                    />
+                                    <router-link
+                                        to="/#product"
+                                        class="option"
+                                        @click.native="$router.go()"
+                                    >
+                                        <img
+                                            class="btn"
+                                            :src="
+                                                require(`@/assets/img/index1-2/light-box/1-2-5-btn.png`)
+                                            "
+                                            alt=""
+                                        />
+                                    </router-link>
                                 </swiper-slide>
                                 <div
                                     class="swiper-button-prev"
@@ -1371,10 +1376,19 @@ export default {
         },
         lightBoxOpen(isOpen) {
             this.lightBoxShow = isOpen;
+            this.disableScrollY(isOpen);
         },
         section3LightBoxClick() {
             this.lightBoxShow = false;
             this.scrollToSection(5);
+        },
+        disableScrollY(hide) {
+            const html = document.getElementsByTagName("html")[0];
+            if (hide) {
+                html.style.overflowY = "hidden";
+            } else {
+                html.style.overflowY = "auto";
+            }
         },
     },
     filters: {},

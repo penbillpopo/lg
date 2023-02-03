@@ -15,8 +15,12 @@
                 />
             </button>
             <div class="option-box">
-                <router-link to="/" class="option" @click.native="$router.go()">
-                    <p>LG Fiji 韓式洗衣新革命</p>
+                <router-link
+                    to="/#product"
+                    class="option"
+                    @click.native="$router.go()"
+                >
+                    <p>Fiji 韓式洗衣新革命</p>
                 </router-link>
                 <router-link
                     to="/share"
