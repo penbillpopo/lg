@@ -3,11 +3,11 @@
         <router-link to="/" @click.native="$router.go()">
             <img class="logo" :src="require(`@/assets/img/logo.png`)" alt="" />
         </router-link>
-        <div class="hamburger" v-if="!isMenuOpen" @click="menuOpen(true)">
+        <div class="hamburger" v-show="!isMenuOpen" @click="menuOpen(true)">
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        <div class="black-field" v-else>
+        <div class="black-field" v-show="isMenuOpen">
             <button class="close-btn" @click="menuOpen(false)">
                 <img
                     :src="require(`@/assets/img/index1-2/light-box/close.png`)"
@@ -20,7 +20,7 @@
                     class="option"
                     @click.native="$router.go()"
                 >
-                    <p>Fiji 韓式洗衣新革命</p>
+                    <p>Fiji 韓式洗衣新革命{{ isMenuOpen }}</p>
                 </router-link>
                 <router-link
                     to="/share"
@@ -58,6 +58,7 @@ export default {
     },
     methods: {
         menuOpen(open) {
+            console.log(open);
             this.isMenuOpen = open;
         },
     },

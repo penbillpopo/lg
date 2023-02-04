@@ -491,7 +491,7 @@
         }
         transition: transform 0.3s ease;
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.05);
         }
     }
     .lightbox {
@@ -513,7 +513,7 @@
                     justify-content: center;
                     align-items: center;
                     img {
-                        width: 70%;
+                        width: 77%;
                     }
                 }
                 .swiper-button-prev {
@@ -812,16 +812,15 @@ $delays: (
             display: flex;
             justify-content: center;
             padding-top: 1%;
-            margin-left: 15%;
-            width: 60%;
-            img {
-                width: 110%;
-            }
-            img {
-                height: 100%;
-                transition: transform 0.3s ease;
-                &:hover {
-                    transform: scale(1.1);
+            margin-left: 14.25%;
+            width: 62%;
+            a {
+                img {
+                    width: 99.25%;
+                    transition: transform 0.3s ease;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
@@ -1015,7 +1014,7 @@ $delays: (
                         transform: scale(1.1);
                     }
                     .btn {
-                        transform: scale(1.1) translateX(-50%);
+                        transform: scale(1.05) translateX(-50%);
                     }
                 }
                 .pic {
@@ -1108,12 +1107,12 @@ $delays: (
                         position: absolute;
                         width: 45%;
                         left: 50%;
-                        bottom: 12%;
+                        bottom: 10%;
                         transform: translateX(-50%);
                         transition: transform 0.3s ease;
                         cursor: pointer;
                         &:hover {
-                            transform: translateX(-50%) scale(1.1);
+                            transform: translateX(-50%) scale(1.05);
                         }
                     }
                 }
