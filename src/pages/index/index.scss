@@ -1170,7 +1170,7 @@ $delays: (
         .bubble6 {
             animation-name: revealScale, shaking;
             animation-duration: 1s, 8s;
-            animation-iteration-count: infinite;
+            animation-iteration-count: initial, infinite;
             animation-fill-mode: forwards;
         }
         .bubble1 {

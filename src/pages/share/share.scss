@@ -209,17 +209,27 @@
         z-index: 1;
         &.hover {
             z-index: 0;
-            opacity: 0;
+            opacity: 1;
         }
         &.mobile {
             left: 7%;
             width: 85%;
+            &:hover {
+                opacity: 1;
+            }
         }
+
         &:hover {
             opacity: 0;
             &.hover {
                 opacity: 1;
             }
+        }
+        @media screen and (max-width: 1023px) {
+            &.hover {
+                opacity: 0;
+            }
+            opacity: 1;
         }
     }
 
@@ -232,17 +242,26 @@
         z-index: 1;
         &.hover {
             z-index: 0;
-            opacity: 0;
-        }
-        &.mobile {
-            left: 7%;
-            width: 85%;
+            opacity: 1;
         }
         &:hover {
             opacity: 0;
             &.hover {
                 opacity: 1;
             }
+        }
+        &.mobile {
+            left: 7%;
+            width: 85%;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        @media screen and (max-width: 1023px) {
+            &.hover {
+                opacity: 0;
+            }
+            opacity: 1;
         }
     }
     .image4 {

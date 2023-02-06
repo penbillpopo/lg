@@ -20,7 +20,7 @@
                     class="option"
                     @click.native="$router.go()"
                 >
-                    <p>Fiji 韓式洗衣新革命{{ isMenuOpen }}</p>
+                    <p>Fiji 韓式洗衣新革命</p>
                 </router-link>
                 <router-link
                     to="/share"
