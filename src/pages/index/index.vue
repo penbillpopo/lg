@@ -122,12 +122,6 @@
                     </div>
                 </div>
             </div>
-            <button class="scroll-btn" @click="scrollToSection(2)">
-                <img
-                    :src="require(`@/assets/img/index1-0/scroll.png`)"
-                    alt=""
-                />
-            </button>
         </div>
         <div class="section2" ref="section2">
             <div class="bg">
@@ -447,17 +441,14 @@
                     />
                 </button>
                 <div class="lightbox">
-                    <div
-                        class="frame"
-                        :style="{
-                            'background-image':
-                                'url(' +
-                                require(`@/assets/img/index1-2/light-box/circle_bg2.png`) +
-                                ')',
-                        }"
-                    >
+                    <div class="frame" ref="frame3">
                         <div class="inner">
-                            <swiper class="swiper" :options="swiperOption3">
+                            <swiper
+                                class="swiper"
+                                :options="swiperOption3"
+                                @slideChange="changeSwiperIndex"
+                                ref="swiper3"
+                            >
                                 <swiper-slide>
                                     <img
                                         :src="
@@ -1332,6 +1323,16 @@ export default {
         });
     },
     methods: {
+        changeSwiperIndex() {
+            if (
+                this.$refs["swiper3"].$swiper &&
+                this.$refs["swiper3"].$swiper.activeIndex === 4
+            ) {
+                this.$refs["frame3"].classList.add("leaf");
+            } else {
+                this.$refs["frame3"].classList.remove("leaf");
+            }
+        },
         sectionScroll() {
             if (this.isScrollStop) {
                 window.scrollTo(0, this.tempScrollOffset);
@@ -1367,6 +1368,11 @@ export default {
                     setTimeout(() => {
                         this.isScrollStop = false;
                     }, 1000);
+                    if (percentage === 1) {
+                        setTimeout(() => {
+                            this.scrollToSection(2);
+                        }, 2200);
+                    }
                 }
             }
         },

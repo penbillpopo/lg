@@ -63,7 +63,7 @@
                             v-for="(item, index) in chats"
                             :key="index"
                         >
-                            <div class="frame">
+                            <div class="frame" :class="{ active: item.active }">
                                 <img
                                     v-if="index % 2 === 0"
                                     :src="
@@ -114,26 +114,50 @@
                     </swiper>
                 </div>
                 <!-- share image sliders -->
-                <div class="image-swiper">
-                    <swiper class="swiper" :options="swiperOptionImage">
-                        <swiper-slide v-for="index in 11" :key="index">
-                            <img
-                                class="image"
-                                :src="
-                                    require(`@/assets/img/index2-1/images_${index}.png`)
-                                "
-                                alt=""
-                        /></swiper-slide>
-                    </swiper>
+                <div class="marquee" ref="marquee">
+                    <img
+                        v-for="index in 11"
+                        :key="index"
+                        class="image"
+                        :src="
+                            require(`@/assets/img/index2-1/images_${index}.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        v-for="index in 11"
+                        :key="index + 11"
+                        class="image"
+                        :src="
+                            require(`@/assets/img/index2-1/images_${index}.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        v-for="index in 11"
+                        :key="index + 22"
+                        class="image"
+                        :src="
+                            require(`@/assets/img/index2-1/images_${index}.png`)
+                        "
+                        alt=""
+                    />
                 </div>
                 <a
                     href="https://mamibuy.com.tw/talk/forum/topic/438210"
                     target="_blank"
                 >
                     <img
-                        class="share-more"
+                        class="share-more pc"
                         :src="
                             require(`@/assets/img/index2-1/btn-shareMore.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="share-more mobile"
+                        :src="
+                            require(`@/assets/img/index2-1/btn-shareMore-m.png`)
                         "
                         alt=""
                     />
@@ -145,11 +169,21 @@
                         alt=""
                     />
                 </a>
-                <a href="#" target="_blank">
+                <a
+                    href="https://www.facebook.com/ebctonightlikewar/posts/688697319613475"
+                    target="_blank"
+                >
                     <img
-                        class="like-btn"
+                        class="like-btn pc"
                         :src="
                             require(`@/assets/img/index2-1/btn-likeItTonight.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="like-btn mobile"
+                        :src="
+                            require(`@/assets/img/index2-1/btn-likeItTonight-m.png`)
                         "
                         alt=""
                     />
@@ -657,8 +691,16 @@ export default {
             hash: this.$route.hash,
             hasScrolledToBottom: false,
             swiperOptionChat: {
+                effect: "coverflow",
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 10,
+                    depth: 70,
+                    modifier: 1,
+                    scale: 0.9,
+                    slideShadows: false,
+                },
                 slidesPerView: 4,
-                spaceBetween: 10,
                 speed: 1500,
                 navigation: {
                     nextEl: ".swiper-button-next.chat",
@@ -690,12 +732,14 @@ export default {
                     別小看只有小小的一張洗衣纸，它可是一張「強效去污酵素」的洗衣纸喔！完全不用擔心衣服會洗不乾淨，洗完還帶有一股淡淡的清新香味，不像化學味道那檬刺鼻。
                     完全愛上使用FiJi飛清洗衣紙了啦！ 更多訊息請參考:
                     LG生活健康電商網站htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW`,
+                    active: false,
                 },
                 {
                     title: "冷水也能溶解很徹底",
                     name: "Yazmin",
                     content: `它我們家是使用一般型洗衣機，它無法像全自動或滾筒洗衣機一樣可以用膠囊型的洗衣精，因為會不好溶解，曾經試過某牌的膠囊洗衣球，結果不僅沒溶解好，還沾的衣服到處都是，所以我只好乖乖的使用一般洗衣精，但洗衣精又很佔空間且不好倒。
                                 這次使用了FiJi飛漬洗衣紙，真是令我大開眼界，它輕巧便利又環保，不佔空間好收納，LG專利紙張型洗劑，一張就能搞定一桶髒衣，就算用冷水也能溶解的很徹底，強效去汙酵素，連兒子每次都要手洗很久的襪子都能直接洗淨，讓媽媽好輕鬆，而且用多少就撕多少，完全不怕浪費，就算要手洗貼身衣物也可以，輕巧又不佔空間,真是媽媽的神隊友！`,
+                    active: false,
                 },
                 {
                     title: "強效去污酵素，好洗",
@@ -703,6 +747,7 @@ export default {
                     content: `我們家洗衣服有用一般洗衣精和洗衣球兩種，但總是會遇到1.衣服太少，洗衣球一顆太浪費，還遇過衣服洗完衣球完好無缺的情形。2.先生總是無法準確用衣服量，去抓洗衣精要多少，所以洗衣服的事情總是落在媽媽身上。
                                 這次嘗試使用“FiJi飛漬洗衣紙“，本來還很擔心它的溶解度和清潔能力，結果衣服洗出來的成果超乎我想像，意外的好洗，清潔力也很夠，100%完全溶解零殘留，連冷水也能完全溶解，而且一整包不佔空間又輕巧便利好收纳，全新纸張型洗劑，拿取時方便乾淨不沾手。
                                 現在的衣服，先生都會幫忙丟洗衣機，因為FiJi虛線設計可以精準换算單次所需用量，彈性使用超輕鬆，而且洗完還有淡淡清香，先生也誇讚FiJi飛漬洗衣紙輕巧便利又環保，不佔空間好收纳，用量也很省，一張搞定一桶髒衣，100%溶解不殘留，我們家的滾筒洗衣機也不怕，加上它的強效去污酵素，連白色襯衫都能輕鬆洗淨，真的是手洗機洗都好用。`,
+                    active: false,
                 },
                 {
                     title: "不沾手也不怕流！",
@@ -730,6 +775,7 @@ export default {
                                 將洗衣紙和購衣服一起丟入洗衣機內清洗
                                 讓你能優雅的洗衣服，不兵荒馬亂~
                                 同步分享於部落格:https://mamibuy.com.tw/talk/article/213552`,
+                    active: false,
                 },
                 {
                     title: "頑固污漬也好清",
@@ -738,6 +784,7 @@ export default {
                                 希望有強勁的去汙潔淨力，又不要傷害到衣物本身，擅長作智慧家電的LG總是會推出令人耳目一新的產品，這次是推出的是很讓我驚訝的FiJi飛漬洗衣紙，洗衣服竟然可以不用洗衣精(粉)而是紙!!想到洗衣服不用提重重的洗衣精，就覺得老婆可以省力不少？身為顧家好男人的我不該趁機表示一下我的貼心嗎??
                                 洗衣紙使用方式非常容易，可以容易的根據衣服量判斷要放多少張洗衣紙使用量很容易估算，也不需要撕碎或是泡軟，直接跟著髒衣丟到洗衣筒，它是可以被冷水溶解的。高清潔力非常適合給我們家孩子使用，強效去污酵素讓沾在衣服上的頑固污漬也清潔溜溜。
                                 有些家長會很在意的香精部分，這款洗衣紙完除讓服變得乾淨之外，只带著淡淡清香，不用擔心會有過多的化學香精殘留在衣服上，也不用擔心汗臭洗不掉。`,
+                    active: false,
                 },
                 {
                     title: "洗衣紙卻100%溶解！",
@@ -749,6 +796,7 @@ export default {
                                 4.洗完有股淡淡清香，半室外晾衣也很OK
                                 5.不占空間收纳方便。
                                 FiJi飛清洗衣紙納入我口袋名單，半獣人拿上拿下都輕鬆，解放媽媽二頭肌！`,
+                    active: false,
                 },
                 {
                     title: "洗多少衣服就撕多少張！",
@@ -766,6 +814,7 @@ export default {
                                 洗後不殘留只聞得到洗完淡淡清香，而且【
                                 FiJi飛漬洗衣纸】收納少非常輕巧便利，洗衣亦能輕鬆控制使用量不浪費又環保，推薦主婦們一定要來試試~無論手洗機洗都好用呢！
                                 LG生活健康電商網站htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW`,
+                    active: false,
                 },
                 {
                     title: "比一般洗衣精還省",
@@ -775,6 +824,7 @@ export default {
                                 FiJi飛漬洗衣紙真的解決了這些問題，LG專利紙張洗劑真的很方便，好溶解不殘留，用量可配合洗衣的份量去調整，重點是使用的量比一般洗衣精還省。一張FiJi飛漬洗衣紙就可以洗一整個洗衣機的量。
                                 要針對局部髒污只要撕開洗衣紙用適當的份量先溶解在水盆裡去手洗，不用大罐大的洗衣精搬來搬去,輕鬆又省力又節省空間。
                                 使用過後發覺FiJi飛漬洗衣紙洗淨力真的不錯，沒有洗劑殘留卻又洗的乾淨，用冷水也是馬上溶解，香味也清爽舒服，沒那麼多瓶瓶罐也很方便環保回收，覺得跟洗衣球相比一樣不沾手，但FiJi飛漬洗衣紙用量更彈性，重量很輕巧，連我兩歲大的兒子都可以輕鬆拿，對於正在媽媽手困擾的我而言真的是太喜歡了!!`,
+                    active: false,
                 },
                 {
                     title: "天然清香不刺鼻",
@@ -795,6 +845,7 @@ export default {
                                 4.強效去污酵素,輕鬆洗淨衣物。
                                 5.輕鬆控制使用量,手洗機洗都好用。 哪裡買
                                 https://www.lglife.com.tw`,
+                    active: false,
                 },
                 {
                     title: "洗多少衣服就撕多少張！",
@@ -825,6 +876,7 @@ export default {
                                 可以幫它準備美麗的盒子裝這些紙
                                 家裡也可以有美美的陽台囉 點這裡看更多介紹唷
                                 htps://www.lglife.com.tw/SalePage/Index/7024498?lang=zh-TW`,
+                    active: false,
                 },
             ],
             swiperOptionImage: {
@@ -832,7 +884,7 @@ export default {
                 spaceBetween: 20,
                 loop: true,
                 autoplay: {
-                    delay: 3000,
+                    delay: 0,
                     disableOnInteraction: false,
                 },
                 speed: 1500,
@@ -881,8 +933,22 @@ export default {
                 }, 200);
             }
         });
+        window.addEventListener("resize", this.marquee(".marquee", 0.3));
     },
     methods: {
+        marquee(selector, speed) {
+            const parentSelector = document.querySelector(selector);
+            const firstElement = parentSelector.children[0];
+            let i = 0;
+            const width = (parentSelector.offsetWidth * 0.3 + 20) * 11;
+            setInterval(function () {
+                firstElement.style.marginLeft = `-${i}px`;
+                if (i > width) {
+                    i = 0;
+                }
+                i = i + speed;
+            }, 0);
+        },
         scrollToSection(sessionName) {
             setTimeout(() => {
                 if (this.$refs[sessionName]) {

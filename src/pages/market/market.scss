@@ -61,6 +61,12 @@
             transform: translate(100px, 100px) scale(1.5);
         }
     }
+    .bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
 }
 
 .mobile {
@@ -80,6 +86,16 @@
 }
 
 @media screen and (max-width: 1023px) {
+    .background {
+        .buttons {
+            bottom: 0%;
+            .market-btn {
+                width: 20%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
     .pc {
         display: none;
     }

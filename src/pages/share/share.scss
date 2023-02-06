@@ -71,8 +71,10 @@
 
     .chat-swiper {
         position: absolute;
-        width: 100%;
+        width: 110%;
         top: 43%;
+        left: 50%;
+        transform: translateX(-50%);
         .frame {
             width: 100%;
             position: relative;
@@ -113,6 +115,12 @@
                     }
                 }
             }
+        }
+        .swiper-button-prev {
+            left: calc(5% + 10px);
+        }
+        .swiper-button-next {
+            right: calc(5% + 10px);
         }
         @media screen and (max-width: 1023px) {
             top: 53%;
@@ -178,18 +186,18 @@
             }
         }
     }
-    .image-swiper {
+    .marquee {
         position: absolute;
         width: 100%;
-        top: 63%;
+        top: 64%;
+        display: flex;
         .image {
-            width: 100%;
+            width: 30%;
+            margin: 0 10px;
         }
         @media screen and (max-width: 1023px) {
             top: 73%;
-        }
-        @media screen and (max-width: 768px) {
-            top: 73%;
+            transform: scale(1.4);
         }
     }
     .share-more {
@@ -201,6 +209,11 @@
         z-index: 1;
         &.hover {
             z-index: 0;
+            opacity: 0;
+        }
+        &.mobile {
+            left: 7%;
+            width: 85%;
         }
         &:hover {
             opacity: 0;
@@ -219,6 +232,11 @@
         z-index: 1;
         &.hover {
             z-index: 0;
+            opacity: 0;
+        }
+        &.mobile {
+            left: 7%;
+            width: 85%;
         }
         &:hover {
             opacity: 0;

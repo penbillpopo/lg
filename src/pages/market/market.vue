@@ -7,6 +7,11 @@
                 :src="require(`@/assets/img/index3/index_3-bg.png`)"
                 alt=""
             />
+            <img
+                class="background-img mobile"
+                :src="require(`@/assets/img/index3/index_m_3.png`)"
+                alt=""
+            />
             <a
                 class="logo"
                 href="https://www.costco.com.tw/Household-Pet-Supplies/Cleaning-Laundry-Products/Laundry/FiJi-Laundry-Detergent-120-Sheet/p/138993"
@@ -53,8 +58,13 @@
                 /></a>
             </div>
             <img
-                class="background-img mobile"
-                :src="require(`@/assets/img/index3/index_m_3.png`)"
+                class="bottom pc"
+                :src="require(`@/assets/img/index3/index_3_bottom.png`)"
+                alt=""
+            />
+            <img
+                class="bottom mobile"
+                :src="require(`@/assets/img/index3/index_m_3_bottom.png`)"
                 alt=""
             />
         </div>
