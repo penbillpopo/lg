@@ -11,9 +11,21 @@
                     :src="require(`@/assets/img/index2-1/index_2-1.png`)"
                     alt=""
                 />
-                <button class="share-btn-pc" @click="lightBoxIntroOpen(true)">
+                <button
+                    class="share-btn-pc pc"
+                    @click="lightBoxIntroOpen(true)"
+                >
                     <img
                         :src="require(`@/assets/img/index2-1/btn.png`)"
+                        alt=""
+                    />
+                </button>
+                <button
+                    class="share-btn-pc hover"
+                    @click="lightBoxIntroOpen(true)"
+                >
+                    <img
+                        :src="require(`@/assets/img/index2-1/hover_btn.png`)"
                         alt=""
                     />
                 </button>
@@ -100,6 +112,22 @@
                                             alt=""
                                         />
                                     </button>
+                                    <button
+                                        class="fb-btn hover"
+                                        @click="
+                                            lightBoxApplyOpen(
+                                                true,
+                                                item.content
+                                            )
+                                        "
+                                    >
+                                        <img
+                                            :src="
+                                                require(`@/assets/img/index2-1/fbBtn_hover.png`)
+                                            "
+                                            alt=""
+                                        />
+                                    </button>
                                 </div>
                             </div>
                         </swiper-slide>
@@ -169,42 +197,22 @@
                         alt=""
                     />
                 </a>
+
                 <a
                     href="https://www.facebook.com/ebctonightlikewar/posts/688697319613475"
-                    target="_blank"
-                >
-                    <img
-                        class="like-btn pc"
-                        :src="
-                            require(`@/assets/img/index2-1/btn-likeItTonight.png`)
-                        "
+                    ><img
+                        class="image4"
+                        :src="require(`@/assets/img/index2-1/images4.png`)"
                         alt=""
-                    />
-                    <img
-                        class="like-btn mobile"
-                        :src="
-                            require(`@/assets/img/index2-1/btn-likeItTonight-m.png`)
-                        "
+                /></a>
+                <a
+                    href="https://www.facebook.com/ebctonightlikewar/posts/688697319613475"
+                    ><img
+                        class="image5"
+                        :src="require(`@/assets/img/index2-1/images5.png`)"
                         alt=""
-                    />
-                    <img
-                        class="like-btn hover"
-                        :src="
-                            require(`@/assets/img/index2-1/btn-likeItTonight-hover.png`)
-                        "
-                        alt=""
-                    />
-                </a>
-                <img
-                    class="image4"
-                    :src="require(`@/assets/img/index2-1/images4.png`)"
-                    alt=""
-                />
-                <img
-                    class="image5"
-                    :src="require(`@/assets/img/index2-1/images5.png`)"
-                    alt=""
-                />
+                /></a>
+
                 <!-- RWD part -->
                 <img
                     class="mobile"
@@ -737,7 +745,7 @@ export default {
                 {
                     title: "冷水也能溶解很徹底",
                     name: "Yazmin",
-                    content: `它我們家是使用一般型洗衣機，它無法像全自動或滾筒洗衣機一樣可以用膠囊型的洗衣精，因為會不好溶解，曾經試過某牌的膠囊洗衣球，結果不僅沒溶解好，還沾的衣服到處都是，所以我只好乖乖的使用一般洗衣精，但洗衣精又很佔空間且不好倒。
+                    content: `我們家是使用一般型洗衣機，它無法像全自動或滾筒洗衣機一樣可以用膠囊型的洗衣精，因為會不好溶解，曾經試過某牌的膠囊洗衣球，結果不僅沒溶解好，還沾的衣服到處都是，所以我只好乖乖的使用一般洗衣精，但洗衣精又很佔空間且不好倒。
                                 這次使用了FiJi飛漬洗衣紙，真是令我大開眼界，它輕巧便利又環保，不佔空間好收納，LG專利紙張型洗劑，一張就能搞定一桶髒衣，就算用冷水也能溶解的很徹底，強效去汙酵素，連兒子每次都要手洗很久的襪子都能直接洗淨，讓媽媽好輕鬆，而且用多少就撕多少，完全不怕浪費，就算要手洗貼身衣物也可以，輕巧又不佔空間,真是媽媽的神隊友！`,
                     active: false,
                 },
