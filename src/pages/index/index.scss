@@ -1,6 +1,9 @@
 .container {
     &.active {
         min-height: 200vh;
+        @supports (min-height: 100dvh) {
+            min-height: 200dvh;
+        }
         .section1,
         .section2,
         .section3,
@@ -499,8 +502,10 @@
         left: 50%;
         top: 45%;
         transform: translate(-50%, -50%);
-        width: 600px;
-        height: 700px;
+        width: 80vw;
+        height: 86vw;
+        max-width: 600px;
+        max-height: 660px;
         .frame {
             width: 100%;
             height: 100%;
@@ -511,7 +516,7 @@
                 background-image: url(@/assets/img/index1-2/light-box/circle_bg.png);
             }
             .inner {
-                transform: translateY(45px);
+                transform: translateY(20px);
             }
             .swiper {
                 width: 100%;
@@ -533,16 +538,10 @@
             }
         }
         @media screen and (max-width: 768px) {
-            width: 500px;
-            height: 600px;
         }
         @media screen and (max-width: 600px) {
-            width: 450px;
-            height: 550px;
         }
         @media screen and (max-width: 480px) {
-            width: 400px;
-            height: 500px;
             .frame {
                 .swiper {
                     .swiper-button-prev {
@@ -555,12 +554,8 @@
             }
         }
         @media screen and (max-width: 420px) {
-            width: 350px;
-            height: 450px;
         }
         @media screen and (max-width: 380px) {
-            width: 300px;
-            height: 400px;
             .frame {
                 .swiper {
                     .swiper-button-prev {
@@ -820,11 +815,11 @@ $delays: (
             display: flex;
             justify-content: center;
             padding-top: 1%;
-            margin-left: 14.25%;
+            margin-left: 15%;
             width: 62%;
             a {
                 img {
-                    width: 99.25%;
+                    width: 100%;
                     transition: transform 0.3s ease;
                     &:hover {
                         transform: scale(1.05);
@@ -1115,7 +1110,7 @@ $delays: (
                         position: absolute;
                         width: 42%;
                         left: 50%;
-                        bottom: 13%;
+                        bottom: 11%;
                         transform: translateX(-50%);
                         transition: transform 0.3s ease;
                         cursor: pointer;

@@ -319,8 +319,10 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 600px;
-        height: 650px;
+        width: 80vw;
+        height: 86vw;
+        max-width: 600px;
+        max-height: 660px;
         .frame {
             width: 100%;
             height: 100%;
@@ -361,7 +363,8 @@
                 }
                 .content,
                 .text {
-                    height: 310px;
+                    max-height: 310px;
+                    height: 68%;
                     strong {
                         color: rgb(230, 61, 112);
                     }
@@ -396,7 +399,7 @@
                     background-color: rgb(27, 68, 151);
                     margin: 0 auto;
                     display: block;
-                    margin-top: 40px;
+                    margin-top: 12%;
                     border-radius: 20px;
                     transition: transform 0.3s ease;
                     cursor: pointer;
@@ -410,20 +413,21 @@
                     }
                 }
                 .step1 {
+                    height: 100%;
                     .title {
                         font-size: 22px;
                         margin-bottom: 20px;
                     }
                     .text {
-                        height: 230px;
+                        max-height: 230px;
                         padding: 0 10px;
                         overflow-x: hidden;
                         overflow-y: auto;
                     }
                 }
                 .step2 {
+                    height: 100%;
                     .content {
-                        height: 260px;
                     }
                     .agree {
                         display: flex;
@@ -433,7 +437,7 @@
                             width: 30px;
                             height: 20px;
                             position: absolute;
-                            bottom: 43px;
+                            bottom: 10%;
                             right: 0;
                             background-color: rgba(0, 0, 0, 0);
                             color: #d0d0d0;
@@ -469,7 +473,9 @@
                                 padding-right: 15px;
                             }
                             input {
-                                width: 280px;
+                                max-width: 280px;
+                                max-height: 45px;
+                                width: 100%;
                                 height: 45px;
                                 border-radius: 20px;
                                 border: 0;
@@ -492,12 +498,10 @@
             }
         }
         @media screen and (max-width: 768px) {
-            width: 500px;
-            height: 550px;
             .frame {
                 .content-box {
+                    top: 53%;
                     .content {
-                        height: 250px;
                     }
                     button {
                         height: 30px;
@@ -516,12 +520,11 @@
                             font-size: 14px;
                         }
                         .text {
-                            height: 200px;
+                            height: 65%;
                         }
                     }
                     .step2 {
                         .content {
-                            height: 200px;
                             strong,
                             p {
                                 font-size: 14px;
@@ -529,6 +532,9 @@
                         }
                         .agree {
                             margin-top: 10px;
+                            .slide-down {
+                                display: none;
+                            }
                         }
                         button {
                             margin-top: 15px;
@@ -536,7 +542,7 @@
                     }
                     .step3 {
                         .input-box {
-                            margin-top: 20px;
+                            margin-top: 30px;
                             .input {
                                 margin-bottom: 15px;
                                 p {
@@ -544,12 +550,11 @@
                                     padding-right: 10px;
                                 }
                                 input {
-                                    width: 230px;
                                 }
                             }
                         }
                         button {
-                            margin-top: 40px;
+                            margin-top: 8%;
                         }
                     }
                     .step4 {
@@ -566,15 +571,14 @@
             }
         }
         @media screen and (max-width: 480px) {
-            width: 400px;
-            height: 450px;
+            width: 90vw;
+            height: 96vw;
             .frame {
                 .content-box {
-                    top: 53%;
+                    top: 50%;
                     width: 70%;
-
                     .content {
-                        height: 160px;
+                        height: 70%;
                     }
                     button {
                         height: 25px;
@@ -589,7 +593,6 @@
                             margin-bottom: 10px;
                         }
                         .text {
-                            height: 170px;
                         }
                     }
                     .step2 {
@@ -598,7 +601,9 @@
                             margin-bottom: 10px;
                         }
                         .content {
-                            height: 140px;
+                        }
+                        button {
+                            margin-top: 10px;
                         }
                     }
                     .step3 {
@@ -609,7 +614,6 @@
                                 padding-right: 10px;
                             }
                             input {
-                                width: 160px;
                             }
                         }
                         button {
@@ -630,12 +634,9 @@
             }
         }
         @media screen and (max-width: 380px) {
-            width: 300px;
-            height: 320px;
             .frame {
                 .content-box {
                     .content {
-                        height: 140px;
                         strong,
                         p {
                             font-size: 12px;
@@ -650,7 +651,6 @@
                             margin-bottom: 0px;
                         }
                         .text {
-                            height: 120px;
                         }
                         p {
                             font-size: 12px;
@@ -662,7 +662,6 @@
                             margin-bottom: 0px;
                         }
                         .content {
-                            height: 120px;
                             strong,
                             p {
                                 font-size: 12px;
@@ -671,9 +670,6 @@
                         .agree {
                             label {
                                 font-size: 12px;
-                            }
-                            .slide-down {
-                                display: none;
                             }
                         }
                     }
@@ -690,7 +686,6 @@
                                     padding-right: 10px;
                                 }
                                 input {
-                                    width: 140px;
                                     height: 32px;
                                 }
                             }
