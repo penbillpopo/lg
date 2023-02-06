@@ -71,6 +71,12 @@
         left: 54%;
         width: 13%;
     }
+    .floating_btn {
+        position: absolute;
+        bottom: 55%;
+        left: 76%;
+        width: 7%;
+    }
 
     .chat-swiper {
         position: absolute;
@@ -772,6 +778,12 @@
             bottom: 49.5%;
             left: 58%;
             width: 29%;
+        }
+        .floating_btn {
+            position: absolute;
+            bottom: 71%;
+            left: 75%;
+            width: 18%;
         }
 
         .fb {
