@@ -15,11 +15,7 @@
                 />
             </button>
             <div class="option-box">
-                <router-link
-                    to="/#product"
-                    class="option"
-                    @click.native="$router.go()"
-                >
+                <router-link to="/" class="option" @click.native="$router.go()">
                     <p>Fiji 韓式洗衣新革命</p>
                 </router-link>
                 <router-link
@@ -58,7 +54,6 @@ export default {
     },
     methods: {
         menuOpen(open) {
-            console.log(open);
             this.isMenuOpen = open;
         },
     },

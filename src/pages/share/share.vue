@@ -213,7 +213,7 @@
                 />
             </div>
 
-            <div class="black-field" v-if="lightBoxIntroShow">
+            <div class="black-field" v-show="lightBoxIntroShow">
                 <button class="close-btn" @click="lightBoxIntroOpen(false)">
                     <img
                         :src="
@@ -385,7 +385,7 @@
                     </div>
                 </div>
             </div>
-            <div class="black-field" v-if="lightBoxApplyShow">
+            <div class="black-field" v-show="lightBoxApplyShow">
                 <button class="close-btn" @click="lightBoxApplyOpen(false)">
                     <img
                         :src="
@@ -405,7 +405,7 @@
                         }"
                     >
                         <div class="content-box">
-                            <div class="step1" v-if="apply.step === 1">
+                            <div class="step1" v-show="apply.step === 1">
                                 <p class="title">好物推薦心得</p>
                                 <div class="text">
                                     <p>
@@ -416,7 +416,7 @@
                                     分享抽大獎
                                 </button>
                             </div>
-                            <div class="step2" v-if="apply.step === 2">
+                            <div class="step2" v-show="apply.step === 2">
                                 <p class="title">Fiji抽獎注意事項</p>
                                 <div
                                     class="content"
@@ -605,7 +605,7 @@
                                     下一步
                                 </button>
                             </div>
-                            <div class="step3" v-if="apply.step === 3">
+                            <div class="step3" v-show="apply.step === 3">
                                 <p class="title">中獎後連繫資訊</p>
                                 <div class="input-box">
                                     <div class="input">
@@ -646,7 +646,7 @@
                                     下一步抽大獎
                                 </button>
                             </div>
-                            <div class="step4" v-if="apply.step === 4">
+                            <div class="step4" v-show="apply.step === 4">
                                 <p class="title">感謝分享</p>
                                 <img
                                     :src="

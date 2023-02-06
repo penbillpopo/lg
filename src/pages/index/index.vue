@@ -1,132 +1,10 @@
 <template>
     <div class="container" ref="container">
         <navComponent v-if="!lightBoxShow" location="home"></navComponent>
-        <div class="section1">
-            <div class="flex-box pc-flex">
-                <div class="frame ani">
-                    <div
-                        class="img"
-                        :style="{
-                            'background-image':
-                                'url(' +
-                                require(`@/assets/img/index1-0/01.jpg`) +
-                                ')',
-                        }"
-                    ></div>
-                </div>
-                <div class="frame ani delay-1">
-                    <div
-                        class="img"
-                        :style="{
-                            'background-image':
-                                'url(' +
-                                require(`@/assets/img/index1-0/02.jpg`) +
-                                ')',
-                        }"
-                    ></div>
-                </div>
-                <div class="frame ani delay-2">
-                    <div
-                        class="img"
-                        :style="{
-                            'background-image':
-                                'url(' +
-                                require(`@/assets/img/index1-0/03.jpg`) +
-                                ')',
-                        }"
-                    ></div>
-                </div>
-                <div class="frame ani delay-3">
-                    <div
-                        class="img"
-                        :style="{
-                            'background-image':
-                                'url(' +
-                                require(`@/assets/img/index1-0/04.jpg`) +
-                                ')',
-                        }"
-                    ></div>
-                </div>
-            </div>
-            <div class="flex-box mobile-flex">
-                <div class="frame ani">
-                    <div
-                        class="img"
-                        :style="{
-                            'background-image':
-                                'url(' +
-                                require(`@/assets/img/index1-0/mobile/item_1.png`) +
-                                ')',
-                        }"
-                    >
-                        <img
-                            :src="
-                                require(`@/assets/img/index1-0/mobile/item_11.png`)
-                            "
-                            alt=""
-                        />
-                    </div>
-                </div>
-                <div class="frame ani delay-1">
-                    <div
-                        class="img"
-                        :style="{
-                            'background-image':
-                                'url(' +
-                                require(`@/assets/img/index1-0/mobile/item_2.png`) +
-                                ')',
-                        }"
-                    >
-                        <img
-                            :src="
-                                require(`@/assets/img/index1-0/mobile/item_22.png`)
-                            "
-                            alt=""
-                        />
-                    </div>
-                </div>
-                <div class="frame ani delay-2">
-                    <div
-                        class="img"
-                        :style="{
-                            'background-image':
-                                'url(' +
-                                require(`@/assets/img/index1-0/mobile/item_3.png`) +
-                                ')',
-                        }"
-                    >
-                        <img
-                            :src="
-                                require(`@/assets/img/index1-0/mobile/item_33.png`)
-                            "
-                            alt=""
-                        />
-                    </div>
-                </div>
-                <div class="frame ani delay-3">
-                    <div
-                        class="img"
-                        :style="{
-                            'background-image':
-                                'url(' +
-                                require(`@/assets/img/index1-0/mobile/item_4.png`) +
-                                ')',
-                        }"
-                    >
-                        <img
-                            :src="
-                                require(`@/assets/img/index1-0/mobile/item_44.png`)
-                            "
-                            alt=""
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="section2" ref="section2">
             <div class="bg">
                 <div class="nav-box">
-                    <router-link to="/#product" @click.native="$router.go()">
+                    <router-link to="/" @click.native="$router.go()">
                         <img
                             :src="require(`@/assets/img/index1-1/nav-1.png`)"
                             alt=""
@@ -431,7 +309,7 @@
                     />
                 </div>
             </div>
-            <div class="black-field" v-if="lightBoxShow">
+            <div class="black-field" v-show="lightBoxShow">
                 <button class="close-btn" @click="lightBoxOpen(false)">
                     <img
                         :src="
@@ -489,7 +367,7 @@
                                         alt=""
                                     />
                                     <router-link
-                                        to="/#product"
+                                        to="/"
                                         class="option"
                                         @click.native="$router.go()"
                                     >
@@ -641,7 +519,7 @@
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1800"
+                            class="text-R-2 reveal-right-1500"
                             :src="
                                 require(`@/assets/img/index1-5/elements/text-R-2.png`)
                             "
@@ -649,7 +527,7 @@
                         />
                         <div class="pic-box">
                             <img
-                                class="pic-R-1 reveal-right-2100"
+                                class="pic-R-1 reveal-right-1500"
                                 :src="
                                     require(`@/assets/img/index1-5/elements/pic-R-1.png`)
                                 "
@@ -711,7 +589,7 @@
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1800"
+                            class="text-R-2 reveal-right-1500"
                             :src="
                                 require(`@/assets/img/index1-5/elements/text-R-2.png`)
                             "
@@ -719,7 +597,7 @@
                         />
                         <div class="pic-box">
                             <img
-                                class="pic-R-1 reveal-right-2100"
+                                class="pic-R-1 reveal-right-1500"
                                 :src="
                                     require(`@/assets/img/index1-5/elements/pic-R-1.png`)
                                 "
@@ -785,13 +663,13 @@
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1800"
+                            class="text-R-2 reveal-right-1500"
                             :src="
                                 require(`@/assets/img/index1-6/elements/text-R-2.png`)
                             "
                             alt=""
                         />
-                        <div class="pic-box reveal-right-2100">
+                        <div class="pic-box reveal-right-1500">
                             <img
                                 class="pic-R-1"
                                 :src="
@@ -862,13 +740,13 @@
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1800"
+                            class="text-R-2 reveal-right-1500"
                             :src="
                                 require(`@/assets/img/index1-6/elements/text-R-2.png`)
                             "
                             alt=""
                         />
-                        <div class="pic-box reveal-right-2100">
+                        <div class="pic-box reveal-right-1500">
                             <img
                                 class="pic-R-1"
                                 :src="
@@ -943,13 +821,13 @@
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1800"
+                            class="text-R-2 reveal-right-1500"
                             :src="
                                 require(`@/assets/img/index1-7/elements/text-R-2.png`)
                             "
                             alt=""
                         />
-                        <div class="pic-box reveal-right-2100">
+                        <div class="pic-box reveal-right-1500">
                             <div class="left"></div>
                             <div class="right">
                                 <div class="top">
@@ -1018,13 +896,13 @@
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1800"
+                            class="text-R-2 reveal-right-1500"
                             :src="
                                 require(`@/assets/img/index1-7/elements/text-R-2.png`)
                             "
                             alt=""
                         />
-                        <div class="pic-box reveal-right-2100">
+                        <div class="pic-box reveal-right-1500">
                             <div class="left"></div>
                             <div class="right">
                                 <div class="top">
@@ -1097,13 +975,13 @@
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1800"
+                            class="text-R-2 reveal-right-1500"
                             :src="
                                 require(`@/assets/img/index1-8/elements/text-R-2.png`)
                             "
                             alt=""
                         />
-                        <div class="pic-box reveal-right-2100">
+                        <div class="pic-box reveal-right-1500">
                             <img
                                 class="pic-R-1"
                                 :src="
@@ -1174,13 +1052,13 @@
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1800"
+                            class="text-R-2 reveal-right-1500"
                             :src="
                                 require(`@/assets/img/index1-8/elements/text-R-2.png`)
                             "
                             alt=""
                         />
-                        <div class="pic-box reveal-right-2100">
+                        <div class="pic-box reveal-right-1500">
                             <img
                                 class="pic-R-1"
                                 :src="
@@ -1342,37 +1220,32 @@ export default {
                 Math.round(
                     (window.pageYOffset /
                         (document.body.offsetHeight - window.innerHeight)) *
-                        10
+                        9
                 ) + 1;
-            if (percentage <= 11) {
-                if (percentage === 11) {
-                    percentage = 10;
+            if (percentage <= 10) {
+                if (percentage === 10) {
+                    percentage = 9;
                 }
                 if (
                     this.$refs["container"] &&
                     !this.$refs["container"].classList.contains(
-                        `animate-${percentage}`
+                        `animate-${percentage + 1}`
                     )
                 ) {
-                    for (let i = 1; i <= 10; i++) {
+                    for (let i = 1; i <= 9; i++) {
                         this.$refs["container"].classList.remove(
-                            `animate-${i}`
+                            `animate-${i + 1}`
                         );
                     }
                     this.$refs["container"].classList.add(
                         "container",
-                        `animate-${percentage}`
+                        `animate-${percentage + 1}`
                     );
                     this.isScrollStop = true;
                     this.tempScrollOffset = window.scrollY;
                     setTimeout(() => {
                         this.isScrollStop = false;
                     }, 1000);
-                    if (percentage === 1) {
-                        setTimeout(() => {
-                            this.scrollToSection(2);
-                        }, 2200);
-                    }
                 }
             }
         },
