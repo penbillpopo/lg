@@ -103,7 +103,7 @@
                     alt=""
                 />
             </div>
-            <button class="scroll-btn small" @click="scrollToSection(3)">
+            <button class="scroll-btn small" @click="scrollToSection(1)">
                 <img
                     :src="require(`@/assets/img/index1-1/scroll.png`)"
                     alt=""
@@ -369,7 +369,7 @@
                                     <router-link
                                         to="/"
                                         class="option"
-                                        @click.native="$router.go()"
+                                        @click.native="reload()"
                                     >
                                         <img
                                             class="btn"
@@ -393,6 +393,12 @@
                     </div>
                 </div>
             </div>
+            <button class="scroll-btn small" @click="scrollToSection(2)">
+                <img
+                    :src="require(`@/assets/img/index1-1/scroll.png`)"
+                    alt=""
+                />
+            </button>
         </div>
         <div class="section4" ref="section4">
             <div class="bg">
@@ -444,6 +450,12 @@
                     />
                 </div>
             </div>
+            <button class="scroll-btn small" @click="scrollToSection(3)">
+                <img
+                    :src="require(`@/assets/img/index1-1/scroll.png`)"
+                    alt=""
+                />
+            </button>
         </div>
         <div class="section5" ref="section5">
             <div class="bg">
@@ -463,6 +475,12 @@
                     alt=""
                 />
             </div>
+            <button class="scroll-btn small" @click="scrollToSection(4)">
+                <img
+                    :src="require(`@/assets/img/index1-1/scroll.png`)"
+                    alt=""
+                />
+            </button>
         </div>
         <div class="section6">
             <div class="question-box pc-flex">
@@ -607,6 +625,12 @@
                     </div>
                 </div>
             </div>
+            <button class="scroll-btn small" @click="scrollToSection(5)">
+                <img
+                    :src="require(`@/assets/img/index1-1/scroll.png`)"
+                    alt=""
+                />
+            </button>
         </div>
         <div class="section7">
             <div class="question-box pc-flex">
@@ -765,6 +789,12 @@
                     />
                 </div>
             </div>
+            <button class="scroll-btn small" @click="scrollToSection(6)">
+                <img
+                    :src="require(`@/assets/img/index1-1/scroll.png`)"
+                    alt=""
+                />
+            </button>
         </div>
         <div class="section8">
             <div class="question-box pc-flex">
@@ -919,6 +949,12 @@
                     </div>
                 </div>
             </div>
+            <button class="scroll-btn small" @click="scrollToSection(7)">
+                <img
+                    :src="require(`@/assets/img/index1-1/scroll.png`)"
+                    alt=""
+                />
+            </button>
         </div>
         <div class="section9">
             <div class="question-box pc-flex">
@@ -1077,6 +1113,12 @@
                     </div>
                 </div>
             </div>
+            <button class="scroll-btn small" @click="scrollToSection(8)">
+                <img
+                    :src="require(`@/assets/img/index1-1/scroll.png`)"
+                    alt=""
+                />
+            </button>
         </div>
         <div class="section10" ref="video">
             <div class="bg">
@@ -1250,8 +1292,7 @@ export default {
             }
         },
         scrollToSection(session) {
-            const offset = 15;
-            window.scrollTo(0, (window.innerHeight / 20) * session + offset);
+            window.scrollTo(0, (window.innerHeight * session) / 9);
         },
         lightBoxOpen(isOpen) {
             this.lightBoxShow = isOpen;
@@ -1259,7 +1300,7 @@ export default {
         },
         section3LightBoxClick() {
             this.lightBoxShow = false;
-            this.scrollToSection(5);
+            this.scrollToSection(2);
         },
         disableScrollY(hide) {
             const html = document.getElementsByTagName("html")[0];
@@ -1268,6 +1309,10 @@ export default {
             } else {
                 html.style.overflowY = "auto";
             }
+        },
+        reload() {
+            window.history.go(-1);
+            window.location.reload();
         },
     },
     filters: {},
