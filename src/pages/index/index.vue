@@ -6,7 +6,15 @@
                 <div class="nav-box">
                     <router-link to="/" @click.native="$router.go()">
                         <img
+                            class="btn"
                             :src="require(`@/assets/img/index1-1/nav-1.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="btn-hover"
+                            :src="
+                                require(`@/assets/img/index1-1/nav-1-hover.png`)
+                            "
                             alt=""
                         />
                     </router-link>
@@ -16,7 +24,15 @@
                         @click.native="$router.go()"
                     >
                         <img
+                            class="btn"
                             :src="require(`@/assets/img/index1-1/nav-2.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="btn-hover"
+                            :src="
+                                require(`@/assets/img/index1-1/nav-2-hover.png`)
+                            "
                             alt=""
                         />
                     </router-link>
@@ -26,7 +42,15 @@
                         @click.native="$router.go()"
                     >
                         <img
+                            class="btn"
                             :src="require(`@/assets/img/index1-1/nav-3.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="btn-hover"
+                            :src="
+                                require(`@/assets/img/index1-1/nav-3-hover.png`)
+                            "
                             alt=""
                         />
                     </router-link>
@@ -36,7 +60,15 @@
                         @click.native="$router.go()"
                     >
                         <img
+                            class="btn"
                             :src="require(`@/assets/img/index1-1/nav-4.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="btn-hover"
+                            :src="
+                                require(`@/assets/img/index1-1/nav-4-hover.png`)
+                            "
                             alt=""
                         />
                     </router-link>

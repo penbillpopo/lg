@@ -206,6 +206,7 @@
 
                 <a
                     href="https://www.facebook.com/ebctonightlikewar/posts/688697319613475"
+                    target="_blank"
                     class="image4"
                 >
                     <div class="frame">
@@ -217,6 +218,7 @@
                 </a>
                 <a
                     href="https://www.facebook.com/ebctonightlikewar/posts/688697319613475"
+                    target="_blank"
                     class="image5"
                 >
                     <div class="frame">
@@ -737,9 +739,34 @@ export default {
                         slidesPerView: 3,
                         spaceBetween: 10,
                     },
-                    0: {
+                    480: {
                         slidesPerView: 2,
                         spaceBetween: 10,
+                        coverflowEffect: {
+                            rotate: 0,
+                            stretch: 30,
+                            depth: 70,
+                            modifier: 1,
+                            scale: 0.8,
+                            slideShadows: false,
+                        },
+                    },
+                    400: {
+                        slidesPerView: 1.5,
+                        coverflowEffect: {
+                            rotate: 0,
+                            stretch: 80,
+                            depth: 60,
+                            modifier: 1,
+                            scale: 0.45,
+                            slideShadows: false,
+                        },
+                        spaceBetween: 0,
+                    },
+                    0: {
+                        coverflowEffect: {
+                            stretch: 60,
+                        },
                     },
                 },
             },
