@@ -200,18 +200,26 @@
 
                 <a
                     href="https://www.facebook.com/ebctonightlikewar/posts/688697319613475"
-                    ><img
-                        class="image4"
-                        :src="require(`@/assets/img/index2-1/images4.png`)"
-                        alt=""
-                /></a>
+                    class="image4"
+                >
+                    <div class="frame">
+                        <img
+                            :src="require(`@/assets/img/index2-1/images4.png`)"
+                            alt=""
+                        />
+                    </div>
+                </a>
                 <a
                     href="https://www.facebook.com/ebctonightlikewar/posts/688697319613475"
-                    ><img
-                        class="image5"
-                        :src="require(`@/assets/img/index2-1/images5.png`)"
-                        alt=""
-                /></a>
+                    class="image5"
+                >
+                    <div class="frame">
+                        <img
+                            :src="require(`@/assets/img/index2-1/images5.png`)"
+                            alt=""
+                        />
+                    </div>
+                </a>
 
                 <!-- RWD part -->
                 <img

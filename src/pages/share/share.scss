@@ -279,16 +279,36 @@
         }
     }
     .image4 {
-        position: absolute;
-        top: 82%;
-        left: 17%;
-        width: 32%;
+        .frame {
+            overflow: hidden;
+            position: absolute;
+            top: 82%;
+            left: 17%;
+            width: 32%;
+            img {
+                width: 100%;
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
     }
     .image5 {
-        position: absolute;
-        top: 82%;
-        right: 17%;
-        width: 32%;
+        .frame {
+            overflow: hidden;
+            position: absolute;
+            top: 82%;
+            right: 17%;
+            width: 32%;
+            img {
+                width: 100%;
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
     }
 }
 
@@ -791,17 +811,21 @@
         }
 
         .image4 {
-            position: absolute;
-            top: 88%;
-            left: 4%;
-            width: 45%;
+            img {
+                position: absolute;
+                top: 88%;
+                left: 4%;
+                width: 45%;
+            }
         }
 
         .image5 {
-            position: absolute;
-            top: 88%;
-            right: 4%;
-            width: 45%;
+            img {
+                position: absolute;
+                top: 88%;
+                right: 4%;
+                width: 45%;
+            }
         }
     }
 }

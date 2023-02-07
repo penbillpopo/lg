@@ -1,41 +1,40 @@
 <template>
     <div class="nav">
-        <router-link to="/" @click.native="$router.go()">
+        <router-link to="/" @click.native="reload()">
             <img class="logo" :src="require(`@/assets/img/logo.png`)" alt="" />
         </router-link>
-        <div class="hamburger" v-show="!isMenuOpen" @click="menuOpen(true)">
-            <div class="line"></div>
-            <div class="line"></div>
+        <div
+            class="hamburger"
+            :class="{ active: isMenuOpen }"
+            @click="menuOpen(!isMenuOpen)"
+        >
+            <div class="line l1"></div>
+            <div class="line l2"></div>
+            <p class="title">主選單</p>
         </div>
         <div class="black-field" v-show="isMenuOpen">
-            <button class="close-btn" @click="menuOpen(false)">
-                <img
-                    :src="require(`@/assets/img/index1-2/light-box/close.png`)"
-                    alt=""
-                />
-            </button>
             <div class="option-box">
-                <router-link to="/" class="option" @click.native="$router.go()">
+                <router-link to="/" class="option" @click.native="reload()">
                     <p>Fiji 韓式洗衣新革命</p>
                 </router-link>
                 <router-link
                     to="/share"
                     class="option"
-                    @click.native="$router.go()"
+                    @click.native="reload()"
                 >
                     <p>分享抽LG洗衣機</p>
                 </router-link>
                 <router-link
                     to="/share#mamibuy"
                     class="option"
-                    @click.native="$router.go()"
+                    @click.native="reload()"
                 >
                     <p>百人親身好評見證</p>
                 </router-link>
                 <router-link
                     to="/market"
                     class="option"
-                    @click.native="$router.go()"
+                    @click.native="reload()"
                 >
                     <p>立即購買</p>
                 </router-link>
@@ -55,6 +54,10 @@ export default {
     methods: {
         menuOpen(open) {
             this.isMenuOpen = open;
+        },
+        reload() {
+            window.history.go(-1);
+            window.location.reload();
         },
     },
 };

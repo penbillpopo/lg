@@ -33,10 +33,24 @@
         }
     }
 }
-.animate-1,
+.animate-1 {
+    .nav {
+        display: none;
+    }
+}
 .animate-2 {
     .nav {
         display: none;
+    }
+    @media screen and (max-width: 1023px) {
+        :deep {
+            .nav {
+                display: block;
+                .logo {
+                    display: none !important;
+                }
+            }
+        }
     }
 }
 .bg {
@@ -346,6 +360,7 @@
                 padding-bottom: 55%;
                 margin-bottom: 10px;
                 position: relative;
+                transition: transform 0.3 ease;
                 .title {
                     position: absolute;
                     top: -25%;
@@ -828,13 +843,6 @@ $delays: (
             }
         }
     }
-    @media screen and (max-width: 1023px) {
-        .bg {
-            .nav-box {
-                display: none;
-            }
-        }
-    }
     .logo {
         position: absolute;
         top: 0;
@@ -963,9 +971,13 @@ $delays: (
         .bg {
             background-image: url(@/assets/img/index1-1/mobile/bg.png);
             padding-bottom: 155%;
+            .nav-box {
+                display: none;
+            }
         }
         .logo {
             width: 22%;
+            right: 71%;
         }
         .title {
             width: 87%;
@@ -1263,10 +1275,65 @@ $delays: (
         }
     }
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1366px) {
         .paper {
             top: 3%;
             left: 17.5%;
+            width: 51%;
+        }
+        .title {
+            top: 8%;
+            left: 53.5%;
+            width: 27%;
+        }
+        .powder {
+            top: 62%;
+            left: 62.5%;
+            width: 17%;
+        }
+        .bubble-box {
+            .bubble1 {
+                top: 68.5%;
+                left: 16%;
+                width: 14%;
+                z-index: 0;
+            }
+            .bubble2 {
+                top: 56%;
+                left: 11.2%;
+                width: 9%;
+                z-index: 0;
+            }
+            .bubble3 {
+                top: 30.5%;
+                left: 17.5%;
+                width: 15%;
+                z-index: 2;
+            }
+            .bubble4 {
+                top: 16%;
+                left: 18%;
+                width: 8%;
+                z-index: 2;
+            }
+            .bubble5 {
+                top: -1%;
+                left: 24%;
+                width: 14%;
+                z-index: 2;
+            }
+            .bubble6 {
+                top: 26%;
+                left: 32%;
+                width: 7%;
+                z-index: 2;
+            }
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .paper {
+            top: 13%;
+            left: 21.5%;
             width: 50%;
         }
         .title {
