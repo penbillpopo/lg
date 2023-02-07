@@ -13,6 +13,21 @@
             width: 100%;
         }
     }
+
+    .floating_btn {
+        position: absolute;
+        top: 40.5%;
+        right: 12%;
+        width: 10%;
+        img {
+            width: 90%;
+            transition: all ease 0.3s;
+        }
+        :hover {
+            transform: scale(1.05);
+        }
+    }
+
     .hover {
         opacity: 0;
         transition: all ease 0.3s;
@@ -36,6 +51,19 @@
             width: 49%;
             img {
                 width: 100%;
+            }
+        }
+        .floating_btn {
+            position: absolute;
+            top: 25.5%;
+            right: 6%;
+            width: 18%;
+            img {
+                width: 90%;
+                transition: all ease 0.3s;
+            }
+            :hover {
+                transform: scale(1.05);
             }
         }
     }
