@@ -367,38 +367,58 @@
     .bg {
         background-image: url(@/assets/img/index1-9/bg.png);
     }
-
+    .click-btn {
+        position: fixed;
+        width: 65px;
+        height: 80px;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        transition: opacity 0.6s ease;
+        cursor: pointer;
+        pointer-events: none;
+        &.hover {
+            opacity: 1;
+        }
+    }
     .video-box {
         position: absolute;
-        width: 50%;
+        width: 65%;
         transform: translate(-50%, -50%);
-        top: 55%;
-        left: 35%;
+        top: 62%;
+        left: 43%;
+        display: flex;
+        .title {
+            position: absolute;
+            top: -45%;
+            left: -1%;
+            width: 60%;
+        }
         .video {
-            width: 50%;
-            margin-bottom: 20px;
+            width: 70%;
+            margin-right: 20px;
+            position: relative;
+
             .pic {
                 width: 100%;
                 @extend %background_100;
                 padding-bottom: 55%;
                 margin-bottom: 10px;
                 position: relative;
-                transition: transform 0.3 ease;
-                .title {
-                    position: absolute;
-                    top: -25%;
-                    left: -1%;
-                    width: 70%;
-                }
+                transition: background 0.3s ease;
                 .text {
-                    width: 45%;
+                    width: 60%;
                     position: absolute;
-                    bottom: -13%;
+                    bottom: -15%;
+                    &.t2 {
+                        width: 72%;
+                    }
                 }
                 .play-btn {
                     position: absolute;
-                    width: 120px;
-                    height: 120px;
+                    width: 100px;
+                    height: 100px;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -407,6 +427,7 @@
                     cursor: pointer;
                 }
                 &:hover {
+                    background-size: 120%;
                     .play-btn {
                         opacity: 1;
                     }
@@ -422,65 +443,76 @@
         }
 
         .video-box {
-            top: 50%;
+            top: 55%;
             width: 70%;
             left: 50%;
+            flex-direction: column;
+            .title {
+                top: -14%;
+                left: -1%;
+                width: 80%;
+            }
             .video {
-                width: 60%;
+                width: 100%;
+                margin-bottom: 10%;
                 .pic {
                     .play-btn {
                         opacity: 1;
+                    }
+                }
+                .text {
+                    &.t2 {
+                        width: 80%;
                     }
                 }
             }
         }
     }
     @media screen and (max-width: 768px) {
-        .title {
-            top: 8%;
-            width: 65%;
-        }
         .video-box {
-            width: 80%;
+            top: 55%;
+            width: 70%;
+            left: 50%;
+            flex-direction: column;
+            .title {
+                top: -14%;
+                left: -1%;
+                width: 80%;
+            }
             .video {
-                .play-btn {
-                    width: 60px;
-                    height: 60px;
+                width: 100%;
+                margin-bottom: 10%;
+                .pic {
+                    .play-btn {
+                        width: 80px;
+                        height: 80px;
+                        opacity: 1;
+                    }
                 }
             }
         }
     }
     @media screen and (max-width: 480px) {
-        .title {
-            top: 8%;
-            left: 18%;
-        }
         .video-box {
+            top: 55%;
             width: 90%;
-            .video {
-                width: 70%;
-                .play-btn {
-                    width: 40px;
-                    height: 40px;
-                }
-            }
-        }
-    }
-    @media screen and (max-width: 420px) {
-        .title {
-            top: 10%;
-            left: 16%;
-        }
-        .video-box {
-            .video {
+            left: 50%;
+            flex-direction: column;
+            .title {
+                top: -14%;
+                left: -1%;
                 width: 80%;
             }
-        }
-    }
-    @media screen and (max-width: 380px) {
-        .title {
-            left: 9%;
-            top: 11%;
+            .video {
+                width: 100%;
+                .pic {
+                    .play-btn {
+                        width: 60px;
+                        height: 60px;
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 }
@@ -1071,6 +1103,15 @@ $delays: (
                         transform: scale(1.05) translateX(-50%);
                     }
                 }
+                .arrow {
+                    position: absolute;
+                    bottom: 3.2%;
+                    right: 10%;
+                    width: 6%;
+                    animation-name: arrowMoving;
+                    animation-duration: 1.2s;
+                    animation-iteration-count: infinite;
+                }
                 .pic {
                     width: 100%;
                     height: 100%;
@@ -1108,12 +1149,18 @@ $delays: (
                     bottom: 10%;
                     right: 3%;
                     width: 7%;
+                    animation-name: arrowMoving;
+                    animation-duration: 1.2s;
+                    animation-iteration-count: infinite;
                 }
                 .arrow {
                     position: absolute;
                     bottom: 20%;
                     right: 3%;
                     width: 7%;
+                    animation-name: arrowMoving;
+                    animation-duration: 1.2s;
+                    animation-iteration-count: infinite;
                 }
                 .pic {
                     width: 100%;
@@ -1144,6 +1191,17 @@ $delays: (
                         right: 6%;
                     }
                 }
+            }
+        }
+        @keyframes arrowMoving {
+            0% {
+                transform: translateX(0px);
+            }
+            40% {
+                transform: translateX(10px);
+            }
+            100% {
+                transform: translateX(0px);
             }
         }
     }

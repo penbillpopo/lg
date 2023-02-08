@@ -167,6 +167,11 @@
                         :src="require(`@/assets/img/index1-2/ng1.png`)"
                         alt=""
                     />
+                    <img
+                        class="arrow"
+                        :src="require(`@/assets/img/index1-2/arrow2.png`)"
+                        alt=""
+                    />
                 </div>
                 <div
                     class="col25 reveal-bottom-400 pic-box"
@@ -184,6 +189,11 @@
                     <img
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng2.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="arrow"
+                        :src="require(`@/assets/img/index1-2/arrow2.png`)"
                         alt=""
                     />
                 </div>
@@ -205,6 +215,11 @@
                         :src="require(`@/assets/img/index1-2/ng3.png`)"
                         alt=""
                     />
+                    <img
+                        class="arrow"
+                        :src="require(`@/assets/img/index1-2/arrow2.png`)"
+                        alt=""
+                    />
                 </div>
                 <div
                     class="col25 reveal-bottom-1200 pic-box"
@@ -222,6 +237,11 @@
                     <img
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng4.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="arrow"
+                        :src="require(`@/assets/img/index1-2/arrow2.png`)"
                         alt=""
                     />
                 </div>
@@ -282,7 +302,6 @@
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng2.png`)"
                         alt=""
-                        @click="lightBoxOpen(true)"
                     />
                     <img
                         class="arrow"
@@ -307,7 +326,6 @@
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng3.png`)"
                         alt=""
-                        @click="lightBoxOpen(true)"
                     />
                     <img
                         class="arrow"
@@ -332,7 +350,6 @@
                         class="btn"
                         :src="require(`@/assets/img/index1-2/ng4.png`)"
                         alt=""
-                        @click="lightBoxOpen(true)"
                     />
                     <img
                         class="arrow"
@@ -398,11 +415,7 @@
                                         "
                                         alt=""
                                     />
-                                    <router-link
-                                        to="/"
-                                        class="option"
-                                        @click.native="reload()"
-                                    >
+                                    <button @click="section3LightBoxClick()">
                                         <img
                                             class="btn"
                                             :src="
@@ -410,7 +423,7 @@
                                             "
                                             alt=""
                                         />
-                                    </router-link>
+                                    </button>
                                 </swiper-slide>
                                 <div
                                     class="swiper-button-prev"
@@ -562,14 +575,14 @@
                             />
                         </div>
                         <img
-                            class="text-R-1 reveal-right-1500"
+                            class="text-R-1 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-5/elements/text-R-1.png`)
                             "
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1500"
+                            class="text-R-2 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-5/elements/text-R-2.png`)
                             "
@@ -632,14 +645,14 @@
                             />
                         </div>
                         <img
-                            class="text-R-1 reveal-right-1500"
+                            class="text-R-1 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-5/elements/text-R-1.png`)
                             "
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1500"
+                            class="text-R-2 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-5/elements/text-R-2.png`)
                             "
@@ -712,14 +725,14 @@
                             />
                         </div>
                         <img
-                            class="text-R-1 reveal-right-1500"
+                            class="text-R-1 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-6/elements/text-R-1.png`)
                             "
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1500"
+                            class="text-R-2 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-6/elements/text-R-2.png`)
                             "
@@ -789,14 +802,14 @@
                             />
                         </div>
                         <img
-                            class="text-R-1 reveal-right-1500"
+                            class="text-R-1 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-6/elements/text-R-1.png`)
                             "
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1500"
+                            class="text-R-2 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-6/elements/text-R-2.png`)
                             "
@@ -876,14 +889,14 @@
                             />
                         </div>
                         <img
-                            class="text-R-1 reveal-right-1500"
+                            class="text-R-1 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-7/elements/text-R-1.png`)
                             "
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1500"
+                            class="text-R-2 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-7/elements/text-R-2.png`)
                             "
@@ -951,14 +964,14 @@
                             />
                         </div>
                         <img
-                            class="text-R-1 reveal-right-1500"
+                            class="text-R-1 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-7/elements/text-R-1.png`)
                             "
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1500"
+                            class="text-R-2 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-7/elements/text-R-2.png`)
                             "
@@ -1036,14 +1049,14 @@
                             />
                         </div>
                         <img
-                            class="text-R-1 reveal-right-1500"
+                            class="text-R-1 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-8/elements/text-R-1.png`)
                             "
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1500"
+                            class="text-R-2 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-8/elements/text-R-2.png`)
                             "
@@ -1113,14 +1126,14 @@
                             />
                         </div>
                         <img
-                            class="text-R-1 reveal-right-1500"
+                            class="text-R-1 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-8/elements/text-R-1.png`)
                             "
                             alt=""
                         />
                         <img
-                            class="text-R-2 reveal-right-1500"
+                            class="text-R-2 reveal-right-1200"
                             :src="
                                 require(`@/assets/img/index1-8/elements/text-R-2.png`)
                             "
@@ -1155,13 +1168,19 @@
         <div class="section10" ref="video">
             <div class="bg">
                 <div class="video-box">
+                    <img
+                        class="title reveal-left-300"
+                        :src="require(`@/assets/img/index1-9/title.png`)"
+                        alt=""
+                    />
                     <a
                         class="video"
                         href="https://www.youtube.com/watch?v=WviQZvbizGQ"
                         data-fancybox
+                        ref="video-1"
                     >
                         <div
-                            class="pic reveal-left-300"
+                            class="pic reveal-left-600"
                             :style="{
                                 'background-image':
                                     'url(' +
@@ -1169,13 +1188,6 @@
                                     ')',
                             }"
                         >
-                            <img
-                                class="title"
-                                :src="
-                                    require(`@/assets/img/index1-9/title.png`)
-                                "
-                                alt=""
-                            />
                             <img
                                 class="play-btn"
                                 :src="
@@ -1191,8 +1203,43 @@
                             />
                         </div>
                     </a>
+                    <a
+                        class="video"
+                        href="https://youtu.be/7YWjWfyM_9c"
+                        data-fancybox
+                        ref="video-2"
+                    >
+                        <div
+                            class="pic reveal-left-900"
+                            :style="{
+                                'background-image':
+                                    'url(' +
+                                    require(`@/assets/img/index1-9/video_1.png`) +
+                                    ')',
+                            }"
+                        >
+                            <img
+                                class="play-btn"
+                                :src="
+                                    require(`@/assets/img/index1-9/playBtn.png`)
+                                "
+                            />
+                            <img
+                                class="text t2"
+                                :src="
+                                    require(`@/assets/img/index1-9/txt_3.png`)
+                                "
+                                alt=""
+                            />
+                        </div>
+                    </a>
                 </div>
             </div>
+            <img
+                class="click-btn"
+                ref="video-btn-2"
+                :src="require(`@/assets/img/index1-9/clickBtn.png`)"
+            />
         </div>
     </div>
 </template>
@@ -1273,6 +1320,7 @@ export default {
                 this.sectionScroll();
             }, 200);
         });
+        this.initVideoAnime();
     },
     methods: {
         changeSwiperIndex() {
@@ -1345,6 +1393,26 @@ export default {
         reload() {
             window.history.go(-1);
             window.location.reload();
+        },
+        initVideoAnime() {
+            const videoBtns = [
+                this.$refs["video-btn-1"],
+                this.$refs["video-btn-2"],
+            ];
+            this.scrollToSection(10);
+            for (let i = 0; i < videoBtns.length; i++) {
+                const videoBtn = videoBtns[i];
+                document.addEventListener(
+                    "mousemove",
+                    function (e) {
+                        if (videoBtn) {
+                            videoBtn.style.left = `${e.clientX}px`;
+                            videoBtn.style.top = `${e.clientY}px`;
+                        }
+                    },
+                    false
+                );
+            }
         },
     },
     filters: {},
