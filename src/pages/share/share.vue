@@ -751,22 +751,17 @@ export default {
                             slideShadows: false,
                         },
                     },
-                    400: {
+                    0: {
                         slidesPerView: 1.5,
                         coverflowEffect: {
                             rotate: 0,
-                            stretch: 80,
-                            depth: 60,
+                            stretch: 30,
+                            depth: 70,
                             modifier: 1,
-                            scale: 0.45,
+                            scale: 0.6,
                             slideShadows: false,
                         },
                         spaceBetween: 0,
-                    },
-                    0: {
-                        coverflowEffect: {
-                            stretch: 60,
-                        },
                     },
                 },
             },
