@@ -1285,11 +1285,10 @@ export default {
             tempScrollOffset: "",
             isScrollStop: false,
             routeNameColumn: {
-                home: 2,
-                ng4: 3,
-                product: 5,
-                innovation: 7,
-                video: 17,
+                home: 0,
+                product: 2,
+                innovation: 3,
+                video: 9,
             },
             hash: this.$route.hash,
         };

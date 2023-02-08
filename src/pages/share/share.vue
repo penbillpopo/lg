@@ -20,12 +20,6 @@
                         alt=""
                     />
                 </button>
-                <button class="floating_btn" @click="lightBoxIntroOpen(true)">
-                    <img
-                        :src="require(`@/assets/img/index2-1/floating_btn.png`)"
-                        alt=""
-                    />
-                </button>
                 <button
                     class="share-btn-pc hover"
                     @click="lightBoxIntroOpen(true)"
@@ -42,6 +36,12 @@
                 >
                     <img
                         :src="require(`@/assets/img/index2-1/btnM.png`)"
+                        alt=""
+                    />
+                </button>
+                <button class="floating_btn" @click="lightBoxApplyStep2Open()">
+                    <img
+                        :src="require(`@/assets/img/index2-1/floating_btn.png`)"
                         alt=""
                     />
                 </button>
@@ -1049,11 +1049,17 @@ export default {
                 xfbml: true,
                 version: "v11.0",
             });
-            FB.ui({
-                display: "popup",
-                method: "share",
-                href: "http://www.lgfiji.com.tw/",
-            });
+            // FB.ui({
+            //     display: "popup",
+            //     method: "share",
+            //     href: "http://www.lgfiji.com.tw/",
+            // });
+            let a = document.createElement("a");
+            a.setAttribute("style", "display: none");
+            a.href =
+                "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.lgfiji.com.tw%2F&amp;src=sdkpreparse";
+            a.target = "_blank";
+            a.click();
             this.apply.step = 4;
         },
         lightBoxIntroOpen(isOpen) {
@@ -1069,6 +1075,11 @@ export default {
                 this.applyContent = "";
             }
             this.resetApply();
+        },
+        lightBoxApplyStep2Open() {
+            this.lightBoxApplyShow = true;
+            this.disableScrollY(true);
+            this.onStep1Click();
         },
         disableScrollY(hide) {
             const html = document.getElementsByTagName("html")[0];

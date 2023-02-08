@@ -54,10 +54,19 @@ export default {
     methods: {
         menuOpen(open) {
             this.isMenuOpen = open;
+            this.disableScrollY(open);
         },
         reload() {
             window.history.go(-1);
             window.location.reload();
+        },
+        disableScrollY(hide) {
+            const html = document.getElementsByTagName("html")[0];
+            if (hide) {
+                html.style.overflowY = "hidden";
+            } else {
+                html.style.overflowY = "auto";
+            }
         },
     },
 };
