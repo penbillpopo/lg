@@ -56,8 +56,7 @@
         &:hover {
             background: #03e9f4;
             color: #fff;
-            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
         }
 
         /* 線條的共通設定 */
@@ -221,7 +220,7 @@
     .background {
         .buttons {
             position: absolute;
-            bottom: 7%;
+            bottom: 6%;
             .market-btn {
                 width: 30%;
             }
