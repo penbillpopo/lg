@@ -389,6 +389,7 @@
 .mobile {
     display: none;
 }
+
 .black-field {
     position: fixed;
     left: 0;
@@ -497,6 +498,7 @@
                     border-radius: 20px;
                     transition: transform 0.3s ease;
                     cursor: pointer;
+                    position: relative;
                     &:hover {
                         transform: scale(1.05);
                     }
@@ -504,6 +506,20 @@
                         background-color: rgb(125, 125, 125);
                         pointer-events: none;
                         cursor: default;
+                    }
+                    .fb-share-button {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        z-index: 10;
+                        top: 0;
+                        left: 0;
+                        a {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
                 .step1 {
