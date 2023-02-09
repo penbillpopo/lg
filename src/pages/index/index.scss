@@ -58,10 +58,6 @@
     }
 }
 .animate-5,
-.animate-6,
-.animate-7,
-.animate-8,
-.animate-9,
 .market {
     :deep {
         .nav {
@@ -72,6 +68,26 @@
             }
             .title {
                 color: #fff;
+            }
+        }
+    }
+}
+.animate-6,
+.animate-7,
+.animate-8,
+.animate-9,
+.market {
+    :deep {
+        @media screen and (max-width: 1023px) {
+            .nav {
+                .hamburger {
+                    .line {
+                        background-color: #fff;
+                    }
+                }
+                .title {
+                    color: #fff;
+                }
             }
         }
     }
@@ -386,7 +402,7 @@
         position: absolute;
         width: 65%;
         transform: translate(-50%, -50%);
-        top: 62%;
+        top: 58%;
         left: 43%;
         display: flex;
         .title {
@@ -885,7 +901,7 @@ $delays: (
             display: flex;
             justify-content: center;
             padding-top: 1%;
-            margin-left: 15%;
+            margin-left: calc(15% - 9px);
             width: 62%;
             a {
                 position: relative;

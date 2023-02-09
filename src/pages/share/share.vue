@@ -765,11 +765,23 @@ export default {
                             slideShadows: false,
                         },
                     },
+                    400: {
+                        slidesPerView: 1.5,
+                        coverflowEffect: {
+                            rotate: 0,
+                            stretch: 70,
+                            depth: 70,
+                            modifier: 1,
+                            scale: 0.6,
+                            slideShadows: false,
+                        },
+                        spaceBetween: 0,
+                    },
                     0: {
                         slidesPerView: 1.5,
                         coverflowEffect: {
                             rotate: 0,
-                            stretch: 30,
+                            stretch: 55,
                             depth: 70,
                             modifier: 1,
                             scale: 0.6,
@@ -993,6 +1005,7 @@ export default {
             }
         });
         window.addEventListener("resize", this.marquee(".marquee", 0.3));
+        this.disableScrollY(false);
     },
     watch: {
         "apply.data": {
