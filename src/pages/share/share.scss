@@ -17,14 +17,14 @@
     .floating_btn {
         position: fixed;
         bottom: 50%;
-        left: 82%;
-        width: 100rem;
+        left: 78%;
+        width: 10%;
         z-index: 11;
         animation-name: shaking;
         animation-duration: 2s;
         animation-iteration-count: infinite;
         img {
-            width: 10%;
+            width: 90%;
             transition: all ease 0.3s;
         }
         :hover {
@@ -151,7 +151,7 @@
                         position: relative;
                     }
                     .text::before {
-                        content: "";
+                        content: '';
                         height: calc(100% - 24px);
                         float: right;
                     }
@@ -170,7 +170,7 @@
                             color: #2647a4;
                         }
                         &::before {
-                            content: "...";
+                            content: '...';
                             position: absolute;
                             left: -5px;
                             color: #333;
