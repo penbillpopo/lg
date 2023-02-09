@@ -134,12 +134,36 @@
                     margin-bottom: 5%;
                     @include textdot(1);
                 }
-                .text {
-                    font-size: 16px;
-                    @include textdot(2);
-                    font-weight: 400;
-                    margin-bottom: 5%;
-                    line-height: 1.8;
+
+                .wrapper {
+                    display: flex;
+                    width: 100%;
+                    overflow: hidden;
+                    .text {
+                        font-size: 16px;
+                        @include textdot(2);
+                        font-weight: 400;
+                        margin-bottom: 5%;
+                        line-height: 1.8;
+                    }
+                    .text::before {
+                        content: "";
+                        height: calc(100% - 24px);
+                        float: right;
+                    }
+                    .btn {
+                        float: right;
+                        clear: both;
+                        font-size: 16px;
+                        padding: 0 8px;
+                        line-height: 24px;
+                        color: #646464;
+                        cursor: pointer;
+                        border: 0;
+                        &:hover {
+                            color: #2647a4;
+                        }
+                    }
                 }
                 .name {
                     font-size: 16px;
@@ -189,6 +213,15 @@
                         font-size: 15px;
                         margin-bottom: 10px;
                     }
+                    .wrapper {
+                        .text {
+                            font-size: 15px;
+                            margin-bottom: 10px;
+                        }
+                        .btn {
+                            font-size: 15px;
+                        }
+                    }
                     .name {
                         font-size: 15px;
                         margin-bottom: 10px;
@@ -212,9 +245,14 @@
                         font-size: 18px;
                         margin-bottom: 7px;
                     }
-                    .text {
-                        font-size: 14px;
-                        margin-bottom: 7px;
+                    .wrapper {
+                        .text {
+                            font-size: 14px;
+                            margin-bottom: 7px;
+                        }
+                        .btn {
+                            font-size: 14px;
+                        }
                     }
                     .name {
                         font-size: 14px;
@@ -227,15 +265,17 @@
             .frame {
                 .content {
                     .title {
-                        font-size: 14px;
+                        font-size: 16px;
                         margin-bottom: 5px;
                     }
-                    .text {
-                        font-size: 12px;
-                        margin-bottom: 5px;
+                    .wrapper {
+                        .text {
+                            margin-bottom: 5px;
+                        }
+                        .btn {
+                        }
                     }
                     .name {
-                        font-size: 12px;
                         margin-bottom: 5px;
                     }
                 }
