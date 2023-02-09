@@ -98,9 +98,23 @@
                                 />
                                 <div class="content">
                                     <h1 class="title">{{ item.title }}</h1>
-                                    <p class="text">
-                                        {{ item.content }}
-                                    </p>
+
+                                    <div class="wrapper">
+                                        <div class="text">
+                                            <button
+                                                class="btn"
+                                                @click="
+                                                    lightBoxApplyOpen(
+                                                        true,
+                                                        item.content
+                                                    )
+                                                "
+                                            >
+                                                顯示更多
+                                            </button>
+                                            {{ item.content }}
+                                        </div>
+                                    </div>
                                     <p class="name">{{ item.name }}</p>
                                     <button
                                         class="fb-btn"

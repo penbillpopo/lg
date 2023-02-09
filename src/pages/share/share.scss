@@ -128,19 +128,57 @@
                 transform: translate(-50%, -50%);
                 width: 65%;
                 .title {
-                    font-size: 24px;
+                    font-size: 22px;
                     font-weight: 400;
                     color: #2647a4;
                     margin-bottom: 5%;
                     @include textdot(1);
                 }
-                .text {
-                    font-size: 16px;
-                    @include textdot(2);
-                    font-weight: 400;
-                    margin-bottom: 5%;
-                    line-height: 1.8;
+
+                .wrapper {
+                    display: flex;
+                    width: 100%;
+                    overflow: hidden;
+                    .text {
+                        font-size: 18px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-align: justify;
+                        font-weight: 400;
+                        margin-bottom: 5%;
+                        line-height: 1.8;
+                        max-height: 5.4em;
+                        position: relative;
+                    }
+                    .text::before {
+                        content: "";
+                        height: calc(100% - 24px);
+                        float: right;
+                    }
+                    .btn {
+                        float: right;
+                        clear: both;
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-left: 20px;
+                        transform: translateY(-2px);
+                        color: #646464;
+                        cursor: pointer;
+                        border: 0;
+                        position: relative;
+                        &:hover {
+                            color: #2647a4;
+                        }
+                        &::before {
+                            content: "...";
+                            position: absolute;
+                            left: -5px;
+                            color: #333;
+                            transform: translateX(-100%);
+                        }
+                    }
                 }
+
                 .name {
                     font-size: 16px;
                     color: #3655aa;
@@ -189,6 +227,15 @@
                         font-size: 15px;
                         margin-bottom: 10px;
                     }
+                    .wrapper {
+                        .text {
+                            font-size: 15px;
+                            margin-bottom: 10px;
+                        }
+                        .btn {
+                            font-size: 15px;
+                        }
+                    }
                     .name {
                         font-size: 15px;
                         margin-bottom: 10px;
@@ -212,9 +259,14 @@
                         font-size: 18px;
                         margin-bottom: 7px;
                     }
-                    .text {
-                        font-size: 14px;
-                        margin-bottom: 7px;
+                    .wrapper {
+                        .text {
+                            font-size: 14px;
+                            margin-bottom: 7px;
+                        }
+                        .btn {
+                            font-size: 14px;
+                        }
                     }
                     .name {
                         font-size: 14px;
@@ -227,15 +279,17 @@
             .frame {
                 .content {
                     .title {
-                        font-size: 14px;
+                        font-size: 16px;
                         margin-bottom: 5px;
                     }
-                    .text {
-                        font-size: 12px;
-                        margin-bottom: 5px;
+                    .wrapper {
+                        .text {
+                            margin-bottom: 5px;
+                        }
+                        .btn {
+                        }
                     }
                     .name {
-                        font-size: 12px;
                         margin-bottom: 5px;
                     }
                 }
