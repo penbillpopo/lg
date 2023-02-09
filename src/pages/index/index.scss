@@ -58,10 +58,6 @@
     }
 }
 .animate-5,
-.animate-6,
-.animate-7,
-.animate-8,
-.animate-9,
 .market {
     :deep {
         .nav {
@@ -72,6 +68,26 @@
             }
             .title {
                 color: #fff;
+            }
+        }
+    }
+}
+.animate-6,
+.animate-7,
+.animate-8,
+.animate-9,
+.market {
+    :deep {
+        @media screen and (max-width: 1023px) {
+            .nav {
+                .hamburger {
+                    .line {
+                        background-color: #fff;
+                    }
+                }
+                .title {
+                    color: #fff;
+                }
             }
         }
     }
@@ -124,6 +140,7 @@
         justify-content: center;
         .frame {
             width: 80%;
+            margin-bottom: 8%; //為了閃過scroll
         }
         .title-box {
             display: flex;
@@ -386,7 +403,7 @@
         position: absolute;
         width: 65%;
         transform: translate(-50%, -50%);
-        top: 62%;
+        top: 58%;
         left: 43%;
         display: flex;
         .title {
@@ -885,7 +902,7 @@ $delays: (
             display: flex;
             justify-content: center;
             padding-top: 1%;
-            margin-left: 15%;
+            margin-left: calc(15% - 9px);
             width: 62%;
             a {
                 position: relative;
@@ -1080,7 +1097,7 @@ $delays: (
             }
             .btn {
                 position: absolute;
-                bottom: 30px;
+                bottom: 130px;
                 left: 50%;
                 transform: translateX(-50%);
                 width: 60%;
@@ -1102,16 +1119,39 @@ $delays: (
                     .btn {
                         transform: scale(1.05) translateX(-50%);
                     }
+                    .ng-title {
+                        transform: scale(1.05);
+                    }
                 }
-                .arrow {
+                .title-arrow {
                     position: absolute;
-                    bottom: 3.2%;
-                    right: 10%;
-                    width: 6%;
-                    animation-name: arrowMoving;
-                    animation-duration: 1.2s;
-                    animation-iteration-count: infinite;
+                    bottom: 8%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-left: 5%;
+                    .ng-title {
+                        width: 60%;
+                        transition: all ease 0.3s;
+                    }
+                    .arrow {
+                        width: 5%;
+                        animation-name: arrowMoving;
+                        animation-duration: 1.2s;
+                        animation-iteration-count: infinite;
+                    }
                 }
+
+                // .arrow {
+                //     position: absolute;
+                //     bottom: 3.2%;
+                //     right: 10%;
+                //     width: 6%;
+                //     animation-name: arrowMoving;
+                //     animation-duration: 1.2s;
+                //     animation-iteration-count: infinite;
+                // }
                 .pic {
                     width: 100%;
                     height: 100%;

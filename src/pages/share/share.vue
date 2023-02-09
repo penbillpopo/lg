@@ -668,6 +668,20 @@
                                     @click="onStep3Click()"
                                 >
                                     下一步抽大獎
+                                    <div
+                                        v-if="validate"
+                                        class="fb-share-button"
+                                        data-href="http://www.lgfiji.com.tw/"
+                                        data-layout="button_count"
+                                        data-size="large"
+                                    >
+                                        <a
+                                            target="_blank"
+                                            href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.lgfiji.com.tw%2F&amp;src=sdkpreparse"
+                                            class="fb-xfbml-parse-ignore"
+                                            >分享</a
+                                        >
+                                    </div>
                                 </button>
                             </div>
                             <div class="step4" v-show="apply.step === 4">
@@ -751,11 +765,23 @@ export default {
                             slideShadows: false,
                         },
                     },
+                    400: {
+                        slidesPerView: 1.5,
+                        coverflowEffect: {
+                            rotate: 0,
+                            stretch: 70,
+                            depth: 70,
+                            modifier: 1,
+                            scale: 0.6,
+                            slideShadows: false,
+                        },
+                        spaceBetween: 0,
+                    },
                     0: {
                         slidesPerView: 1.5,
                         coverflowEffect: {
                             rotate: 0,
-                            stretch: 30,
+                            stretch: 55,
                             depth: 70,
                             modifier: 1,
                             scale: 0.6,
@@ -951,6 +977,7 @@ export default {
                     },
                 },
             },
+            validate: false,
         };
     },
     created() {
@@ -978,6 +1005,15 @@ export default {
             }
         });
         window.addEventListener("resize", this.marquee(".marquee", 0.3));
+        this.disableScrollY(false);
+    },
+    watch: {
+        "apply.data": {
+            handler: function () {
+                this.updateValidate();
+            },
+            deep: true,
+        },
     },
     methods: {
         marquee(selector, speed) {
@@ -1013,18 +1049,7 @@ export default {
             this.apply.step = 3;
         },
         onStep3Click() {
-            let validate = true;
-            let alertTxt = "";
-            let regPhone = /^09[0-9]{8}$/;
-            let regEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-            if (!regPhone.test(this.apply.data.phone)) {
-                validate = false;
-                alertTxt = "手機格式錯誤";
-            } else if (!regEmail.test(this.apply.data.email)) {
-                validate = false;
-                alertTxt = "email格式錯誤";
-            }
-            if (validate) {
+            if (this.validate) {
                 this.axios
                     .post("https://2908.api.gosu.bar/customize/addLgMember", {
                         name: this.apply.data.name,
@@ -1032,15 +1057,34 @@ export default {
                         phone: this.apply.data.phone,
                     })
                     .then(async () => {
-                        this.shareFb();
+                        this.apply.step = 4;
                     })
                     .catch((error) => {
-                        this.shareFb();
+                        this.apply.step = 4;
                         console.error(error);
                     });
             } else {
+                let alertTxt = "";
+                let regPhone = /^09[0-9]{8}$/;
+                let regEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                if (!regPhone.test(this.apply.data.phone)) {
+                    alertTxt = "手機格式錯誤";
+                } else if (!regEmail.test(this.apply.data.email)) {
+                    alertTxt = "email格式錯誤";
+                }
                 alert(alertTxt);
             }
+        },
+        updateValidate() {
+            let validate = true;
+            let regPhone = /^09[0-9]{8}$/;
+            let regEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            if (!regPhone.test(this.apply.data.phone)) {
+                validate = false;
+            } else if (!regEmail.test(this.apply.data.email)) {
+                validate = false;
+            }
+            this.validate = validate;
         },
         async shareFb() {
             await FB.init({

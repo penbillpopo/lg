@@ -164,14 +164,21 @@
                     ></div>
                     <img
                         class="btn"
-                        :src="require(`@/assets/img/index1-2/ng1.png`)"
+                        :src="require(`@/assets/img/index1-2/ng1-1.png`)"
                         alt=""
                     />
-                    <img
-                        class="arrow"
-                        :src="require(`@/assets/img/index1-2/arrow2.png`)"
-                        alt=""
-                    />
+                    <div class="title-arrow">
+                        <img
+                            class="ng-title"
+                            :src="require(`@/assets/img/index1-2/ng1-2.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="arrow"
+                            :src="require(`@/assets/img/index1-2/arrow2.png`)"
+                            alt=""
+                        />
+                    </div>
                 </div>
                 <div
                     class="col25 reveal-bottom-400 pic-box"
@@ -188,14 +195,21 @@
                     ></div>
                     <img
                         class="btn"
-                        :src="require(`@/assets/img/index1-2/ng2.png`)"
+                        :src="require(`@/assets/img/index1-2/ng2-1.png`)"
                         alt=""
                     />
-                    <img
-                        class="arrow"
-                        :src="require(`@/assets/img/index1-2/arrow2.png`)"
-                        alt=""
-                    />
+                    <div class="title-arrow">
+                        <img
+                            class="ng-title"
+                            :src="require(`@/assets/img/index1-2/ng2-2.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="arrow"
+                            :src="require(`@/assets/img/index1-2/arrow2.png`)"
+                            alt=""
+                        />
+                    </div>
                 </div>
                 <div
                     class="col25 reveal-bottom-800 pic-box"
@@ -212,14 +226,21 @@
                     ></div>
                     <img
                         class="btn"
-                        :src="require(`@/assets/img/index1-2/ng3.png`)"
+                        :src="require(`@/assets/img/index1-2/ng3-1.png`)"
                         alt=""
                     />
-                    <img
-                        class="arrow"
-                        :src="require(`@/assets/img/index1-2/arrow2.png`)"
-                        alt=""
-                    />
+                    <div class="title-arrow">
+                        <img
+                            class="ng-title"
+                            :src="require(`@/assets/img/index1-2/ng3-2.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="arrow"
+                            :src="require(`@/assets/img/index1-2/arrow2.png`)"
+                            alt=""
+                        />
+                    </div>
                 </div>
                 <div
                     class="col25 reveal-bottom-1200 pic-box"
@@ -236,14 +257,21 @@
                     ></div>
                     <img
                         class="btn"
-                        :src="require(`@/assets/img/index1-2/ng4.png`)"
+                        :src="require(`@/assets/img/index1-2/ng4-1.png`)"
                         alt=""
                     />
-                    <img
-                        class="arrow"
-                        :src="require(`@/assets/img/index1-2/arrow2.png`)"
-                        alt=""
-                    />
+                    <div class="title-arrow">
+                        <img
+                            class="ng-title"
+                            :src="require(`@/assets/img/index1-2/ng4-2.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="arrow"
+                            :src="require(`@/assets/img/index1-2/arrow2.png`)"
+                            alt=""
+                        />
+                    </div>
                 </div>
             </div>
             <div class="flex-box mobile-flex">
@@ -1320,6 +1348,7 @@ export default {
             }, 200);
         });
         this.initVideoAnime();
+        this.disableScrollY(false);
     },
     methods: {
         changeSwiperIndex() {
@@ -1379,6 +1408,7 @@ export default {
         },
         section3LightBoxClick() {
             this.lightBoxShow = false;
+            this.disableScrollY(false);
             this.scrollToSection(2);
         },
         disableScrollY(hide) {
