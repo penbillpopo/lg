@@ -403,7 +403,7 @@
         position: absolute;
         width: 65%;
         transform: translate(-50%, -50%);
-        top: 58%;
+        top: 55.5%;
         left: 43%;
         display: flex;
         .title {
@@ -614,6 +614,9 @@
                     align-items: center;
                     img {
                         width: 77%;
+                    }
+                    img.last-img {
+                        width: 60%;
                     }
                 }
                 .swiper-button-prev {
@@ -1126,6 +1129,7 @@ $delays: (
                 .title-arrow {
                     position: absolute;
                     bottom: 8%;
+                    left: 4%;
                     width: 100%;
                     display: flex;
                     justify-content: space-evenly;
