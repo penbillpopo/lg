@@ -1218,12 +1218,6 @@
                             }"
                         >
                             <img
-                                class="play-btn"
-                                :src="
-                                    require(`@/assets/img/index1-9/playBtn.png`)
-                                "
-                            />
-                            <img
                                 class="text"
                                 :src="
                                     require(`@/assets/img/index1-9/txt_1.png`)
@@ -1248,12 +1242,6 @@
                             }"
                         >
                             <img
-                                class="play-btn"
-                                :src="
-                                    require(`@/assets/img/index1-9/playBtn.png`)
-                                "
-                            />
-                            <img
                                 class="text t2"
                                 :src="
                                     require(`@/assets/img/index1-9/txt_3.png`)
@@ -1266,8 +1254,15 @@
             </div>
             <img
                 class="click-btn"
+                :class="{ active: !playBtnShow }"
                 ref="video-btn-1"
                 :src="require(`@/assets/img/index1-9/clickBtn.png`)"
+            />
+            <img
+                class="play-btn"
+                :class="{ active: playBtnShow }"
+                ref="video-btn-2"
+                :src="require(`@/assets/img/index1-9/playBtn.png`)"
             />
         </div>
     </div>
@@ -1320,6 +1315,7 @@ export default {
                 video: 9,
             },
             hash: this.$route.hash,
+            playBtnShow: false,
         };
     },
     created() {},
@@ -1425,8 +1421,44 @@ export default {
             window.location.reload();
         },
         initVideoAnime() {
-            const videoBtns = [this.$refs["video-btn-1"]];
+            const videos = [this.$refs["video-1"], this.$refs["video-2"]];
+            const videoBtns = [
+                this.$refs["video-btn-1"],
+                this.$refs["video-btn-2"],
+            ];
             this.scrollToSection(10);
+            const _this = this;
+            for (let i = 0; i < videos.length; i++) {
+                const video = videos[i];
+                video.addEventListener(
+                    "mouseenter",
+                    function () {
+                        _this.playBtnShow = true;
+                    },
+                    false
+                );
+                video.addEventListener(
+                    "mouseover",
+                    function () {
+                        _this.playBtnShow = true;
+                    },
+                    false
+                );
+                video.addEventListener(
+                    "mouseleave",
+                    function () {
+                        _this.playBtnShow = false;
+                    },
+                    false
+                );
+                video.addEventListener(
+                    "mouseout",
+                    function () {
+                        _this.playBtnShow = false;
+                    },
+                    false
+                );
+            }
             for (let i = 0; i < videoBtns.length; i++) {
                 const videoBtn = videoBtns[i];
                 document.addEventListener(

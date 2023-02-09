@@ -384,21 +384,23 @@
     .bg {
         background-image: url(@/assets/img/index1-9/bg.png);
     }
-    .click-btn {
+    .click-btn,
+    .play-btn {
         position: fixed;
         width: 65px;
         height: 80px;
         top: 0;
         left: 0;
         transform: translate(-50%, -50%);
-        opacity: 1;
+        opacity: 0;
         transition: opacity 0.6s ease;
         cursor: pointer;
         pointer-events: none;
-        &.hover {
+        &.active {
             opacity: 1;
         }
     }
+
     .video-box {
         position: absolute;
         width: 65%;
@@ -416,7 +418,6 @@
             width: 70%;
             margin-right: 20px;
             position: relative;
-
             .pic {
                 width: 100%;
                 @extend %background_100;
@@ -424,6 +425,8 @@
                 margin-bottom: 10px;
                 position: relative;
                 transition: background 0.3s ease;
+                cursor: pointer;
+
                 .text {
                     width: 60%;
                     position: absolute;
@@ -432,22 +435,8 @@
                         width: 72%;
                     }
                 }
-                .play-btn {
-                    position: absolute;
-                    width: 100px;
-                    height: 100px;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    opacity: 0;
-                    transition: opacity 0.6s ease;
-                    cursor: pointer;
-                }
                 &:hover {
                     background-size: 120%;
-                    .play-btn {
-                        opacity: 1;
-                    }
                 }
             }
         }
