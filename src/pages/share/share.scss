@@ -123,9 +123,9 @@
             }
             .content {
                 position: absolute;
-                top: 13%;
+                top: 40%;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translate(-50%, -50%);
                 width: 65%;
                 .title {
                     font-size: 24px;
@@ -148,7 +148,7 @@
                     margin-bottom: 5%;
                 }
                 .fb-btn {
-                    width: 80%;
+                    width: 88%;
                     transition: transform 0.3s ease;
                     // &:hover {
                     //     transform: scale(1.05);
@@ -177,9 +177,10 @@
             top: 53%;
         }
         @media screen and (max-width: 768px) {
+            top: 52.5%;
             .frame {
                 .content {
-                    top: 13%;
+                    top: 42%;
                     .title {
                         font-size: 20px;
                         margin-bottom: 10px;
@@ -197,7 +198,7 @@
         }
         @media screen and (max-width: 480px) {
             width: 100%;
-            top: 51.4%;
+            top: 51.7%;
             .swiper-button-prev {
                 left: 10px;
             }
@@ -205,23 +206,19 @@
                 right: 10px;
             }
             .frame {
-                width: 95%;
+                width: 90%;
                 .content {
-                    top: 13%;
                     .title {
                         font-size: 18px;
-                        margin-bottom: 5px;
+                        margin-bottom: 7px;
                     }
                     .text {
                         font-size: 14px;
-                        margin-bottom: 5px;
+                        margin-bottom: 7px;
                     }
                     .name {
                         font-size: 14px;
-                        margin-bottom: 5px;
-                    }
-                    .fb-btn {
-                        padding-left: 10px;
+                        margin-bottom: 7px;
                     }
                 }
             }
@@ -229,18 +226,17 @@
         @media screen and (max-width: 380px) {
             .frame {
                 .content {
-                    top: 13%;
                     .title {
                         font-size: 14px;
-                        margin-bottom: 3px;
+                        margin-bottom: 5px;
                     }
                     .text {
                         font-size: 12px;
-                        margin-bottom: 3px;
+                        margin-bottom: 5px;
                     }
                     .name {
                         font-size: 12px;
-                        margin-bottom: 3px;
+                        margin-bottom: 5px;
                     }
                 }
             }
@@ -256,7 +252,7 @@
             margin: 0 10px;
         }
         @media screen and (max-width: 1023px) {
-            top: 73%;
+            top: 74%;
             transform: scale(1.4);
         }
     }
@@ -331,6 +327,7 @@
             top: 82%;
             left: 17%;
             width: 32%;
+            border-radius: 160px;
             img {
                 width: 100%;
                 transition: transform 0.3s ease;
@@ -341,16 +338,16 @@
         }
         @media screen and (max-width: 1023px) {
             .frame {
-                overflow: inherit;
-                position: initial;
-                width: auto;
-                img {
-                    width: 43%;
-                    left: calc(7% - 12.5px);
-                    &:hover {
-                        transform: scale(1);
-                    }
-                }
+                top: 89%;
+                width: 40%;
+                left: 8.5%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .frame {
+                top: 89%;
+                width: 44%;
+                left: 4.2%;
             }
         }
     }
@@ -361,6 +358,7 @@
             top: 82%;
             right: 17%;
             width: 32%;
+            border-radius: 160px;
             img {
                 width: 100%;
                 transition: transform 0.3s ease;
@@ -371,16 +369,16 @@
         }
         @media screen and (max-width: 1023px) {
             .frame {
-                overflow: inherit;
-                position: initial;
-                width: auto;
-                img {
-                    width: 43%;
-                    right: calc(7% - 12.5px);
-                    &:hover {
-                        transform: scale(1);
-                    }
-                }
+                top: 89%;
+                width: 40%;
+                right: 8.5%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .frame {
+                top: 89%;
+                width: 44%;
+                right: 4.2%;
             }
         }
     }
@@ -389,6 +387,7 @@
 .mobile {
     display: none;
 }
+
 .black-field {
     position: fixed;
     left: 0;
@@ -497,6 +496,7 @@
                     border-radius: 20px;
                     transition: transform 0.3s ease;
                     cursor: pointer;
+                    position: relative;
                     &:hover {
                         transform: scale(1.05);
                     }
@@ -504,6 +504,20 @@
                         background-color: rgb(125, 125, 125);
                         pointer-events: none;
                         cursor: default;
+                    }
+                    .fb-share-button {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        z-index: 10;
+                        top: 0;
+                        left: 0;
+                        a {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
                 .step1 {
@@ -881,24 +895,6 @@
             }
             &.btn4 {
                 display: none;
-            }
-        }
-
-        .image4 {
-            img {
-                position: absolute;
-                top: 88%;
-                left: 4%;
-                width: 45%;
-            }
-        }
-
-        .image5 {
-            img {
-                position: absolute;
-                top: 88%;
-                right: 4%;
-                width: 45%;
             }
         }
     }

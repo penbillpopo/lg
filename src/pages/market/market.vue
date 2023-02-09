@@ -95,7 +95,19 @@ export default {
         return {};
     },
     created() {},
-    methods: {},
+    mounted() {
+        this.disableScrollY(false);
+    },
+    methods: {
+        disableScrollY(hide) {
+            const html = document.getElementsByTagName("html")[0];
+            if (hide) {
+                html.style.overflowY = "hidden";
+            } else {
+                html.style.overflowY = "auto";
+            }
+        },
+    },
     filters: {},
 };
 </script>

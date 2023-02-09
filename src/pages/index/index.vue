@@ -677,6 +677,7 @@ export default {
             }, 200);
         });
         this.initVideoAnime();
+        this.disableScrollY(false);
     },
     methods: {
         changeSwiperIndex() {
