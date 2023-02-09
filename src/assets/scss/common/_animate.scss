@@ -1,0 +1,307 @@
+//top
+.reveal-top-300 {
+    animation-name: revealTop300;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-top-600 {
+    animation-name: revealTop600;
+    animation-duration: 1.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-top-1600 {
+    animation-name: revealTop1600;
+    animation-duration: 2.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes revealTop300 {
+    0% {
+        opacity: 0;
+    }
+    23% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes revealTop600 {
+    0% {
+        opacity: 0;
+    }
+    37% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes revealTop1600 {
+    0% {
+        opacity: 0;
+    }
+    61% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+//left
+.reveal-left-300 {
+    animation-name: revealLeft300;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-left-600 {
+    animation-name: revealLeft600;
+    animation-duration: 1.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-left-800 {
+    animation-name: revealLeft800;
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-left-900 {
+    animation-name: revealLeft900;
+    animation-duration: 1.9s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-left-1000 {
+    animation-name: revealLeft1000;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes revealLeft300 {
+    0% {
+        opacity: 0;
+    }
+    23% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes revealLeft600 {
+    0% {
+        opacity: 0;
+    }
+    37% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes revealLeft800 {
+    0% {
+        opacity: 0;
+    }
+    44% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes revealLeft900 {
+    0% {
+        opacity: 0;
+    }
+    47% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes revealLeft1000 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+//right
+.reveal-right-300 {
+    animation-name: revealRight300;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-right-600 {
+    animation-name: revealRight600;
+    animation-duration: 1.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-right-1200 {
+    animation-name: revealRight1200;
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-right-1500 {
+    animation-name: revealRight1500;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes revealRight300 {
+    0% {
+        opacity: 0;
+    }
+    23% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes revealRight600 {
+    0% {
+        opacity: 0;
+    }
+    37% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes revealRight1200 {
+    0% {
+        opacity: 0;
+    }
+    54% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes revealRight1500 {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+//bottom
+
+.reveal-bottom-0 {
+    animation-name: revealBottom0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-bottom-400 {
+    animation-name: revealBottom400;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-bottom-800 {
+    animation-name: revealBottom800;
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.reveal-bottom-1200 {
+    animation-name: revealBottom1200;
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes revealBottom0 {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes revealBottom400 {
+    0% {
+        opacity: 0;
+    }
+    28% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes revealBottom800 {
+    0% {
+        opacity: 0;
+    }
+    44% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes revealBottom1200 {
+    0% {
+        opacity: 0;
+    }
+    54% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

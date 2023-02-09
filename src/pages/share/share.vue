@@ -251,7 +251,7 @@
                 />
             </div>
 
-            <div class="black-field" v-show="lightBoxIntroShow">
+            <div class="black-field" v-if="lightBoxIntroShow">
                 <button class="close-btn" @click="lightBoxIntroOpen(false)">
                     <img
                         :src="
@@ -423,7 +423,7 @@
                     </div>
                 </div>
             </div>
-            <div class="black-field" v-show="lightBoxApplyShow">
+            <div class="black-field" v-if="lightBoxApplyShow">
                 <button class="close-btn" @click="lightBoxApplyOpen(false)">
                     <img
                         :src="
