@@ -138,4 +138,13 @@ export default [
     // require(`@/assets/img/index1-9/title.png`),
     // require(`@/assets/img/index1-9/playBtn.png`),
     // require(`@/assets/img/index1-9/txt_1.png`),
+    require(`@/assets/img/index2-1/index_2-1.png`),
+    require(`@/assets/img/index2-1/btn.png`),
+    require(`@/assets/img/index2-1/hover_btn.png`),
+    require(`@/assets/img/index2-1/btnM.png`),
+    require(`@/assets/img/index2-1/floating_btn.png`),
+    require(`@/assets/img/index2-1/award-text.png`),
+    require(`@/assets/img/index2-1/93.png`),
+    require(`@/assets/img/index2-1/95.png`),
+    require(`@/assets/img/index2-1/96.png`),
 ];
