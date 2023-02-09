@@ -128,7 +128,7 @@
                 transform: translate(-50%, -50%);
                 width: 65%;
                 .title {
-                    font-size: 24px;
+                    font-size: 22px;
                     font-weight: 400;
                     color: #2647a4;
                     margin-bottom: 5%;
@@ -140,11 +140,15 @@
                     width: 100%;
                     overflow: hidden;
                     .text {
-                        font-size: 16px;
-                        @include textdot(2);
+                        font-size: 18px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-align: justify;
                         font-weight: 400;
                         margin-bottom: 5%;
                         line-height: 1.8;
+                        max-height: 5.4em;
+                        position: relative;
                     }
                     .text::before {
                         content: "";
@@ -155,16 +159,26 @@
                         float: right;
                         clear: both;
                         font-size: 16px;
-                        padding: 0 8px;
                         line-height: 24px;
+                        margin-left: 20px;
+                        transform: translateY(-2px);
                         color: #646464;
                         cursor: pointer;
                         border: 0;
+                        position: relative;
                         &:hover {
                             color: #2647a4;
                         }
+                        &::before {
+                            content: "...";
+                            position: absolute;
+                            left: -5px;
+                            color: #333;
+                            transform: translateX(-100%);
+                        }
                     }
                 }
+
                 .name {
                     font-size: 16px;
                     color: #3655aa;
@@ -288,7 +302,7 @@
         top: 64%;
         display: flex;
         .image {
-            width: 30%;
+            width: 30vw;
             margin: 0 10px;
         }
         @media screen and (max-width: 1023px) {
@@ -368,6 +382,7 @@
             left: 17%;
             width: 32%;
             border-radius: 160px;
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
             img {
                 width: 100%;
                 transition: transform 0.3s ease;
@@ -399,6 +414,7 @@
             right: 17%;
             width: 32%;
             border-radius: 160px;
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
             img {
                 width: 100%;
                 transition: transform 0.3s ease;

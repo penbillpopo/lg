@@ -1408,6 +1408,7 @@ export default {
         },
         section3LightBoxClick() {
             this.lightBoxShow = false;
+            this.disableScrollY(false);
             this.scrollToSection(2);
         },
         disableScrollY(hide) {
