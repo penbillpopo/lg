@@ -248,7 +248,7 @@
         top: 64%;
         display: flex;
         .image {
-            width: 30%;
+            width: 30vw;
             margin: 0 10px;
         }
         @media screen and (max-width: 1023px) {
@@ -328,6 +328,7 @@
             left: 17%;
             width: 32%;
             border-radius: 160px;
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
             img {
                 width: 100%;
                 transition: transform 0.3s ease;
@@ -359,6 +360,7 @@
             right: 17%;
             width: 32%;
             border-radius: 160px;
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
             img {
                 width: 100%;
                 transition: transform 0.3s ease;
