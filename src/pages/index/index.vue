@@ -17,6 +17,17 @@
                             "
                             alt=""
                         />
+                        <div class="hover" @click.stop>
+                            <div class="row" @click="scrollToSection(2)">
+                                <p>產品特性</p>
+                            </div>
+                            <div class="row" @click="scrollToSection(6)">
+                                <p>建議用量</p>
+                            </div>
+                            <div class="row" @click="scrollToSection(7)">
+                                <p>使用說明</p>
+                            </div>
+                        </div>
                     </router-link>
                     <router-link
                         to="/share"

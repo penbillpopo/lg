@@ -1,31 +1,156 @@
 .background {
     width: 100%;
+    height: 100vh;
     position: relative;
     .background-img {
-        width: 100%;
+        width: 100vw;
+        height: 37vw;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        position: relative;
+        .logo {
+            position: absolute;
+            right: 54.8%;
+            bottom: 5%;
+            width: 12.5%;
+            transform: translateY(-50%);
+            padding-bottom: 0;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+            img {
+                width: 100%;
+            }
+
+            &:hover {
+                background: #03e9f4;
+                color: #fff;
+                box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+                    0 0 100px #03e9f4;
+            }
+
+            /* 線條的共通設定 */
+            span {
+                position: absolute;
+                display: block;
+            }
+
+            /* 上方左到右的動態 */
+            span:nth-child(1) {
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 3px;
+                background: linear-gradient(90deg, transparent, #03e9f4);
+                animation: btn-anim1 1s linear infinite;
+            }
+            @keyframes btn-anim1 {
+                0% {
+                    left: -100%;
+                }
+                50%,
+                100% {
+                    left: 100%;
+                }
+            }
+
+            /* 右側上到下的動態 */
+            span:nth-child(2) {
+                top: -100%;
+                right: 0;
+                width: 3px;
+                height: 100%;
+                background: linear-gradient(180deg, transparent, #03e9f4);
+                animation: btn-anim2 1s linear infinite;
+                animation-delay: 0.25s;
+            }
+            @keyframes btn-anim2 {
+                0% {
+                    top: -100%;
+                }
+                50%,
+                100% {
+                    top: 100%;
+                }
+            }
+
+            /* 下方右到左的動態 */
+            span:nth-child(3) {
+                bottom: 0;
+                right: -100%;
+                width: 100%;
+                height: 3px;
+                background: linear-gradient(270deg, transparent, #03e9f4);
+                animation: btn-anim3 1s linear infinite;
+                animation-delay: 0.5s;
+            }
+            @keyframes btn-anim3 {
+                0% {
+                    right: -100%;
+                }
+                50%,
+                100% {
+                    right: 100%;
+                }
+            }
+
+            /* 左方下到上的動態 */
+            span:nth-child(4) {
+                bottom: -100%;
+                left: 0;
+                width: 3px;
+                height: 100%;
+                background: linear-gradient(360deg, transparent, #03e9f4);
+                animation: btn-anim4 1s linear infinite;
+                animation-delay: 0.75s;
+            }
+            @keyframes btn-anim4 {
+                0% {
+                    bottom: -100%;
+                }
+                50%,
+                100% {
+                    bottom: 100%;
+                }
+            }
+        }
     }
     .buttons {
         width: 100%;
-        position: absolute;
-        bottom: 10%;
-        left: 0;
+        height: calc(100vh - 37vw);
         display: flex;
         justify-content: center;
-        .market-btn {
-            width: 10%;
-            margin: 0 5px;
-            transition: transform 0.5s ease;
-            &:hover {
-                transform: scale(1.05);
-            }
-            img {
-                width: 100%;
+        align-items: center;
+        position: relative;
+        .title {
+            position: absolute;
+            left: 50%;
+            top: 3%;
+            width: 13%;
+            transform: translateX(-50%);
+        }
+        .group {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .market-btn {
+                width: 10%;
+                margin: 0 5px;
+                transition: transform 0.5s ease;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                img {
+                    width: 100%;
+                }
             }
         }
     }
     .footer {
         position: fixed;
         bottom: 0;
+        left: 0;
         background: #0f1d3a;
         width: 100%;
         display: flex;
@@ -41,116 +166,6 @@
         }
     }
 
-    .logo {
-        position: absolute;
-        top: 54.8%;
-        right: 54.8%;
-        width: 12.5%;
-        padding-bottom: 0;
-        overflow: hidden;
-        transition: transform 0.5s ease;
-        img {
-            width: 100%;
-        }
-
-        &:hover {
-            background: #03e9f4;
-            color: #fff;
-            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
-        }
-
-        /* 線條的共通設定 */
-        span {
-            position: absolute;
-            display: block;
-        }
-
-        /* 上方左到右的動態 */
-        span:nth-child(1) {
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #03e9f4);
-            animation: btn-anim1 1s linear infinite;
-        }
-        @keyframes btn-anim1 {
-            0% {
-                left: -100%;
-            }
-            50%,
-            100% {
-                left: 100%;
-            }
-        }
-
-        /* 右側上到下的動態 */
-        span:nth-child(2) {
-            top: -100%;
-            right: 0;
-            width: 3px;
-            height: 100%;
-            background: linear-gradient(180deg, transparent, #03e9f4);
-            animation: btn-anim2 1s linear infinite;
-            animation-delay: 0.25s;
-        }
-        @keyframes btn-anim2 {
-            0% {
-                top: -100%;
-            }
-            50%,
-            100% {
-                top: 100%;
-            }
-        }
-
-        /* 下方右到左的動態 */
-        span:nth-child(3) {
-            bottom: 0;
-            right: -100%;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(270deg, transparent, #03e9f4);
-            animation: btn-anim3 1s linear infinite;
-            animation-delay: 0.5s;
-        }
-        @keyframes btn-anim3 {
-            0% {
-                right: -100%;
-            }
-            50%,
-            100% {
-                right: 100%;
-            }
-        }
-
-        /* 左方下到上的動態 */
-        span:nth-child(4) {
-            bottom: -100%;
-            left: 0;
-            width: 3px;
-            height: 100%;
-            background: linear-gradient(360deg, transparent, #03e9f4);
-            animation: btn-anim4 1s linear infinite;
-            animation-delay: 0.75s;
-        }
-        @keyframes btn-anim4 {
-            0% {
-                bottom: -100%;
-            }
-            50%,
-            100% {
-                bottom: 100%;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            top: 55.5%;
-            right: 57%;
-            width: 30%;
-            padding-bottom: 0%;
-        }
-    }
     @keyframes flashing {
         0% {
             opacity: 1;
@@ -195,9 +210,13 @@
 @media screen and (max-width: 1023px) {
     .background {
         .buttons {
-            bottom: 0%;
-            .market-btn {
-                width: 20%;
+            .title {
+                width: 23%;
+            }
+            .group {
+                .market-btn {
+                    width: 20%;
+                }
             }
         }
     }
@@ -207,11 +226,36 @@
         display: none;
     }
     .background {
+        .background-img {
+            height: 115vw;
+            position: relative;
+            .logo {
+                right: 57%;
+                bottom: 9%;
+                width: 30%;
+            }
+        }
+        .buttons {
+            height: calc(100vh - 115vw);
+            .title {
+                width: 35%;
+            }
+            .group {
+                flex-wrap: wrap-reverse;
+
+                .market-btn {
+                    width: 30%;
+                    margin-bottom: 8px;
+                }
+            }
+        }
         .footer {
             .footer-p {
                 display: block;
                 width: 50%;
             }
+        }
+        .logo {
         }
     }
     .pc {
@@ -222,14 +266,10 @@
     }
     .background {
         .buttons {
-            position: absolute;
-            bottom: 6%;
-            .market-btn {
-                width: 30%;
-            }
-            .btn1 {
-                position: absolute;
-                bottom: 120%;
+            .group {
+                .market-btn {
+                    width: 30%;
+                }
             }
         }
     }
