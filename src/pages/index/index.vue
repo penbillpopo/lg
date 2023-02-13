@@ -537,7 +537,7 @@
             </div>
             <button class="scroll-btn small" @click="scrollToSection(3)">
                 <img
-                    :src="require(`@/assets/img/index1-1/scroll.png`)"
+                    :src="require(`@/assets/img/index1-1/scroll-black.png`)"
                     alt=""
                 />
             </button>
@@ -562,7 +562,7 @@
             </div>
             <button class="scroll-btn small" @click="scrollToSection(4)">
                 <img
-                    :src="require(`@/assets/img/index1-1/scroll.png`)"
+                    :src="require(`@/assets/img/index1-1/scroll-black.png`)"
                     alt=""
                 />
             </button>
