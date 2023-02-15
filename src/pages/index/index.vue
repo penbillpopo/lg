@@ -1235,6 +1235,12 @@
                                 "
                                 alt=""
                             />
+                            <img
+                                class="play-btn-mobile"
+                                :src="
+                                    require(`@/assets/img/index1-9/playBtn-m.png`)
+                                "
+                            />
                         </div>
                     </a>
                     <a
@@ -1259,16 +1265,16 @@
                                 "
                                 alt=""
                             />
+                            <img
+                                class="play-btn-mobile"
+                                :src="
+                                    require(`@/assets/img/index1-9/playBtn-m.png`)
+                                "
+                            />
                         </div>
                     </a>
                 </div>
             </div>
-            <img
-                class="click-btn"
-                :class="{ active: !playBtnShow }"
-                ref="video-btn-1"
-                :src="require(`@/assets/img/index1-9/clickBtn.png`)"
-            />
             <img
                 class="play-btn"
                 :class="{ active: playBtnShow }"
@@ -1433,10 +1439,7 @@ export default {
         },
         initVideoAnime() {
             const videos = [this.$refs["video-1"], this.$refs["video-2"]];
-            const videoBtns = [
-                this.$refs["video-btn-1"],
-                this.$refs["video-btn-2"],
-            ];
+            const videoBtns = [this.$refs["video-btn-2"]];
             this.scrollToSection(10);
             const _this = this;
             for (let i = 0; i < videos.length; i++) {

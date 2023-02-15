@@ -387,8 +387,8 @@
     .click-btn,
     .play-btn {
         position: fixed;
-        width: 65px;
-        height: 80px;
+        width: 90px;
+        height: 110px;
         top: 0;
         left: 0;
         transform: translate(-50%, -50%);
@@ -435,6 +435,15 @@
                         width: 72%;
                     }
                 }
+                .play-btn-mobile {
+                    position: absolute;
+                    width: 80px;
+                    height: 80px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: none;
+                }
                 &:hover {
                     background-size: 120%;
                 }
@@ -462,8 +471,8 @@
                 width: 100%;
                 margin-bottom: 10%;
                 .pic {
-                    .play-btn {
-                        opacity: 1;
+                    .play-btn-mobile {
+                        display: block;
                     }
                 }
                 .text {
@@ -492,10 +501,9 @@
                 width: 100%;
                 margin-bottom: 10%;
                 .pic {
-                    .play-btn {
-                        width: 80px;
-                        height: 80px;
-                        opacity: 1;
+                    .play-btn-mobile {
+                        width: 70px;
+                        height: 70px;
                     }
                 }
             }
@@ -515,10 +523,9 @@
             .video {
                 width: 100%;
                 .pic {
-                    .play-btn {
+                    .play-btn-mobile {
                         width: 60px;
                         height: 60px;
-                        opacity: 1;
                     }
                 }
             }
