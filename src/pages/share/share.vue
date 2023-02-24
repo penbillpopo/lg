@@ -221,7 +221,7 @@
                 <a
                     href="https://www.facebook.com/ebctonightlikewar/posts/688697319613475"
                     target="_blank"
-                    class="image4"
+                    class="image4 tonight-good-left"
                 >
                     <div class="frame">
                         <img
@@ -233,7 +233,7 @@
                 <a
                     href="https://www.facebook.com/ebctonightlikewar/posts/688697319613475"
                     target="_blank"
-                    class="image5"
+                    class="image5 tonight-good-right"
                 >
                     <div class="frame">
                         <img
@@ -672,6 +672,7 @@
                                     </div>
                                 </div>
                                 <button
+                                    class="next-lottery"
                                     :class="{
                                         disabled: !(
                                             this.apply.data.name &&
@@ -1075,6 +1076,7 @@ export default {
                     })
                     .catch((error) => {
                         this.apply.step = 4;
+                        alert("分享成功");
                         console.error(error);
                     });
             } else {
