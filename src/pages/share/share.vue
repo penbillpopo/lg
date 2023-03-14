@@ -225,6 +225,7 @@
                 >
                     <div class="frame">
                         <img
+                            class="tonight-good-left"
                             :src="require(`@/assets/img/index2-1/images4.png`)"
                             alt=""
                         />
@@ -237,6 +238,7 @@
                 >
                     <div class="frame">
                         <img
+                            class="tonight-good-right"
                             :src="require(`@/assets/img/index2-1/images5.png`)"
                             alt=""
                         />
@@ -685,7 +687,7 @@
                                     下一步抽大獎
                                     <div
                                         v-if="validate"
-                                        class="fb-share-button"
+                                        class="fb-share-button next-lottery"
                                         data-href="http://www.lgfiji.com.tw/"
                                         data-layout="button_count"
                                         data-size="large"
@@ -693,7 +695,7 @@
                                         <a
                                             target="_blank"
                                             href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.lgfiji.com.tw%2F&amp;src=sdkpreparse"
-                                            class="fb-xfbml-parse-ignore"
+                                            class="fb-xfbml-parse-ignore next-lottery"
                                             >分享</a
                                         >
                                     </div>

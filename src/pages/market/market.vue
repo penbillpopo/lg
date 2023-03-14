@@ -65,6 +65,7 @@
                         class="market-btn lg"
                         target="_blank"
                         ><img
+                            class="lg"
                             :src="require(`@/assets/img/index3/LG-button.png`)"
                             alt=""
                     /></a>
@@ -73,6 +74,7 @@
                         class="market-btn momo"
                         target="_blank"
                         ><img
+                            class="momo"
                             :src="
                                 require(`@/assets/img/index3/momo-button.png`)
                             "
@@ -83,6 +85,7 @@
                         class="market-btn pchome"
                         target="_blank"
                         ><img
+                            class="pchome"
                             :src="
                                 require(`@/assets/img/index3/pchome-button.png`)
                             "
@@ -93,6 +96,7 @@
                         class="market-btn shopee"
                         target="_blank"
                         ><img
+                            class="shopee"
                             :src="
                                 require(`@/assets/img/index3/shopee-button.png`)
                             "

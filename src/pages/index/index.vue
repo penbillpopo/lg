@@ -1245,7 +1245,7 @@
                     </a>
                     <a
                         class="video"
-                        href="https://youtu.be/7YWjWfyM_9c"
+                        href="https://www.youtube.com/watch?v=dlUJI-8EgCg"
                         data-fancybox
                         ref="video-2"
                     >
