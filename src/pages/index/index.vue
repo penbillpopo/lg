@@ -3,148 +3,160 @@
         <navComponent v-if="!lightBoxShow" location="home"></navComponent>
         <div class="section2" ref="section2">
             <div class="bg">
-                <div class="nav-box">
-                    <router-link to="/" @click.native="$router.go()">
-                        <img
-                            class="btn"
-                            :src="require(`@/assets/img/index1-1/nav-1.png`)"
-                            alt=""
-                        />
-                        <img
-                            class="btn-hover"
-                            :src="
-                                require(`@/assets/img/index1-1/nav-1-hover.png`)
-                            "
-                            alt=""
-                        />
-                        <div class="hover" @click.stop>
-                            <div class="row" @click="scrollToSection(2)">
-                                <p>產品特性</p>
+                <div class="bg-center">
+                    <div class="nav-box">
+                        <router-link to="/" @click.native="$router.go()">
+                            <img
+                                class="btn"
+                                :src="
+                                    require(`@/assets/img/index1-1/nav-1.png`)
+                                "
+                                alt=""
+                            />
+                            <img
+                                class="btn-hover"
+                                :src="
+                                    require(`@/assets/img/index1-1/nav-1-hover.png`)
+                                "
+                                alt=""
+                            />
+                            <div class="hover" @click.stop>
+                                <div class="row" @click="scrollToSection(2)">
+                                    <p>產品特性</p>
+                                </div>
+                                <div class="row" @click="scrollToSection(6)">
+                                    <p>建議用量</p>
+                                </div>
+                                <div class="row" @click="scrollToSection(7)">
+                                    <p>使用說明</p>
+                                </div>
                             </div>
-                            <div class="row" @click="scrollToSection(6)">
-                                <p>建議用量</p>
-                            </div>
-                            <div class="row" @click="scrollToSection(7)">
-                                <p>使用說明</p>
-                            </div>
-                        </div>
-                    </router-link>
-                    <router-link
-                        to="/share"
-                        class="option"
-                        @click.native="$router.go()"
-                    >
+                        </router-link>
+                        <router-link
+                            to="/share"
+                            class="option"
+                            @click.native="$router.go()"
+                        >
+                            <img
+                                class="btn"
+                                :src="
+                                    require(`@/assets/img/index1-1/nav-2.png`)
+                                "
+                                alt=""
+                            />
+                            <img
+                                class="btn-hover"
+                                :src="
+                                    require(`@/assets/img/index1-1/nav-2-hover.png`)
+                                "
+                                alt=""
+                            />
+                        </router-link>
+                        <router-link
+                            to="/share#mamibuy"
+                            class="option"
+                            @click.native="$router.go()"
+                        >
+                            <img
+                                class="btn"
+                                :src="
+                                    require(`@/assets/img/index1-1/nav-3.png`)
+                                "
+                                alt=""
+                            />
+                            <img
+                                class="btn-hover"
+                                :src="
+                                    require(`@/assets/img/index1-1/nav-3-hover.png`)
+                                "
+                                alt=""
+                            />
+                        </router-link>
+                        <router-link
+                            to="/market"
+                            class="option"
+                            @click.native="$router.go()"
+                        >
+                            <img
+                                class="btn"
+                                :src="
+                                    require(`@/assets/img/index1-1/nav-4.png`)
+                                "
+                                alt=""
+                            />
+                            <img
+                                class="btn-hover"
+                                :src="
+                                    require(`@/assets/img/index1-1/nav-4-hover.png`)
+                                "
+                                alt=""
+                            />
+                        </router-link>
+                    </div>
+                    <div class="logo">
                         <img
-                            class="btn"
-                            :src="require(`@/assets/img/index1-1/nav-2.png`)"
+                            class="flash"
+                            :src="require(`@/assets/img/index1-1/flash.png`)"
                             alt=""
                         />
                         <img
-                            class="btn-hover"
-                            :src="
-                                require(`@/assets/img/index1-1/nav-2-hover.png`)
-                            "
+                            :src="require(`@/assets/img/index1-1/logo.png`)"
                             alt=""
                         />
-                    </router-link>
-                    <router-link
-                        to="/share#mamibuy"
-                        class="option"
-                        @click.native="$router.go()"
-                    >
-                        <img
-                            class="btn"
-                            :src="require(`@/assets/img/index1-1/nav-3.png`)"
-                            alt=""
-                        />
-                        <img
-                            class="btn-hover"
-                            :src="
-                                require(`@/assets/img/index1-1/nav-3-hover.png`)
-                            "
-                            alt=""
-                        />
-                    </router-link>
-                    <router-link
-                        to="/market"
-                        class="option"
-                        @click.native="$router.go()"
-                    >
-                        <img
-                            class="btn"
-                            :src="require(`@/assets/img/index1-1/nav-4.png`)"
-                            alt=""
-                        />
-                        <img
-                            class="btn-hover"
-                            :src="
-                                require(`@/assets/img/index1-1/nav-4-hover.png`)
-                            "
-                            alt=""
-                        />
-                    </router-link>
-                </div>
-                <div class="logo">
+                    </div>
                     <img
-                        class="flash"
-                        :src="require(`@/assets/img/index1-1/flash.png`)"
+                        class="title reveal-top-300"
+                        :src="require(`@/assets/img/index1-1/title.png`)"
                         alt=""
                     />
                     <img
-                        :src="require(`@/assets/img/index1-1/logo.png`)"
+                        class="powder reveal-left-600 pc-inline-block"
+                        :src="require(`@/assets/img/index1-1/powder.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="powder reveal-left-600 mobile-inline-block"
+                        :src="
+                            require(`@/assets/img/index1-1/mobile/powder.png`)
+                        "
+                        alt=""
+                    />
+                    <img
+                        class="light l1"
+                        :src="require(`@/assets/img/index1-1/light2.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="light l2"
+                        :src="require(`@/assets/img/index1-1/light2.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="light l3"
+                        :src="require(`@/assets/img/index1-1/light2.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="light l4"
+                        :src="require(`@/assets/img/index1-1/light2.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="light l5"
+                        :src="require(`@/assets/img/index1-1/light2.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="light l6"
+                        :src="require(`@/assets/img/index1-1/light2.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="light l7"
+                        :src="require(`@/assets/img/index1-1/light2.png`)"
                         alt=""
                     />
                 </div>
-                <img
-                    class="title reveal-top-300"
-                    :src="require(`@/assets/img/index1-1/title.png`)"
-                    alt=""
-                />
-                <img
-                    class="powder reveal-left-600 pc-inline-block"
-                    :src="require(`@/assets/img/index1-1/powder.png`)"
-                    alt=""
-                />
-                <img
-                    class="powder reveal-left-600 mobile-inline-block"
-                    :src="require(`@/assets/img/index1-1/mobile/powder.png`)"
-                    alt=""
-                />
-                <img
-                    class="light l1"
-                    :src="require(`@/assets/img/index1-1/light2.png`)"
-                    alt=""
-                />
-                <img
-                    class="light l2"
-                    :src="require(`@/assets/img/index1-1/light2.png`)"
-                    alt=""
-                />
-                <img
-                    class="light l3"
-                    :src="require(`@/assets/img/index1-1/light2.png`)"
-                    alt=""
-                />
-                <img
-                    class="light l4"
-                    :src="require(`@/assets/img/index1-1/light2.png`)"
-                    alt=""
-                />
-                <img
-                    class="light l5"
-                    :src="require(`@/assets/img/index1-1/light2.png`)"
-                    alt=""
-                />
-                <img
-                    class="light l6"
-                    :src="require(`@/assets/img/index1-1/light2.png`)"
-                    alt=""
-                />
-                <img
-                    class="light l7"
-                    :src="require(`@/assets/img/index1-1/light2.png`)"
-                    alt=""
-                />
             </div>
             <button class="scroll-btn small" @click="scrollToSection(1)">
                 <img
@@ -487,52 +499,54 @@
         </div>
         <div class="section4" ref="section4">
             <div class="bg">
-                <img
-                    class="title reveal-right-300"
-                    :src="require(`@/assets/img/index1-3/title.png`)"
-                    alt=""
-                />
-                <img
-                    class="powder reveal-right-300"
-                    :src="require(`@/assets/img/index1-3/powder.png`)"
-                    alt=""
-                />
-                <img
-                    class="paper"
-                    :src="require(`@/assets/img/index1-3/paper.png`)"
-                    alt=""
-                />
-                <div ref="section4-ani" class="bubble-box">
+                <div class="bg-center">
                     <img
-                        class="bubble1"
-                        :src="require(`@/assets/img/index1-3/bubble1.png`)"
+                        class="title reveal-right-300"
+                        :src="require(`@/assets/img/index1-3/title.png`)"
                         alt=""
                     />
                     <img
-                        class="bubble2"
-                        :src="require(`@/assets/img/index1-3/bubble2.png`)"
+                        class="powder reveal-right-300"
+                        :src="require(`@/assets/img/index1-3/powder.png`)"
                         alt=""
                     />
                     <img
-                        class="bubble3"
-                        :src="require(`@/assets/img/index1-3/bubble3.png`)"
+                        class="paper"
+                        :src="require(`@/assets/img/index1-3/paper.png`)"
                         alt=""
                     />
-                    <img
-                        class="bubble4"
-                        :src="require(`@/assets/img/index1-3/bubble4.png`)"
-                        alt=""
-                    />
-                    <img
-                        class="bubble5"
-                        :src="require(`@/assets/img/index1-3/bubble5.png`)"
-                        alt=""
-                    />
-                    <img
-                        class="bubble6"
-                        :src="require(`@/assets/img/index1-3/bubble6.png`)"
-                        alt=""
-                    />
+                    <div ref="section4-ani" class="bubble-box">
+                        <img
+                            class="bubble1"
+                            :src="require(`@/assets/img/index1-3/bubble1.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="bubble2"
+                            :src="require(`@/assets/img/index1-3/bubble2.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="bubble3"
+                            :src="require(`@/assets/img/index1-3/bubble3.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="bubble4"
+                            :src="require(`@/assets/img/index1-3/bubble4.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="bubble5"
+                            :src="require(`@/assets/img/index1-3/bubble5.png`)"
+                            alt=""
+                        />
+                        <img
+                            class="bubble6"
+                            :src="require(`@/assets/img/index1-3/bubble6.png`)"
+                            alt=""
+                        />
+                    </div>
                 </div>
             </div>
             <button class="scroll-btn small" @click="scrollToSection(3)">
@@ -544,21 +558,23 @@
         </div>
         <div class="section5" ref="section5">
             <div class="bg">
-                <img
-                    class="title1 reveal-left-300"
-                    :src="require(`@/assets/img/index1-4/title1.png`)"
-                    alt=""
-                />
-                <img
-                    class="title2 reveal-top-600"
-                    :src="require(`@/assets/img/index1-4/title2.png`)"
-                    alt=""
-                />
-                <img
-                    class="powder"
-                    :src="require(`@/assets/img/index1-4/powder.png`)"
-                    alt=""
-                />
+                <div class="bg-center">
+                    <img
+                        class="title1 reveal-left-300"
+                        :src="require(`@/assets/img/index1-4/title1.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="title2 reveal-top-600"
+                        :src="require(`@/assets/img/index1-4/title2.png`)"
+                        alt=""
+                    />
+                    <img
+                        class="powder"
+                        :src="require(`@/assets/img/index1-4/powder.png`)"
+                        alt=""
+                    />
+                </div>
             </div>
             <button class="scroll-btn small" @click="scrollToSection(4)">
                 <img
@@ -1207,72 +1223,74 @@
         </div>
         <div class="section10" ref="video">
             <div class="bg">
-                <div class="video-box">
-                    <img
-                        class="title reveal-left-300"
-                        :src="require(`@/assets/img/index1-9/title.png`)"
-                        alt=""
-                    />
-                    <a
-                        class="video"
-                        href="https://www.youtube.com/watch?v=WviQZvbizGQ"
-                        data-fancybox
-                        ref="video-1"
-                    >
-                        <div
-                            class="pic reveal-left-600"
-                            :style="{
-                                'background-image':
-                                    'url(' +
-                                    require(`@/assets/img/index1-9/video_2.png`) +
-                                    ')',
-                            }"
+                <div class="bg-center">
+                    <div class="video-box">
+                        <img
+                            class="title reveal-left-300"
+                            :src="require(`@/assets/img/index1-9/title.png`)"
+                            alt=""
+                        />
+                        <a
+                            class="video"
+                            href="https://www.youtube.com/watch?v=WviQZvbizGQ"
+                            data-fancybox
+                            ref="video-1"
                         >
-                            <img
-                                class="text"
-                                :src="
-                                    require(`@/assets/img/index1-9/txt_1.png`)
-                                "
-                                alt=""
-                            />
-                            <img
-                                class="play-btn-mobile"
-                                :src="
-                                    require(`@/assets/img/index1-9/playBtn-m.png`)
-                                "
-                            />
-                        </div>
-                    </a>
-                    <a
-                        class="video"
-                        href="https://www.youtube.com/watch?v=dlUJI-8EgCg"
-                        data-fancybox
-                        ref="video-2"
-                    >
-                        <div
-                            class="pic reveal-left-900"
-                            :style="{
-                                'background-image':
-                                    'url(' +
-                                    require(`@/assets/img/index1-9/video_1.png`) +
-                                    ')',
-                            }"
+                            <div
+                                class="pic reveal-left-600"
+                                :style="{
+                                    'background-image':
+                                        'url(' +
+                                        require(`@/assets/img/index1-9/video_2.png`) +
+                                        ')',
+                                }"
+                            >
+                                <img
+                                    class="text"
+                                    :src="
+                                        require(`@/assets/img/index1-9/txt_1.png`)
+                                    "
+                                    alt=""
+                                />
+                                <img
+                                    class="play-btn-mobile"
+                                    :src="
+                                        require(`@/assets/img/index1-9/playBtn-m.png`)
+                                    "
+                                />
+                            </div>
+                        </a>
+                        <a
+                            class="video"
+                            href="https://www.youtube.com/watch?v=dlUJI-8EgCg"
+                            data-fancybox
+                            ref="video-2"
                         >
-                            <img
-                                class="text t2"
-                                :src="
-                                    require(`@/assets/img/index1-9/txt_3.png`)
-                                "
-                                alt=""
-                            />
-                            <img
-                                class="play-btn-mobile"
-                                :src="
-                                    require(`@/assets/img/index1-9/playBtn-m.png`)
-                                "
-                            />
-                        </div>
-                    </a>
+                            <div
+                                class="pic reveal-left-900"
+                                :style="{
+                                    'background-image':
+                                        'url(' +
+                                        require(`@/assets/img/index1-9/video_1.png`) +
+                                        ')',
+                                }"
+                            >
+                                <img
+                                    class="text t2"
+                                    :src="
+                                        require(`@/assets/img/index1-9/txt_3.png`)
+                                    "
+                                    alt=""
+                                />
+                                <img
+                                    class="play-btn-mobile"
+                                    :src="
+                                        require(`@/assets/img/index1-9/playBtn-m.png`)
+                                    "
+                                />
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
             <img
